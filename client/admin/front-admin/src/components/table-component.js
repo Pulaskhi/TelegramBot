@@ -115,7 +115,7 @@ class Table extends HTMLElement {
 
       .user-box__data {
         padding: 15px;
-        background-color: hsl(200, 77%, 32%);
+        background-color:rgb(19, 144, 50);
         border-radius: 0 0 10px 10px;
       }
 
