@@ -251,7 +251,9 @@ class Table extends HTMLElement {
       ul.appendChild(uptatedAt)
       uptatedAt.textContent = `Fecha de actualización: ${element.updatedAt}`
     })
+    
   }
+  
 }
 
 customElements.define('table-component', Table)
