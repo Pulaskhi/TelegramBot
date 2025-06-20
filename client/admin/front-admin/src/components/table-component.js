@@ -251,8 +251,29 @@ class Table extends HTMLElement {
       ul.appendChild(uptatedAt)
       uptatedAt.textContent = `Fecha de actualización: ${element.updatedAt}`
     })
-    
+    this.renderButtons()
   }
+  renderButtons () {
+    this.shadow.querySelector('.table').addEventListener('click', event => {
+      if (event.target.closest('.edit-button')) {
+        const element = event.target.closest('.delete-button')
+        const id = element.dataset.id
+      }
+
+      if (event.target.closest('.delete-icon')) {
+        const element = event.target.closest('.delete-icon')
+        const id = element.dataset.id
+
+        document.dispatchEvent(new CustomEvent('showDeleteModal',{
+          detail: {
+      
+          }
+        }))
+        
+      }
+    })
+  }
+
   
 }
 

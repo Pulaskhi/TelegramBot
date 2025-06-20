@@ -3,6 +3,8 @@ class NotFound extends HTMLElement {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
     this.data = {}
+    
+    document.addEventListener('notice', this.handleMessage.bind(this))
   }
 
   async connectedCallback () {

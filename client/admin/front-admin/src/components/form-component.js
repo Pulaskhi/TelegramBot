@@ -226,6 +226,12 @@ class Form extends HTMLElement {
             message: 'Datos guardados correctamente',
             type: 'success'
           }
+
+        }))
+        document.dispatchEvent(new CustomEvent('delete',{
+          detail: {
+      
+          }
         }))
       } catch (error) {
         document.dispatchEvent(new CustomEvent('notice', {

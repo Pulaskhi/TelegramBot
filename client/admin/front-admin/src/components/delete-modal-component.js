@@ -2,10 +2,16 @@ class DeleteModal extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
+
+    document.addEventListener('showDeleteModal', this.showDeleteModal.bind(this))
   }
 
   connectedCallback () {
     this.render()
+  }
+
+  showDeleteModal (event) {
+    this.shadow.querySelector('.modal-overlay').classList.add('active')
   }
 
   render () {
@@ -133,7 +139,7 @@ class DeleteModal extends HTMLElement {
      
       </style>
   
-      <div class="modal-overlay active">
+      <div class="modal-overlay">
         <div class="modal-content">
           <button class="close-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
