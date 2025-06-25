@@ -2,7 +2,7 @@ class DeleteModal extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
-
+    this.endpoint = ''
     document.addEventListener('showDeleteModal', this.showDeleteModal.bind(this))
   }
 
@@ -11,134 +11,133 @@ class DeleteModal extends HTMLElement {
   }
 
   showDeleteModal (event) {
+    const { endpoint, elementId } = event.detail
+    this.endpoint = `${endpoint}/${elementId}`
     this.shadow.querySelector('.modal-overlay').classList.add('active')
   }
 
   render () {
-    this.shadow.innerHTML =
-      /* html */`
+    this.shadow.innerHTML = /* html */`
       <style>
-             
-        *{
+        * {
           box-sizing: border-box;
         }
-  
-        h1, h2, h3, h4, h5, h6, p{
+
+        h1, h2, h3, h4, h5, h6, p {
           margin: 0;
         }
-  
-        h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, button{
+
+        h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, button {
           font-family: "Nunito Sans", serif;
           font-optical-sizing: auto;
         }
-  
-        button{
+
+        button {
           background-color: transparent;
           border: none;
           cursor: pointer;
           outline: none;
           padding: 0;
         }
-  
+
         .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s;
-            z-index: 1000; /* Asegura que esté por encima del resto */
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s, visibility 0.3s;
+          z-index: 1000;
         }
 
-        .modal-overlay.active{
+        .modal-overlay.active {
           opacity: 1;
           visibility: visible;
         }
-  
+
         .modal-content {
-            background: white;
-            padding: 20px 30px;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 400px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            color: black;
-            position: relative;
+          background: white;
+          padding: 20px 30px;
+          border-radius: 10px;
+          text-align: center;
+          max-width: 400px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          color: black;
+          position: relative;
         }
-  
+
         .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            padding: 2px;
-            border-radius: 4px;
-            transition: background-color 0.2s ease;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          padding: 2px;
+          border-radius: 4px;
+          transition: background-color 0.2s ease;
         }
-  
+
         .close-button:hover {
-            background-color: rgba(0, 0, 0, 0.1);
+          background-color: rgba(0, 0, 0, 0.1);
         }
-  
+
         .close-button svg {
-            width: 100%;
-            height: 100%;
-            fill: hsl(200, 77%, 22%);
-            transition: fill 0.2s ease;
+          width: 100%;
+          height: 100%;
+          fill: hsl(200, 77%, 22%);
+          transition: fill 0.2s ease;
         }
-  
+
         .close-button:hover svg {
-            fill: hsl(200, 77%, 32%);
+          fill: hsl(200, 77%, 32%);
         }
-  
+
         .modal-content h2 {
-            margin-bottom: 20px;
-            padding-right: 30px; /* Espacio para el botón de cerrar */
+          margin-bottom: 20px;
+          padding-right: 30px;
         }
-  
+
         .modal-buttons {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+          display: flex;
+          justify-content: space-around;
+          margin-top: 20px;
         }
-  
+
         .modal-buttons button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            min-width: 60px;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 6px;
+          font-size: 16px;
+          cursor: pointer;
+          min-width: 60px;
         }
-  
+
         .btn-confirm {
-            background-color:hsl(0, 65%, 50%);
-            color: white;
+          background-color: hsl(0, 65%, 50%);
+          color: white;
         }
-  
+
         .btn-cancel {
-            background-color: hsl(0, 0%, 65%);
-            color: white;
+          background-color: hsl(0, 0%, 65%);
+          color: white;
         }
-  
+
         .btn-confirm:hover {
-            background-color:hsl(0, 65%, 40%);
+          background-color: hsl(0, 65%, 40%);
         }
-  
+
         .btn-cancel:hover {
-            background-color: hsl(0, 0%, 45%);
+          background-color: hsl(0, 0%, 45%);
         }
-     
       </style>
-  
+
       <div class="modal-overlay">
         <div class="modal-content">
           <button class="close-button">
@@ -148,29 +147,58 @@ class DeleteModal extends HTMLElement {
           </button>
           <h2>¿Estás seguro de eliminar el registro?</h2>
           <div class="modal-buttons">
-            <button class="btn-confirm" >Sí</button>
-            <button class="btn-cancel" >No</button>
+            <button class="btn-confirm">Sí</button>
+            <button class="btn-cancel">No</button>
           </div>
         </div>
       </div>
-      `
+    `
 
     this.renderButtons()
   }
 
   renderButtons () {
-    this.shadow.querySelector('.modal-overlay').addEventListener('click', event => {
-      if (event.target.closest('.btn-confirm')) {
-        this.shadow.querySelector('.modal-overlay').classList.remove('active')
-      }
+    const overlay = this.shadow.querySelector('.modal-overlay')
 
-      if (event.target.closest('.btn-cancel')) {
-        this.shadow.querySelector('.modal-overlay').classList.remove('active')
-      }
+    const confirmBtn = this.shadow.querySelector('.btn-confirm')
+    const cancelBtn = this.shadow.querySelector('.btn-cancel')
+    const closeBtn = this.shadow.querySelector('.close-button')
 
-      if (event.target.closest('.close-button')) {
-        this.shadow.querySelector('.modal-overlay').classList.remove('active')
+    confirmBtn.addEventListener('click', async () => {
+      try {
+        const response = await fetch(this.endpoint, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+
+        if (!response.ok) throw new Error('Error al eliminar el elemento')
+
+        document.dispatchEvent(new CustomEvent('notice', {
+          detail: {
+            message: 'Elemento eliminado correctamente',
+            type: 'success'
+          }
+        }))
+      } catch (error) {
+        document.dispatchEvent(new CustomEvent('notice', {
+          detail: {
+            message: 'No se pudo eliminar el elemento',
+            type: 'error'
+          }
+        }))
+      } finally {
+        overlay.classList.remove('active')
       }
+    })
+
+    cancelBtn.addEventListener('click', () => {
+      overlay.classList.remove('active')
+    })
+
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('active')
     })
   }
 }

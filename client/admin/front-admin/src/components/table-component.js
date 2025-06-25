@@ -259,6 +259,7 @@ class Table extends HTMLElement {
       if (event.target.closest('.edit-button')) {
         const element = event.target.closest('.delete-button')
         const id = element.dataset.id
+        const endpoint = `${this.endpoint}/${id}`
       }
 
       if (event.target.closest('.delete-icon')) {
@@ -267,7 +268,9 @@ class Table extends HTMLElement {
 
         document.dispatchEvent(new CustomEvent('showDeleteModal',{
           detail: {
-      
+            endpoint: this.endpoint,
+            elementId:id,
+
           }
         }))
         
