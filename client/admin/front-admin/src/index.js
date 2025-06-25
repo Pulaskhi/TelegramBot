@@ -1,6 +1,4 @@
-import './components/form-component.js'
 import './components/header-component.js'
-import './components/table-component.js'
 import './components/title-component.js'
 import './components/menu-component.js'
 import './components/main-component.js'
@@ -9,3 +7,6 @@ import './components/page-component.js'
 import './components/not-found-component.js'
 import './components/delete-modal-component.js'
 import './components/message-component.js'
+import './components/forms/users-form-component.js'
+import './components/tables/users-table-component.js'
+

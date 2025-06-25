@@ -9,6 +9,9 @@
     "neostandard": "^0.12.1"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "lodash-es": "^4.17.21",
+    "redux": "^5.0.1",
     "vite": "^6.3.5"
   }
 }
