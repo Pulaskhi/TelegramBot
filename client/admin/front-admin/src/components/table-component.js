@@ -2,6 +2,7 @@ class Table extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
+    this.endpoint='/api/admin/users'
   }
 
   async connectedCallback () {
@@ -11,7 +12,7 @@ class Table extends HTMLElement {
 
   async loadData () {
     try {
-      const response = await fetch('/api/admin/users')
+      const response = await fetch(`${this.endpoint}`)
 
       if (!response.ok) {
         throw new Error(`Error fetching data: ${response.statusText}`)
