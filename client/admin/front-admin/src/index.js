@@ -9,4 +9,4 @@ import './components/delete-modal-component.js'
 import './components/message-component.js'
 import './components/forms/users-form-component.js'
 import './components/tables/users-table-component.js'
-
+import './components/filters/filter-modal-component.js'
