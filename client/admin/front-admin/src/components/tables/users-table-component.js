@@ -7,8 +7,6 @@ class UserTable extends HTMLElement {
     this.shadow = this.attachShadow({ mode: 'open' })
     this.endpoint = '/api/admin/users'
     this.unsubscribe = null
-    this.currentPage = 1
-    this.pageSize = 10
   }
 
   async connectedCallback () {
@@ -22,9 +20,11 @@ class UserTable extends HTMLElement {
     await this.render()
   }
 
-  async loadData () {
+  async loadData (endpoint = this.endpoint) {
+
+    console.log(endpoint)
     try {
-      const response = await fetch(this.endpoint)
+      const response = await fetch(endpoint)
       if (!response.ok) {
         throw new Error(`Error fetching data: ${response.statusText}`)
       }
@@ -35,18 +35,9 @@ class UserTable extends HTMLElement {
     }
   }
 
-  get paginatedData () {
-    const start = (this.currentPage - 1) * this.pageSize
-    return this.data.rows.slice(start, start + this.pageSize)
-  }
-
-  get totalPages () {
-    return Math.ceil(this.data.rows.length / this.pageSize)
-  }
-
   render () {
-    this.shadow.innerHTML = `
-        <style>
+    this.shadow.innerHTML = /*html*/`
+      <style>
       * {
         box-sizing: border-box;
         font-family: "Nunito Sans", serif;
@@ -131,6 +122,10 @@ class UserTable extends HTMLElement {
         font-size: 0.95rem;
       }
 
+      .table__footer span{
+        color: hsl(0, 0%, 0%);
+      }
+
       .table__footer-left {
         font-weight: 500;
       }
@@ -141,31 +136,42 @@ class UserTable extends HTMLElement {
         gap: 10px;
       }
 
+      .pagination{
+        align-items: center;
+        display: flex;
+        gap: 0.5rem;
+      }
+
       .pagination button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      font-size: 1.2rem;
-      padding: 4px 6px;
-      border-radius: 5px;
-      color: black;
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 4px 6px;
+        border-radius: 5px;
+        color: black;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
 
-    .pagination button:hover:not(:disabled) {
-      background-color: rgba(0, 0, 0, 0.1);
-      color: #000000cc;
-    }
+      .pagination button.disabled{
+        cursor: default;
+      }
 
-    .pagination button:disabled {
-      opacity: 0.4;
-      cursor: pointer; /* <---- aquí cambio */
-      color: #555;
-    }
+      .pagination button:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #000000cc;
+      }
+
+      .pagination button.disabled{
+        background-color: transparent;
+        color:hsl(0, 0.00%, 26.70%);
+      }
+
       .page-info {
         font-weight: bold;
+        font-size: 0.7rem;
       }
-</style>
+    </style>
 
     <section class="table">
       <div class="table__header">
@@ -181,10 +187,17 @@ class UserTable extends HTMLElement {
       <div class="table__body"></div>
       <div class="table__footer">
         <div class="table__footer-left">
-          ${this.data.rows.length} registros en total, mostrando ${this.pageSize} por página
+          
+          <span>${this.data.meta.total} registros en total, mostrando ${this.data.meta.size} por página</span>
         </div>
         <div class="table__footer-right">
-          ${this.renderPagination()}
+          <div class="pagination">
+            <button class="pagination-button ${this.data.meta.currentPage === 1 ? 'disabled' : ''}" data-page="1">&laquo;</button>
+            <button class="pagination-button ${this.data.meta.currentPage === 1 ? 'disabled' : ''}" data-page="${this.data.meta.currentPage > 1 ? this.data.meta.currentPage - 1 : 1}">&lsaquo;</button>
+            <span class="page-info">${this.data.meta.currentPage} de ${this.data.meta.pages}</span>
+            <button class="pagination-button ${this.data.meta.currentPage === this.data.meta.pages ? 'disabled' : ''}"  data-page="${this.data.meta.currentPage < this.data.meta.pages ? this.data.meta.currentPage + 1 : this.data.meta.currentPage}">&rsaquo;</button>
+            <button class="pagination-button ${this.data.meta.currentPage === this.data.meta.pages ? 'disabled' : ''}" data-page="${this.data.meta.pages}">&raquo;</button>
+          </div>
         </div>
       </div>
     </section>
@@ -193,7 +206,7 @@ class UserTable extends HTMLElement {
     const tableBody = this.shadow.querySelector('.table__body')
     tableBody.innerHTML = ''
 
-    this.paginatedData.forEach(element => {
+    this.data.rows.forEach(element => {
       const userBox = document.createElement('div')
       const upperRow = document.createElement('div')
       const editIcon = document.createElement('button')
@@ -237,23 +250,11 @@ class UserTable extends HTMLElement {
     this.renderButtons()
   }
 
-  renderPagination () {
-    return `
-      <div class="pagination">
-        <button class="first-page" ${this.currentPage === 1 ? 'disabled' : ''}>&laquo;</button>
-        <button class="prev-page" ${this.currentPage === 1 ? 'disabled' : ''}>&lsaquo;</button>
-        <span class="page-info">Página ${this.currentPage} de ${this.totalPages}</span>
-        <button class="next-page" ${this.currentPage === this.totalPages ? 'disabled' : ''}>&rsaquo;</button>
-        <button class="last-page" ${this.currentPage === this.totalPages ? 'disabled' : ''}>&raquo;</button>
-      </div>
-    `
-  }
-
   renderButtons () {
     this.shadow.querySelector('.table').addEventListener('click', async event => {
       const editBtn = event.target.closest('.edit-icon')
       const deleteBtn = event.target.closest('.delete-icon')
-      const filterBtn =event.target.closest('.filter-icon')
+      const filterBtn = event.target.closest('.filter-icon')
 
       if (editBtn) {
         const id = editBtn.dataset.id
@@ -276,28 +277,14 @@ class UserTable extends HTMLElement {
         }))
       }
 
-      if(filterBtn){
+      if (filterBtn) {
         document.dispatchEvent(new CustomEvent('showFilterModal'))
       }
 
-      if (event.target.closest('.first-page')) {
-        this.currentPage = 1
-        this.render()
-      }
-
-      if (event.target.closest('.prev-page') && this.currentPage > 1) {
-        this.currentPage--
-        this.render()
-      }
-
-      if (event.target.closest('.next-page') && this.currentPage < this.totalPages) {
-        this.currentPage++
-        this.render()
-      }
-
-      if (event.target.closest('.last-page')) {
-        this.currentPage = this.totalPages
-        this.render()
+      if (event.target.closest('.pagination-button') && !event.target.closest('.pagination-button').classList.contains('.disabled')) {
+        const page = event.target.closest('.pagination-button').dataset.page
+        const endpoint = `${this.endpoint}?page=${page}`
+        this.loadData(endpoint).then(() => this.render())
       }
     })
   }
