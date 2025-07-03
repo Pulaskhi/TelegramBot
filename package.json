@@ -9,7 +9,7 @@
       "dev:front-customer": "cd client/customer && npm run dev",
       "install": "npm-run-all --parallel install:front-admin install:front-customer",
       "install:front-admin": "cd client/admin/front-admin && npm install",
-      "install:front-customer": "cd client/customer/front-customer && npm install",
+      "install:front-customer": "cd client/customer && npm install",
       "proxy": "node ./proxy.js"
     },
     "devDependencies": {

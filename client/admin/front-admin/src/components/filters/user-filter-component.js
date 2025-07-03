@@ -1,9 +1,10 @@
+import { store } from '../../redux/store.js'
+import { setFilterQuery } from '../../redux/crud-slice.js'
 class UserFilter extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
-    this.endpoint = ''
-    this.tableEndpoint = ''
+    this.endpoint = '/api/admin/users'
     document.addEventListener('showFilterModal', this.showFilterModal.bind(this))
   }
 
@@ -11,8 +12,10 @@ class UserFilter extends HTMLElement {
     this.render()
   }
 
-  showFilterModal () {
-    this.shadow.querySelector('.modal-overlay').classList.add('active')
+  showFilterModal (event) {
+    if(event.detail.endpoint === this.endpoint ){
+      this.shadow.querySelector('.modal-overlay').classList.add('active')
+    }
   }
 
   render () {
@@ -116,6 +119,24 @@ class UserFilter extends HTMLElement {
           width: 100%;
         }
 
+        .form-element {
+          flex: 1;
+          display:flex;
+          flex-direction: column;
+          gap: 10px 0px;
+          margin: 10px 0;
+        }
+    
+        .form-element-input input {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          box-sizing: border-box;
+          border: none;
+          background: white;
+          color: black;
+        }
+
         .modal-buttons {
           display: flex;
           justify-content: space-around;
@@ -160,10 +181,24 @@ class UserFilter extends HTMLElement {
           <h2>¿Qué quieres filtrar?</h2>
 
           <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Introduce un nombre" />
-            <label for="email">Correo</label>
-            <input type="email" id="email" name="email" placeholder="Introduce un correo" />
+            <form>
+              <div class="form-element">
+                <div class="form-title">
+                  <span>Nombre</span>
+                </div>
+                <div class="form-element-input">
+                  <input type="text" placeholder="" name="name">
+                </div>
+              </div>
+              <div class="form-element">
+                <div class="form-title">
+                  <span>Email</span>
+                </div>
+                <div class="form-element-input">
+                  <input type="email" placeholder="" name="email">
+                </div>
+              </div>
+            </form>
           </div>
 
           <div class="modal-buttons">
@@ -185,17 +220,47 @@ class UserFilter extends HTMLElement {
     const closeBtn = this.shadow.querySelector('.close-button')
 
     confirmBtn.addEventListener('click', async () => {
-      // Aquí puedes capturar los valores
-      const name = this.shadow.querySelector('#name').value
-      const email = this.shadow.querySelector('#email').value
-      console.log('Filtrar por:', { name, email })
+      const form = this.shadow.querySelector('form')
+      const formData = new FormData(form)
+      const formDataJson = {}
 
-      // Aquí iría tu lógica de filtro (fetch, dispatch, etc.)
+      for (const [key, value] of formData.entries()) {
+        formDataJson[key] = value !== '' ? value : null
+      }
+      const query = Object.entries(formDataJson).map(([key, value]) => `${key}=${value}`).join('&')
+
+      const filterQuery = {
+        endPoint: this.endpoint,
+        query
+      }
+
+      store.dispatch(setFilterQuery(filterQuery))
       overlay.classList.remove('active')
     })
 
     cancelBtn.addEventListener('click', () => {
+
+      const form = this.shadow.querySelector('form')
+      form.reset()
+
+      const formData = new FormData(form)
+      const formDataJson = {}
+
+      for (const [key, value] of formData.entries()) {
+        formDataJson[key] = value !== '' ? value : null
+      }
+
+      const query = Object.entries(formDataJson).map(([key, value]) => `${key}=${value}`).join('&')
+
+      const filterQuery = {
+        endPoint: this.endpoint,
+        query
+      }
+
+      store.dispatch(setFilterQuery(filterQuery))
+
       overlay.classList.remove('active')
+
     })
 
     closeBtn.addEventListener('click', () => {

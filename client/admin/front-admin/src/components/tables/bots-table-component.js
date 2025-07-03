@@ -1,11 +1,11 @@
 import { store } from '../../redux/store.js'
 import { showFormElement } from '../../redux/crud-slice.js'
 
-class UserTable extends HTMLElement {
+class BotTable extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
-    this.endpoint = '/api/admin/users'
+    this.endpoint = '/api/admin/bots'
     this.filterQuery = null
     this.unsubscribe = null
   }
@@ -243,7 +243,8 @@ class UserTable extends HTMLElement {
 
       ul.innerHTML = `
         <li>Nombre: ${element.name}</li>
-        <li>Email: ${element.email}</li>
+        <li>Plataforma: ${element.platform}</li>
+        <li>Token: ${element.token}</li>
         <li>Fecha de creación: ${element.createdAt}</li>
         <li>Fecha de actualización: ${element.updatedAt}</li>
       `
@@ -304,4 +305,4 @@ class UserTable extends HTMLElement {
   }
 }
 
-customElements.define('users-table-component', UserTable)
+customElements.define('bots-table-component', BotTable)

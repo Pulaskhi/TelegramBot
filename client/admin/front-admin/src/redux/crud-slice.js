@@ -7,6 +7,10 @@ export const crudSlice = createSlice({
       endPoint: null,
       data: null
     },
+    filterQuery: {
+      endPoint: null,
+      query: null
+    },
     tableEndpoint: null
   },
   reducers: {
@@ -15,13 +19,17 @@ export const crudSlice = createSlice({
     },
     refreshTable: (state, action) => {
       state.tableEndpoint = action.payload
+    },
+    setFilterQuery: (state, action) => {
+      state.filterQuery = action.payload
     }
   }
 })
 
 export const {
   showFormElement,
-  refreshTable
+  refreshTable,
+  setFilterQuery
 } = crudSlice.actions
 
 export default crudSlice.reducer

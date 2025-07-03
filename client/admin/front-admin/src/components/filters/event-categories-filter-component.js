@@ -1,39 +1,31 @@
-import { store } from '../redux/store.js'
-import { refreshTable, showFormElement } from '../redux/crud-slice.js'
-class DeleteModal extends HTMLElement {
+import { store } from '../../redux/store.js'
+import { setFilterQuery } from '../../redux/crud-slice.js'
+
+class EventCategoryFilter extends HTMLElement {
   constructor () {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
-    this.endpoint = ''
-    document.addEventListener('showDeleteModal', this.showDeleteModal.bind(this))
-    this.tableEndpoint = ''
+    this.endpoint = '/api/admin/event-categories'
+    document.addEventListener('showFilterModal', this.showFilterModal.bind(this))
   }
 
   connectedCallback () {
     this.render()
   }
 
-  showDeleteModal (event) {
-    const { endpoint, elementId } = event.detail
-    this.tableEndpoint = endpoint
-    this.endpoint = `${endpoint}/${elementId}`
-    this.shadow.querySelector('.modal-overlay').classList.add('active')
+  showFilterModal (event) {
+    if(event.detail.endpoint === this.endpoint ){
+      this.shadow.querySelector('.modal-overlay').classList.add('active')
+    }
   }
 
   render () {
     this.shadow.innerHTML = /* html */`
       <style>
-        * {
-          box-sizing: border-box;
-        }
-
-        h1, h2, h3, h4, h5, h6, p {
-          margin: 0;
-        }
-
+        * { box-sizing: border-box; }
+        h1, h2, h3, h4, h5, h6, p { margin: 0; }
         h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, button {
           font-family: "Nunito Sans", serif;
-          font-optical-sizing: auto;
         }
 
         button {
@@ -108,6 +100,44 @@ class DeleteModal extends HTMLElement {
           padding-right: 30px;
         }
 
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 20px;
+          text-align: left;
+        }
+
+        .form-group label {
+          font-weight: bold;
+        }
+
+        .form-group input {
+          padding: 8px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          font-size: 14px;
+          width: 100%;
+        }
+
+        .form-element {
+          flex: 1;
+          display:flex;
+          flex-direction: column;
+          gap: 10px 0px;
+          margin: 10px 0;
+        }
+    
+        .form-element-input input {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          box-sizing: border-box;
+          border: none;
+          background: white;
+          color: black;
+        }
+
         .modal-buttons {
           display: flex;
           justify-content: space-around;
@@ -125,7 +155,6 @@ class DeleteModal extends HTMLElement {
 
         .btn-confirm {
           background-color: hsl(0, 65%, 50%);
-          
           color: white;
         }
 
@@ -150,10 +179,24 @@ class DeleteModal extends HTMLElement {
               <path d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" />
             </svg>
           </button>
-          <h2>¿Estás seguro de eliminar el registro?</h2>
+          <h2>¿Qué quieres filtrar?</h2>
+
+          <div class="form-group">
+            <form>
+              <div class="form-element">
+                <div class="form-title">
+                  <span>Nombre</span>
+                </div>
+                <div class="form-element-input">
+                  <input type="text" placeholder="" name="name">
+                </div>
+              </div>
+            </form>
+          </div>
+
           <div class="modal-buttons">
-            <button class="btn-confirm">Sí</button>
-            <button class="btn-cancel">No</button>
+            <button class="btn-confirm">Aceptar</button>
+            <button class="btn-cancel">Cancelar</button>
           </div>
         </div>
       </div>
@@ -170,43 +213,47 @@ class DeleteModal extends HTMLElement {
     const closeBtn = this.shadow.querySelector('.close-button')
 
     confirmBtn.addEventListener('click', async () => {
-      try {
-        const response = await fetch(this.endpoint, {
-          method: 'DELETE',
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
+      const form = this.shadow.querySelector('form')
+      const formData = new FormData(form)
+      const formDataJson = {}
 
-        if (!response.ok) throw new Error('Error al eliminar el elemento')
-
-        document.dispatchEvent(new CustomEvent('notice', {
-          detail: {
-            message: 'Elemento eliminado correctamente',
-            type: 'success'
-          }
-        }))
-
-        store.dispatch(refreshTable(this.tableEndpoint))
-        store.dispatch(showFormElement({
-          endPoint: this.tableEndpoint,
-          data: null
-        }))
-        
-      } catch (error) {
-        document.dispatchEvent(new CustomEvent('notice', {
-          detail: {
-            message: 'No se pudo eliminar el elemento',
-            type: 'error'
-          }
-        }))
-      } finally {
-        overlay.classList.remove('active')
+      for (const [key, value] of formData.entries()) {
+        formDataJson[key] = value !== '' ? value : null
       }
+      const query = Object.entries(formDataJson).map(([key, value]) => `${key}=${value}`).join('&')
+
+      const filterQuery = {
+        endPoint: this.endpoint,
+        query
+      }
+
+      store.dispatch(setFilterQuery(filterQuery))
+      overlay.classList.remove('active')
     })
 
     cancelBtn.addEventListener('click', () => {
+
+      const form = this.shadow.querySelector('form')
+      form.reset()
+
+      const formData = new FormData(form)
+      const formDataJson = {}
+
+      for (const [key, value] of formData.entries()) {
+        formDataJson[key] = value !== '' ? value : null
+      }
+
+      const query = Object.entries(formDataJson).map(([key, value]) => `${key}=${value}`).join('&')
+
+      const filterQuery = {
+        endPoint: this.endpoint,
+        query
+      }
+
+      store.dispatch(setFilterQuery(filterQuery))
+
       overlay.classList.remove('active')
+
     })
 
     closeBtn.addEventListener('click', () => {
@@ -215,4 +262,4 @@ class DeleteModal extends HTMLElement {
   }
 }
 
-customElements.define('delete-modal-component', DeleteModal)
+customElements.define('event-categories-filter-component', EventCategoryFilter)

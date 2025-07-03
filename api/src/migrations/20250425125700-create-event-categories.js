@@ -3,28 +3,20 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('bots', {
+    await queryInterface.createTable('event-categories', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
       },
-      platform: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
       name: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
-      description: {
-        type: Sequelize.TEXT,
-        allowNull: false,
-      },
-      token:{
-        type: Sequelize.TEXT,
-        allowNull: false,
+      token: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
       createdAt: {
         type: Sequelize.DATE,
@@ -41,6 +33,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('bots')
+    await queryInterface.dropTable('event-categories')
   }
 }
