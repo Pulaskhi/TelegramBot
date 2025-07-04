@@ -28,7 +28,8 @@ class PageComponent extends HTMLElement {
       '/admin/eventos': 'events.html',
       '/admin/modal': 'modal.html',
       '/admin/categorias-de-eventos': 'event-categories.html',
-      '/admin/bots':'bots.html'
+      '/admin/bots':'bots.html',
+      '/admin/promotores':'promoters.html'
 
     }
     // guardar el filename correspondiente a la ruta de la url.
