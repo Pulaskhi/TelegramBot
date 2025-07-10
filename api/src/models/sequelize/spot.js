@@ -1,35 +1,43 @@
 module.exports = function (sequelize, DataTypes) {
-  const Model = sequelize.define('EventCategory',
+  const Model = sequelize.define('Spot',
     { // definicion de los campos del modelo
       id: {
         type: DataTypes.INTEGER,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
         allowNull: false
       },
-      platform: {
+      townId: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          },
-          notEmpty: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          }
-        }
       },
       name: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Por favor, rellena el campo "Nombre".'
-          },
-          notEmpty: {
-            msg: 'Por favor, rellena el campo "Nombre".'
-          }
-        }
+      },
+      description: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
+      address:{
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      latitude: {
+        type: DataTypes.FLOAT,
+        allowNull: false,
+      },
+      longitude :{
+        type: DataTypes.FLOAT,
+        allowNull: false,
+      },
+      enviroment :{
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      isActive :{
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
       },
       createdAt: {
         type: DataTypes.DATE,
@@ -49,7 +57,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     }, { // opciones del modelo
       sequelize,
-      tableName: 'event-categories',
+      tableName: 'spots',
       timestamps: true,
       paranoid: true, // no borres datos
       indexes: [

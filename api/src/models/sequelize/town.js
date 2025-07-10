@@ -1,23 +1,11 @@
 module.exports = function (sequelize, DataTypes) {
-  const Model = sequelize.define('EventCategory',
+  const Model = sequelize.define('Town',
     { // definicion de los campos del modelo
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false
-      },
-      platform: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          },
-          notEmpty: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          }
-        }
       },
       name: {
         type: DataTypes.STRING,
@@ -31,6 +19,7 @@ module.exports = function (sequelize, DataTypes) {
           }
         }
       },
+      
       createdAt: {
         type: DataTypes.DATE,
         get () {
@@ -49,7 +38,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     }, { // opciones del modelo
       sequelize,
-      tableName: 'event-categories',
+      tableName: 'towns',
       timestamps: true,
       paranoid: true, // no borres datos
       indexes: [

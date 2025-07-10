@@ -1,35 +1,28 @@
 module.exports = function (sequelize, DataTypes) {
-  const Model = sequelize.define('EventCategory',
-    { // definicion de los campos del modelo
+  const Model = sequelize.define('CustomerCredentials',
+    {
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false
       },
-      platform: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          },
-          notEmpty: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          }
-        }
+      customerId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       },
-      name: {
+      email: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Por favor, rellena el campo "Nombre".'
-          },
-          notEmpty: {
-            msg: 'Por favor, rellena el campo "Nombre".'
-          }
-        }
+        unique: true
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      lastPasswordChange: {
+        type: DataTypes.DATE,
+        allowNull: false
       },
       createdAt: {
         type: DataTypes.DATE,
@@ -47,11 +40,11 @@ module.exports = function (sequelize, DataTypes) {
             : null
         }
       }
-    }, { // opciones del modelo
+    }, {
       sequelize,
-      tableName: 'event-categories',
+      tableName: 'customer-credentials',
       timestamps: true,
-      paranoid: true, // no borres datos
+      paranoid: true,
       indexes: [
         {
           name: 'PRIMARY',

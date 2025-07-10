@@ -269,7 +269,6 @@ class UserForm extends HTMLElement {
                 </div>
               </div>
             </div>
-           
           </form>
         </div>
       </section>

@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const Model = sequelize.define('EventCategory',
+  const Model = sequelize.define('EventPrice',
     { // definicion de los campos del modelo
       id: {
         type: DataTypes.INTEGER,
@@ -7,29 +7,17 @@ module.exports = function (sequelize, DataTypes) {
         primaryKey: true,
         allowNull: false
       },
-      platform: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          },
-          notEmpty: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          }
-        }
+      eventId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       },
-      name: {
+      description: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Por favor, rellena el campo "Nombre".'
-          },
-          notEmpty: {
-            msg: 'Por favor, rellena el campo "Nombre".'
-          }
-        }
+        allowNull: false
+      },
+      price: {
+        type: DataTypes.DECIMAL,
+        allowNull: false
       },
       createdAt: {
         type: DataTypes.DATE,
@@ -49,7 +37,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     }, { // opciones del modelo
       sequelize,
-      tableName: 'event-categories',
+      tableName: 'event-prices',
       timestamps: true,
       paranoid: true, // no borres datos
       indexes: [

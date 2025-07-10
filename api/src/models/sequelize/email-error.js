@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const Model = sequelize.define('EventCategory',
+  const Model = sequelize.define('EmailError',
     { // definicion de los campos del modelo
       id: {
         type: DataTypes.INTEGER,
@@ -7,29 +7,21 @@ module.exports = function (sequelize, DataTypes) {
         primaryKey: true,
         allowNull: false
       },
-      platform: {
+      userType: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          },
-          notEmpty: {
-            msg: 'Por favor, rellena el campo "Plataforma".'
-          }
-        }
+        allowNull: false
       },
-      name: {
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      emailTemplate: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Por favor, rellena el campo "Nombre".'
-          },
-          notEmpty: {
-            msg: 'Por favor, rellena el campo "Nombre".'
-          }
-        }
+        allowNull: false
+      },
+      error:{
+        type: DataTypes.TEXT,
+        allowNull: false
       },
       createdAt: {
         type: DataTypes.DATE,
@@ -49,7 +41,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     }, { // opciones del modelo
       sequelize,
-      tableName: 'event-categories',
+      tableName: 'email-errors',
       timestamps: true,
       paranoid: true, // no borres datos
       indexes: [
