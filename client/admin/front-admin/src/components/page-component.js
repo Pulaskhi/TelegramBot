@@ -25,11 +25,13 @@ class PageComponent extends HTMLElement {
   async getTemplate (path) {
     const routes = {
       '/admin/usuarios': 'users.html',
-      '/admin/eventos': 'events.html',
+      '/admin/events': 'events.html',
       '/admin/modal': 'modal.html',
       '/admin/categorias-de-eventos': 'event-categories.html',
       '/admin/bots':'bots.html',
-      '/admin/promotores':'promoters.html'
+      '/admin/promotores':'promoters.html',
+      '/admin/faqs':'faqs.html',
+      '/admin/lenguajes':'/admin/languages'
 
     }
     // guardar el filename correspondiente a la ruta de la url.
