@@ -2,11 +2,11 @@ import isEqual from 'lodash-es/isEqual'
 import { store } from '../../redux/store.js'
 import { refreshTable } from '../../redux/crud-slice.js'
 
-class UserForm extends HTMLElement {
+class HeadersForm extends HTMLElement {
     constructor () {
       super()
       this.shadow = this.attachShadow({ mode: 'open' })
-      this.endpoint = '/api/admin/users'
+      this.endpoint = '/api/admin/headers'
       this.unsubscribe = null
       this.formElementData = null
     }
@@ -210,9 +210,6 @@ class UserForm extends HTMLElement {
               <div class="tab active" data-tab="general">
                 <button>General</button>
               </div>
-              <div class="tab" data-tab="images">
-                <button>Imágenes<button>
-              </div>
             </div class="tabs">
             <div class="form__header-icons">
               <button class="clean-icon">
@@ -242,33 +239,15 @@ class UserForm extends HTMLElement {
           <form>
             <input type="hidden" name="id">
             <div class="tab-content active" data-tab="general">
-              <div class="form-element">
-                <div class="form-title">
-                  <span>Titulo</span>
-                </div>
-                <div class="form-element-input">
-                  <input type="text" placeholder="" name="name">
-                </div>
+            <div class="form-element">
+              <div class="form-title">
+                <span>Título</span>
               </div>
-              <div class="form-element">
-                <div class="form-title">
-                  <span>Descripción</span>
-                </div>
-                <div class="form-element-input">
-                  <input type="email" placeholder="" name="email">
-                </div>
+              <div class="form-element-input">
+                <input type="text" placeholder="" name="title">
               </div>
             </div>
-            <div class="tab-content" data-tab="images">
-              <div class="form-element">
-                <div class="form-title">
-                  <span>Avatar</span>
-                </div>
-                <div class="form-element-input">
-                  <input type="image" name="avatar">
-                </div>
-              </div>
-            </div>
+           
           </form>
         </div>
       </section>
@@ -400,5 +379,5 @@ class UserForm extends HTMLElement {
 
   }
   
-  customElements.define('users-form-component', UserForm)
+  customElements.define('headers-form-component', HeadersForm)
   

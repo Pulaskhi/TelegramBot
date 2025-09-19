@@ -2,11 +2,11 @@ import isEqual from 'lodash-es/isEqual'
 import { store } from '../../redux/store.js'
 import { refreshTable } from '../../redux/crud-slice.js'
 
-class LanguageForm extends HTMLElement {
+class FaqsForm extends HTMLElement {
     constructor () {
       super()
       this.shadow = this.attachShadow({ mode: 'open' })
-      this.endpoint = '/api/admin/languages'
+      this.endpoint = '/api/admin/faqs'
       this.unsubscribe = null
       this.formElementData = null
     }
@@ -241,35 +241,22 @@ class LanguageForm extends HTMLElement {
             <div class="tab-content active" data-tab="general">
             <div class="form-element">
               <div class="form-title">
-                <span>Name</span>
+                <span>Título</span>
               </div>
               <div class="form-element-input">
-                <input type="text" placeholder="" name="name">
+                <input type="text" placeholder="" name="title">
               </div>
             </div>
             <div class="form-element">
               <div class="form-title">
-                <span>Alias</span>
+                <span>Descripcion</span>
               </div>
               <div class="form-element-input">
-                <input type="text" placeholder="" name="alias">
+                <textarea name="description"></textarea>
               </div>
             </div>
             <div class="form-element">
               <div class="form-title">
-                <span>Token</span>
-              </div>
-              <div class="form-element-input">
-                <input type="text" placeholder="" name="token">
-              </div>
-            </div>
-            <div class="form-element">
-              <div class="form-title">
-                <span>Description</span>
-              </div>
-              <div class="form-element-input">
-                <input type="text" placeholder="" name="description">
-              </div>
             </div>
           </div>
             <div class="tab-content" data-tab="images">
@@ -414,5 +401,5 @@ class LanguageForm extends HTMLElement {
 
   }
   
-  customElements.define('languages-form-component', LanguageForm)
+  customElements.define('faqs-form-component', FaqsForm)
   

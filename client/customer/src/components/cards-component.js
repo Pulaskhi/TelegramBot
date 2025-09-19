@@ -1,330 +1,301 @@
 class Cards extends HTMLElement {
-  constructor () {
-    super()
-    this.shadow = this.attachShadow({ mode: 'open' })
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({
+      mode: 'open'
+    });
   }
 
-  async connectedCallback () {
-    await this.loadData()
-    await this.render()
+  async connectedCallback() {
+    this.loadData();
+    this.render();
   }
 
-  loadData () {
+  loadData() {
     this.data = {
-      title: 'Fácil de usaar',
-      description: 'Tan simple como decir qué productos buscas, las características que te interesan y cuanto estás dispuesto a pagas. Nuestro bot se encargará de buscarlo por ti y te notificará cuando encuentre algo que se ajuste a tus preferencias.',
+      title: 'Tu entrenamiento, nuestra fuerza',
+      description: 'Más allá de la manguera y el hacha, la verdadera preparación de un bombero reside en la disciplina. Desde la agilidad en espacios confinados hasta la resistencia en rescates de alto riesgo, cada desafío se convierte en una oportunidad para salvar vidas.',
       images: {
-        xs: './images/airpods/go_airpods__ed69m4vdask2_large.png',
-        sm: './images/airpods/go_airpods__ed69m4vdask2_large.png',
-        md: './images/airpods/go_airpods__ed69m4vdask2_large.png',
-        lg: './images/airpods/go_airpods__ed69m4vdask2_large.png'
+        xs: './images/bombero/bombero-entrenando-xs.jpg',
+        sm: './images/bombero/bombero-entrenando-sm.jpg',
+        md: './images/bombero/bombero-entrenando-md.jpg',
+        lg: './images/bombero/bombero-entrenando-lg.jpg'
       },
-      cards: [
-        {
-          title: 'Siri, text Rigo, "I\'m on my way"',
-          color: 'white',
-          images: {
-            xs: './images/text/go_iphone__rgcqxe88k6y6_small.png',
-            sm: './images/text/go_iphone__rgcqxe88k6y6_small.png',
-            md: './images/text/go_iphone__rgcqxe88k6y6_small.png',
-            lg: './images/text/go_iphone__rgcqxe88k6y6_small.png'
-          }
-        },
-        {
-          title: 'Siri, remind me to water plants when I get home',
-          color: 'black',
-          images: {
-            xs: './images/remind/go_tile_1__c3xn44p0q22q_large.png',
-            sm: './images/remind/go_tile_1__c3xn44p0q22q_large.png',
-            md: './images/remind/go_tile_1__c3xn44p0q22q_large.png',
-            lg: './images/remind/go_tile_1__c3xn44p0q22q_large.png'
-          }
-        },
-        {
-          title: 'Siri, text Rigo, "I\'m on my way"',
-          color: 'white',
-          images: {
-            xs: './images/helpful/go_tile_2__r3t0enbq5lea_large.jpg',
-            sm: './images/helpful/go_tile_2__r3t0enbq5lea_large.jpg',
-            md: './images/helpful/go_tile_2__r3t0enbq5lea_large.jpg',
-            lg: './images/helpful/go_tile_2__r3t0enbq5lea_large.jpg'
-          }
+      cards: [{
+        title: 'Entrenamiento de Resistencia',
+        color: 'fire',
+        images: {
+          xs: './images/bombero/resistencia-xs.jpg',
+          sm: './images/bombero/resistencia-sm.jpg',
+          md: './images/bombero/resistencia-md.jpg',
+          lg: './images/bombero/resistencia-lg.jpg'
         }
-      ]
-    }
+      }, {
+        title: 'Simulacros de Rescate',
+        color: 'smoke',
+        images: {
+          xs: './images/bombero/rescate-xs.jpg',
+          sm: './images/bombero/rescate-sm.jpg',
+          md: './images/bombero/rescate-md.jpg',
+          lg: './images/bombero/rescate-lg.jpg'
+        }
+      }, {
+        title: 'Habilidades con Manguera',
+        color: 'fire',
+        images: {
+          xs: './images/bombero/habilidades-xs.jpg',
+          sm: './images/bombero/habilidades-sm.jpg',
+          md: './images/bombero/habilidades-md.jpg',
+          lg: './images/bombero/habilidades-lg.jpg'
+        }
+      }]
+    };
   }
 
-  render () {
+  render() {
     this.shadow.innerHTML =
-    /* html */
-    `<style>
-      *{
-        box-sizing: border-box;
-      }
+      /* html */
+      `
+            <style>
+              * {
+                box-sizing: border-box;
+              }
 
+              h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, button {
+                font-family: "Nunito Sans", serif;
+                margin: 0;
+              }
 
-      h1, h2, h3, h4, h5, h6, p{
-        margin: 0;
-      }
+              img {
+                object-fit: cover;
+                width: 100%;
+              }
 
-      h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, button{
-        font-family: "Nunito Sans", serif;
-        font-optical-sizing: auto;
-      }
+              .cards {
+                align-items: center;
+                background: #330000;
+                border-bottom-left-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 2rem;
+                position: relative;
+              }
 
-      img{
-        object-fit: cover;
-        width: 100%;
-      }
-      
+              @media (min-width: 768px) {
+                .cards { padding: 2rem 10%; }
+              }
 
-      .cards{
-        align-items: center;
-        background: linear-gradient(hsl(240, 33%, 99%), hsl(334, 60%, 83%), hsl(215, 58%, 34%));
-        border-bottom-left-radius: 2rem;
-        border-bottom-right-radius: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
+              @media (min-width: 1280px) {
+                .cards { padding: 2rem 20%; }
+              }
 
-        @media (min-width: 768px) {
-          padding: 2rem 10%;
-        }
+              .cards-info {
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+                padding-bottom: 5rem;
+              }
 
-        @media (min-width: 1280px) {
-          padding: 2rem 20%;
-        }
-      }
+              .cards-title {
+                align-items: center;
+                display: flex;
+                position: relative;
+              }
 
-      .cards-info{
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-        padding-bottom: 5rem;
+              @media (min-width: 1280px) {
+                .cards-title { width: 80%; }
+              }
 
-        @media (min-width: 1024px) {
-          gap: 7rem;
-        }
+              .cards-title-gradient h2 {
+                background: linear-gradient(270deg, #ff6347, #ffdd33);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-size: 5rem;
+                font-weight: 700;
+              }
 
-        @media (min-width: 1280px) {
-          gap: 3rem;
-        }
+              @media (min-width: 768px) {
+                .cards-title-gradient h2 {
+                  font-size: 10rem;
+                  line-height: 11rem;
+                }
+              }
 
-        @media (min-width: 3000px) {
-          gap: 15rem;
-        }
-      }
+              .cards-image {
+                position: absolute;
+                left: 55%;
+                top: 50%;
+                width: 40%;
+                z-index: 10;
+              }
 
-      .cards-title{
-        align-items: center;
-        display: flex;
-        position: relative;
+              @media (min-width: 768px) {
+                .cards-image {
+                  left: 60%;
+                  width: 30%;
+                }
+              }
 
-        @media (min-width: 1280px) {
-          width: 80%;
-        }
-      }
+              @media (min-width: 1024px) {
+                .cards-image {
+                  left: 50%;
+                  width: 30%;
+                }
+              }
 
-      .cards-title-gradient h2{
-        background: linear-gradient(270deg,  hsl(331, 52%, 70%), hsl(219, 50%, 36%));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        font-size: 5rem;
-        font-weight: 700;
-        
-        @media (min-width: 768px) {
-          font-size: 10rem;
-          line-height: 11rem;
-        }
+              @media (min-width: 1280px) {
+                .cards-image {
+                  left: 70%;
+                  top: 30%;
+                  width: 30%;
+                }
+              }
 
-        @media (min-width: 1280px) {
-          font-size: 10rem;
-          line-height: 11rem;
-        }
-      }
+              .cards-description p {
+                color: #f0f0f0;
+                font-size: 1.2rem;
+                line-height: 1.5;
+                font-weight: 400;
+              }
 
-      .cards-image{
-        position: absolute;
-        left: 55%; 
-        top: 50%;
-        width: 40%; 
+              @media (min-width: 768px) {
+                .cards-description p { font-size: 2rem; }
+              }
 
-        @media (min-width: 768px) {
-          left: 60%;
-          width: 30%;
-        }
+              .cards-list {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+              }
 
-        @media (min-width: 1024px) {
-          left: 50%;
-          width: 30%;
-        }
+              .card {
+                border-radius: 2rem;
+                display: grid;
+                gap: 2rem;
+                grid-template-columns: 1fr;
+                padding: 2.5rem 2.5rem 0 2.5rem;
+                position: relative;
+                overflow: hidden;
+              }
 
-        @media (min-width: 1280px) {
-          left: 70%;
-          top: 30%;
-          width: 30%;
-        }
+              @media (min-width: 1024px) {
+                .card { grid-template-columns: 1fr 1fr; }
+              }
 
-        @media (min-width: 3000px) {
-          left: 60%;
-          top: 30%;
-          width: 20%;
-        }
-      }
+              .card.fire {
+                background: linear-gradient(135deg, #ff3300, #ff6347);
+              }
 
-      .cards-description p{
-        color: hsl(240, 2%, 55%);
-        font-size: 1.2rem;
+              .card.smoke {
+                background: linear-gradient(135deg, #444444, #222222);
+              }
 
-        @media (min-width: 768px) {
-          font-size: 2rem;
-        }
-      }
+              .card-title {
+                display: flex;
+                align-items: center;
+              }
 
-      .cards-list{
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
+              .card-title h4 {
+                font-size: 2rem;
+                font-weight: 800;
+                line-height: 2.5rem;
+                color: #ffdd33;
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+              }
 
-      .card{
-        border-radius: 2rem;
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: 1fr;
-        padding: 2.5rem 2.5rem 0 2.5rem;
+              @media (min-width: 768px) {
+                .card-title h4 {
+                  font-size: 3rem;
+                  line-height: 3.5rem;
+                }
+              }
 
-        @media (min-width: 1024px) {
-          grid-template-columns: 1fr 1fr;
-        }
+              .card-image {
+                display: flex;
+                align-items: flex-end;
+              }
 
-        @media (min-width: 1280px) {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
+              .card-image img {
+                display: block;
+                border-radius: 1rem 1rem 0 0;
+              }
+            </style>
 
-      .card.white{
-        background: hsl(0, 0%, 100%);
-      }
+            <section class="cards">
+              <div class="cards-info">
+                <div class="cards-title">
+                  <div class="cards-title-gradient">
+                    <h2>${this.data.title}</h2>
+                  </div>
+                  <div class="cards-image">
+                    <picture>
+                      <source srcset="${this.data.images.lg}" media="(min-width: 1920px)">
+                      <source srcset="${this.data.images.md}" media="(min-width: 1024px)">
+                      <source srcset="${this.data.images.sm}" media="(min-width: 768px)">
+                      <source srcset="${this.data.images.xs}" media="(min-width: 480px)">
+                      <img src="${this.data.images.xs}" alt="Imagen de bombero entrenando">
+                    </picture>
+                  </div>
+                </div>
+                <div class="cards-description">
+                  <p>${this.data.description}</p>
+                </div>
+              </div>
 
-      .card.black{
-        background: linear-gradient(hsl(209, 54%, 22%), hsl(240, 47%, 9%));
-        padding: 2.5rem;
-      }
+              <div class="cards-list"></div>
+            </section>
+        `;
 
-      .card-title h4{
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 2rem;
-
-        @media (min-width: 768px) {
-          font-size: 3rem;
-          line-height: 3rem;
-        }
-      }
-
-      .card.white .card-title h4 {
-        -webkit-background-clip: text;
-        background: linear-gradient(270deg,  hsl(331, 52%, 70%), hsl(219, 50%, 36%));
-        background-clip: text;
-        color: transparent;
-      }
-
-      .card.black .card-title h4{
-        color: hsl(0, 0%, 100%);
-      }
-
-      .card.black .card-title h4 {
-        -webkit-background-clip: text;
-        background: linear-gradient(270deg,  hsl(334, 98%, 82%), hsl(312, 53%, 68%));
-        background-clip: text;
-        color: transparent;
-      }
-
-      .card-image img{
-        display: block;
-      }
-     </style>
-
-          
-      <section class="cards">
-      <div class="cards-info">
-        <div class="cards-title">
-          <div class="cards-title-gradient">
-            <h2>${this.data.title}</h2>
-          </div>
-          <div class="cards-image">
-            <picture>
-              <source srcset="${this.data.images.lg}" media="(min-width: 1920px)">
-              <source srcset="${this.data.images.md}" media="(min-width: 1024px)">
-              <source srcset="${this.data.images.sm}" media="(min-width: 768px)">
-              <source srcset="${this.data.images.xs}" media="(min-width: 480px)">
-              <img src="${this.data.images.xs}" alt="Imagen de prueba de Picsum">
-            </picture>
-          </div>
-        </div>
-        <div class="cards-description">
-          <p>${this.data.description}</p>
-        </div>
-      </div>
-
-
-      <div class="cards-list"></div>
-
-
-    </section>
-    
-    `
-
+    const cardListContainer = this.shadow.querySelector('.cards-list');
     this.data.cards.forEach(element => {
-      const cardListContainer = this.shadow.querySelector('.cards-list')
-      const cardContainer = document.createElement('div')
-      cardContainer.classList.add('card', element.color)
-      cardListContainer.appendChild(cardContainer)
+      const cardContainer = document.createElement('div');
+      cardContainer.classList.add('card', element.color);
+      cardListContainer.appendChild(cardContainer);
 
-      const cardTitleContent = document.createElement('div')
-      cardTitleContent.classList.add('card-title')
-      cardContainer.appendChild(cardTitleContent)
+      const cardTitleContent = document.createElement('div');
+      cardTitleContent.classList.add('card-title');
+      cardContainer.appendChild(cardTitleContent);
 
-      const cardTitle = document.createElement('h4')
-      cardTitle.textContent = element.title
-      cardTitleContent.appendChild(cardTitle)
+      const cardTitle = document.createElement('h4');
+      cardTitle.textContent = element.title;
+      cardTitleContent.appendChild(cardTitle);
 
-      const cardImageContent = document.createElement('div')
-      cardImageContent.classList.add('card-image')
-      cardContainer.appendChild(cardImageContent)
+      const cardImageContent = document.createElement('div');
+      cardImageContent.classList.add('card-image');
+      cardContainer.appendChild(cardImageContent);
 
-      const picture = document.createElement('picture')
-      cardImageContent.appendChild(picture)
+      const picture = document.createElement('picture');
+      cardImageContent.appendChild(picture);
 
-      const sourceLg = document.createElement('source')
-      sourceLg.srcset = element.images.lg
-      sourceLg.media = '(min-width: 1920px)'
-      picture.appendChild(sourceLg)
+      const sourceLg = document.createElement('source');
+      sourceLg.srcset = element.images.lg;
+      sourceLg.media = '(min-width: 1920px)';
+      picture.appendChild(sourceLg);
 
-      const sourceMd = document.createElement('source')
-      sourceMd.srcset = element.images.md
-      sourceMd.media = '(min-width: 1024px)'
-      picture.appendChild(sourceMd)
+      const sourceMd = document.createElement('source');
+      sourceMd.srcset = element.images.md;
+      sourceMd.media = '(min-width: 1024px)';
+      picture.appendChild(sourceMd);
 
-      const sourceSm = document.createElement('source')
-      sourceSm.srcset = element.images.sm
-      sourceSm.media = '(min-width: 768px)'
-      picture.appendChild(sourceSm)
+      const sourceSm = document.createElement('source');
+      sourceSm.srcset = element.images.sm;
+      sourceSm.media = '(min-width: 768px)';
+      picture.appendChild(sourceSm);
 
-      const sourceXs = document.createElement('source')
-      sourceXs.srcset = element.images.xs
-      sourceXs.media = '(min-width: 480px)'
-      picture.appendChild(sourceXs)
+      const sourceXs = document.createElement('source');
+      sourceXs.srcset = element.images.xs;
+      sourceXs.media = '(min-width: 480px)';
+      picture.appendChild(sourceXs);
 
-      const img = document.createElement('img')
-      img.src = element.images.xs
-      img.alt = 'Imagen de prueba Picsum'
-      picture.appendChild(img)
-    })
+      const img = document.createElement('img');
+      img.src = element.images.xs;
+      img.alt = 'Imagen de bombero en entrenamiento';
+      picture.appendChild(img);
+    });
   }
 }
 
-customElements.define('cards-component', Cards)
+customElements.define('cards-component', Cards);

@@ -31,6 +31,8 @@ class PageComponent extends HTMLElement {
       '/admin/bots':'bots.html',
       '/admin/promotores':'promoters.html',
       '/admin/faqs':'faqs.html',
+      '/admin/asistentes':'assistants.html',
+      '/admin/headers':'headers.html',
       '/admin/lenguajes':'/admin/languages'
 
     }
