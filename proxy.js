@@ -7,7 +7,7 @@ const options = {
   // 
   target: 'http://127.0.0.1:8080', 
   //nombre del dominio. se suele poner dev-nombreDominio
-  cookieDomainRewrite: 'dev-youthing.com', 
+  cookieDomainRewrite: 'dev-bot.com', 
   changeOrigin: true,
   logLevel: 'debug',
   onProxyReq: function(proxyReq, req, res) {

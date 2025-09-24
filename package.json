@@ -1,8 +1,11 @@
 {
     "dependencies": {
-        "express": "^5",
+        "dotenv": "^17.2.2",
+        "express": "^5.1.0",
         "http-proxy-middleware": "^2.0.6",
-        "jszip": "^3.10.1"
+        "jszip": "^3.10.1",
+        "mongoose": "^8.18.2",
+        "openai": "^5.22.1"
     },
     "scripts": {
         "dev": "npm-run-all --parallel dev:front-admin dev:front-customer proxy",

@@ -48,7 +48,7 @@ class ChatBoxComponent extends HTMLElement {
   
       this.addMessage('user', text)
       input.value = ''
-      this.fakeBotReply()
+      this.sendToAPI()
     }
   
     addMessage(type, text) {
@@ -75,18 +75,24 @@ class ChatBoxComponent extends HTMLElement {
       messagesDiv.scrollTop = messagesDiv.scrollHeight
     }
   
-    fakeBotReply() {
-      setTimeout(() => {s
-        const responses = [
-          "🔥 ¡Aquí falta pes!",
-          "💪 Los cascoooos",
-          "🚒 Me falta cafe",
-          "🙂 me encanta correr"
-        ]
-        const reply = responses[Math.floor(Math.random() * responses.length)]
-        this.addMessage('bot', reply)
-      }, 1000)
+   async sendToAPI(message) {
+    try {
+      const res = await fetch('http://dev-bot.com/api/customers/chats', { // cambia la URL según tu API
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message })
+      })
+      const data = await res.json()
+      if (data.reply) {
+        this.addMessage('bot', data.reply)
+      } else {
+        this.addMessage('bot', '🤖 No hay respuesta')
+      }
+    } catch (err) {
+      console.error(err)
+      this.addMessage('bot', '⚠️ Error en la conexión')
     }
+}
   
     render() {
       this.shadow.innerHTML = /* html */`
