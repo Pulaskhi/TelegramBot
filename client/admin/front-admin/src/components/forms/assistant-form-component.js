@@ -77,26 +77,26 @@ class AssistantForm extends HTMLElement {
           display: flex;
           justify-content: space-between; /* Alinea los elementos a los extremos */
           align-items: center;
-          background: hsl(198, 100%, 85%);
+          background: linear-gradient(135deg, hsl(60, 100%, 85%), hsl(30, 90%, 75%));
           border-radius: 5px;
-  
+          box-shadow: 0 2px 10px rgba(255, 140, 0, 0.3);
         }
   
         .form__header-box-filter.active{
-          background: hsl(198, 74.20%, 6.10%);
+          background: linear-gradient(135deg, hsl(45, 100%, 50%), hsl(25, 100%, 40%));
           padding: 5px 10px;
           color: white; /* Asegura que el texto sea visible */
           height: 30px;
           border-radius: 5px 0 0 5px;
-  
+          box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
         }
+        
         .form__header-box-filter{
-          background: hsl(200, 77%, 42%);
+          background: linear-gradient(135deg, hsl(30, 100%, 55%), hsl(0, 85%, 50%));
           padding: 5px 10px;
           color: white; /* Asegura que el texto sea visible */
           height: 30px;
           border-radius: 5px 0 0 5px;
-  
         }
   
         .form__header-box-filter button {
@@ -113,13 +113,18 @@ class AssistantForm extends HTMLElement {
         .table__header__icon svg,
         .edit-icon svg,
         .delete-icon svg,
-        .clean-icon,
-        .save-icon {
+        .clean-icon svg,
+        .save-icon svg {
           width: 30px;
           height: 30px;
-          fill: black;
+          fill: hsl(0, 85%, 45%);
+          transition: fill 0.3s ease;
         }
-  
+
+        .clean-icon:hover svg,
+        .save-icon:hover svg {
+          fill: hsl(25, 100%, 40%);
+        }
   
         /* Ajustar cada elemento del formulario */
         .form-element {
@@ -129,15 +134,30 @@ class AssistantForm extends HTMLElement {
           gap: 10px 0px;
           margin: 10px 0;
         }
+
+        .form-title span {
+          color: hsl(0, 0%, 95%);
+          font-weight: 600;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
     
         .form-element-input input {
           width: 100%;
-          padding: 10px;
-          border-radius: 5px;
+          padding: 12px;
+          border-radius: 8px;
           box-sizing: border-box;
-          border: none;
+          border: 2px solid hsl(30, 80%, 60%);
+          background: rgba(255, 255, 255, 0.95);
+          color: hsl(0, 0%, 20%);
+          font-weight: 500;
+          transition: all 0.3s ease;
+        }
+
+        .form-element-input input:focus {
+          outline: none;
+          border-color: hsl(14, 100%, 50%);
+          box-shadow: 0 0 10px rgba(255, 100, 0, 0.4);
           background: white;
-          color: black;
         }
   
         .tabs{
@@ -146,24 +166,42 @@ class AssistantForm extends HTMLElement {
         }
 
         .tab{
-          background: hsl(200, 77%, 42%);
+          background: linear-gradient(135deg, hsl(30, 100%, 55%), hsl(0, 85%, 50%));
           cursor: pointer;
-          padding: 5px 10px;
+          padding: 8px 15px;
           color: white; 
-          height: 30px;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          transition: all 0.3s ease;
+          border: 1px solid hsl(0, 85%, 40%);
         }
 
         .tab:first-child{
-          border-radius: 5px 0 0 5px;
+          border-radius: 8px 0 0 8px;
+        }
+
+        .tab:last-child{
+          border-radius: 0 8px 8px 0;
         }
 
         .tab button{
-          color: white; 
+          color: white;
+          font-weight: 600;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .tab:hover{
+          background: linear-gradient(135deg, hsl(35, 100%, 60%), hsl(5, 90%, 55%));
+          transform: translateY(-1px);
+          box-shadow: 0 3px 10px rgba(255, 100, 0, 0.4);
         }
 
         .tab.active{
-          background: hsl(198, 74.20%, 6.10%);
-          color: white; 
+          background: linear-gradient(135deg, hsl(45, 100%, 50%), hsl(25, 100%, 40%));
+          color: white;
+          box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+          transform: translateY(1px);
         }
 
         .tab-content{
@@ -174,31 +212,65 @@ class AssistantForm extends HTMLElement {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
           gap:1rem;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          border-radius: 10px;
+          margin-top: 15px;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 140, 0, 0.3);
         }
         
         .validation-errors.active{
-          background: hsl(0, 96.80%, 75.50%);
-          border-radius: 5px;
+          background: linear-gradient(135deg, hsl(0, 85%, 75%), hsl(0, 100%, 65%));
+          border-radius: 8px;
           display: block;
           margin: 1rem 0;
           padding: 1rem;
           position: relative;
+          box-shadow: 0 4px 15px rgba(220, 20, 60, 0.4);
+          border: 2px solid hsl(0, 85%, 60%);
         }
 
         .validation-errors{
           display: none;
         }
 
+        .validation-errors ul li {
+          color: white;
+          font-weight: 600;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+          margin: 5px 0;
+        }
+
         .close-validation-errors{
           position: absolute;
           right: 0.5rem;
           top: 0.5rem;
+          transition: transform 0.2s ease;
+        }
+
+        .close-validation-errors:hover {
+          transform: scale(1.1);
         }
 
         .close-validation-errors svg{
-          fill: hsl(100, 100%, 100%);
+          fill: white;
           height: 2rem;
           width: 2rem;
+          filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+        }
+
+        .form {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 15px;
+          padding: 20px;
+          backdrop-filter: blur(15px);
+          border: 1px solid rgba(255, 140, 0, 0.2);
+          box-shadow: 0 8px 25px rgba(255, 100, 0, 0.2);
+        }
+
+        .form__body {
+          margin-top: 15px;
         }
      
       </style>
@@ -424,7 +496,7 @@ class AssistantForm extends HTMLElement {
     }
 
     hideValidationErrors(){
-      this.shadow.querySelector('.validation-errors').remove('active')
+      this.shadow.querySelector('.validation-errors').classList.remove('active')
     }
 	
 		resetForm () {
@@ -439,4 +511,3 @@ class AssistantForm extends HTMLElement {
   }
   
   customElements.define('assistant-form-component', AssistantForm)
-  

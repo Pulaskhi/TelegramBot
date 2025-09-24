@@ -3,10 +3,15 @@
 }
 
 body {
+  /* Fondo anterior azul (comentado) */
+  /* background: radial-gradient(circle, hsl(198, 100%, 76%), hsl(200, 77%, 42%)); */
+  
+  /* Fondo anterior púrpura (comentado) */
   /* background: radial-gradient(circle, hsl(229, 66%, 60%) 0%, hsl(229, 66%, 40%) 100%); */
-  background: radial-gradient(circle, hsl(198, 100%, 76%), hsl(200, 77%, 42%));
+  
+  /* Nuevo fondo tema bomberos - gradiente rojo-naranja */
+  background: radial-gradient(circle, hsl(45, 100%, 70%), hsl(25, 100%, 55%), hsl(0, 85%, 50%));
+  
   color: white;
   margin: 0;
 }
-
-
