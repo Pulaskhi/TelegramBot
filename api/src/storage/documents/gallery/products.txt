@@ -1,0 +1,3761 @@
+https://www.quely.es/tienda
+
+1000000 token input
+29000 output
+90 centimos coste consulta
+
+{
+  "productos": [
+    {
+      "seo": {
+        "titulo_seo": "Palitos galleta María",
+        "descripcion_seo": "Crujientes Palitos de galleta María.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "50 g / ud.",
+        "categoria": "Dulce",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Crujientes Palitos de galleta María."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0.69,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "50 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 22 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 15.17,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Palitos galleta María",
+        "url_producto": "https://www.quely.es/palitos-galleta-maria-50-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, azúcar, aceite refinado de girasol alto oleico, dextrosa, gasificantes: bicarbonato sódico y bicarbonato amónico, sal marina, miel, emulgente: lecitina y aroma vainilla. Puede contener trazas de sésamo, leche, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 1812 kJ / 429 kcal; Grasas 9,5 g (sat. 0,8 g, monoinsat. 7,3 g, poliinsat. 1,0 g); Hidratos 77 g (azúcares 22 g); Fibra 1,9 g; Proteínas 8,0 g; Sal 0,95 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Merienda con crema de cacao",
+        "descripcion_seo": "Picos y crema de cacao con avellanas.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "63 g / ud.",
+        "categoria": "Infantil",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Picos y crema de cacao con avellanas."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.19,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "63 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 21 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 24.99,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Merienda con crema de cacao",
+        "url_producto": "https://www.quely.es/quely-merienda-con-crema-de-cacao-63-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Picos: harina de trigo, aceite refinado de girasol alto oleico, sal marina y levadura. Puede contener trazas de sésamo, leche, soja y mostaza. Crema de cacao con avellanas: azúcar, grasa vegetal (palma), aceite vegetal (girasol), cacao desgrasado en polvo (8%), leche desnatada en polvo, pasta de avellana (7%), emulgentes (lecitina de soja, triestearato de sorbitano, mono- y diglicéridos de ácidos grasos), aroma, antioxidantes (palmitato de ascorbilo, extracto rico en tocoferoles)."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 2036 kJ / 486 kcal; Grasas 22 g (sat. 4,8 g, monoinsat. 12 g, poliinsat. 5,5 g); Hidratos 63 g (azúcares 18 g); Fibra 2,9 g; Proteínas 7,5 g; Sal 1,6 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Merienda con crema de queso",
+        "descripcion_seo": "Picos y crema de queso.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "63 g / ud.",
+        "categoria": "Infantil",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Picos y crema de queso."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.19,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "63 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 21 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 24.99,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Merienda con crema de queso",
+        "url_producto": "https://www.quely.es/quely-merienda-con-crema-de-queso-63-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Picos: harina de trigo, aceite refinado de girasol alto oleico, sal marina, levadura. Puede contener trazas de sésamo, leche, soja y mostaza. Queso fundido con queso Gouda: queso fresco (53.6%), queso gouda (18.7%), mantequilla, agua, proteína de leche, sales de fundido, estabilizantes, lactosa, queso en polvo, aroma, potenciadores de sabor y sal."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 1694 kJ / 405 kcal; Grasas 21 g (sat. 9,6 g, monoinsat. 9,7 g, poliinsat. 2,1 g); Hidratos 44 g (azúcares 3,0 g); Fibra 2,2 g; Proteínas 8,9 g; Sal 2,4 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelis 200g",
+        "descripcion_seo": "Deliciosas y crujientes galletas con aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "200g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Deliciosas y crujientes galletas con aceite de oliva, siguiendo receta tradicional."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.5,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "200g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 12 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 18.03,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelis",
+        "url_producto": "https://www.quely.es/quelis-200g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, aceite refinado de girasol alto oleico, levadura, aceite de oliva y sal marina. Puede contener trazas de sésamo, leche, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 2012 kJ / 480 kcal; Grasas 20 g (sat. 2,1 g, monoinsat. 15 g, poliinsat. 2,4 g); Hidratos 65 g (azúcares 3,8 g); Fibra 2,0 g; Proteínas 8,9 g; Sal 1,7 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelis 400g",
+        "descripcion_seo": "Deliciosas y crujientes galletas con aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "400g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Deliciosas y crujientes galletas con aceite de oliva, siguiendo receta tradicional."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.88,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "400g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 12 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 22.58,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelis",
+        "url_producto": "https://www.quely.es/quelis-400g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, aceite refinado de girasol alto oleico, levadura, aceite de oliva, sal marina. Puede contener trazas de sésamo, leche, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 2012 kJ / 480 kcal; Grasas 20 g (sat. 2,1 g, monoinsat. 15 g, poliinsat. 2,4 g); Hidratos 65 g (azúcares 3,8 g); Fibra 2,0 g; Proteínas 8,9 g; Sal 1,7 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "2 Quelis",
+        "descripcion_seo": "Pack 2.100 g de Quelis.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "2.100 g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 17.25,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "2.100 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "2 Quelis",
+        "url_producto": "https://www.quely.es/quelis-2-uds"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely picada 225g",
+        "descripcion_seo": "Galleta picada para rebozados más crujientes y sabrosos.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "225g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Galleta picada con la que conseguirás que tus rebozados sean más crujientes y sabrosos."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.04,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "225g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 18 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 18.72,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely picada",
+        "url_producto": "https://www.quely.es/quely-picada-225g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, aceite refinado de girasol alto oleico, harina integral de trigo, levadura, sal marina, aceite de oliva, sésamo y pipas de girasol. Puede contener trazas de leche, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 1860 kJ / 443 kcal; Grasas 15 g (sat. 1,4 g, monoinsat. 11 g, poliinsat. 2,1 g); Hidratos 65 g (azúcares 2,7 g); Fibra 3,8 g; Proteínas 10 g; Sal 1,7 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely picada 900g",
+        "descripcion_seo": "Galleta picada para rebozados.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "900g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Galleta picada con la que conseguirás que tus rebozados sean más crujientes y sabrosos."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 3.31,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "900g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 10 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 33.09,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely picada",
+        "url_producto": "https://www.quely.es/quely-picada-900g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, aceite refinado de girasol alto oleico, harina integral de trigo, levadura, sal marina, aceite de oliva, sésamo y pipas de girasol. Puede contener trazas de leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely picada ajo y perejil 225g",
+        "descripcion_seo": "Galleta picada con ajo y perejil para rebozados sabrosos.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "225g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Galleta picada con ajo y perejil para rebozados."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.42,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "225g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 18 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 25.53,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely picada ajo y perejil",
+        "url_producto": "https://www.quely.es/quely-picada-ajo-y-perejil-225g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, aceite refinado de girasol alto oleico, harina integral de trigo, levadura, ajo en polvo (sulfitos) (3,5%), perejil en polvo (2,7%), sal marina, aceite de oliva, sésamo y pipas de girasol. Puede contener trazas de leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelis integrales 400g",
+        "descripcion_seo": "Galletas integrales con aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "400g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Deliciosas y crujientes galletas integrales con aceite de oliva."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.88,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "400g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 12 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 22.58,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelis integrales",
+        "url_producto": "https://www.quely.es/quelis-integrales-400g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, harina integral de trigo (19%), aceite refinado de girasol alto oleico, levadura, aceite de oliva y sal marina. Puede contener trazas de sésamo, leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "2 Quelis integrales",
+        "descripcion_seo": "Pack 2.100 g de Quelis integrales.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "2.100 g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Deliciosas y crujientes galletas integrales con aceite de oliva. (Aprox. 140 paquetes por caja)."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 17.25,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "2.100 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "2 Quelis integrales",
+        "url_producto": "https://www.quely.es/quelis-integrales-2-unidades"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, harina integral de trigo (19%), aceite refinado de girasol alto oleico, levadura, aceite de oliva y sal marina. Puede contener trazas de sésamo, leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas 200 g",
+        "descripcion_seo": "Galletas típicas crujientes.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "200 g",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.5,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "200 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas",
+        "url_producto": "https://www.quely.es/quelitas-200-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas 400 g",
+        "descripcion_seo": "Galletas típicas crujientes.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "400 g",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.08,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "400 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas",
+        "url_producto": "https://www.quely.es/quelitas-400-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas integrales 200 g",
+        "descripcion_seo": "Galletas integrales con aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "200 g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Galletas integrales con aceite de oliva."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.5,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "200 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 12 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 18.03,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas integrales",
+        "url_producto": "https://www.quely.es/quelitas-integrales-200-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, harina integral de trigo (19%), aceite refinado de girasol alto oleico, levadura, aceite de oliva y sal marina. Puede contener trazas de sésamo, leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas integrales 400 g",
+        "descripcion_seo": "Galletas integrales con aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "400 g",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.08,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "400 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas integrales",
+        "url_producto": "https://www.quely.es/quelitas-integrales-400-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Picos aceite de oliva 225 g",
+        "descripcion_seo": "Picos con aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "225 g",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.32,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "225 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Picos aceite de oliva",
+        "url_producto": "https://www.quely.es/picos-aceite-de-oliva-225-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Picos 225 g",
+        "descripcion_seo": "Picos tradicionales.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "225 g",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.23,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "225 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Picos",
+        "url_producto": "https://www.quely.es/picos-225-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Picos integrales 225 g",
+        "descripcion_seo": "Picos integrales.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "225 g",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.23,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "225 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Picos integrales",
+        "url_producto": "https://www.quely.es/picos-integrales-225-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Picos integral sésamo 225 g",
+        "descripcion_seo": "Picos integrales con sésamo.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "225 g / ud.",
+        "categoria": "Tradicional",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Picos integrales con semillas de sésamo."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.23,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "225 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 16 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 19.67,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Picos integral sésamo",
+        "url_producto": "https://www.quely.es/picos-integral-sesamo-225-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, harina integral de trigo (19%), aceite refinado de girasol alto oleico, sésamo (3,8%), levadura y sal marina. Puede contener trazas de leche, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 1925 kJ / 458 kcal; Grasas 17 g (sat. 1,7 g, monoinsat. 12 g, poliinsat. 2,6 g); Hidratos 63 g (azúcares 1,5 g); Fibra 4,7 g; Proteínas 11 g; Sal 2,2 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Rustic 350 g",
+        "descripcion_seo": "Galletas de Inca con extra de aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "350 g / ud.",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Las tradicionales y auténticas Galletas de Inca elaboradas con un extra de aceite de oliva."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.44,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "350 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 12 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 29.27,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Rustic",
+        "url_producto": "https://www.quely.es/quely-rustic-350-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, aceite refinado de girasol alto oleico, levadura, aceite de oliva (4,5%) y sal marina. Puede contener trazas de sésamo, leche, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 2013 kJ / 480 kcal; Grasas 20 g (sat. 2,3 g, monoinsat. 13 g, poliinsat. 4,4 g); Hidratos 64 g (azúcares 2,1 g); Fibra 2,3 g; Proteínas 9,8 g; Sal 1,7 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Rustic integral 350 g",
+        "descripcion_seo": "Galletas de Inca integrales con extra de aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "350 g / ud.",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Las tradicionales y auténticas Galletas de Inca integrales elaboradas con un extra de aceite de oliva."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.44,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "350 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 12 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 29.27,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Rustic integral",
+        "url_producto": "https://www.quely.es/quely-rustic-integral-350-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, harina integral de trigo (19%), aceite refinado de girasol alto oleico, aceite de oliva (4,5%), levadura y sal marina. Puede contener trazas de sésamo, leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas Rustic 350 g",
+        "descripcion_seo": "Quelitas Rustic.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "350 g",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.44,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "350 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas Rustic",
+        "url_producto": "https://www.quely.es/quelitas-rustic-350-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas Rustic integral 350 g",
+        "descripcion_seo": "Quelitas Rustic integrales.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "350 g",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.44,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "350 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas Rustic integral",
+        "url_producto": "https://www.quely.es/quelitas-rustic-integral-350-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely tapas 200 g",
+        "descripcion_seo": "Quely tapas.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "200 g",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.37,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "200 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely tapas",
+        "url_producto": "https://www.quely.es/quely-tapas-200-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Guixes 250 g",
+        "descripcion_seo": "Guixes crujientes salados.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "250 g",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.45,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "250 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Guixes",
+        "url_producto": "https://www.quely.es/guixes-250-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Guixes integrales 250 g",
+        "descripcion_seo": "Guixes salados con harina integral.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "250 g / ud.",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Galletas saladas elaboradas de forma artesanal con harina integral de trigo."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.45,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "250 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 10 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 24.5,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Guixes integrales",
+        "url_producto": "https://www.quely.es/guixes-integrales-250-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina integral de trigo (38%), harina de trigo, aceite refinado de girasol alto oleico, aceite de oliva, levadura y sal marina. Puede contener trazas de sésamo, leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Guixetes chía 250 g",
+        "descripcion_seo": "Guixetes con chía.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "250 g",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.45,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "250 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Guixetes chía",
+        "url_producto": "https://www.quely.es/guixetes-chia-250-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Guixetes pipas 250 g",
+        "descripcion_seo": "Guixetes con pipas.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "250 g",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.45,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "250 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Guixetes pipas",
+        "url_producto": "https://www.quely.es/guixetes-pipas-250-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Guixetes sésamo 250 g",
+        "descripcion_seo": "Guixetes con sésamo.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "250 g",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.45,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "250 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Guixetes sésamo",
+        "url_producto": "https://www.quely.es/guixetes-sesamo-250-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely tapas integrales 200 g",
+        "descripcion_seo": "Quely tapas integrales.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "200 g",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.37,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "200 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely tapas integrales",
+        "url_producto": "https://www.quely.es/quely-tapas-integrales-200-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelis integrales sin sal añadida 350 g",
+        "descripcion_seo": "Galletas integrales sin sal añadida.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "350 g",
+        "categoria": "Selección",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.22,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "350 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelis integrales sin sal añadida",
+        "url_producto": "https://www.quely.es/quelis-integrales-sin-sal-anadida-350-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Palitos aceite de oliva 50 g",
+        "descripcion_seo": "Palitos con aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "50 g",
+        "categoria": "Palitos",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0.65,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "50 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Palitos aceite de oliva",
+        "url_producto": "https://www.quely.es/palitos-aceite-de-oliva-50-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Palitos integrales y aceite de oliva 50 g",
+        "descripcion_seo": "Palitos integrales con aceite de oliva.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "50 g",
+        "categoria": "Palitos",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0.65,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "50 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Palitos integrales y aceite de oliva",
+        "url_producto": "https://www.quely.es/palitos-integrales-y-aceite-de-oliva-50-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Palitos mediterráneos 50 g",
+        "descripcion_seo": "Palitos sabor mediterráneo (tomate, ajo y orégano).",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "50 g / ud.",
+        "categoria": "Palitos",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Palitos con tomate, ajo y orégano."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0.65,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "50 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 22 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 14.35,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Palitos mediterráneos",
+        "url_producto": "https://www.quely.es/palitos-mediterraneos-50-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, aceite refinado de girasol alto oleico, aceite de oliva (2,4%), levadura, sal marina, tomate en polvo (0,8%), ajo en polvo (0,6%) y orégano en polvo (0,4%). Puede contener trazas de sésamo, leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Palitos aceitunas 50 g",
+        "descripcion_seo": "Palitos con aceitunas.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "50 g",
+        "categoria": "Palitos",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0.65,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "50 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Palitos aceitunas",
+        "url_producto": "https://www.quely.es/palitos-aceitunas-50-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Palitos pipas 50 g",
+        "descripcion_seo": "Palitos con pipas de girasol.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "50 g / ud.",
+        "categoria": "Palitos",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Palitos con pipas de girasol."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0.65,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "50 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 22 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 14.35,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Palitos pipas",
+        "url_producto": "https://www.quely.es/palitos-pipas-50-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, pipas de girasol (8%), aceite refinado de girasol alto oleico, levadura, sal marina, aceite de oliva (0,7%) y fibra de avena. Puede contener trazas de sésamo, leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Palitos chía 50 g",
+        "descripcion_seo": "Palitos con chía.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "50 g",
+        "categoria": "Palitos",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0.65,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "50 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Palitos chía",
+        "url_producto": "https://www.quely.es/palitos-chia-50-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Palitos queso 50 g",
+        "descripcion_seo": "Palitos sabor queso.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "50 g",
+        "categoria": "Palitos",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0.65,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "50 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Palitos queso",
+        "url_producto": "https://www.quely.es/palitos-queso-50-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas Snacks pipas 150 g",
+        "descripcion_seo": "Quelitas Snacks sabor pipas.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "150 g",
+        "categoria": "Snacks",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.23,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "150 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas Snacks pipas",
+        "url_producto": "https://www.quely.es/quelitas-snacks-pipas-150-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas Snacks aceitunas 150 g",
+        "descripcion_seo": "Quelitas Snacks sabor aceitunas.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "150 g",
+        "categoria": "Snacks",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.23,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "150 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas Snacks aceitunas",
+        "url_producto": "https://www.quely.es/quelitas-snacks-aceitunas-150-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas Snacks Mediterráneas 150 g",
+        "descripcion_seo": "Quelitas Snacks sabor Mediterráneo (tomate, ajo, orégano).",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "150 g / ud.",
+        "categoria": "Snacks",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Crujientes Quelitas sabor Mediterráneo, con tomate, ajo y orégano."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.23,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "150 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 12 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 14.75,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas Snacks Mediterráneas",
+        "url_producto": "https://www.quely.es/quelitas-snacks-mediterraneas-150-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, aceite refinado de girasol alto oleico, levadura, sal marina, tomate en polvo (1,2%), aceite de oliva, ajo en polvo (0,7%), orégano en polvo (0,4%). Puede contener trazas de sésamo, leche, soja y mostaza."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitas Snacks queso 150 g",
+        "descripcion_seo": "Quelitas Snacks sabor queso.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "150 g",
+        "categoria": "Snacks",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.23,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "150 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitas Snacks queso",
+        "url_producto": "https://www.quely.es/quelitas-snacks-queso-150-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Merienda de chocolate con leche 75 g",
+        "descripcion_seo": "Merienda con chocolate con leche.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "75 g",
+        "categoria": "Infantil",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.19,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "75 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Merienda de chocolate con leche",
+        "url_producto": "https://www.quely.es/quely-merienda-de-chocolate-con-leche-75-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Merienda de chocolate blanco 75 g",
+        "descripcion_seo": "Merienda con chocolate blanco.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "75 g",
+        "categoria": "Infantil",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.19,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "75 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Merienda de chocolate blanco",
+        "url_producto": "https://www.quely.es/quely-merienda-de-chocolate-blanco-75-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Merienda fuet 68 g",
+        "descripcion_seo": "Merienda con fuet.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "68 g",
+        "categoria": "Infantil",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.29,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "68 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Merienda fuet",
+        "url_producto": "https://www.quely.es/quely-merienda-fuet-68-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Merienda XL fuet 90 g",
+        "descripcion_seo": "Merienda XL con fuet.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "90 g",
+        "categoria": "Infantil",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.09,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "90 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Merienda XL fuet",
+        "url_producto": "https://www.quely.es/quely-merienda-xl-fuet-90-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitos chocolate con leche 70 g",
+        "descripcion_seo": "Palitos recubiertos de chocolate con leche.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "70 g",
+        "categoria": "",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.45,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "70 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitos chocolate con leche",
+        "url_producto": "https://www.quely.es/quelitos-chocolate-con-leche"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quelitos chocolate blanco 70 g",
+        "descripcion_seo": "Palitos recubiertos de chocolate blanco.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "70 g",
+        "categoria": "",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.45,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "70 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quelitos chocolate blanco",
+        "url_producto": "https://www.quely.es/quelitos-chocolate-blanco-70-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "QuelyBon 75 g",
+        "descripcion_seo": "QuelyBon.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "75 g",
+        "categoria": "",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.5,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "75 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "QuelyBon",
+        "url_producto": "https://www.quely.es/quelybon-75-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely María 450 g",
+        "descripcion_seo": "Galletas María elaboradas con los mejores ingredientes.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "450 g / ud.",
+        "categoria": "Dulce",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Galletas María elaboradas con los mejores ingredientes."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "450 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "bajo_pedido",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "pendiente",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely María",
+        "url_producto": "https://www.quely.es/quely-maria-450g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, azúcar, aceite refinado de girasol alto oleico, dextrosa, gasificantes: bicarbonato sódico y bicarbonato amónico, sal marina, miel, emulgente: lecitina de girasol y aroma vainilla. Puede contener trazas de sésamo, leche, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 1812 kJ / 429 kcal; Grasas 9,5 g (sat. 0,8 g, monoinsat. 7,3 g, poliinsat. 1,0 g); Hidratos 77 g (azúcares 22 g); Fibra 1,9 g; Proteínas 8,0 g; Sal 0,95 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely María Integral 450 g",
+        "descripcion_seo": "Galletas María integrales.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "450 g",
+        "categoria": "",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "450 g",
+        "sku": "",
+        "ean": "",
+        "stock": "bajo_pedido",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "pendiente",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely María Integral",
+        "url_producto": "https://www.quely.es/quely-maria-integral"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Crem 210 g",
+        "descripcion_seo": "Galleta rica en leche con suave sabor a coco.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "210 g / ud.",
+        "categoria": "Dulce",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Galleta rica en leche con suave sabor a coco."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 1.25,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "210 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 30 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 37.49,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Crem",
+        "url_producto": "https://www.quely.es/quely-crem-210-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, margarina (grasa de coco, aceite de girasol, agua, sal marina, corrector de la acidez (ácido cítrico), conservador (ácido sórbico), emulgentes (mono y diglicéridos de ácidos grasos, lecitinas), antioxidantes (palmitato de ascorbilo y extracto rico en tocoferoles)), azúcar en polvo, leche entera de vaca (6,8 %), coco rallado deshidratado (5,4%), dextrosa, gasificantes (bicarbonato sódico y bicarbonato amónico), sal marina, emulgente (lecitina). Puede contener trazas de sésamo, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 2009 kJ / 479 kcal; Grasas 20 g (sat. 16 g, monoinsat. 2,3 g, poliinsat. 2,2 g); Hidratos 66 g (azúcares 21 g); Fibra 2,9 g; Proteínas 7,3 g; Sal 0,79 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Quely Crem 55 g",
+        "descripcion_seo": "Galleta rica en leche con suave sabor a coco (formato 55 g).",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "55 g",
+        "categoria": "Dulce",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 0.6,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "55 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Quely Crem",
+        "url_producto": "https://www.quely.es/quely-crem-55-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Café & té 1.000 g",
+        "descripcion_seo": "Pequeña galleta rica en leche ideal para café o té. Envasadas individualmente.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "1.000 g / ud.",
+        "categoria": "Dulce",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Pequeña galleta rica en leche, envasadas individualmente. (Aprox. 250 galletas de 4 g)."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 14.3,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "1.000 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Café & té",
+        "url_producto": "https://www.quely.es/cafe-te-1000-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, margarina (grasa de coco, aceite de girasol, agua, sal marina, corrector de la acidez, conservador, emulgentes, antioxidantes), azúcar, leche entera, coco rallado, dextrosa, sal marina, gasificantes, emulgente (lecitina de girasol). Puede contener trazas de sésamo, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 2062 kJ / 491 kcal; Grasas 20 g (sat. 15 g, monoinsat. 2,2 g, poliinsat. 2,4 g); Hidratos 69 g (azúcares 23 g); Fibra 2,7 g; Proteínas 7,5 g; Sal 0,89 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Café & té caramelizada 1.000 g",
+        "descripcion_seo": "Galleta para café y té, variedad caramelizada.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "1.000 g",
+        "categoria": "Dulce",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": ""
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 15.95,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "1.000 g",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": []
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Café & té caramelizada",
+        "url_producto": "https://www.quely.es/cafe-te-caramelizada-1000-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [],
+        "informacion_util": "",
+        "informacion_nutricional": false
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    },
+    {
+      "seo": {
+        "titulo_seo": "Galletó 450 g",
+        "descripcion_seo": "Tradicionales galletas típicas de Mallorca.",
+        "marca_seo": "Quely"
+      },
+      "multimedia": {
+        "imagen_destacada": "",
+        "galeria_imagenes": [],
+        "ficha_tecnica_pdf": "",
+        "enlace_youtube": ""
+      },
+      "datos_principales": {
+        "subtitulo": "450 g / ud.",
+        "categoria": "Dulce",
+        "caracteristicas_producto": [],
+        "informacion_del_producto": "Tradicionales galletas típicas de Mallorca."
+      },
+      "venta_detalle": {
+        "precio_iva_incluido": 2.59,
+        "precio_sin_iva": 0,
+        "precio_descuento_iva_incluido": 0,
+        "precio_descuento_sin_iva": 0,
+        "venta_mayorista": false,
+        "formato": "450 g / ud.",
+        "sku": "",
+        "ean": "",
+        "stock": "disponible",
+        "variantes": [
+          {
+            "nombre": "Caja 9 uds",
+            "sku": "",
+            "ean": "",
+            "precio_iva_incluido": 23.31,
+            "precio_sin_iva": 0,
+            "stock": "disponible"
+          }
+        ]
+      },
+      "estado_logistica": {
+        "estado": "publicado",
+        "subestado": "correcto",
+        "tipo_producto": "estandar",
+        "tipo_entrega": "entrega_inmediata",
+        "dias_preparacion": 0,
+        "observaciones_entrega": ""
+      },
+      "asociado_y_nombre": {
+        "asociado_id": "",
+        "nombre_producto": "Galletó",
+        "url_producto": "https://www.quely.es/galleto-450-g"
+      },
+      "informacion_adicional": {
+        "otras_caracteristicas": [
+          {
+            "nombre": "Ingredientes",
+            "valor": "Harina de trigo, azúcar, aceite refinado de girasol alto oleico, leche, gasificante: bicarbonato amónico, sal marina y aroma vainilla. Puede contener trazas de sésamo, soja y mostaza."
+          },
+          {
+            "nombre": "Valores nutricionales (100 g)",
+            "valor": "Energía 1879 kJ / 446 kcal; Grasas 12 g (sat. 1,2 g, monoinsat. 9,1 g, poliinsat. 1,2 g); Hidratos 75 g (azúcares 22 g); Fibra 2,1 g; Proteínas 8,4 g; Sal 0,17 g."
+          }
+        ],
+        "informacion_util": "",
+        "informacion_nutricional": true
+      },
+      "precio_y_fiscalidad": {
+        "unidad_medida": "g",
+        "tipo_iva": 21,
+        "impuesto_especial_alcoholes": false
+      }
+    }
+  ]
+}
+
+
+
+const response = await openai.responses.create({
+  model: "gpt-5",
+  input: [
+    {
+      "role": "developer",
+      "content": [
+        {
+          "type": "input_text",
+          "text": "Tu tarea consiste en visitar la página web de una empresa (se te proporcionará la URL) y navegar en ella para identificar y extraer exhaustivamente toda la información de los productos que aparecen.\\n\\nInstrucciones clave:\\n\\n1. Explora la URL proporcionada, siguiendo enlaces internos si es necesario, hasta localizar todos los productos y sus páginas de detalle.\\n2. Para cada producto identificado, construye un objeto JSON que siga estrictamente el esquema proporcionado (json_schema con strict:true).\\n   - No inventes ni rellenes valores inexistentes.\\n   - Si una propiedad obligatoria no está explícita en la web, devuélvela en blanco (string vacío, array vacío, false o 0 según corresponda).\\n3. La salida final debe ser un único array que contenga todos los productos.\\n4. No devuelvas explicaciones ni texto adicional: solo el array JSON válido conforme al schema.\\n5. Respeta exactamente los nombres de las propiedades y las restricciones del schema (tipos, enums, required, additionalProperties:false).\\n\\nObjetivo final: obtener una representación estructurada, uniforme y completa de todo el catálogo de la web en formato JSON para su ingestión automática en sistemas externos."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "input_text",
+          "text": "Visita la siguiente página web de la empresa y extrae todos los productos que aparezcan en ella y en sus secciones internas:\\n\\nhttps://www.quely.es/tiendan\\nDevuelve la información en un único array JSON, estructurado exactamente conforme al json_schema definido en el Developer message.\\n\\nNo incluyas explicaciones ni comentarios: solo el array JSON válido."
+        }
+      ]
+    }
+  ],
+  text: {
+    "format": {
+      "type": "json_schema",
+      "name": "catalogo_productos",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "productos": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "seo": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "titulo_seo": {
+                      "type": "string"
+                    },
+                    "descripcion_seo": {
+                      "type": "string"
+                    },
+                    "marca_seo": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "titulo_seo",
+                    "descripcion_seo",
+                    "marca_seo"
+                  ]
+                },
+                "multimedia": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "imagen_destacada": {
+                      "type": "string"
+                    },
+                    "galeria_imagenes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "ficha_tecnica_pdf": {
+                      "type": "string"
+                    },
+                    "enlace_youtube": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "imagen_destacada",
+                    "galeria_imagenes",
+                    "ficha_tecnica_pdf",
+                    "enlace_youtube"
+                  ]
+                },
+                "datos_principales": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "subtitulo": {
+                      "type": "string"
+                    },
+                    "categoria": {
+                      "type": "string"
+                    },
+                    "caracteristicas_producto": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "producto_local_registrado",
+                          "ecologico",
+                          "sin_gluten",
+                          "refrigerado",
+                          "congelado",
+                          "industria_local_sostenible",
+                          "proyecto_social"
+                        ]
+                      }
+                    },
+                    "informacion_del_producto": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "subtitulo",
+                    "categoria",
+                    "caracteristicas_producto",
+                    "informacion_del_producto"
+                  ]
+                },
+                "venta_detalle": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "precio_iva_incluido": {
+                      "type": "number"
+                    },
+                    "precio_sin_iva": {
+                      "type": "number"
+                    },
+                    "precio_descuento_iva_incluido": {
+                      "type": "number"
+                    },
+                    "precio_descuento_sin_iva": {
+                      "type": "number"
+                    },
+                    "venta_mayorista": {
+                      "type": "boolean"
+                    },
+                    "formato": {
+                      "type": "string"
+                    },
+                    "sku": {
+                      "type": "string"
+                    },
+                    "ean": {
+                      "type": "string"
+                    },
+                    "stock": {
+                      "type": "string",
+                      "enum": [
+                        "disponible",
+                        "agotado",
+                        "bajo_stock",
+                        "bajo_pedido"
+                      ]
+                    },
+                    "variantes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "nombre": {
+                            "type": "string"
+                          },
+                          "sku": {
+                            "type": "string"
+                          },
+                          "ean": {
+                            "type": "string"
+                          },
+                          "precio_iva_incluido": {
+                            "type": "number"
+                          },
+                          "precio_sin_iva": {
+                            "type": "number"
+                          },
+                          "stock": {
+                            "type": "string",
+                            "enum": [
+                              "disponible",
+                              "agotado",
+                              "bajo_stock",
+                              "bajo_pedido"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "nombre",
+                          "sku",
+                          "ean",
+                          "precio_iva_incluido",
+                          "precio_sin_iva",
+                          "stock"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "precio_iva_incluido",
+                    "precio_sin_iva",
+                    "precio_descuento_iva_incluido",
+                    "precio_descuento_sin_iva",
+                    "venta_mayorista",
+                    "formato",
+                    "sku",
+                    "ean",
+                    "stock",
+                    "variantes"
+                  ]
+                },
+                "estado_logistica": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "estado": {
+                      "type": "string",
+                      "enum": [
+                        "borrador",
+                        "revision",
+                        "publicado",
+                        "archivado"
+                      ]
+                    },
+                    "subestado": {
+                      "type": "string",
+                      "enum": [
+                        "correcto",
+                        "incidencia",
+                        "pendiente"
+                      ]
+                    },
+                    "tipo_producto": {
+                      "type": "string",
+                      "enum": [
+                        "estandar",
+                        "perecedero",
+                        "fragil",
+                        "personalizado"
+                      ]
+                    },
+                    "tipo_entrega": {
+                      "type": "string",
+                      "enum": [
+                        "entrega_inmediata",
+                        "programada",
+                        "recogida_local"
+                      ]
+                    },
+                    "dias_preparacion": {
+                      "type": "integer"
+                    },
+                    "observaciones_entrega": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "estado",
+                    "subestado",
+                    "tipo_producto",
+                    "tipo_entrega",
+                    "dias_preparacion",
+                    "observaciones_entrega"
+                  ]
+                },
+                "asociado_y_nombre": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "asociado_id": {
+                      "type": "string"
+                    },
+                    "nombre_producto": {
+                      "type": "string"
+                    },
+                    "url_producto": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "asociado_id",
+                    "nombre_producto",
+                    "url_producto"
+                  ]
+                },
+                "informacion_adicional": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "otras_caracteristicas": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "nombre": {
+                            "type": "string"
+                          },
+                          "valor": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "nombre",
+                          "valor"
+                        ]
+                      }
+                    },
+                    "informacion_util": {
+                      "type": "string"
+                    },
+                    "informacion_nutricional": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "otras_caracteristicas",
+                    "informacion_util",
+                    "informacion_nutricional"
+                  ]
+                },
+                "precio_y_fiscalidad": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "unidad_medida": {
+                      "type": "string",
+                      "enum": [
+                        "unidad",
+                        "kg",
+                        "g",
+                        "l",
+                        "ml",
+                        "pack",
+                        "otro"
+                      ]
+                    },
+                    "tipo_iva": {
+                      "type": "number",
+                      "enum": [
+                        21,
+                        10,
+                        4
+                      ]
+                    },
+                    "impuesto_especial_alcoholes": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "unidad_medida",
+                    "tipo_iva",
+                    "impuesto_especial_alcoholes"
+                  ]
+                }
+              },
+              "required": [
+                "seo",
+                "multimedia",
+                "datos_principales",
+                "venta_detalle",
+                "estado_logistica",
+                "asociado_y_nombre",
+                "informacion_adicional",
+                "precio_y_fiscalidad"
+              ]
+            }
+          }
+        },
+        "required": [
+          "productos"
+        ]
+      }
+    },
+    "verbosity": "medium"
+  },
+  reasoning: {
+    "effort": "medium"
+  },
+  tools: [
+    {
+      "type": "web_search",
+      "user_location": {
+        "type": "approximate"
+      },
+      "search_context_size": "medium"
+    }
+  ],
+  store: true,
+  include: [
+    "reasoning.encrypted_content",
+    "web_search_call.action.sources"
+  ]
+});

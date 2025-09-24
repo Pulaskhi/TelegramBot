@@ -8,13 +8,15 @@ class Hero extends HTMLElement {
   async connectedCallback () {
     await this.loadData()
     await this.render()
+    this.setupButtonListener()
   }
 
   loadData () {
     this.data = {
       title: 'Prepárate para la oposición de Bombero',
-      description: 'Entrena tus habilidades físicas y teóricas con nuestro asistente digital. ¡Salva vidas y domina el fuego!',
-      buttonText: 'Comenzar preparación'
+      description: 'Utiliza asistentes de inteligencia artificial para generar test automaticamente',
+      buttonText: 'Comenzar',
+      redirectUrl: '/admin/asistentes'
     }
   }
 
@@ -146,6 +148,11 @@ class Hero extends HTMLElement {
       .footer-flame path {
         animation: flame-move 3s ease-in-out infinite alternate;
       }
+      /* La primera onda no tiene opacidad variable */
+      .footer-flame path:nth-child(1) {
+        animation: none;
+        opacity: 1; 
+      }
       .footer-flame path:nth-child(2){ animation-delay: 0.5s; }
       .footer-flame path:nth-child(3){ animation-delay: 1s; }
       .footer-flame path:nth-child(4){ animation-delay: 1.5s; }
@@ -155,7 +162,22 @@ class Hero extends HTMLElement {
         50% { transform: translateY(-20px); opacity:1;}
         100% { transform: translateY(0); opacity:0.8;}
       }
+      /* Nueva animación sin cambios de opacidad */
+      @keyframes flame-move-opaque {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+      }
 
+      /* Nueva capa sólida que se superpone a las ondas y tiene la altura del 10% */
+      .hero-base-overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 5%;
+        background-color: #ff4500;
+        z-index: 3;
+      }
     </style>
 
     <section class="hero">
@@ -164,9 +186,10 @@ class Hero extends HTMLElement {
         <div class="hero-description"><p>${this.data.description}</p></div>
         <div class="hero-button"><button>${this.data.buttonText}</button></div>
       </div>
-
-    
       
+      <!-- Esta capa se superpone a las ondas -->
+      <div class="hero-base-overlay"></div>
+
       <div class="hero-footer">
         <div class="hero-footer-background-waves footer-flame">
           <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -183,6 +206,16 @@ class Hero extends HTMLElement {
       </div>
     </section>
     `
+  }
+
+  setupButtonListener() {
+    const button = this.shadow.querySelector('.hero-button button');
+    
+    if (button) {
+      button.addEventListener('click', () => {
+        window.location.href = this.data.redirectUrl;
+      });
+    }
   }
 }
 

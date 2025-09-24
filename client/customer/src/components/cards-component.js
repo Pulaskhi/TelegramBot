@@ -15,39 +15,15 @@ class Cards extends HTMLElement {
     this.data = {
       title: 'Tu entrenamiento, nuestra fuerza',
       description: 'Más allá de la manguera y el hacha, la verdadera preparación de un bombero reside en la disciplina. Desde la agilidad en espacios confinados hasta la resistencia en rescates de alto riesgo, cada desafío se convierte en una oportunidad para salvar vidas.',
-      images: {
-        xs: './images/bombero/bombero-entrenando-xs.jpg',
-        sm: './images/bombero/bombero-entrenando-sm.jpg',
-        md: './images/bombero/bombero-entrenando-md.jpg',
-        lg: './images/bombero/bombero-entrenando-lg.jpg'
-      },
       cards: [{
         title: 'Entrenamiento de Resistencia',
-        color: 'fire',
-        images: {
-          xs: './images/bombero/resistencia-xs.jpg',
-          sm: './images/bombero/resistencia-sm.jpg',
-          md: './images/bombero/resistencia-md.jpg',
-          lg: './images/bombero/resistencia-lg.jpg'
-        }
+        color: 'fire'
       }, {
         title: 'Simulacros de Rescate',
-        color: 'smoke',
-        images: {
-          xs: './images/bombero/rescate-xs.jpg',
-          sm: './images/bombero/rescate-sm.jpg',
-          md: './images/bombero/rescate-md.jpg',
-          lg: './images/bombero/rescate-lg.jpg'
-        }
+        color: 'smoke'
       }, {
         title: 'Habilidades con Manguera',
-        color: 'fire',
-        images: {
-          xs: './images/bombero/habilidades-xs.jpg',
-          sm: './images/bombero/habilidades-sm.jpg',
-          md: './images/bombero/habilidades-md.jpg',
-          lg: './images/bombero/habilidades-lg.jpg'
-        }
+        color: 'fire'
       }]
     };
   }
@@ -57,8 +33,12 @@ class Cards extends HTMLElement {
       /* html */
       `
             <style>
+              @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&display=swap');
+
               * {
                 box-sizing: border-box;
+                margin: 0;
+                padding: 0;
               }
 
               h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, button {
@@ -66,91 +46,48 @@ class Cards extends HTMLElement {
                 margin: 0;
               }
 
-              img {
-                object-fit: cover;
-                width: 100%;
-              }
-
               .cards {
                 align-items: center;
                 background: #330000;
-                border-bottom-left-radius: 2rem;
-                border-bottom-right-radius: 2rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding: 2rem;
-                position: relative;
+                padding: 4rem 2rem;
               }
-
+              
               @media (min-width: 768px) {
-                .cards { padding: 2rem 10%; }
+                .cards { 
+                  padding: 4rem 10%; 
+                }
               }
 
               @media (min-width: 1280px) {
-                .cards { padding: 2rem 20%; }
+                .cards { 
+                  padding: 4rem 20%; 
+                }
               }
-
+              
               .cards-info {
                 display: flex;
                 flex-direction: column;
                 gap: 5rem;
                 padding-bottom: 5rem;
+                text-align: center;
               }
-
-              .cards-title {
-                align-items: center;
-                display: flex;
-                position: relative;
-              }
-
-              @media (min-width: 1280px) {
-                .cards-title { width: 80%; }
-              }
-
-              .cards-title-gradient h2 {
+              
+              .cards-title h2 {
                 background: linear-gradient(270deg, #ff6347, #ffdd33);
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                font-size: 5rem;
+                font-size: 3rem;
                 font-weight: 700;
+                line-height: 1.2;
               }
-
+              
               @media (min-width: 768px) {
-                .cards-title-gradient h2 {
-                  font-size: 10rem;
-                  line-height: 11rem;
-                }
-              }
-
-              .cards-image {
-                position: absolute;
-                left: 55%;
-                top: 50%;
-                width: 40%;
-                z-index: 10;
-              }
-
-              @media (min-width: 768px) {
-                .cards-image {
-                  left: 60%;
-                  width: 30%;
-                }
-              }
-
-              @media (min-width: 1024px) {
-                .cards-image {
-                  left: 50%;
-                  width: 30%;
-                }
-              }
-
-              @media (min-width: 1280px) {
-                .cards-image {
-                  left: 70%;
-                  top: 30%;
-                  width: 30%;
+                .cards-title h2 {
+                  font-size: 5rem;
                 }
               }
 
@@ -159,30 +96,46 @@ class Cards extends HTMLElement {
                 font-size: 1.2rem;
                 line-height: 1.5;
                 font-weight: 400;
+                text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
               }
 
               @media (min-width: 768px) {
-                .cards-description p { font-size: 2rem; }
+                .cards-description p { 
+                  font-size: 2rem; 
+                }
               }
 
               .cards-list {
                 display: flex;
-                flex-direction: column;
+                flex-wrap: wrap; 
                 gap: 2rem;
+                width: 100%;
+                justify-content: center;
+              }
+
+              @media (min-width: 1024px) {
+                .cards-list {
+                  flex-direction: row;
+                }
               }
 
               .card {
                 border-radius: 2rem;
-                display: grid;
-                gap: 2rem;
-                grid-template-columns: 1fr;
-                padding: 2.5rem 2.5rem 0 2.5rem;
-                position: relative;
-                overflow: hidden;
+                padding: 2.5rem;
+                text-align: center;
+                flex: 1;
+                /* Propiedades para controlar el desbordamiento de texto */
+                word-wrap: break-word; 
+                overflow-wrap: break-word;
+                /* Establecer un ancho máximo para que no se extienda demasiado */
+                max-width: 350px; 
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
               }
 
-              @media (min-width: 1024px) {
-                .card { grid-template-columns: 1fr 1fr; }
+              .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
               }
 
               .card.fire {
@@ -194,51 +147,24 @@ class Cards extends HTMLElement {
               }
 
               .card-title {
-                display: flex;
-                align-items: center;
-              }
-
-              .card-title h4 {
+                color: #ffdd33;
                 font-size: 2rem;
                 font-weight: 800;
-                line-height: 2.5rem;
-                color: #ffdd33;
+                line-height: 1.2;
                 text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
               }
-
+              
               @media (min-width: 768px) {
-                .card-title h4 {
-                  font-size: 3rem;
-                  line-height: 3.5rem;
+                .card-title {
+                  font-size: 1rem;
                 }
-              }
-
-              .card-image {
-                display: flex;
-                align-items: flex-end;
-              }
-
-              .card-image img {
-                display: block;
-                border-radius: 1rem 1rem 0 0;
               }
             </style>
 
             <section class="cards">
               <div class="cards-info">
                 <div class="cards-title">
-                  <div class="cards-title-gradient">
-                    <h2>${this.data.title}</h2>
-                  </div>
-                  <div class="cards-image">
-                    <picture>
-                      <source srcset="${this.data.images.lg}" media="(min-width: 1920px)">
-                      <source srcset="${this.data.images.md}" media="(min-width: 1024px)">
-                      <source srcset="${this.data.images.sm}" media="(min-width: 768px)">
-                      <source srcset="${this.data.images.xs}" media="(min-width: 480px)">
-                      <img src="${this.data.images.xs}" alt="Imagen de bombero entrenando">
-                    </picture>
-                  </div>
+                  <h2>${this.data.title}</h2>
                 </div>
                 <div class="cards-description">
                   <p>${this.data.description}</p>
@@ -255,45 +181,10 @@ class Cards extends HTMLElement {
       cardContainer.classList.add('card', element.color);
       cardListContainer.appendChild(cardContainer);
 
-      const cardTitleContent = document.createElement('div');
-      cardTitleContent.classList.add('card-title');
-      cardContainer.appendChild(cardTitleContent);
-
       const cardTitle = document.createElement('h4');
+      cardTitle.classList.add('card-title');
       cardTitle.textContent = element.title;
-      cardTitleContent.appendChild(cardTitle);
-
-      const cardImageContent = document.createElement('div');
-      cardImageContent.classList.add('card-image');
-      cardContainer.appendChild(cardImageContent);
-
-      const picture = document.createElement('picture');
-      cardImageContent.appendChild(picture);
-
-      const sourceLg = document.createElement('source');
-      sourceLg.srcset = element.images.lg;
-      sourceLg.media = '(min-width: 1920px)';
-      picture.appendChild(sourceLg);
-
-      const sourceMd = document.createElement('source');
-      sourceMd.srcset = element.images.md;
-      sourceMd.media = '(min-width: 1024px)';
-      picture.appendChild(sourceMd);
-
-      const sourceSm = document.createElement('source');
-      sourceSm.srcset = element.images.sm;
-      sourceSm.media = '(min-width: 768px)';
-      picture.appendChild(sourceSm);
-
-      const sourceXs = document.createElement('source');
-      sourceXs.srcset = element.images.xs;
-      sourceXs.media = '(min-width: 480px)';
-      picture.appendChild(sourceXs);
-
-      const img = document.createElement('img');
-      img.src = element.images.xs;
-      img.alt = 'Imagen de bombero en entrenamiento';
-      picture.appendChild(img);
+      cardContainer.appendChild(cardTitle);
     });
   }
 }
