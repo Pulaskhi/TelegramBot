@@ -6,5 +6,6 @@ import './components/subscription-form-component.js'
 import './components/font-loader-component.js'
 import './components/page-component.js'
 import './components/not-found-component.js'
-import './components/chatbox-component.js'
+import './components/chatbot-component.js'
+
 

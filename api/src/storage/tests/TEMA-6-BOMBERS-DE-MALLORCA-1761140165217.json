@@ -1,0 +1,272 @@
+[
+  {
+    "pregunta": "¿Cuál es una de las razones por las que los gases combustibles son utilizados tanto en la industria como en aplicaciones domésticas?",
+    "opciones": [
+      "A) Por su capacidad de producir fácilmente energía calorífica",
+      "B) Por su bajo costo de producción",
+      "C) Por su alta densidad"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué puede causar una fuga incontrolada de gases combustibles?",
+    "opciones": [
+      "A) Explosión",
+      "B) Inflamación y posible incendio o deflagración",
+      "C) Congelación"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué gas tiene la temperatura de auto inflamación más alta mencionada en el texto?",
+    "opciones": [
+      "A) Propano",
+      "B) Butano",
+      "C) Gas Natural"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿A qué familia pertenecen los gases naturales según su potencia calorífica?",
+    "opciones": [
+      "A) 1ª Familia",
+      "B) 2ª Familia",
+      "C) 3ª Familia"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué característica tienen los aires carburados con respecto a su densidad?",
+    "opciones": [
+      "A) Son más densos que el aire",
+      "B) Son menos densos que el aire",
+      "C) Tienen densidades tanto superiores como inferiores al aire dependiendo del tipo"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cómo se transporta el gas natural licuado (GNL)?",
+    "opciones": [
+      "A) A temperatura ambiente",
+      "B) A unos 160ºC bajo cero",
+      "C) A unos 100ºC"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es el principal componente del gas natural?",
+    "opciones": [
+      "A) Etano",
+      "B) Metano",
+      "C) Propano"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de presión se utiliza en las redes de Alta Presión B (APB)?",
+    "opciones": [
+      "A) Menos de 4 bar",
+      "B) Más de 16 bar",
+      "C) Entre 4 y 16 bar"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué se necesita para hacer que un gas de una familia sea intercambiable con un gas de otra familia en un quemador?",
+    "opciones": [
+      "A) Una pequeña regulación",
+      "B) Una modificación profunda del quemador",
+      "C) No es posible hacerlo"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de gas se conoce tradicionalmente como 'gas ciudad'?",
+    "opciones": [
+      "A) Gas Manufacturado",
+      "B) Gas Natural",
+      "C) Aire Carburado"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué propiedad es crucial para determinar si una mezcla de gas-aire es inflamable?",
+    "opciones": [
+      "A) La temperatura de la mezcla",
+      "B) Los límites de inflamabilidad",
+      "C) La presión de la mezcla"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué sucede si los gases de la combustión son mal evacuados?",
+    "opciones": [
+      "A) Pueden producir asfixia",
+      "B) Incrementan la eficiencia del aparato",
+      "C) Reducen la toxicidad del ambiente"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué tipo de presión se utiliza en las redes de Media Presión tipo A (MPA)?",
+    "opciones": [
+      "A) Entre 0,05 y 0,4 bar",
+      "B) Entre 0,4 y 4 bar",
+      "C) Menos de 0,05 bar"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué debe ser añadido a los gases manufacturados debido a su falta de olor?",
+    "opciones": [
+      "A) Agua",
+      "B) Un agente olorizante",
+      "C) Dióxido de carbono"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cómo se clasifican las redes de baja presión (B.P)?",
+    "opciones": [
+      "A) Presiones iguales o inferiores a 0,05 bar",
+      "B) Presiones entre 0,05 y 0,4 bar",
+      "C) Presiones superiores a 0,4 bar"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué componente se usa para olorizar el gas natural?",
+    "opciones": [
+      "A) Metano",
+      "B) THT (tetrahidrotiofeno)",
+      "C) CO2"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la temperatura de auto inflamación del butano según el texto?",
+    "opciones": [
+      "A) 468ºC",
+      "B) 410ºC",
+      "C) 520ºC"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de gas se considera menos denso que el aire?",
+    "opciones": [
+      "A) Aires metanados",
+      "B) Aires propanados",
+      "C) Gases manufacturados"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué tipo de gas es utilizado en los aparatos e instalaciones previstos para gases de la primera familia?",
+    "opciones": [
+      "A) Aires carburados",
+      "B) Gas natural",
+      "C) Gas licuado"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿En qué forma se encuentra el gas natural en los grandes depósitos de GNL?",
+    "opciones": [
+      "A) En forma gaseosa",
+      "B) En forma sólida",
+      "C) En forma líquida"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué tipo de material se utiliza para el recipiente interior de los grandes depósitos de GNL?",
+    "opciones": [
+      "A) Acero con 9% de níquel",
+      "B) Hormigón armado",
+      "C) Plástico reforzado"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Cómo se llaman los buques utilizados para el transporte en gran escala del GNL?",
+    "opciones": [
+      "A) Petroleros",
+      "B) Metaneros",
+      "C) Gaseros"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de gas se produce mezclando hidrocarburos volátiles con aire?",
+    "opciones": [
+      "A) Gas Manufacturado",
+      "B) Gas Natural",
+      "C) Aires Carburados"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué sucede con el GNL en las plantas gasificadoras?",
+    "opciones": [
+      "A) Se compacta aún más",
+      "B) Se regasifica",
+      "C) Se transforma en un nuevo tipo de gas"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la potencia calorífica de los gases de la 3ª Familia?",
+    "opciones": [
+      "A) Entre 4.000 y 5.000 Kcal/m³",
+      "B) Entre 9.000 y 11.000 Kcal/m³",
+      "C) Entre 24.000 y 35.000 Kcal/m³"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cómo se describe la modificación necesaria para utilizar un gas de una familia diferente en un quemador?",
+    "opciones": [
+      "A) Simple y rápida",
+      "B) Moderada",
+      "C) Profunda"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es la velocidad inicial máxima de propagación de la llama en una mezcla estequiométrica de gas-aire?",
+    "opciones": [
+      "A) Depende de la temperatura",
+      "B) No es un parámetro relevante",
+      "C) Corresponde a la velocidad inicial de propagación en la deflagración"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué tipo de presión se emplea en las redes de Alta Presión A (APA)?",
+    "opciones": [
+      "A) Entre 4 y 16 bares",
+      "B) Más de 16 bares",
+      "C) Menos de 4 bares"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué tipo de gas se utiliza normalmente para formar aires propanados?",
+    "opciones": [
+      "A) Metano",
+      "B) Propano",
+      "C) Butano"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué proporción de propano tiene un aire propanado con una potencia calorífica superior a 13,000 kcal/m³?",
+    "opciones": [
+      "A) 27%",
+      "B) 50%",
+      "C) Alrededor de un 55%"
+    ],
+    "correcta": "C"
+  }
+]

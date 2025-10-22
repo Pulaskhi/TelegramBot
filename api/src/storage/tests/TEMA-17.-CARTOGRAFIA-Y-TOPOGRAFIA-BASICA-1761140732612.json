@@ -1,0 +1,290 @@
+[
+  {
+    "pregunta": "¿Qué palabra del latín es el origen etimológico de 'cartografía'?",
+    "opciones": [
+      "A) charta",
+      "B) cartus",
+      "C) carta"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué significa el sufijo '-grafía' en el contexto de la palabra 'cartografía'?",
+    "opciones": [
+      "A) lugar",
+      "B) describir o escribir",
+      "C) estudio"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué forma tiene la Tierra según el texto?",
+    "opciones": [
+      "A) Plana",
+      "B) Cuadrada",
+      "C) Esférica"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué ciencia se encarga de la representación del planeta Tierra sobre un plano?",
+    "opciones": [
+      "A) Geometría",
+      "B) Cartografía",
+      "C) Biología"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿De qué origen etimológico proviene la palabra 'topografía'?",
+    "opciones": [
+      "A) Latín",
+      "B) Griego",
+      "C) Árabe"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué significa 'topos' en griego?",
+    "opciones": [
+      "A) Mapa",
+      "B) Lugar",
+      "C) Agua"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué ejes utiliza la topografía para describir un terreno?",
+    "opciones": [
+      "A) Solo X y Y",
+      "B) X, Y y Z",
+      "C) A, B y C"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué permite despreciar la topografía en sus mediciones?",
+    "opciones": [
+      "A) La vegetación",
+      "B) Edificaciones",
+      "C) Curvatura terrestre"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es la principal diferencia entre topografía y geodesia según el tamaño del área estudiada?",
+    "opciones": [
+      "A) Topografía estudia áreas menores y geodesia áreas mayores",
+      "B) Topografía estudia solo montañas",
+      "C) Geodesia estudia áreas menores"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué es un mapa según el texto?",
+    "opciones": [
+      "A) Una herramienta de navegación",
+      "B) Representación de un área geográfica",
+      "C) Un tipo de gráfico"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué color se suele usar para representar el agua en los mapas?",
+    "opciones": [
+      "A) Verde",
+      "B) Rojo",
+      "C) Azul"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Dónde se definen los símbolos utilizados en un mapa?",
+    "opciones": [
+      "A) En el título",
+      "B) En la leyenda",
+      "C) En el margen"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de mapa muestra las divisiones políticas y administrativas?",
+    "opciones": [
+      "A) Mapas topográficos",
+      "B) Mapas políticos",
+      "C) Mapas geológicos"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de escala muestra una relación directa entre medidas del mapa y la realidad?",
+    "opciones": [
+      "A) Escala numérica",
+      "B) Escala lineal",
+      "C) Escala gráfica"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué escala es más detallada, 1:50.000 o 1:5.000?",
+    "opciones": [
+      "A) 1:50.000",
+      "B) 1:5.000",
+      "C) Son iguales"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cómo se denomina el plano horizontal de cota cero?",
+    "opciones": [
+      "A) Plano de proyección",
+      "B) Superficie de cota cero",
+      "C) Nivel del mar"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué ciencia está encargada de determinar la proyección horizontal de los puntos?",
+    "opciones": [
+      "A) Planimetría",
+      "B) Altimetría",
+      "C) Cartografía"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Para qué tipo de terreno a veces solo se necesitan datos planimétricos?",
+    "opciones": [
+      "A) Montañosos",
+      "B) Llanos",
+      "C) Urbanos"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué indica una escala de 1:50.000?",
+    "opciones": [
+      "A) 1 cm en el mapa son 50.000 cm en la realidad",
+      "B) 1 km en el mapa son 50.000 km en la realidad",
+      "C) 1 m en el mapa son 50.000 m en la realidad"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué tipo de mapas utilizan escalas como 1:10.000 o 1:5.000?",
+    "opciones": [
+      "A) Mapas turísticos",
+      "B) Mapas para navegación",
+      "C) Mapas militares"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es la función principal de la cartografía?",
+    "opciones": [
+      "A) Estudiar la fauna",
+      "B) Representar el planeta en un plano",
+      "C) Medir temperaturas globales"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué representa un mapa topográfico?",
+    "opciones": [
+      "A) Solo elementos culturales",
+      "B) Características físicas del terreno",
+      "C) Distribuciones poblacionales"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué propiedades debe tener un mapa según el texto?",
+    "opciones": [
+      "A) Propiedades métricas",
+      "B) Propiedades literarias",
+      "C) Propiedades eléctricas"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué tipo de mapa se utiliza para la navegación de embarcaciones?",
+    "opciones": [
+      "A) Mapas de ciudad",
+      "B) Cartas de navegación marítima",
+      "C) Mapas políticos"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué información adicional contienen las cartas de navegación aérea aparte de características topográficas?",
+    "opciones": [
+      "A) Situación de radiofaros y corredores aéreos",
+      "B) Ubicación de hoteles y restaurantes",
+      "C) Datos meteorológicos"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué simboliza un punto en un mapa según el texto?",
+    "opciones": [
+      "A) Una montaña",
+      "B) Una ciudad o pueblo",
+      "C) Un río"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué color se utiliza generalmente para imprimir las fronteras políticas en los mapas?",
+    "opciones": [
+      "A) Azul",
+      "B) Verde",
+      "C) Diferentes colores o líneas discontinuas"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué escala es más grande, 1:1 o 1:500.000?",
+    "opciones": [
+      "A) 1:1",
+      "B) 1:500.000",
+      "C) Son iguales"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué se puede estudiar con un mapa a escala 1:1.000?",
+    "opciones": [
+      "A) Detalles muy pequeños",
+      "B) Fenómenos de mucho detalle",
+      "C) Continentes enteros"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿En qué tipo de mapas se pueden representar planos calle de ciudades?",
+    "opciones": [
+      "A) 1:5.000 a 1:20.000",
+      "B) 1:50.000 a 1:200.000",
+      "C) 1:200.000 a 1:1.000.000"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué escala es típicamente usada para estudiar provincias y regiones?",
+    "opciones": [
+      "A) 1:1.000.000 a 1:5.000.000",
+      "B) 1:50.000 a 1:200.000",
+      "C) 1:5.000 a 1:20.000"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué escala permite ver el mundo entero?",
+    "opciones": [
+      "A) Inferiores a 1:1.000.000",
+      "B) 1:50.000",
+      "C) 1:5.000"
+    ],
+    "correcta": "A"
+  }
+]

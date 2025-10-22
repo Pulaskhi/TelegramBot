@@ -23,6 +23,7 @@ import './components/tables/pdfs-table-component.js'
 import './components/tables/headers-table-component.js'
 import './components/tables/event-categories-table-component.js'
 import './components/tables/events-table-component.js'
+import './components/tables/test-table-component.js'
 import './components/tables/promoters-table-component.js'
 import './components/tables/promoters-table-component.js'
 import './components/filters/user-filter-component.js'
@@ -30,4 +31,7 @@ import './components/filters/event-categories-filter-component.js'
 import './components/filters/events-filter-component.js'
 import './components/filters/bots-filter-component.js'
 import './components/filters/promoter-filter-component.js'
+
+
+
 
