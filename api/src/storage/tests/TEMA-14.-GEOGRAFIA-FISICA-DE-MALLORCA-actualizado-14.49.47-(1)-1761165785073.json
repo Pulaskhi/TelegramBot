@@ -1,0 +1,272 @@
+[
+  {
+    "pregunta": "¿Cuál es la extensión total de la isla de Mallorca?",
+    "opciones": [
+      "A) 3.626 km²",
+      "B) 4.626 km²",
+      "C) 2.626 km²"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Cuál es la longitud máxima de oeste a este en Mallorca?",
+    "opciones": [
+      "A) 96 Km",
+      "B) 86 Km",
+      "C) 106 Km"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué punto se encuentra al norte de Mallorca?",
+    "opciones": [
+      "A) Cap de ses Salines",
+      "B) Cap de Formentor",
+      "C) Sant Telm"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué material predomina en la formación geológica de Mallorca?",
+    "opciones": [
+      "A) Materiales silíceos",
+      "B) Materiales calcáreos",
+      "C) Rocas volcánicas"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la altura del Puig Major en Mallorca?",
+    "opciones": [
+      "A) 1.445 m",
+      "B) 1.348 m",
+      "C) 1.100 m"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué municipio pertenece a la Sierra de Tramuntana?",
+    "opciones": [
+      "A) Artà",
+      "B) Pollença",
+      "C) Manacor"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es el punto más oriental de Mallorca?",
+    "opciones": [
+      "A) Punta de Capdepera",
+      "B) Cap de Catalunya",
+      "C) Cap de Cala Figuera"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué formación montañosa se extiende en dirección SW-NE?",
+    "opciones": [
+      "A) Serra de Llevant",
+      "B) Sierra de Tramuntana",
+      "C) Depresión Central"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la longitud total de la Sierra de Tramuntana?",
+    "opciones": [
+      "A) 90 Km",
+      "B) 100 Km",
+      "C) 80 Km"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Cuál es el municipio donde se encuentra el Puig de Massanella?",
+    "opciones": [
+      "A) Escorca",
+      "B) Deià",
+      "C) Bunyola"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Cuál es el municipio más occidental de la Sierra de Tramuntana?",
+    "opciones": [
+      "A) Andratx",
+      "B) Sóller",
+      "C) Pollença"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué tipo de vegetación caracteriza principalmente la Sierra de Tramuntana?",
+    "opciones": [
+      "A) Vegetación lacustre",
+      "B) Bosques y matorrales",
+      "C) Vegetación de montaña"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es el ciclo del agua que implica la absorción del agua por las plantas?",
+    "opciones": [
+      "A) Infiltración",
+      "B) Transpiración",
+      "C) Corriente superficial"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de formación vegetal se encuentra en la costa de Mallorca?",
+    "opciones": [
+      "A) Bosques",
+      "B) Vegetación de montaña",
+      "C) Vegetación de costa"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué tipo de agua se almacena en los acuíferos?",
+    "opciones": [
+      "A) Aguas superficiales",
+      "B) Aguas subterráneas",
+      "C) Aguas de riego"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué forma tiene la isla de Mallorca?",
+    "opciones": [
+      "A) Triangular",
+      "B) Rectangular",
+      "C) Romboidal"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es la altura del Puig de l'Ofre?",
+    "opciones": [
+      "A) 1.348 m",
+      "B) 1.091 m",
+      "C) 1.100 m"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la altura máxima que alcanzan los acantilados en la vertiente septentrional de la Sierra de Tramuntana?",
+    "opciones": [
+      "A) 200 metros",
+      "B) 300 a 400 metros",
+      "C) 500 metros"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es el municipio donde se encuentra el Puig d'es Teix?",
+    "opciones": [
+      "A) Escorca",
+      "B) Deià",
+      "C) Pollença"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de roca predomina en la isla de Mallorca debido a su formación geológica?",
+    "opciones": [
+      "A) Granito",
+      "B) Caliza",
+      "C) Basalto"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué municipio está situado en la parte meridional de la Sierra de Tramuntana y es conocido por su puerto?",
+    "opciones": [
+      "A) Pollença",
+      "B) Andratx",
+      "C) Sóller"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es la altura de la Talaia Freda de Son Morei d’Artà?",
+    "opciones": [
+      "A) 560 m",
+      "B) 510 m",
+      "C) 450 m"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué municipio se encuentra en la Serra de Llevant?",
+    "opciones": [
+      "A) Escorca",
+      "B) Artà",
+      "C) Sóller"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la principal fuente de agua potable para Palma que se encuentra en la Sierra de Tramuntana?",
+    "opciones": [
+      "A) Cúber",
+      "B) Gorg Blau",
+      "C) Puig Major"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Cuál es la altura del Puig d'es Galatzó?",
+    "opciones": [
+      "A) 1.026 m",
+      "B) 1.100 m",
+      "C) 1.348 m"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Cuál es el municipio más oriental de la isla de Mallorca?",
+    "opciones": [
+      "A) Calvià",
+      "B) Andratx",
+      "C) Capdepera"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es el nombre de la bahía más grande en la costa de Mallorca?",
+    "opciones": [
+      "A) Badia de Palma",
+      "B) Badia de Pollença",
+      "C) Badia d'Alcudia"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es la altura del monte más alto en la Serra de Llevant?",
+    "opciones": [
+      "A) Puig de Randa",
+      "B) Talaia Freda de Son Morei d’Artà",
+      "C) Sant Salvador de Felanitx"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de vegetación se encuentra en las bahías de Palma, Campos y Alcudia?",
+    "opciones": [
+      "A) Vegetación lacustre y de agua dulce",
+      "B) Bosques y matorrales",
+      "C) Vegetación de duna"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es la característica geológica más importante de Mallorca?",
+    "opciones": [
+      "A) Origen terciario de los relieves",
+      "B) Predominancia de materiales silíceos",
+      "C) Abundancia de rocas volcánicas"
+    ],
+    "correcta": "A"
+  }
+]

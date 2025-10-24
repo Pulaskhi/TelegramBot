@@ -1,0 +1,299 @@
+[
+  {
+    "pregunta": "¿Qué inclinación máxima puede tener un ascensor respecto a la vertical?",
+    "opciones": [
+      "A) 15°",
+      "B) 30°",
+      "C) 45°"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué tipo de cable se utiliza actualmente en los ascensores por su resistencia?",
+    "opciones": [
+      "A) Cables de acero",
+      "B) Cintas de nylon",
+      "C) Cintas más resistentes"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué función cumple el contrapeso en un ascensor?",
+    "opciones": [
+      "A) Equilibra el peso de la cabina",
+      "B) Aumenta la velocidad de la cabina",
+      "C) Disminuye el espacio necesario"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes no es un tipo de ascensor mencionado?",
+    "opciones": [
+      "A) Ascensor de vapor",
+      "B) Ascensor hidráulico",
+      "C) Ascensor para adherencia"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Cuál es la velocidad máxima de desplazamiento de un ascensor con engranajes?",
+    "opciones": [
+      "A) 1,7 metros por segundo",
+      "B) 10 metros por segundo",
+      "C) 5 metros por segundo"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Dónde se instala la máquina en los ascensores sin engranajes de gran altura?",
+    "opciones": [
+      "A) Parte inferior del edificio",
+      "B) Parte superior del edificio",
+      "C) En un cuarto anexo"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué caracteriza a los ascensores hidráulicos en términos de ruido?",
+    "opciones": [
+      "A) Generan mucho ruido",
+      "B) No generan ruido",
+      "C) Generan poco ruido"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuántas plantas como máximo es recomendable para un ascensor hidráulico?",
+    "opciones": [
+      "A) 10 plantas",
+      "B) 4 o 5 plantas",
+      "C) 8 plantas"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de guías utilizan los ascensores inclinados?",
+    "opciones": [
+      "A) Guías horizontales",
+      "B) Guías verticales",
+      "C) Guías inclinadas"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué tipo de ascensor es más adecuado para edificios con alto flujo de personas?",
+    "opciones": [
+      "A) Hidráulico",
+      "B) Con engranajes",
+      "C) Sin engranajes"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Para qué se utilizan principalmente los montacargas industriales?",
+    "opciones": [
+      "A) Transporte de personas",
+      "B) Elevación de vehículos y maquinaria pesada",
+      "C) Entretenimiento"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la principal ventaja de las plataformas hidráulicas de tijera?",
+    "opciones": [
+      "A) Velocidad",
+      "B) Capacidad de carga",
+      "C) Flexibilidad de uso"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué permiten las rampas niveladoras?",
+    "opciones": [
+      "A) Ajustar la temperatura",
+      "B) Ajustar la altura",
+      "C) Mejorar la tracción"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué es una carga litera?",
+    "opciones": [
+      "A) Un tipo de ascensor",
+      "B) Una plataforma de transporte",
+      "C) Un tipo de cama en hospitales"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Dónde son comunes los montaplatos?",
+    "opciones": [
+      "A) En escuelas",
+      "B) En teatros",
+      "C) En restaurantes y oficinas"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué tipo de ascensor se instala generalmente en viviendas particulares para personas con movilidad reducida?",
+    "opciones": [
+      "A) Ascensores inclinados",
+      "B) Plataformas elevadoras verticales",
+      "C) Ascensores de gran altura"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de asiento usan las sillas salvaescaleras?",
+    "opciones": [
+      "A) Fijo",
+      "B) Giratorio",
+      "C) Deslizante"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es un elemento esencial en los ascensores de adherencia con recinto de máquinas?",
+    "opciones": [
+      "A) El local técnico",
+      "B) La cabina",
+      "C) El contrapeso"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué se requiere en el recinto de máquinas de un ascensor para su funcionamiento adecuado?",
+    "opciones": [
+      "A) Decoración",
+      "B) Ventilación adecuada",
+      "C) Iluminación intensa"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la principal función del contrapeso en los ascensores?",
+    "opciones": [
+      "A) Aumentar la velocidad de ascenso",
+      "B) Disminuir el consumo energético",
+      "C) Producir electricidad"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué característica común tienen los ascensores sin engranajes?",
+    "opciones": [
+      "A) Utilizan un sistema reductor",
+      "B) Alcanzan altas velocidades",
+      "C) Funcionan con gas natural"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué tipo de motor utilizan los ascensores con engranajes para mover la cabina?",
+    "opciones": [
+      "A) Motor de combustión interna",
+      "B) Motor eléctrico",
+      "C) Motor hidráulico"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la principal ventaja de utilizar un ascensor hidráulico en edificios bajos?",
+    "opciones": [
+      "A) Mayor velocidad",
+      "B) Menor ruido",
+      "C) No requiere sala de máquinas superior"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué tipo de trayectoria siguen los ascensores inclinados?",
+    "opciones": [
+      "A) Horizontal",
+      "B) Inclinada",
+      "C) Espiral"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Para qué tipo de carga son adecuados los montacargas industriales?",
+    "opciones": [
+      "A) Ligeras",
+      "B) Medianas",
+      "C) Pesadas"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué tipo de estructura utilizan las plataformas hidráulicas de tijera?",
+    "opciones": [
+      "A) Brazos articulados",
+      "B) Cables de acero",
+      "C) Raíles inclinados"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué función tienen los muelles móviles o rampas niveladoras?",
+    "opciones": [
+      "A) Ajustar la altura entre andenes y vehículos",
+      "B) Aumentar la velocidad de carga",
+      "C) Reducir el consumo de energía"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué beneficio ofrecen los montaplatos en edificios de varias plantas?",
+    "opciones": [
+      "A) Transportar personas",
+      "B) Ahorrar energía",
+      "C) Transportar objetos pequeños"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué solución de accesibilidad se usa comúnmente en escaleras curvas?",
+    "opciones": [
+      "A) Plataformas elevadoras verticales",
+      "B) Ascensores inclinados",
+      "C) Sillas salvaescaleras"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Dónde se aloja la maquinaria de un ascensor hidráulico?",
+    "opciones": [
+      "A) En la parte superior del edificio",
+      "B) En la parte inferior o en un cuarto anexo",
+      "C) En un recinto especial al lado del edificio"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es una característica común de los ascensores para personas con movilidad reducida?",
+    "opciones": [
+      "A) Alta velocidad",
+      "B) Gran capacidad de carga",
+      "C) Facilitar el desplazamiento vertical sin obras complejas"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes no es un uso común de los ascensores inclinados?",
+    "opciones": [
+      "A) En terrenos montañosos",
+      "B) En edificios de gran altura",
+      "C) En entornos urbanos irregulares"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué aspecto de los montacargas industriales es destacado en el texto?",
+    "opciones": [
+      "A) Su baja capacidad de carga",
+      "B) Su versatilidad en diferentes entornos",
+      "C) Su uso exclusivo en la construcción"
+    ],
+    "correcta": "B"
+  }
+]

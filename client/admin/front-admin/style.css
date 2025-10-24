@@ -1,17 +1,92 @@
-* {
-  box-sizing: border-box;
+/* ===== Base elegante y neutra ===== */
+:root{
+  --bg-1: hsl(220 20% 98%);
+  --bg-2: hsl(220 22% 96%);
+  --card: #ffffff;
+  --text: hsl(222 47% 11%);
+  --muted: hsl(215 16% 47%);
+  --brand-1: hsl(222 90% 56%); /* acento azul elegante */
+  --brand-2: hsl(252 84% 60%); /* ligero violeta para degradé */
 }
 
-body {
-  /* Fondo anterior azul (comentado) */
-  /* background: radial-gradient(circle, hsl(198, 100%, 76%), hsl(200, 77%, 42%)); */
-  
-  /* Fondo anterior púrpura (comentado) */
-  /* background: radial-gradient(circle, hsl(229, 66%, 60%) 0%, hsl(229, 66%, 40%) 100%); */
-  
-  /* Nuevo fondo tema bomberos - gradiente rojo-naranja */
-  background: radial-gradient(circle, hsl(45, 100%, 70%), hsl(25, 100%, 55%), hsl(0, 85%, 50%));
-  
-  color: white;
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{
   margin: 0;
+  color: var(--text);
+  /* Fondo suave con sutiles manchas de luz */
+  background:
+    radial-gradient(900px 700px at 15% 10%, hsl(220 50% 99%), transparent 60%),
+    radial-gradient(1100px 800px at 85% -10%, hsl(260 70% 99%), transparent 55%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  background-attachment: fixed;
+  font-family: "Nunito Sans", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+
+/* Contenido principal con respiración */
+main-component{
+  display: block;
+  padding: 24px clamp(16px, 3vw, 40px);
+}
+
+/* Títulos y texto */
+h1,h2,h3{ letter-spacing: 0.2px; }
+p, label, small{ color: var(--muted); }
+
+/* Enlaces */
+a{ color: var(--brand-1); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+/* Selección de texto */
+::selection{ background: var(--brand-1); color: white; }
+
+/* ===== Pulido del modal del test (fuera del Shadow DOM) ===== */
+.test-overlay{
+  background: rgba(15, 23, 42, 0.5); /* slate-900/50 */
+  backdrop-filter: blur(3px);
+}
+
+.test-modal{
+  background: var(--card);
+  color: var(--text);
+  border-radius: 16px 0 0 16px;
+  box-shadow: -10px 0 30px rgba(0,0,0,.15);
+  border: 1px solid hsl(220 14% 92%);
+}
+
+.test-modal-header{
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: #fff;
+  padding: 12px 20px !important;
+  border-radius: 16px 0 0 0;
+}
+
+.test-modal-content{
+  background: linear-gradient(180deg, #fff, hsl(0 0% 99%));
+  padding: 20px !important;
+}
+
+/* Botón cerrar del modal */
+.close-btn{
+  transition: transform .12s ease, opacity .12s ease;
+}
+.close-btn:hover{ transform: scale(1.08); opacity: .9; }
+
+/* ===== Modo oscuro opcional (si el SO lo usa) ===== */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg-1: hsl(222 28% 12%);
+    --bg-2: hsl(222 24% 10%);
+    --card: hsl(222 24% 14%);
+    --text: hsl(220 20% 96%);
+    --muted: hsl(220 10% 70%);
+  }
+  body{
+    background:
+      radial-gradient(900px 700px at 15% 10%, hsl(222 20% 16%), transparent 60%),
+      radial-gradient(1100px 800px at 85% -10%, hsl(260 24% 18%), transparent 55%),
+      linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  }
+  .test-modal{ border-color: hsl(222 18% 22%); }
+  .test-modal-content{ background: linear-gradient(180deg, hsl(222 24% 14%), hsl(222 24% 12%)); }
 }

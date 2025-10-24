@@ -1,0 +1,452 @@
+[
+  {
+    "pregunta": "¿Cuál es la unidad que mide la intensidad de la corriente eléctrica?",
+    "respuestas": [
+      "Voltio",
+      "Amperio",
+      "Ohmio"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué fenómeno describe una descarga eléctrica luminosa entre dos conductores?",
+    "respuestas": [
+      "Cortocircuito",
+      "Arco eléctrico",
+      "Resistencia"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué dispositivo es esencial para proteger una instalación eléctrica de los cortocircuitos?",
+    "respuestas": [
+      "Conmutador",
+      "Fusible",
+      "Transformador"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué unidad se utiliza para medir la resistencia eléctrica?",
+    "respuestas": [
+      "Amperio",
+      "Candela",
+      "Ohmio"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el propósito principal de la puesta a tierra en instalaciones eléctricas?",
+    "respuestas": [
+      "Aumentar la resistencia eléctrica",
+      "Proteger los aparatos eléctricos",
+      "Proteger a las personas"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué color se utiliza para el conductor de tierra según la normativa española?",
+    "respuestas": [
+      "Azul",
+      "Verde y amarillo",
+      "Negro"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la tensión nominal mínima que clasifica una instalación como de alta tensión en corriente alterna?",
+    "respuestas": [
+      "1.000 V",
+      "500 V",
+      "1.500 V"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de corriente varía en intensidad y sentido 50 veces por segundo?",
+    "respuestas": [
+      "Corriente continua",
+      "Corriente alterna",
+      "Corriente estática"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué ventaja principal ofrece la corriente alterna sobre la corriente continua?",
+    "respuestas": [
+      "Menor coste de mantenimiento",
+      "Facilidad en el cambio de voltaje",
+      "Mayor facilidad de almacenamiento"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tensión nominal se considera de media tensión?",
+    "respuestas": [
+      "380 kV",
+      "30 kV",
+      "220 kV"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de línea eléctrica tiene una tensión nominal de 132 kV?",
+    "respuestas": [
+      "Media tensión",
+      "Baja tensión",
+      "Alta tensión"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes es un tipo de línea que puede ser tanto aérea como enterrada?",
+    "respuestas": [
+      "Línea de alta tensión",
+      "Línea de media tensión",
+      "Ambas opciones son correctas"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué color se asigna al conductor neutro en las instalaciones eléctricas según la normativa española?",
+    "respuestas": [
+      "Verde y amarillo",
+      "Azul",
+      "Negro"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la función principal de un interruptor automático en una celda de línea?",
+    "respuestas": [
+      "Establecer y mantener la tensión de la línea",
+      "Establecer, mantener e interrumpir las intensidades de corriente de servicio y anormalmente elevadas",
+      "Regular la frecuencia de la corriente en la línea"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué característica distingue principalmente a una línea eléctrica aérea desnuda?",
+    "respuestas": [
+      "Va enterrada bajo tierra",
+      "Está formada por un conjunto de tres conductores trenzados",
+      "Se soporta sobre estructuras de presilla o celosía"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En una subestación transformadora, ¿hasta qué tensión de llegada se maneja?",
+    "respuestas": [
+      "Hasta 66 kV",
+      "Más de 150 kV",
+      "Hasta 100 kV"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de seccionador se utiliza comúnmente en las instalaciones eléctricas mencionadas?",
+    "respuestas": [
+      "Bipolar",
+      "Monopolar",
+      "Tripolar"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la tensión más utilizada entre fase y neutro en instalaciones de baja tensión a nivel doméstico?",
+    "respuestas": [
+      "127 Vatios",
+      "230 Vatios",
+      "400 Vatios"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué diferencian los cuadros de baja tensión modulares de los descubiertos?",
+    "respuestas": [
+      "Los modulares están al aire libre, los descubiertos están en interiores",
+      "Los modulares contienen portafusibles, los descubiertos no",
+      "Los modulares manejan mayor tensión que los descubiertos"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de fusibles se encuentra en una Caja General de Protección de exterior?",
+    "respuestas": [
+      "Tipo cuchilla",
+      "Tipo cilíndrico con portafusibles",
+      "Tipo cilíndrico sin portafusibles"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la función principal de un interruptor diferencial en una instalación de baja tensión?",
+    "respuestas": [
+      "Controlar la potencia máxima de la instalación",
+      "Proteger a las personas de contactos directos e indirectos",
+      "Interrumpir la corriente en caso de cortocircuito"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué caracteriza a los centros de transformación de tipo intemperie?",
+    "respuestas": [
+      "Están contenidos dentro de un edificio",
+      "Tienen el transformador sujeto en un soporte metálico a cierta altura",
+      "Están completamente enterrados bajo tierra"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la principal diferencia entre una estación transformadora y una subestación transformadora?",
+    "respuestas": [
+      "La estación transformadora maneja tensiones de llegada superiores a 66 kV, mientras que la subestación hasta 66 kV",
+      "La subestación transformadora solo maneja corriente continua, mientras que la estación transformadora maneja corriente alterna",
+      "No hay diferencias, ambos términos son intercambiables"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de instalación eléctrica de baja tensión se caracteriza por tener los conductores de color negro y formar un conjunto trenzado?",
+    "respuestas": [
+      "Líneas aéreas convencionales",
+      "Líneas subterráneas",
+      "Líneas aéreas trenzadas aisladas"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la función de un interruptor de control de potencia máxima (ICPM) en una instalación doméstica?",
+    "respuestas": [
+      "Detectar y desconectar la instalación ante corrientes de fuga",
+      "Evitar que la potencia suministrada supere la potencia contratada",
+      "Controlar la tensión entre las diferentes fases"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de fusibles se utilizan en la Centralización de Contadores para proteger la línea?",
+    "respuestas": [
+      "Tipo cuchilla",
+      "Tipo cilíndrico con portafusibles",
+      "Tipo cilíndrico sin portafusibles"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la función principal de un interruptor diferencial (ID) en una instalación eléctrica?",
+    "respuestas": [
+      "Proteger contra sobretensiones",
+      "Detectar y desconectar corrientes de fuga",
+      "Regular la potencia total de la instalación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué protección ofrece un dispositivo de protección contra sobretensiones (DPS)?",
+    "respuestas": [
+      "Protege contra contactos indirectos",
+      "Desvía las sobretensiones peligrosas hacia el suelo",
+      "Limita la potencia de los aparatos conectados"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica el REBT respecto al número de circuitos mínimos en función de la superficie de la vivienda?",
+    "respuestas": [
+      "El número de circuitos es independiente de la superficie",
+      "El número de circuitos aumenta con la potencia contratada",
+      "El número de circuitos está determinado por la superficie y la potencia contratada"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué caracteriza a una electrificación elevada según el REBT?",
+    "respuestas": [
+      "Un mínimo de cinco circuitos y una potencia no inferior a 5750 W",
+      "Más de cinco circuitos y una potencia no inferior a 9200 W",
+      "Cinco circuitos y una potencia inferior a 5750 W"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la distancia de seguridad mínima al trabajar cerca de una instalación de alta tensión de hasta 15 kV?",
+    "respuestas": [
+      "0,80 m",
+      "0,90 m",
+      "1,00 m"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el caso de contacto con una línea eléctrica de alta tensión, ¿qué debe hacer el conductor de la máquina afectada?",
+    "respuestas": [
+      "Abandonar inmediatamente la máquina",
+      "Mantenerse en la cabina y advertir a otros de no tocar la máquina",
+      "Intentar reparar el daño causado"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la distancia mínima de seguridad que debe mantenerse al usar un extintor en incendios en instalaciones eléctricas de baja tensión?",
+    "respuestas": [
+      "0,3 m",
+      "0,5 m",
+      "1 m"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el propósito del borne de tierra en una instalación eléctrica?",
+    "respuestas": [
+      "Conectar los circuitos de alimentación con el neutro",
+      "Unir las carcasas metálicas de los receptores con la toma de tierra",
+      "Proteger contra sobrecargas en los circuitos"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de circuitos se origina en los Pequeños Interruptores Automáticos (PIA)?",
+    "respuestas": [
+      "Circuitos de protección contra sobretensiones",
+      "Circuitos de alimentación interior",
+      "Circuitos exclusivos para iluminación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué medidas deben tomarse si no se pueden mantener las distancias de seguridad en trabajos cerca de instalaciones de alta tensión?",
+    "respuestas": [
+      "Contactar al responsable de la instalación y esperar instrucciones",
+      "Continuar con el trabajo utilizando protección personal",
+      "Desconectar la energía sin consultar"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué acción se recomienda en caso de caída de una línea eléctrica de alta tensión?",
+    "respuestas": [
+      "Acercarse a la línea para evaluar el daño",
+      "Prohibir el acceso a la zona hasta verificar que no hay tensión",
+      "Reconectar la línea inmediatamente"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la función del circuito de conexión a tierra en una instalación eléctrica?",
+    "respuestas": [
+      "Distribuir eficientemente la energía a todos los receptores",
+      "Proteger a las personas de contactos directos derivando fugas a tierra",
+      "Conectar directamente con la fuente de energía principal"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la distancia mínima de seguridad que debe mantenerse entre el aparato extintor y los puntos en tensión de las instalaciones eléctricas de baja tensión durante una intervención?",
+    "respuestas": [
+      "0,5 metros",
+      "1 metro",
+      "2 metros"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Al intervenir en un incendio cerca de instalaciones eléctricas de 1 a 16 kV, ¿cuál es la distancia mínima que se debe mantener entre el aparato extintor y los puntos en tensión?",
+    "respuestas": [
+      "0,5 metros",
+      "1 metro",
+      "2 metros"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el caso de un incendio en áreas con instalaciones eléctricas de 15 a 66 kV, ¿cuál es la distancia mínima recomendada entre el aparato extintor y los puntos en tensión?",
+    "respuestas": [
+      "1 metro",
+      "2 metros",
+      "4 metros"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué distancia se debe mantener entre un aparato extintor y puntos en tensión de más de 66 kV durante operaciones de extinción de incendios?",
+    "respuestas": [
+      "2 metros",
+      "4 metros",
+      "5 metros"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Cuando se utiliza un agente extintor no conductor de la corriente en una intervención, ¿qué característica es crucial para la seguridad del personal?",
+    "respuestas": [
+      "La viscosidad del agente",
+      "La no conductividad del agente",
+      "El color del agente"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de agentes extintores son recomendados para usar cerca de instalaciones eléctricas en tensión?",
+    "respuestas": [
+      "Agentes conductores de la corriente",
+      "Agentes no conductores de la corriente",
+      "Cualquier tipo de agente extintor"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes afirmaciones es correcta respecto a la intervención en incendios cerca de instalaciones eléctricas?",
+    "respuestas": [
+      "Se puede utilizar cualquier tipo de agente extintor sin considerar su conductividad.",
+      "Solo se deben utilizar agentes extintores que sean conductores de electricidad.",
+      "Es crucial usar agentes extintores que no sean conductores de la corriente."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En una situación de incendio, ¿por qué es importante mantener una distancia de seguridad entre el aparato extintor y los puntos en tensión eléctrica?",
+    "respuestas": [
+      "Para evitar daños al aparato extintor",
+      "Para prevenir el riesgo de electrocución",
+      "Para mejorar la eficacia del agente extintor"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué medida de seguridad es fundamental al usar aparatos extintores cerca de instalaciones eléctricas en tensión?",
+    "respuestas": [
+      "Usar equipos de protección personal",
+      "Mantener la distancia mínima recomendada",
+      "Asegurarse de que el fuego esté completamente apagado"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la distancia mínima de seguridad entre el aparato extintor y puntos en tensión de instalaciones de 15 a 66 kV según las normativas de seguridad en incendios?",
+    "respuestas": [
+      "1 metro",
+      "2 metros",
+      "3 metros"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de intervenciones de incendio, ¿por qué es esencial utilizar agentes extintores no conductores de la corriente cerca de instalaciones eléctricas?",
+    "respuestas": [
+      "Para acelerar el proceso de extinción del fuego",
+      "Para cumplir con las regulaciones ambientales",
+      "Para minimizar el riesgo de electrocución"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué precaución debe tenerse en cuenta al seleccionar un agente extintor para usar en la proximidad de instalaciones eléctricas?",
+    "respuestas": [
+      "Seleccionar agentes de rápido despliegue",
+      "Elegir agentes con alto poder de enfriamiento",
+      "Optar por agentes que no conduzcan electricidad"
+    ],
+    "correcta": 3
+  }
+]

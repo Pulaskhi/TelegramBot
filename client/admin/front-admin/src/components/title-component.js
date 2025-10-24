@@ -56,7 +56,7 @@ class Title extends HTMLElement {
     </style>
 
     <div class="header__title">
-      <h2>ASISTENTES IA</h2>
+      <h2></h2>
     </div>
     
     `

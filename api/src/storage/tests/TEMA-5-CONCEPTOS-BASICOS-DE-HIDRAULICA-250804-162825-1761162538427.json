@@ -1,0 +1,290 @@
+[
+  {
+    "pregunta": "¿Qué estudia la hidráulica según el texto?",
+    "opciones": [
+      "A) El comportamiento de los sólidos en movimiento",
+      "B) El comportamiento de los fluidos, ya sea en reposo o en movimiento",
+      "C) El comportamiento de las partículas subatómicas"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la principal diferencia entre los fluidos y la materia sólida?",
+    "opciones": [
+      "A) La temperatura a la que se encuentran",
+      "B) Las fuerzas de atracción entre sus moléculas",
+      "C) El color y la textura"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la característica principal que permite diferenciar los líquidos de los gases?",
+    "opciones": [
+      "A) La temperatura",
+      "B) La viscosidad",
+      "C) La compresibilidad"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué afirma la teoría cinética sobre las partículas de la materia?",
+    "opciones": [
+      "A) Las partículas están estáticas y bien alineadas",
+      "B) Las partículas están en movimiento continuo",
+      "C) Las partículas no interactúan entre sí"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿En qué estado de agregación las fuerzas de atracción entre partículas son más débiles?",
+    "opciones": [
+      "A) Sólido",
+      "B) Líquido",
+      "C) Gaseoso"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es la unidad de medida de la densidad en el sistema internacional?",
+    "opciones": [
+      "A) Kilogramos por metro cúbico",
+      "B) Litros",
+      "C) Metros cúbicos"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué fórmula representa la presión según el texto?",
+    "opciones": [
+      "A) p = F / A",
+      "B) p = m / V",
+      "C) p = V / m"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Cómo se denomina la unidad de presión en el Sistema Internacional?",
+    "opciones": [
+      "A) Bar",
+      "B) Pascal",
+      "C) Atmosfera"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué fenómeno se describe como el resultado de la tensión superficial?",
+    "opciones": [
+      "A) La formación esférica de las gotas",
+      "B) El aumento de temperatura en los fluidos",
+      "C) La disminución de la viscosidad en los líquidos"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué propiedad mide la resistencia que ofrece un fluido al fluir?",
+    "opciones": [
+      "A) Compresibilidad",
+      "B) Viscosidad",
+      "C) Tensión superficial"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué establece el Principio de Pascal?",
+    "opciones": [
+      "A) La presión en un fluido encerrado e incompresible se transmite desigualmente en todas las direcciones",
+      "B) La presión en un fluido encerrado e incompresible se transmite por igual en todas las direcciones",
+      "C) La presión en un fluido encerrado e incompresible no se transmite"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la equivalencia de una atmósfera en Pascales?",
+    "opciones": [
+      "A) 101.325 Pa",
+      "B) 100 kPa",
+      "C) 1,013 bar"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "Según el texto, ¿los líquidos se consideran generalmente como?",
+    "opciones": [
+      "A) Fluidos incompresibles",
+      "B) Fluidos compresibles",
+      "C) Fluidos no compresibles ni incompresibles"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué unidad se usa comúnmente para medir la presión en fontanería doméstica?",
+    "opciones": [
+      "A) Pascal",
+      "B) Bar",
+      "C) Atmósfera"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué representa el punto crítico en el contexto de los fluidos?",
+    "opciones": [
+      "A) La temperatura más baja a la que puede existir un fluido",
+      "B) El valor máximo de temperatura y presión donde coexisten dos fases",
+      "C) La presión mínima necesaria para licuar un gas"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué campo de estudio aborda los fluidos en reposo?",
+    "opciones": [
+      "A) Aerodinámica",
+      "B) Hidrostática",
+      "C) Hidrodinámica"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cómo se define la unidad de volumen en el sistema métrico decimal?",
+    "opciones": [
+      "A) Litros",
+      "B) Metros cúbicos",
+      "C) Kilogramos"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la fórmula para calcular la densidad?",
+    "opciones": [
+      "A) δ = V / m",
+      "B) δ = m / V",
+      "C) δ = P / V"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué es el volumen específico?",
+    "opciones": [
+      "A) Relación entre el volumen y la masa que contiene",
+      "B) La cantidad de espacio que ocupa un cuerpo",
+      "C) La masa por unidad de volumen"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué mide el peso específico?",
+    "opciones": [
+      "A) La resistencia de un fluido al fluir",
+      "B) Relación entre el peso y el volumen que ocupa un cuerpo",
+      "C) La fuerza que ejerce un fluido por unidad de área"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué unidad no es equivalente a una atmósfera?",
+    "opciones": [
+      "A) 1 bar",
+      "B) 100 kPa",
+      "C) 14.696 PSI"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué fenómeno ocurre debido a la tensión superficial?",
+    "opciones": [
+      "A) La formación de ondas sonoras en los fluidos",
+      "B) El movimiento de los fluidos en tuberías",
+      "C) El desplazamiento de insectos sobre el agua"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Qué establece que la presión aplicada a un fluido incompresible se transmite a todo el fluido?",
+    "opciones": [
+      "A) Ley de Boyle",
+      "B) Principio de Pascal",
+      "C) Teoría Cinética de los Gases"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es la propiedad de un fluido que contraría a la viscosidad?",
+    "opciones": [
+      "A) Compresibilidad",
+      "B) Fluidez",
+      "C) Tensión superficial"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué unidad se utiliza comúnmente para medir la presión en el sistema internacional?",
+    "opciones": [
+      "A) Bar",
+      "B) Pascal",
+      "C) Atmosfera"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué representa 1 litro en unidades cúbicas?",
+    "opciones": [
+      "A) 1 centímetro cúbico",
+      "B) 1 metro cúbico",
+      "C) 1 decímetro cúbico"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "¿Cuál es el factor principal que diferencia a los líquidos de los gases en términos de compresibilidad según el texto?",
+    "opciones": [
+      "A) Los líquidos son generalmente considerados incompresibles",
+      "B) Los gases son generalmente considerados incompresibles",
+      "C) Ambos son igualmente compresibles"
+    ],
+    "correcta": "A"
+  },
+  {
+    "pregunta": "¿Qué fenómeno se describe por la capacidad de algunos líquidos de 'empapar' la superficie sobre la que están en contacto?",
+    "opciones": [
+      "A) Viscosidad",
+      "B) Tensión superficial",
+      "C) Compresibilidad"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué unidad de presión equivale a 101.325 Pascales?",
+    "opciones": [
+      "A) 1 kilopascal",
+      "B) 1 atmósfera",
+      "C) 1 bar"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿En qué unidad se mide comúnmente el volumen de líquidos?",
+    "opciones": [
+      "A) Metros cúbicos",
+      "B) Litros",
+      "C) Kilogramos"
+    ],
+    "correcta": "B"
+  },
+  {
+    "pregunta": "¿Qué propiedad de los fluidos permite que los insectos se desplacen sobre el agua?",
+    "opciones": [
+      "A) Compresibilidad",
+      "B) Viscosidad",
+      "C) Tensión superficial"
+    ],
+    "correcta": "C"
+  },
+  {
+    "pregunta": "Según el texto, ¿qué área estudia los fluidos en movimiento?",
+    "opciones": [
+      "A) Hidrostática",
+      "B) Aerodinámica",
+      "C) Hidrodinámica"
+    ],
+    "correcta": "C"
+  }
+]

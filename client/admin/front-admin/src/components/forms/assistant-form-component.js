@@ -16,7 +16,6 @@ class AssistantForm extends HTMLElement {
   connectedCallback() {
     this.unsubscribe = store.subscribe(() => {
       const currentState = store.getState()
-
       if (
         currentState.crud.formElement.data &&
         currentState.crud.formElement.endPoint === this.endpoint &&
@@ -29,68 +28,60 @@ class AssistantForm extends HTMLElement {
         this.resetForm()
       }
     })
-
     this.render()
   }
 
   render() {
     this.shadow.innerHTML = `
-      <style>
-        * { box-sizing: border-box; font-family: "Nunito Sans", serif; }
-        button { background: transparent; border: none; cursor: pointer; }
-        ul { list-style: none; margin: 0; padding: 0; }
-
-        .form__header-box {
-          display: flex; justify-content: space-between; align-items: center;
-          background: linear-gradient(135deg, hsl(60,100%,85%), hsl(30,90%,75%));
-          border-radius: 5px; box-shadow: 0 2px 10px rgba(255,140,0,0.3);
-          padding: 5px 10px;
-        }
-
-        .form__header-icons { display: flex; gap: 10px; }
-        .save-icon svg, .clean-icon svg, .load-icon svg {
-          width: 30px; height: 30px; fill: hsl(0,85%,45%);
-          transition: fill 0.3s ease;
-        }
-        .save-icon:hover svg, .clean-icon:hover svg, .load-icon:hover svg {
-          fill: hsl(25,100%,40%);
-        }
-
-        .tabs { display: flex; }
-        .tab {
-          background: linear-gradient(135deg, hsl(30,100%,55%), hsl(0,85%,50%));
-          color: white; padding: 8px 15px; cursor: pointer;
-          border: 1px solid hsl(0,85%,40%);
-        }
-        .tab.active {
-          background: linear-gradient(135deg, hsl(45,100%,50%), hsl(25,100%,40%));
-        }
-
-        .tab-content { display: none; }
-        .tab-content.active {
-          display: grid; grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-          gap: 1rem; background: rgba(255,255,255,0.1);
-          padding: 20px; border-radius: 10px; margin-top: 10px;
-        }
-
-        .form-element { display: flex; flex-direction: column; gap: 6px; }
-        .form-element label { font-weight: 600; }
-        .form-element-input input {
-          width: 100%; padding: 10px; border-radius: 5px;
-          border: 2px solid hsl(30,80%,60%);
-        }
-        .form-element-input input:focus {
-          outline: none; border-color: hsl(14,100%,50%);
-          box-shadow: 0 0 10px rgba(255,100,0,0.4);
-        }
-
-        .test-list { max-height: 300px; overflow-y: auto; border: 1px solid #ccc; background: white; border-radius: 8px; }
-        .test-item {
-          padding: 10px; border-bottom: 1px solid #eee; cursor: pointer;
-          display: flex; justify-content: space-between; align-items: center;
-        }
-        .test-item:hover { background: #f9fafb; }
-      </style>
+     <style>
+      * { box-sizing: border-box; font-family: 'Inter','Nunito Sans',sans-serif; }
+      button { background: transparent; border: none; cursor: pointer; }
+      .form { display:flex; flex-direction:column; gap:1rem; background:#f9fafb; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.05); padding:20px; }
+      .form__header-box {
+        display:flex; justify-content:space-between; align-items:center;
+        background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff;
+        border-radius:10px; padding:10px 20px; box-shadow:0 2px 10px rgba(37,99,235,0.3);
+      }
+      .tabs { display:flex; gap:10px; }
+      .tab button { font-weight:600; background:transparent; color:#fff; padding:8px 15px; border-radius:6px; }
+      .tab.active button { background:rgba(255,255,255,0.2); box-shadow:inset 0 2px 4px rgba(255,255,255,0.2); }
+      .form__header-icons { display:flex; gap:12px; }
+      .form__header-icons button { font-size:1.2rem; background:rgba(255,255,255,0.15);
+        color:#fff; border-radius:50%; width:40px; height:40px;
+        display:flex; justify-content:center; align-items:center; }
+      .form__header-icons button:hover { background:rgba(255,255,255,0.35); transform:scale(1.05); }
+      .form__body { background:#fff; border-radius:10px; padding:20px; box-shadow:inset 0 0 5px rgba(0,0,0,0.05); }
+      .tab-content { display:none; }
+      .tab-content.active { display:block; }
+      .form-element { display:flex; flex-direction:column; margin-bottom:1rem; }
+      .form-element label { font-weight:600; color:#374151; margin-bottom:6px; }
+      .form-element-input input { padding:10px 12px; border:2px solid #e5e7eb; border-radius:8px; background:#f9fafb; font-size:0.95rem; }
+      .form-element-input input:focus { outline:none; border-color:#2563eb; box-shadow:0 0 6px rgba(37,99,235,0.3); background:#fff; }
+      .test-list { border:1px solid #e5e7eb; border-radius:8px; background:#fff; overflow-y:auto; max-height:360px; padding:8px; }
+      .tema-header { font-weight:700; background:#1e40af; color:#fff; padding:10px 12px;
+        border-radius:8px; margin:8px 4px 6px; cursor:pointer; display:flex; align-items:center; gap:8px; }
+      .tema-header .caret { transition:transform .2s ease; }
+      .tema-header.open .caret { transform:rotate(90deg); }
+      .tema-inner { margin:6px 0 12px 10px; display:none; }
+      .test-item { display:flex; justify-content:space-between; align-items:center;
+        padding:10px 12px; border:1px solid #f3f4f6; border-radius:8px; cursor:pointer; margin:6px 2px;
+        background:#f9fafb; }
+      .test-item:hover { background:#eff6ff; transform:translateX(3px); }
+      .test-item span { font-weight:600; color:#1e3a8a; }
+      .test-item small { color:#6b7280; font-size:0.85rem; }
+      .test-overlay { position:fixed; inset:0; background:rgba(17,24,39,0.6);
+        display:flex; justify-content:flex-end; align-items:stretch; z-index:9999; backdrop-filter:blur(2px);
+        animation:fadeIn .2s ease; }
+      .test-modal { width:45%; background:#fff; border-radius:16px 0 0 16px; overflow-y:auto;
+        display:flex; flex-direction:column; box-shadow:-6px 0 16px rgba(0,0,0,0.15); animation:slideIn .25s ease; }
+      .test-modal-header { background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff; padding:16px 20px;
+        display:flex; justify-content:space-between; align-items:center; font-weight:600; border-radius:16px 0 0 0; }
+      .test-modal-content { flex:1; padding:20px; background:#f9fafb; }
+      .close-btn { background:transparent; border:none; color:#fff; font-size:1.6rem; cursor:pointer; }
+      .close-btn:hover { color:#fbbf24; transform:scale(1.05); }
+      @keyframes slideIn { from { transform:translateX(100%); opacity:0; } to { transform:translateX(0); opacity:1; } }
+      @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+     </style>
 
       <section class="form">
         <div class="form__header">
@@ -108,44 +99,18 @@ class AssistantForm extends HTMLElement {
         </div>
 
         <div class="form__body">
-          <div class="validation-errors"><ul></ul></div>
           <form>
             <input type="hidden" name="id">
-
-            <!-- General -->
             <div class="tab-content active" data-tab="general">
-              <div class="form-element">
-                <label>Nombre del Asistente</label>
-                <div class="form-element-input"><input type="text" name="assistantName"></div>
-              </div>
-              <div class="form-element">
-                <label>Endpoint del Asistente</label>
-                <div class="form-element-input"><input type="text" name="assistantEndpoint"></div>
-              </div>
+              <div class="form-element"><label>Tema</label><div class="form-element-input"><input type="text" name="assistantName"></div></div>
+              <div class="form-element"><label>Subtema</label><div class="form-element-input"><input type="text" name="assistantEndpoint"></div></div>
             </div>
-
-            <!-- Documentos -->
             <div class="tab-content" data-tab="files">
-              <div class="form-element">
-                <label>Nombre del archivo PDF (ya existente en storage/documents/gallery)</label>
-                <div class="form-element-input">
-                  <input type="text" name="pdfFilename" placeholder="ejemplo.pdf">
-                </div>
-              </div>
-              <div class="form-element">
-                <label>Documentos</label>
-                <div class="form-element-input">
-                  <upload-file-button-component icon="documents" name="assistantDocuments" language-alias="all" quantity="multiple" file-type="documents"></upload-file-button-component>
-                </div>
-              </div>
+              <div class="form-element"><label>Nombre del archivo PDF</label><div class="form-element-input"><input type="text" name="pdfFilename" placeholder="ejemplo.pdf"></div></div>
+              <div class="form-element"><label>Documentos</label><div class="form-element-input"><upload-file-button-component icon="documents" name="assistantDocuments" language-alias="all" quantity="multiple" file-type="documents"></upload-file-button-component></div></div>
             </div>
-
-            <!-- Tests guardados -->
             <div class="tab-content" data-tab="saved">
-              <div class="form-element">
-                <label>Tests generados previamente</label>
-                <div class="test-list"></div>
-              </div>
+              <div class="form-element"><label>Tests generados previamente</label><div class="test-list"></div></div>
             </div>
           </form>
         </div>
@@ -157,121 +122,43 @@ class AssistantForm extends HTMLElement {
   renderButtons() {
     this.shadow.querySelector('.form').addEventListener('click', async (event) => {
       event.preventDefault()
-
-      // === GUARDAR / GENERAR TEST ===
       if (event.target.closest('.save-icon')) {
-        console.log('💾 Guardar pulsado')
-
         let filename = null
-        try {
-          const state = store.getState()
-          const files = state.files?.files || state.files?.selectedFiles || []
-          if (files.length > 0) filename = files[0].filename || files[0].name
-        } catch (e) {
-          console.warn('⚠️ No se pudo leer Redux.files:', e)
-        }
-
+        const state = store.getState()
+        const files = state.files?.files || state.files?.selectedFiles || []
+        if (files.length > 0) filename = files[0].filename || files[0].name
         if (!filename) filename = this.shadow.querySelector('[name="pdfFilename"]')?.value.trim() || ''
-        console.log('📄 Nombre del PDF seleccionado:', filename)
-
         if (!filename) {
-          document.dispatchEvent(new CustomEvent('notice', {
-            detail: { message: 'Debes indicar el nombre del archivo PDF ya existente en storage/documents/gallery', type: 'error' }
-          }))
+          document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Debes indicar el nombre del PDF', type: 'error' } }))
           return
         }
-
         try {
           const res = await fetch('/api/admin/assistants/pdf-questions-stored', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ filename, save: true }) // 👈 Guardar test
+            body: JSON.stringify({ filename, save: true })
           })
-
           if (!res.ok) throw new Error(`Error HTTP ${res.status}`)
           const data = await res.json()
-          console.log('📡 Respuesta del backend:', data)
-
           if (data.success && data.questions) {
-            // Crear el modal lateral con el test
-            const oldModal = document.querySelector('.test-overlay')
-            if (oldModal) oldModal.remove()
-
-            const overlay = document.createElement('div')
-            overlay.className = 'test-overlay'
-            overlay.innerHTML = `
-              <div class="test-modal">
-                <div class="test-modal-header">
-                  <span>🧠 Test generado</span>
-                  <button class="close-btn">×</button>
-                </div>
-                <div class="test-modal-content"></div>
-              </div>
-            `
-            document.body.appendChild(overlay)
-
-            const container = overlay.querySelector('.test-modal-content')
-            const test = document.createElement('test-component')
-            test.setAttribute('data-questions', JSON.stringify(data.questions))
-            container.appendChild(test)
-
-            overlay.querySelector('.close-btn').addEventListener('click', () => overlay.remove())
-            overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove() })
-
-            if (!document.getElementById('test-modal-style')) {
-              const style = document.createElement('style')
-              style.id = 'test-modal-style'
-              style.textContent = `
-                .test-overlay {
-                  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-                  background: rgba(0,0,0,0.5); display: flex; justify-content: flex-end;
-                  align-items: stretch; z-index: 9999;
-                }
-                .test-modal {
-                  width: 40%; background: white; height: 100%;
-                  border-radius: 10px 0 0 10px; overflow-y: auto;
-                  box-shadow: -4px 0 15px rgba(0,0,0,0.2);
-                  display: flex; flex-direction: column;
-                  animation: slideIn .25s ease;
-                }
-                .test-modal-header {
-                  background: #2563eb; color: white; padding: 10px 20px;
-                  display: flex; justify-content: space-between; align-items: center;
-                  font-weight: bold; border-radius: 10px 0 0 0;
-                }
-                .test-modal-content { flex: 1; overflow-y: auto; padding: 20px; background: #f9fafb; }
-                .close-btn { background: transparent; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
-                @keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
-              `
-              document.head.appendChild(style)
-            }
-
-            document.dispatchEvent(new CustomEvent('notice', {
-              detail: { message: 'Preguntas generadas y guardadas correctamente ✅', type: 'success' }
-            }))
-          } else {
-            throw new Error('Respuesta sin preguntas válidas')
-          }
+            const tema = filename.match(/TEMA[-_\s]?(\d+)/i)?.[0] || 'SIN_TEMA'
+            this.showTestModal('🧠 Test generado', data.questions, tema, filename)
+            document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Preguntas generadas correctamente ✅', type: 'success' } }))
+            const activeTab = this.shadow.querySelector('.tab.active')?.dataset?.tab
+            if (activeTab === 'saved') this.loadSavedTests()
+          } else throw new Error('Respuesta sin preguntas válidas')
         } catch (err) {
           console.error('❌ Error general:', err)
-          document.dispatchEvent(new CustomEvent('notice', {
-            detail: { message: 'Error al generar preguntas desde el PDF', type: 'error' }
-          }))
+          document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Error al generar preguntas', type: 'error' } }))
         }
       }
-
-      // === LIMPIAR ===
       if (event.target.closest('.clean-icon')) this.resetForm()
-
-      // === CAMBIO DE TABS ===
       if (event.target.closest('.tab')) {
         const clicked = event.target.closest('.tab')
         this.shadow.querySelector('.tab.active').classList.remove('active')
         clicked.classList.add('active')
         this.shadow.querySelector('.tab-content.active').classList.remove('active')
         this.shadow.querySelector(`.tab-content[data-tab='${clicked.dataset.tab}']`).classList.add('active')
-
-        // Si el usuario abre "Tests Guardados", los cargamos automáticamente
         if (clicked.dataset.tab === 'saved') this.loadSavedTests()
       }
     })
@@ -283,55 +170,66 @@ class AssistantForm extends HTMLElement {
       const data = await res.json()
       const list = this.shadow.querySelector('.test-list')
       list.innerHTML = ''
-
-      if (data.tests?.length) {
-        data.tests.forEach(t => {
-          const div = document.createElement('div')
-          div.className = 'test-item'
-          div.innerHTML = `
-            <span>📘 ${t.name}</span>
-            <small>${(t.size / 1024).toFixed(1)} KB</small>
-          `
-          div.addEventListener('click', () => this.openSavedTest(t.name))
-          list.appendChild(div)
+      if (!data.temas || data.temas.length === 0) { list.innerHTML = '<p>No hay tests guardados.</p>'; return }
+      data.temas.forEach(grupo => {
+        const header = document.createElement('div')
+        header.className = 'tema-header'
+        header.innerHTML = `<span class="caret">▶</span> ${grupo.tema}`
+        list.appendChild(header)
+        const inner = document.createElement('div')
+        inner.className = 'tema-inner'
+        grupo.tests.forEach(t => {
+          const row = document.createElement('div')
+          row.className = 'test-item'
+          row.innerHTML = `<span>${t.name}</span><small>${(t.size / 1024).toFixed(1)} KB</small>`
+          row.addEventListener('click', () => this.openSavedTest(grupo.tema, t.name))
+          inner.appendChild(row)
         })
-      } else {
-        list.innerHTML = '<p>No hay tests guardados.</p>'
-      }
+        header.addEventListener('click', () => {
+          const opened = inner.style.display === 'block'
+          inner.style.display = opened ? 'none' : 'block'
+          header.classList.toggle('open', !opened)
+        })
+        list.appendChild(inner)
+      })
+    } catch (err) { console.error('❌ Error cargando tests guardados:', err) }
+  }
+
+  async openSavedTest(tema, name) {
+    try {
+      const res = await fetch(`/api/admin/assistants/saved-tests/${encodeURIComponent(tema)}/${encodeURIComponent(name)}`)
+      const data = await res.json()
+      if (!data.success) throw new Error('No se pudo cargar el test')
+      this.showTestModal(`🧠 ${name}`, data.questions, tema, name)
     } catch (err) {
-      console.error('❌ Error cargando tests guardados:', err)
+      console.error('❌ Error abriendo test guardado:', err)
+      document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'No se pudo abrir el test guardado', type: 'error' } }))
     }
   }
 
-  async openSavedTest(name) {
-    try {
-      const res = await fetch(`/api/admin/assistants/saved-tests/${name}`)
-      const data = await res.json()
-      if (!data.success) throw new Error('No se pudo cargar el test')
-
-      const overlay = document.createElement('div')
-      overlay.className = 'test-overlay'
-      overlay.innerHTML = `
-        <div class="test-modal">
-          <div class="test-modal-header">
-            <span>🧠 ${name}</span>
-            <button class="close-btn">×</button>
-          </div>
-          <div class="test-modal-content"></div>
+  showTestModal(title, questionsArray, tema = null, source = null) {
+    const old = document.querySelector('.test-overlay')
+    if (old) old.remove()
+    const overlay = document.createElement('div')
+    overlay.className = 'test-overlay'
+    overlay.innerHTML = `
+      <div class="test-modal">
+        <div class="test-modal-header">
+          <span>${title}</span>
+          <button class="close-btn">×</button>
         </div>
-      `
-      document.body.appendChild(overlay)
-
-      const container = overlay.querySelector('.test-modal-content')
-      const test = document.createElement('test-component')
-      test.setAttribute('data-questions', JSON.stringify(data.questions))
-      container.appendChild(test)
-
-      overlay.querySelector('.close-btn').addEventListener('click', () => overlay.remove())
-      overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove() })
-    } catch (err) {
-      console.error('❌ Error abriendo test guardado:', err)
-    }
+        <div class="test-modal-content"></div>
+      </div>
+    `
+    document.body.appendChild(overlay)
+    const container = overlay.querySelector('.test-modal-content')
+    const test = document.createElement('test-component')
+    test.setAttribute('data-questions', JSON.stringify(questionsArray))
+    if (tema) test.setAttribute('data-tema', tema)
+    if (source) test.setAttribute('data-source', source)
+    container.appendChild(test)
+    overlay.querySelector('.close-btn').addEventListener('click', () => overlay.remove())
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove() })
   }
 
   showElement(data) {
