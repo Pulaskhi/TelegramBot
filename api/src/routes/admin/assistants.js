@@ -23,23 +23,53 @@ const badRoot = path.join(__dirname, "../../storage/bad-tests");
 
 // 🧱 Asegura estructura base
 for (const dir of [testsRoot, trainedRoot, badRoot]) {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-    console.log("📁 Carpeta creada:", dir);
-  }
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-// 🧩 Detecta tema desde el nombre del archivo
+// 🧩 Utilidades
 function detectarTema(filename) {
-  const match = filename.match(/TEMA[-_\s]?(\d+)/i);
-  if (match) return `TEMA-${match[1]}`;
-  return "SIN_TEMA";
+  const match = filename?.match?.(/TEMA[-_\s]?(\d+)/i);
+  return match ? `TEMA-${match[1]}` : "SIN_TEMA";
 }
 
-/**
- * POST /api/admin/assistants/pdf-questions-stored
- * 🧠 Genera preguntas tipo test a partir de un PDF
- */
+function letterFromIndex1(idx) {
+  const i = Number(idx) - 1;
+  return String.fromCharCode(65 + (isNaN(i) ? 0 : i));
+}
+
+function normalizeForTraining(q) {
+  const pregunta = q?.pregunta || q?.question || q?.text || "Pregunta sin texto";
+  const rawOptions = Array.isArray(q?.opciones)
+    ? q.opciones
+    : Array.isArray(q?.respuestas)
+    ? q.respuestas
+    : Array.isArray(q?.answers)
+    ? q.answers
+    : [];
+
+  const opciones = {};
+  rawOptions.forEach((opt, i) => {
+    let text = typeof opt === "string" ? opt : (opt?.label || opt?.text || opt?.value || "");
+    text = text.trim().replace(/^[A-Za-z]\)\s*/g, "");
+    const key = String.fromCharCode(65 + i);
+    opciones[key] = text;
+  });
+
+  let correcta = q?.correcta ?? q?.correct ?? q?.correct_index ?? q?.answer ?? 1;
+  if (typeof correcta === "number") correcta = letterFromIndex1(correcta);
+  if (typeof correcta === "string") {
+    const m = correcta.trim().match(/[A-Za-z]/);
+    correcta = m ? m[0].toUpperCase() : "A";
+  }
+
+  const out = { pregunta, opciones, correcta };
+  if (q?.comentario) out.comentario = String(q.comentario);
+  return out;
+}
+
+/* ===========================================================
+   🧠 Generar preguntas desde PDF
+   =========================================================== */
 router.post("/pdf-questions-stored", async (req, res) => {
   const { filename, save } = req.body;
 
@@ -56,21 +86,16 @@ router.post("/pdf-questions-stored", async (req, res) => {
     const dataBuffer = fs.readFileSync(filePath);
     const pdfData = await pdfParse(dataBuffer);
     const fullText = (pdfData.text || "").trim();
-    console.log(`📄 PDF leído (${fullText.length} caracteres)`);
-
-    if (!fullText.length) {
+    if (!fullText.length)
       return res.status(400).json({ message: "El PDF no tiene texto extraíble" });
-    }
 
-    // 🔁 División segura del texto completo
     function chunkByChars(text, maxChars = 8000, overlap = 300) {
       const chunks = [];
       let start = 0;
-      const total = text.length;
-      while (start < total) {
-        const end = Math.min(start + maxChars, total);
+      while (start < text.length) {
+        const end = Math.min(start + maxChars, text.length);
         chunks.push(text.slice(start, end));
-        if (end >= total) break;
+        if (end >= text.length) break;
         start = Math.max(0, end - overlap);
       }
       return chunks;
@@ -78,26 +103,17 @@ router.post("/pdf-questions-stored", async (req, res) => {
 
     const chunks = chunkByChars(fullText, 8000, 300);
 
-    // 🧠 Prompt
-    function buildPrompt(chunk, idx, total, perChunk) {
-      return `
+    async function generateQuestionsFromChunk(chunk, idx, total, perChunk) {
+      const prompt = `
 Eres un experto en oposiciones de BOMBEROS en España.
-Genera ${perChunk} preguntas tipo test profesionales basadas en el siguiente texto técnico.
+Genera ${perChunk} preguntas tipo test basadas en este texto técnico.
 Formato JSON exacto:
 [
-  {
-    "pregunta": "Texto de la pregunta",
-    "respuestas": ["Opción 1", "Opción 2", "Opción 3"],
-    "correcta": 2
-  }
+  {"pregunta":"Texto","respuestas":["Opción 1","Opción 2","Opción 3"],"correcta":2}
 ]
 Texto base (${idx}/${total}):
 """${chunk}"""
 `;
-    }
-
-    async function generateQuestionsFromChunk(chunk, idx, total, perChunk) {
-      const prompt = buildPrompt(chunk, idx, total, perChunk);
       const completion = await openai.chat.completions.create({
         model: "gpt-4-turbo",
         temperature: 0.5,
@@ -109,22 +125,14 @@ Texto base (${idx}/${total}):
       });
 
       const raw = completion.choices?.[0]?.message?.content || "";
-      let cleaned = raw
-        .replace(/```json|```/gi, "")
-        .replace(/\r|\t/g, " ")
-        .replace(/\s{2,}/g, " ")
-        .trim();
-
+      const cleaned = raw.replace(/```json|```/gi, "").trim();
       try {
         return JSON.parse(cleaned);
       } catch {
         const s = cleaned.indexOf("[");
         const e = cleaned.lastIndexOf("]");
-        if (s !== -1 && e !== -1) {
-          try {
-            return JSON.parse(cleaned.slice(s, e + 1));
-          } catch {}
-        }
+        if (s !== -1 && e !== -1)
+          try { return JSON.parse(cleaned.slice(s, e + 1)); } catch {}
       }
       return [];
     }
@@ -134,48 +142,33 @@ Texto base (${idx}/${total}):
     let all = [];
 
     for (let i = 0; i < chunks.length; i++) {
-      const partQs = await generateQuestionsFromChunk(chunks[i], i + 1, chunks.length, perChunk);
-      all.push(...partQs);
+      const qs = await generateQuestionsFromChunk(chunks[i], i + 1, chunks.length, perChunk);
+      all.push(...qs);
     }
 
-    // 🧽 Deduplicar
     const seen = new Set();
-    const questions = [];
-    for (const q of all) {
+    const questions = all.filter(q => {
       const text = (q?.pregunta || "").trim().toLowerCase();
-      if (text && !seen.has(text)) {
-        seen.add(text);
-        questions.push(q);
-      }
-    }
+      if (!text || seen.has(text)) return false;
+      seen.add(text);
+      return true;
+    });
 
     const finalQs = questions.slice(0, targetTotal);
-
-    // 💾 Guardar
     let savedFile = null;
+
     if (save === true) {
       const tema = detectarTema(filename);
       const temaDir = path.join(testsRoot, tema);
       if (!fs.existsSync(temaDir)) fs.mkdirSync(temaDir, { recursive: true });
-
       const base = path.parse(filename).name;
       const outName = `${base}-${Date.now()}.json`;
       const outPath = path.join(temaDir, outName);
       fs.writeFileSync(outPath, JSON.stringify(finalQs, null, 2), "utf8");
-
       savedFile = path.join(tema, outName);
-      console.log(`💾 Test guardado en: ${savedFile}`);
     }
 
-    // Normalizar para el frontend
-    const normalized = (finalQs || []).map((q) => {
-      const opciones = (q.respuestas || []).map(
-        (r, i) => `${String.fromCharCode(65 + i)}) ${r}`
-      );
-      const correcta = ["A", "B", "C"][(q.correcta || 1) - 1] || "A";
-      return { pregunta: q.pregunta, opciones, correcta };
-    });
-
+    const normalized = finalQs.map(normalizeForTraining);
     res.json({ success: true, questions: normalized, file: savedFile });
   } catch (err) {
     console.error("❌ Error general:", err);
@@ -183,162 +176,215 @@ Texto base (${idx}/${total}):
   }
 });
 
-/**
- * GET /api/admin/assistants/saved-tests
- */
-router.get("/saved-tests", (req, res) => {
-  try {
-    if (!fs.existsSync(testsRoot))
-      return res.json({ success: true, temas: [] });
-
-    const temas = [];
-
-    const rootTests = fs
-      .readdirSync(testsRoot)
-      .filter((f) => f.toLowerCase().endsWith(".json"))
-      .map((f) => {
-        const full = path.join(testsRoot, f);
-        const stat = fs.statSync(full);
-        return { name: f, tema: "SIN_TEMA", size: stat.size, mtime: stat.mtime };
-      });
-    if (rootTests.length > 0) temas.push({ tema: "SIN_TEMA", tests: rootTests });
-
-    fs.readdirSync(testsRoot, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .forEach((dir) => {
-        const folder = path.join(testsRoot, dir.name);
-        const tests = fs
-          .readdirSync(folder)
-          .filter((f) => f.toLowerCase().endsWith(".json"))
-          .map((f) => {
-            const full = path.join(folder, f);
-            const stat = fs.statSync(full);
-            return { name: f, tema: dir.name, size: stat.size, mtime: stat.mtime };
-          })
-          .sort((a, b) => b.mtime - a.mtime);
-        temas.push({ tema: dir.name, tests });
-      });
-
-    res.json({ success: true, temas });
-  } catch (err) {
-    console.error("❌ Error listando tests:", err);
-    res.status(500).json({ success: false, message: "No se pudieron listar los tests" });
-  }
-});
-
-/**
- * GET /api/admin/assistants/saved-tests/:tema/:name
- */
-router.get("/saved-tests/:tema/:name", (req, res) => {
-  try {
-    const { tema, name } = req.params;
-    const filePath = path.join(testsRoot, tema === "SIN_TEMA" ? "" : tema, name);
-    if (!fs.existsSync(filePath))
-      return res.status(404).json({ success: false, message: "Archivo no encontrado" });
-
-    const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    const questions = (raw || []).map((q) => {
-      const opciones = (q.respuestas || q.opciones || []).map(
-        (r, i) => `${String.fromCharCode(65 + i)}) ${r}`
-      );
-      const correcta = ["A", "B", "C"][(q.correcta || 1) - 1] || "A";
-      return { pregunta: q.pregunta, opciones, correcta };
-    });
-
-    res.json({ success: true, questions });
-  } catch (err) {
-    console.error("❌ Error leyendo test guardado:", err);
-    res.status(500).json({ success: false, message: "No se pudo leer el test" });
-  }
-});
-
 /* ===========================================================
-   💾 Sistema de entrenamiento (trained-tests y bad-tests)
+   💾 Guardar entrenados (útiles) y malos (con comentario)
    =========================================================== */
-
-/**
- * POST /api/admin/assistants/save-trained
- */
+// ⭐ Guardar preguntas útiles
 router.post("/save-trained", (req, res) => {
   try {
-    const { selectedQuestions, sourceTest, tema = "SIN_TEMA" } = req.body;
-    if (!Array.isArray(selectedQuestions) || selectedQuestions.length === 0)
+    const { selectedQuestions, sourceTest, tema = "SIN_TEMA", feedback = "" } = req.body;
+    if (!Array.isArray(selectedQuestions) || !selectedQuestions.length)
       return res.status(400).json({ success: false, message: "No hay preguntas seleccionadas" });
 
     const temaDir = path.join(trainedRoot, tema);
     if (!fs.existsSync(temaDir)) fs.mkdirSync(temaDir, { recursive: true });
 
-    const baseName =
-      (sourceTest ? path.parse(sourceTest).name : "custom") +
-      "-trained-" +
-      Date.now() +
-      ".json";
-    const outPath = path.join(temaDir, baseName);
-    fs.writeFileSync(outPath, JSON.stringify(selectedQuestions, null, 2), "utf8");
+    const files = fs.readdirSync(temaDir).filter(f => f.endsWith(".json"));
+    const latest = files.sort((a, b) =>
+      fs.statSync(path.join(temaDir, b)).mtime - fs.statSync(path.join(temaDir, a)).mtime
+    )[0];
 
-    console.log(`💾 Preguntas útiles guardadas en: ${outPath}`);
-    res.json({ success: true, file: path.join(tema, baseName) });
+    let all = [];
+    let oldFeedback = "";
+    if (latest) {
+      try {
+        const oldData = JSON.parse(fs.readFileSync(path.join(temaDir, latest), "utf8"));
+        all = Array.isArray(oldData) ? oldData : (oldData.preguntas || []);
+        oldFeedback = oldData.feedback || "";
+      } catch {}
+    }
+
+    const normalized = selectedQuestions.map(normalizeForTraining);
+    const seen = new Set(all.map(q => (q.pregunta || "").trim().toLowerCase()));
+    normalized.forEach(q => {
+      const key = (q.pregunta || "").trim().toLowerCase();
+      if (!seen.has(key)) {
+        all.push(q);
+        seen.add(key);
+      }
+    });
+
+    const outName = latest || `${(sourceTest ? path.parse(sourceTest).name : "custom")}-trained-${Date.now()}.json`;
+    const outPath = path.join(temaDir, outName);
+
+    const data = {
+      tema,
+      fecha: new Date().toISOString(),
+      feedback: feedback || oldFeedback,
+      preguntas: all
+    };
+
+    fs.writeFileSync(outPath, JSON.stringify(data, null, 2), "utf8");
+    console.log(`💾 Preguntas útiles actualizadas en: ${outPath}`);
+    res.json({ success: true, file: path.join(tema, outName), total: all.length });
   } catch (err) {
     console.error("❌ Error guardando trained:", err);
     res.status(500).json({ success: false, message: "Error guardando trained" });
   }
 });
 
-/**
- * POST /api/admin/assistants/save-bad
- */
+// 👎 Guardar preguntas malas con comentario
 router.post("/save-bad", (req, res) => {
   try {
-    const { selectedQuestions, sourceTest, tema = "SIN_TEMA" } = req.body;
-    if (!Array.isArray(selectedQuestions) || selectedQuestions.length === 0)
+    const { selectedQuestions, sourceTest, tema = "SIN_TEMA", feedback = "" } = req.body;
+    if (!Array.isArray(selectedQuestions) || !selectedQuestions.length)
       return res.status(400).json({ success: false, message: "No hay preguntas seleccionadas" });
 
     const temaDir = path.join(badRoot, tema);
     if (!fs.existsSync(temaDir)) fs.mkdirSync(temaDir, { recursive: true });
 
-    const baseName =
-      (sourceTest ? path.parse(sourceTest).name : "custom") +
-      "-bad-" +
-      Date.now() +
-      ".json";
-    const outPath = path.join(temaDir, baseName);
-    fs.writeFileSync(outPath, JSON.stringify(selectedQuestions, null, 2), "utf8");
+    const files = fs.readdirSync(temaDir).filter(f => f.endsWith(".json"));
+    const latest = files.sort((a, b) =>
+      fs.statSync(path.join(temaDir, b)).mtime - fs.statSync(path.join(temaDir, a)).mtime
+    )[0];
 
-    console.log(`💾 Preguntas malas guardadas en: ${outPath}`);
-    res.json({ success: true, file: path.join(tema, baseName) });
+    let all = [];
+    let oldFeedback = "";
+    if (latest) {
+      try {
+        const oldData = JSON.parse(fs.readFileSync(path.join(temaDir, latest), "utf8"));
+        all = Array.isArray(oldData) ? oldData : (oldData.preguntas || []);
+        oldFeedback = oldData.feedback || "";
+      } catch {}
+    }
+
+    const normalized = selectedQuestions.map(q =>
+      normalizeForTraining({ ...q, comentario: q.comentario || "" })
+    );
+    const seen = new Set(all.map(q => (q.pregunta || "").trim().toLowerCase()));
+    normalized.forEach(q => {
+      const key = (q.pregunta || "").trim().toLowerCase();
+      if (!seen.has(key)) {
+        all.push(q);
+        seen.add(key);
+      }
+    });
+
+    const outName = latest || `${(sourceTest ? path.parse(sourceTest).name : "custom")}-bad-${Date.now()}.json`;
+    const outPath = path.join(temaDir, outName);
+
+    const data = {
+      tema,
+      fecha: new Date().toISOString(),
+      feedback: feedback || oldFeedback,
+      preguntas: all
+    };
+
+    fs.writeFileSync(outPath, JSON.stringify(data, null, 2), "utf8");
+    console.log(`💾 Preguntas malas actualizadas en: ${outPath}`);
+    res.json({ success: true, file: path.join(tema, outName), total: all.length });
   } catch (err) {
     console.error("❌ Error guardando bad:", err);
     res.status(500).json({ success: false, message: "Error guardando bad" });
   }
 });
 
-/**
- * GET /api/admin/assistants/trained-tests
- */
+/* ===========================================================
+   📜 Listar y leer tests generados (storage/tests)
+   =========================================================== */
+router.get("/saved-tests", (req, res) => {
+  try {
+    if (!fs.existsSync(testsRoot))
+      return res.json({ success: true, temas: [] });
+
+    const temas = fs.readdirSync(testsRoot).filter(f =>
+      fs.statSync(path.join(testsRoot, f)).isDirectory()
+    );
+
+    const allTemas = temas.map(tema => {
+      const dir = path.join(testsRoot, tema);
+      const files = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
+      const tests = files.map(file => {
+        const filePath = path.join(dir, file);
+        const stats = fs.statSync(filePath);
+        return {
+          name: file,
+          size: stats.size,
+          url: `/api/admin/assistants/saved-tests/${tema}/${file}`,
+        };
+      });
+      return { tema, tests };
+    });
+
+    res.json({ success: true, temas: allTemas });
+  } catch (err) {
+    console.error("❌ Error listando saved-tests:", err);
+    res.status(500).json({ success: false, message: "Error listando saved-tests" });
+  }
+});
+
+router.get("/saved-tests/:tema/:name", (req, res) => {
+  try {
+    const { tema, name } = req.params;
+    const filePath = path.join(testsRoot, tema, name);
+    if (!fs.existsSync(filePath))
+      return res.status(404).json({ success: false, message: "Archivo no encontrado" });
+
+    const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const questions = Array.isArray(raw) ? raw : (raw.preguntas || []);
+    res.json({ success: true, questions });
+  } catch (err) {
+    console.error("❌ Error leyendo saved-test:", err);
+    res.status(500).json({ success: false, message: "Error leyendo test" });
+  }
+});
+
+/* ===========================================================
+   📜 Listar todos los tests entrenados disponibles
+   =========================================================== */
 router.get("/trained-tests", (req, res) => {
   try {
     if (!fs.existsSync(trainedRoot))
-      return res.json({ success: true, temas: [] });
+      return res.json({ success: true, tests: [] });
 
-    const temas = fs.readdirSync(trainedRoot, { withFileTypes: true })
-      .filter(d => d.isDirectory())
-      .map(dir => {
-        const folder = path.join(trainedRoot, dir.name);
-        const files = fs.readdirSync(folder)
-          .filter(f => f.endsWith(".json"))
-          .map(f => {
-            const full = path.join(folder, f);
-            const stat = fs.statSync(full);
-            return { name: f, tema: dir.name, size: stat.size, mtime: stat.mtime };
-          })
-          .sort((a, b) => b.mtime - a.mtime);
-        return { tema: dir.name, tests: files };
+    const temas = fs.readdirSync(trainedRoot).filter(f =>
+      fs.statSync(path.join(trainedRoot, f)).isDirectory()
+    );
+
+    const allTests = [];
+    temas.forEach(tema => {
+      const dir = path.join(trainedRoot, tema);
+      const files = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
+      files.forEach(file => {
+        allTests.push({
+          tema,
+          name: file,
+          path: path.join(tema, file),
+          url: `/api/admin/assistants/trained-tests/${tema}/${file}`,
+        });
       });
+    });
 
-    res.json({ success: true, temas });
+    res.json({ success: true, tests: allTests });
   } catch (err) {
     console.error("❌ Error listando trained-tests:", err);
-    res.status(500).json({ success: false, message: "No se pudieron listar los tests entrenados" });
+    res.status(500).json({ success: false, message: "Error listando trained-tests" });
+  }
+});
+
+router.get("/trained-tests/:tema/:name", (req, res) => {
+  try {
+    const { tema, name } = req.params;
+    const filePath = path.join(trainedRoot, tema, name);
+    if (!fs.existsSync(filePath))
+      return res.status(404).json({ success: false, message: "Archivo no encontrado" });
+
+    const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const questions = Array.isArray(raw) ? raw.map(normalizeForTraining) : (raw.preguntas || []).map(normalizeForTraining);
+    res.json({ success: true, questions, feedback: raw.feedback || "" });
+  } catch (err) {
+    console.error("❌ Error leyendo trained-test:", err);
+    res.status(500).json({ success: false, message: "Error leyendo trained-test" });
   }
 });
 

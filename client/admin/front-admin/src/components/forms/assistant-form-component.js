@@ -1,6 +1,5 @@
 import isEqual from 'lodash-es/isEqual'
 import { store } from '../../redux/store.js'
-import { refreshTable } from '../../redux/crud-slice.js'
 import { showFiles, removeFiles } from '../../redux/files-slice.js'
 import '../tables/test-table-component.js'
 
@@ -69,18 +68,17 @@ class AssistantForm extends HTMLElement {
       .test-item:hover { background:#eff6ff; transform:translateX(3px); }
       .test-item span { font-weight:600; color:#1e3a8a; }
       .test-item small { color:#6b7280; font-size:0.85rem; }
+
+      /* Modal */
       .test-overlay { position:fixed; inset:0; background:rgba(17,24,39,0.6);
-        display:flex; justify-content:flex-end; align-items:stretch; z-index:9999; backdrop-filter:blur(2px);
-        animation:fadeIn .2s ease; }
+        display:flex; justify-content:flex-end; align-items:stretch; z-index:9999; backdrop-filter:blur(2px); }
       .test-modal { width:45%; background:#fff; border-radius:16px 0 0 16px; overflow-y:auto;
-        display:flex; flex-direction:column; box-shadow:-6px 0 16px rgba(0,0,0,0.15); animation:slideIn .25s ease; }
+        display:flex; flex-direction:column; box-shadow:-6px 0 16px rgba(0,0,0,0.15); }
       .test-modal-header { background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff; padding:16px 20px;
         display:flex; justify-content:space-between; align-items:center; font-weight:600; border-radius:16px 0 0 0; }
       .test-modal-content { flex:1; padding:20px; background:#f9fafb; }
       .close-btn { background:transparent; border:none; color:#fff; font-size:1.6rem; cursor:pointer; }
       .close-btn:hover { color:#fbbf24; transform:scale(1.05); }
-      @keyframes slideIn { from { transform:translateX(100%); opacity:0; } to { transform:translateX(0); opacity:1; } }
-      @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
      </style>
 
       <section class="form">
@@ -89,7 +87,8 @@ class AssistantForm extends HTMLElement {
             <div class="tabs">
               <div class="tab active" data-tab="general"><button>General</button></div>
               <div class="tab" data-tab="files"><button>Documentos</button></div>
-              <div class="tab" data-tab="saved"><button>Tests Guardados</button></div>
+              <div class="tab" data-tab="saved"><button>Tests Generados</button></div>
+              <div class="tab" data-tab="trained"><button>Tests Entrenados</button></div>
             </div>
             <div class="form__header-icons">
               <button class="clean-icon" title="Limpiar formulario">🧹</button>
@@ -101,115 +100,155 @@ class AssistantForm extends HTMLElement {
         <div class="form__body">
           <form>
             <input type="hidden" name="id">
+
             <div class="tab-content active" data-tab="general">
-              <div class="form-element"><label>Tema</label><div class="form-element-input"><input type="text" name="assistantName"></div></div>
-              <div class="form-element"><label>Subtema</label><div class="form-element-input"><input type="text" name="assistantEndpoint"></div></div>
+              <div class="form-element">
+                <label>Tema</label>
+                <div class="form-element-input"><input type="text" name="assistantName"></div>
+              </div>
+              <div class="form-element">
+                <label>Subtema</label>
+                <div class="form-element-input"><input type="text" name="assistantEndpoint"></div>
+              </div>
             </div>
+
             <div class="tab-content" data-tab="files">
-              <div class="form-element"><label>Nombre del archivo PDF</label><div class="form-element-input"><input type="text" name="pdfFilename" placeholder="ejemplo.pdf"></div></div>
-              <div class="form-element"><label>Documentos</label><div class="form-element-input"><upload-file-button-component icon="documents" name="assistantDocuments" language-alias="all" quantity="multiple" file-type="documents"></upload-file-button-component></div></div>
+              <div class="form-element"><label>Nombre del archivo PDF</label>
+                <div class="form-element-input"><input type="text" name="pdfFilename" placeholder="ejemplo.pdf"></div>
+              </div>
             </div>
+
             <div class="tab-content" data-tab="saved">
-              <div class="form-element"><label>Tests generados previamente</label><div class="test-list"></div></div>
+              <div class="form-element"><label>Tests generados previamente</label>
+                <div class="test-list saved-list"></div>
+              </div>
+            </div>
+
+            <div class="tab-content" data-tab="trained">
+              <div class="form-element"><label>Tests entrenados</label>
+                <div class="test-list trained-list"></div>
+              </div>
             </div>
           </form>
         </div>
       </section>
     `
-    this.renderButtons()
+    this.bindEvents()
   }
 
-  renderButtons() {
-    this.shadow.querySelector('.form').addEventListener('click', async (event) => {
-      event.preventDefault()
-      if (event.target.closest('.save-icon')) {
-        let filename = null
-        const state = store.getState()
-        const files = state.files?.files || state.files?.selectedFiles || []
-        if (files.length > 0) filename = files[0].filename || files[0].name
-        if (!filename) filename = this.shadow.querySelector('[name="pdfFilename"]')?.value.trim() || ''
-        if (!filename) {
-          document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Debes indicar el nombre del PDF', type: 'error' } }))
-          return
-        }
-        try {
-          const res = await fetch('/api/admin/assistants/pdf-questions-stored', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ filename, save: true })
-          })
-          if (!res.ok) throw new Error(`Error HTTP ${res.status}`)
-          const data = await res.json()
-          if (data.success && data.questions) {
-            const tema = filename.match(/TEMA[-_\s]?(\d+)/i)?.[0] || 'SIN_TEMA'
-            this.showTestModal('🧠 Test generado', data.questions, tema, filename)
-            document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Preguntas generadas correctamente ✅', type: 'success' } }))
-            const activeTab = this.shadow.querySelector('.tab.active')?.dataset?.tab
-            if (activeTab === 'saved') this.loadSavedTests()
-          } else throw new Error('Respuesta sin preguntas válidas')
-        } catch (err) {
-          console.error('❌ Error general:', err)
-          document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Error al generar preguntas', type: 'error' } }))
-        }
-      }
-      if (event.target.closest('.clean-icon')) this.resetForm()
-      if (event.target.closest('.tab')) {
-        const clicked = event.target.closest('.tab')
+  bindEvents() {
+    this.shadow.querySelector('.form').addEventListener('click', async (e) => {
+      e.preventDefault()
+
+      if (e.target.closest('.save-icon')) this.generateTest()
+      if (e.target.closest('.clean-icon')) this.resetForm()
+
+      const tab = e.target.closest('.tab')
+      if (tab) {
         this.shadow.querySelector('.tab.active').classList.remove('active')
-        clicked.classList.add('active')
+        tab.classList.add('active')
         this.shadow.querySelector('.tab-content.active').classList.remove('active')
-        this.shadow.querySelector(`.tab-content[data-tab='${clicked.dataset.tab}']`).classList.add('active')
-        if (clicked.dataset.tab === 'saved') this.loadSavedTests()
+        this.shadow.querySelector(`.tab-content[data-tab="${tab.dataset.tab}"]`).classList.add('active')
+
+        if (tab.dataset.tab === 'saved') this.loadSavedTests()
+        if (tab.dataset.tab === 'trained') this.loadTrainedTests()
       }
     })
   }
 
-  async loadSavedTests() {
+  async generateTest() {
+    let filename = this.shadow.querySelector('[name="pdfFilename"]')?.value.trim()
+    if (!filename) {
+      document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Debes indicar el nombre del PDF', type: 'error' } }))
+      return
+    }
+
     try {
-      const res = await fetch('/api/admin/assistants/saved-tests')
+      const res = await fetch('/api/admin/assistants/pdf-questions-stored', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filename, save: true })
+      })
       const data = await res.json()
-      const list = this.shadow.querySelector('.test-list')
+      if (!data.success) throw new Error('Error al generar preguntas')
+      document.dispatchEvent(new CustomEvent('notice', { detail: { message: '✅ Preguntas generadas correctamente', type: 'success' } }))
+      this.loadSavedTests()
+    } catch (err) {
+      console.error('❌ Error generando test:', err)
+      document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Error al generar el test', type: 'error' } }))
+    }
+  }
+
+  async loadSavedTests() {
+    await this.loadTests('/api/admin/assistants/saved-tests', '.saved-list', 'saved')
+  }
+
+  async loadTrainedTests() {
+    await this.loadTests('/api/admin/assistants/trained-tests', '.trained-list', 'trained')
+  }
+
+  async loadTests(url, selector, type) {
+    try {
+      const res = await fetch(url)
+      const data = await res.json()
+      const list = this.shadow.querySelector(selector)
       list.innerHTML = ''
-      if (!data.temas || data.temas.length === 0) { list.innerHTML = '<p>No hay tests guardados.</p>'; return }
-      data.temas.forEach(grupo => {
+
+      const groups = data.temas || data.tests || []
+      if (!groups.length) {
+        list.innerHTML = '<p>No hay tests guardados.</p>'
+        return
+      }
+
+      groups.forEach(grupo => {
         const header = document.createElement('div')
         header.className = 'tema-header'
         header.innerHTML = `<span class="caret">▶</span> ${grupo.tema}`
         list.appendChild(header)
+
         const inner = document.createElement('div')
         inner.className = 'tema-inner'
-        grupo.tests.forEach(t => {
+
+        grupo.tests?.forEach(t => {
           const row = document.createElement('div')
           row.className = 'test-item'
-          row.innerHTML = `<span>${t.name}</span><small>${(t.size / 1024).toFixed(1)} KB</small>`
-          row.addEventListener('click', () => this.openSavedTest(grupo.tema, t.name))
+          row.innerHTML = `<span>${t.name}</span>`
+          row.addEventListener('click', () => this.openTest(grupo.tema, t.name, type))
           inner.appendChild(row)
         })
-        header.addEventListener('click', () => {
-          const opened = inner.style.display === 'block'
-          inner.style.display = opened ? 'none' : 'block'
-          header.classList.toggle('open', !opened)
-        })
         list.appendChild(inner)
+
+        header.addEventListener('click', () => {
+          const open = inner.style.display === 'block'
+          inner.style.display = open ? 'none' : 'block'
+          header.classList.toggle('open', !open)
+        })
       })
-    } catch (err) { console.error('❌ Error cargando tests guardados:', err) }
+    } catch (err) {
+      console.error('❌ Error cargando tests:', err)
+    }
   }
 
-  async openSavedTest(tema, name) {
+  async openTest(tema, name, type) {
     try {
-      const res = await fetch(`/api/admin/assistants/saved-tests/${encodeURIComponent(tema)}/${encodeURIComponent(name)}`)
+      const endpoint =
+        type === 'trained'
+          ? `/api/admin/assistants/trained-tests/${encodeURIComponent(tema)}/${encodeURIComponent(name)}`
+          : `/api/admin/assistants/saved-tests/${encodeURIComponent(tema)}/${encodeURIComponent(name)}`
+      const res = await fetch(endpoint)
       const data = await res.json()
-      if (!data.success) throw new Error('No se pudo cargar el test')
-      this.showTestModal(`🧠 ${name}`, data.questions, tema, name)
+      if (!data.success) throw new Error('No se pudo abrir el test')
+      this.showTestModal(`🧠 ${name}`, data.questions, tema, name, data.feedback || '')
     } catch (err) {
-      console.error('❌ Error abriendo test guardado:', err)
+      console.error('❌ Error abriendo test:', err)
       document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'No se pudo abrir el test guardado', type: 'error' } }))
     }
   }
 
-  showTestModal(title, questionsArray, tema = null, source = null) {
+  showTestModal(title, questionsArray, tema = null, source = null, feedback = '') {
     const old = document.querySelector('.test-overlay')
     if (old) old.remove()
+
     const overlay = document.createElement('div')
     overlay.className = 'test-overlay'
     overlay.innerHTML = `
@@ -222,14 +261,26 @@ class AssistantForm extends HTMLElement {
       </div>
     `
     document.body.appendChild(overlay)
+
     const container = overlay.querySelector('.test-modal-content')
     const test = document.createElement('test-component')
     test.setAttribute('data-questions', JSON.stringify(questionsArray))
     if (tema) test.setAttribute('data-tema', tema)
     if (source) test.setAttribute('data-source', source)
+    if (feedback) test.setAttribute('data-feedback', feedback)
     container.appendChild(test)
+
     overlay.querySelector('.close-btn').addEventListener('click', () => overlay.remove())
     overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove() })
+  }
+
+  resetForm() {
+    const form = this.shadow.querySelector('form')
+    form.reset()
+    this.shadow.querySelector('.tab.active').classList.remove('active')
+    this.shadow.querySelector('[data-tab="general"]').classList.add('active')
+    this.shadow.querySelector('.tab-content.active').classList.remove('active')
+    this.shadow.querySelector('[data-tab="general"].tab-content')
   }
 
   showElement(data) {
@@ -238,14 +289,6 @@ class AssistantForm extends HTMLElement {
       if (input) input.value = value
       if (typeof value === 'object' && key === 'files') store.dispatch(showFiles(value))
     })
-  }
-
-  resetForm() {
-    const form = this.shadow.querySelector('form')
-    form.reset()
-    this.shadow.querySelector('[name="id"]').value = ''
-    this.formElementData = null
-    store.dispatch(removeFiles())
   }
 }
 

@@ -32,49 +32,29 @@ class TestComponent extends HTMLElement {
     this._render();
   }
 
+  /**
+   * 🔄 Normaliza preguntas de distintos formatos al formato interno uniforme:
+   * { pregunta: "texto", opciones: [{ key: "A", label: "A) ..." }, ...], correcta: "A" }
+   */
   _normalizeQuestions(arr) {
-    const stripLetterPrefix = (s) => {
-      const m =
-        typeof s === "string"
-          ? s.trim().match(/^[A-Za-z]\)\s*(.*)$/)
-          : null;
-      return m ? m[1] : typeof s === "string" ? s.trim() : "";
-    };
-
-    const letterFrom = (v) => {
-      if (typeof v === "number") return String.fromCharCode(65 + v);
-      if (typeof v === "string") {
-        const m = v.trim().match(/[A-Za-z]/);
-        return m ? m[0].toUpperCase() : "A";
-      }
-      return "A";
-    };
-
     return (arr || []).map((q) => {
-      const pregunta =
-        q.pregunta || q.question || q.text || "Pregunta sin texto";
+      const pregunta = q.pregunta || q.question || q.text || "Pregunta sin texto";
 
-      let opcionesRaw = q.opciones || q.options || q.answers || [];
-      if (!Array.isArray(opcionesRaw)) opcionesRaw = [];
-
-      opcionesRaw = opcionesRaw.map((opt) => {
-        if (typeof opt === "string") return opt;
-        if (opt && typeof opt === "object")
-          return opt.text || opt.label || opt.value || "";
-        return "";
-      });
-
-      const opcionesLimpias = opcionesRaw.map(stripLetterPrefix);
-      const opciones = opcionesLimpias.map((txt, i) => {
-        const letter = String.fromCharCode(65 + i);
+      // ✅ Soporta distintos nombres de campo para las opciones
+      const respuestas = q.respuestas || q.opciones || q.answers || q.options || [];
+      const opcionesLimpias = (Array.isArray(respuestas) ? respuestas : Object.values(respuestas)).map((txt, i) => {
+        const letter = String.fromCharCode(65 + i); // A, B, C, ...
         return { key: letter, label: `${letter}) ${txt}` };
       });
 
-      const correcta = letterFrom(
-        q.correcta ?? q.correct ?? q.correct_index ?? q.answer
-      );
+      // ✅ Convierte número (1,2,3) a letra (A,B,C)
+      let correcta = "A";
+      if (typeof q.correcta === "number") correcta = String.fromCharCode(64 + q.correcta);
+      else if (typeof q.correcta === "string") correcta = q.correcta.toUpperCase().trim();
+      else if (typeof q.correct === "number") correcta = String.fromCharCode(64 + q.correct);
+      else if (typeof q.correct === "string") correcta = q.correct.toUpperCase().trim();
 
-      return { pregunta, opciones, correcta };
+      return { pregunta, opciones: opcionesLimpias, correcta };
     });
   }
 
@@ -101,16 +81,13 @@ class TestComponent extends HTMLElement {
         }
         .question-title { margin: 0; font-weight: 700; }
 
-        .flag-wrap {
-          display: flex; gap: 10px;
-        }
+        .flag-wrap { display: flex; gap: 10px; }
 
         .useful-wrap, .bad-wrap {
           display: inline-flex; align-items: center; gap: 6px;
           font-size: .9rem; user-select: none; cursor: pointer;
           padding: 4px 8px; border-radius: 6px; transition: all .25s ease;
         }
-
         .useful-wrap { background: rgba(251,191,36,0.15); color: #92400e; }
         .useful-wrap:hover { background: rgba(251,191,36,0.25); transform: scale(1.05); }
         .useful-flag { accent-color: #fbbf24; transform: scale(1.15); }
@@ -118,6 +95,19 @@ class TestComponent extends HTMLElement {
         .bad-wrap { background: rgba(239,68,68,0.15); color: #991b1b; }
         .bad-wrap:hover { background: rgba(239,68,68,0.25); transform: scale(1.05); }
         .bad-flag { accent-color: #ef4444; transform: scale(1.15); }
+
+        .bad-comment { display: none; margin-top: 8px; }
+        .bad-comment textarea {
+          width: 100%;
+          border-radius: 6px;
+          border: 1px solid #fca5a5;
+          padding: 6px 8px;
+          font-size: 0.9rem;
+          color: #7f1d1d;
+          background: #fef2f2;
+          resize: vertical;
+          min-height: 50px;
+        }
 
         .options label {
           display: flex; align-items: center; gap: 8px;
@@ -144,13 +134,17 @@ class TestComponent extends HTMLElement {
           background: #e0e7ff; color: #1e3a8a; padding: 6px 10px;
           border-radius: 6px; font-weight: 600; font-size: 0.9rem; margin-top: 8px; border: 1px solid #c7d2fe;
         }
-        .btn-single:hover { background: #c7d2fe; }
 
-        .result {
-          margin-top: 1.2rem; text-align: center; font-weight: 700; font-size: 1.1rem; padding-top: 8px;
-        }
+        .result { margin-top: 1.2rem; text-align: center; font-weight: 700; font-size: 1.1rem; padding-top: 8px; }
         .result.pass { color: #16a34a; }
         .result.fail { color: #dc2626; }
+
+        .feedback { margin-top: 1.5rem; border-top: 1px solid #ddd; padding-top: 1rem; }
+        .feedback h3 { margin: 0 0 8px; font-size: 1rem; color: #1e3a8a; }
+        .feedback textarea {
+          width: 100%; min-height: 70px; border-radius: 6px;
+          border: 1px solid #cbd5e1; padding: 8px; resize: vertical;
+        }
       </style>
 
       <div class="container">
@@ -160,12 +154,18 @@ class TestComponent extends HTMLElement {
         <button class="btn btn-trained">⭐ Guardar preguntas útiles</button>
         <button class="btn btn-bad">👎 Guardar preguntas malas</button>
         <div class="result"></div>
+
+        <div class="feedback">
+          <h3>📝 Comentarios generales sobre el test</h3>
+          <textarea class="feedback-text" placeholder="Escribe aquí tus sugerencias o mejoras..."></textarea>
+        </div>
       </div>
     `;
 
     const content = this.shadow.querySelector(".content");
     content.innerHTML = "";
 
+    // 🔹 Renderizar todas las preguntas con sus opciones
     this.questions.forEach((q, idx) => {
       const div = document.createElement("div");
       div.className = "question";
@@ -176,25 +176,27 @@ class TestComponent extends HTMLElement {
       header.innerHTML = `
         <p class="question-title"><strong>${idx + 1}. ${q.pregunta}</strong></p>
         <div class="flag-wrap">
-          <label class="useful-wrap" title="Marcar esta pregunta como útil">
-            <input type="checkbox" class="useful-flag">
-            <span>⭐ Útil</span>
-          </label>
-          <label class="bad-wrap" title="Marcar esta pregunta como mala">
-            <input type="checkbox" class="bad-flag">
-            <span>👎 Mala</span>
-          </label>
+          <label class="useful-wrap"><input type="checkbox" class="useful-flag"><span>⭐ Útil</span></label>
+          <label class="bad-wrap"><input type="checkbox" class="bad-flag"><span>👎 Mala</span></label>
         </div>
       `;
       div.appendChild(header);
 
-      // Enlazar exclusividad entre ⭐ y 👎
-      setTimeout(() => {
-        const good = div.querySelector(".useful-flag");
-        const bad = div.querySelector(".bad-flag");
-        good.addEventListener("change", () => { if (good.checked) bad.checked = false; });
-        bad.addEventListener("change", () => { if (bad.checked) good.checked = false; });
-      }, 0);
+      const badComment = document.createElement("div");
+      badComment.className = "bad-comment";
+      badComment.innerHTML = `<textarea placeholder="Explica brevemente por qué esta pregunta es mala..."></textarea>`;
+      div.appendChild(badComment);
+
+      const good = header.querySelector(".useful-flag");
+      const bad = header.querySelector(".bad-flag");
+      bad.addEventListener("change", () => {
+        good.checked = false;
+        badComment.style.display = bad.checked ? "block" : "none";
+      });
+      good.addEventListener("change", () => {
+        bad.checked = false;
+        badComment.style.display = "none";
+      });
 
       const optionsContainer = document.createElement("div");
       optionsContainer.className = "options";
@@ -274,54 +276,47 @@ class TestComponent extends HTMLElement {
   async _saveTrained() {
     const selectedQuestions = [];
     this.questions.forEach((q, i) => {
-      const isChecked = this.shadow.querySelector(
-        `.question[data-index="${i}"] .useful-flag`
-      )?.checked;
+      const isChecked = this.shadow.querySelector(`.question[data-index="${i}"] .useful-flag`)?.checked;
       if (isChecked) selectedQuestions.push(q);
     });
 
-    if (selectedQuestions.length === 0) {
-      alert("No hay preguntas marcadas como útiles.");
-      return;
-    }
-
+    if (selectedQuestions.length === 0) return alert("No hay preguntas marcadas como útiles.");
     await this._sendToBackend(selectedQuestions, "save-trained");
   }
 
   async _saveBad() {
-    const badQuestions = [];
-    this.questions.forEach((q, i) => {
-      const isBad = this.shadow.querySelector(
-        `.question[data-index="${i}"] .bad-flag`
-      )?.checked;
-      if (isBad) badQuestions.push(q);
-    });
-
-    if (badQuestions.length === 0) {
-      alert("No hay preguntas marcadas como malas.");
-      return;
+  const badQuestions = [];
+  this.questions.forEach((q, i) => {
+    const badFlag = this.shadow.querySelector(`.question[data-index="${i}"] .bad-flag`);
+    if (badFlag?.checked) {
+      const comment = this.shadow.querySelector(`.question[data-index="${i}"] textarea`)?.value?.trim() || "";
+      badQuestions.push({ ...q, comentario: comment });
     }
+  });
 
-    await this._sendToBackend(badQuestions, "save-bad");
+  if (badQuestions.length === 0) {
+    alert("No hay preguntas marcadas como malas.");
+    return;
   }
 
+  await this._sendToBackend(badQuestions, "save-bad");
+}
   async _sendToBackend(selectedQuestions, route) {
     try {
       const tema = this.getAttribute("data-tema") || "SIN_TEMA";
       const sourceTest = this.getAttribute("data-source") || "custom";
+      const feedback = this.shadow.querySelector(".feedback-text")?.value?.trim() || "";
 
       const res = await fetch(`/api/admin/assistants/${route}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ selectedQuestions, sourceTest, tema }),
+        body: JSON.stringify({ selectedQuestions, sourceTest, tema, feedback }),
       });
 
       const data = await res.json();
-      if (data.success) {
-        alert(`Preguntas guardadas en ${data.file}`);
-      } else {
-        alert("Error al guardar preguntas.");
-      }
+      if (data.success)
+        alert(`Guardado (${data.file}). Total preguntas: ${data.total || selectedQuestions.length}`);
+      else alert("Error al guardar preguntas.");
     } catch (err) {
       console.error("❌ Error guardando preguntas:", err);
       alert("Error guardando preguntas");

@@ -1,0 +1,27 @@
+{
+  "tema": "TEMA-1",
+  "fecha": "2025-10-24T11:26:07.534Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué factor no influye en la rapidez de combustión de una nube de polvo?",
+      "opciones": [
+        "A) A) La humedad",
+        "B) B) La temperatura ambiente",
+        "C) C) El tamaño de las partículas en suspensión"
+      ],
+      "correcta": "B",
+      "comentario": "los 3 influyen"
+    },
+    {
+      "pregunta": "Además del oxígeno, ¿qué otro comburente puede hacer que algunos metales como el aluminio ardan?",
+      "opciones": [
+        "A) A) Cloro",
+        "B) B) Nitrógeno",
+        "C) C) Ácido nítrico"
+      ],
+      "correcta": "B",
+      "comentario": "los 3 pueden ser comburentes"
+    }
+  ]
+}
