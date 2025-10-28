@@ -1,6 +1,6 @@
 {
   "tema": "TEMA-1",
-  "fecha": "2025-10-24T11:27:17.489Z",
+  "fecha": "2025-10-24T19:48:50.010Z",
   "feedback": "en general bien, faltan mas preguntas sobre puntos de inflamación de las mas importantes, butano, metano, propano, etano, gasolina, diesel...",
   "preguntas": [
     {
@@ -326,6 +326,33 @@
         "C": "Un proceso donde las sustancias se mezclan sin cambiar su naturaleza."
       },
       "correcta": "B"
+    },
+    {
+      "pregunta": "¿Qué indica la presencia de humo negro en un incendio?",
+      "opciones": {
+        "A": "Combustión completa y baja producción de CO₂",
+        "B": "Combustión incompleta y presencia de hollín",
+        "C": "Alta eficiencia en la quema de materiales"
+      },
+      "correcta": "B"
+    },
+    {
+      "pregunta": "¿Cuál es la principal causa de muerte relacionada con la exposición al monóxido de carbono (CO) en incendios?",
+      "opciones": {
+        "A": "Explosión por mezclas inflamables",
+        "B": "Formación de carboxihemoglobina que impide el transporte de O₂",
+        "C": "Congelación al contacto con el gas"
+      },
+      "correcta": "B"
+    },
+    {
+      "pregunta": "¿Qué tipo de gas produce el amoniaco cuando reacciona con la humedad de las mucosas?",
+      "opciones": {
+        "A": "Hidróxido de sodio",
+        "B": "Ácido clorhídrico",
+        "C": "Hidróxido amónico"
+      },
+      "correcta": "C"
     }
   ]
 }

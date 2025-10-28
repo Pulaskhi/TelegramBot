@@ -54,8 +54,7 @@ class AssistantForm extends HTMLElement {
       .tab-content.active { display:block; }
       .form-element { display:flex; flex-direction:column; margin-bottom:1rem; }
       .form-element label { font-weight:600; color:#374151; margin-bottom:6px; }
-      .form-element-input input { padding:10px 12px; border:2px solid #e5e7eb; border-radius:8px; background:#f9fafb; font-size:0.95rem; }
-      .form-element-input input:focus { outline:none; border-color:#2563eb; box-shadow:0 0 6px rgba(37,99,235,0.3); background:#fff; }
+
       .test-list { border:1px solid #e5e7eb; border-radius:8px; background:#fff; overflow-y:auto; max-height:360px; padding:8px; }
       .tema-header { font-weight:700; background:#1e40af; color:#fff; padding:10px 12px;
         border-radius:8px; margin:8px 4px 6px; cursor:pointer; display:flex; align-items:center; gap:8px; }
@@ -69,7 +68,6 @@ class AssistantForm extends HTMLElement {
       .test-item span { font-weight:600; color:#1e3a8a; }
       .test-item small { color:#6b7280; font-size:0.85rem; }
 
-      /* Modal */
       .test-overlay { position:fixed; inset:0; background:rgba(17,24,39,0.6);
         display:flex; justify-content:flex-end; align-items:stretch; z-index:9999; backdrop-filter:blur(2px); }
       .test-modal { width:45%; background:#fff; border-radius:16px 0 0 16px; overflow-y:auto;
@@ -113,8 +111,17 @@ class AssistantForm extends HTMLElement {
             </div>
 
             <div class="tab-content" data-tab="files">
-              <div class="form-element"><label>Nombre del archivo PDF</label>
-                <div class="form-element-input"><input type="text" name="pdfFilename" placeholder="ejemplo.pdf"></div>
+              <div class="form-element">
+                <label>Sube tu documento PDF</label>
+                <div class="form-element-input">
+                  <upload-file-button-component
+                    icon="documents"
+                    name="assistantDocuments"
+                    language-alias="all"
+                    quantity="single"
+                    file-type="documents">
+                  </upload-file-button-component>
+                </div>
               </div>
             </div>
 
@@ -157,9 +164,20 @@ class AssistantForm extends HTMLElement {
   }
 
   async generateTest() {
-    let filename = this.shadow.querySelector('[name="pdfFilename"]')?.value.trim()
+    let filename = null
+
+    try {
+      const state = store.getState()
+      const files = state.files?.files || state.files?.selectedFiles || []
+      if (files.length > 0) filename = files[0].filename || files[0].name
+    } catch (e) {
+      console.warn('⚠️ No se pudo leer Redux.files:', e)
+    }
+
+    console.log('📄 Archivo seleccionado para generar test:', filename)
+
     if (!filename) {
-      document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Debes indicar el nombre del PDF', type: 'error' } }))
+      document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Debes subir o seleccionar un PDF en la galería primero', type: 'error' } }))
       return
     }
 
@@ -171,6 +189,7 @@ class AssistantForm extends HTMLElement {
       })
       const data = await res.json()
       if (!data.success) throw new Error('Error al generar preguntas')
+
       document.dispatchEvent(new CustomEvent('notice', { detail: { message: '✅ Preguntas generadas correctamente', type: 'success' } }))
       this.loadSavedTests()
     } catch (err) {
@@ -281,6 +300,7 @@ class AssistantForm extends HTMLElement {
     this.shadow.querySelector('[data-tab="general"]').classList.add('active')
     this.shadow.querySelector('.tab-content.active').classList.remove('active')
     this.shadow.querySelector('[data-tab="general"].tab-content')
+    store.dispatch(removeFiles())
   }
 
   showElement(data) {

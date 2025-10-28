@@ -1,0 +1,16 @@
+{
+  "tema": "TEMA-5",
+  "fecha": "2025-10-24T17:36:49.291Z",
+  "feedback": "Me gusta pero se pueden poner mas preguntas sobre bombas",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué efecto tiene el caudal requerido en la altura de aspiración de una bomba?",
+      "opciones": {
+        "A": "No afecta la altura de aspiración",
+        "B": "Aumenta la altura de aspiración",
+        "C": "Disminuye la altura de aspiración"
+      },
+      "correcta": "C"
+    }
+  ]
+}

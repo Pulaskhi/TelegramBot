@@ -1,0 +1,398 @@
+[
+  {
+    "pregunta": "¿Qué fenómeno implica un cambio en la composición interna y externa de las sustancias?",
+    "respuestas": [
+      "Fenómeno físico",
+      "Fenómeno químico",
+      "Fenómeno fisicoquímico"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes ejemplos no es un fenómeno químico según el texto?",
+    "respuestas": [
+      "Oxidación de un trozo de hierro",
+      "Disolución de sal en agua",
+      "Combustión de papel"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué proceso describen mejor las disoluciones según el texto?",
+    "respuestas": [
+      "Mezcla homogénea sin reacción química",
+      "Reacción química con cambio de estado",
+      "Reacción química que libera energía"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Según el texto, ¿qué es necesario para que una reacción química sea reversible?",
+    "respuestas": [
+      "Debe liberar energía en forma de calor",
+      "Debe permitir la recuperación de la sustancia original",
+      "Debe ocurrir sin cambio de color"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué elemento se considera esencial para que una combustión sea autososeportada según la norma ISO 13943?",
+    "respuestas": [
+      "El oxígeno",
+      "El nitrógeno",
+      "El dióxido de carbono"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Según el texto, ¿qué característica distingue principalmente al fuego del incendio según la norma UNE 23026?",
+    "respuestas": [
+      "El fuego es una combustión no controlada",
+      "El fuego es una combustión controlada",
+      "El fuego no emite humo"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la consecuencia de una combustión incompleta por falta de oxígeno?",
+    "respuestas": [
+      "Formación de dióxido de carbono",
+      "Formación de monóxido de carbono",
+      "Formación de agua"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué función cumple la energía de activación en el proceso de combustión?",
+    "respuestas": [
+      "Inicia la reacción química",
+      "Suprime la reacción química",
+      "No afecta la reacción química"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de combustión ocurre sin formación de llamas y solo en la superficie del material?",
+    "respuestas": [
+      "Combustión directa del sólido",
+      "Combustión indirecta del sólido",
+      "Pirólisis"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué efecto tiene la presencia de humedad en un combustible sólido respecto a su ignición?",
+    "respuestas": [
+      "Aumenta la facilidad de ignición",
+      "Reduce la facilidad de ignición",
+      "No afecta la ignición"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la característica principal que aumenta el riesgo de inflamación en los sólidos en polvo?",
+    "respuestas": [
+      "Su capacidad de absorber humedad",
+      "Su gran superficie de contacto con el comburente",
+      "Su baja capacidad de dispersión en el aire"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué ocurre primero en el proceso de combustión de un tronco en una chimenea de leña?",
+    "respuestas": [
+      "Se inflama directamente",
+      "Se produce pirólisis",
+      "Se vaporiza el material"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de combustión se produce cuando hay suficiente oxígeno?",
+    "respuestas": [
+      "Combustión completa",
+      "Combustión incompleta",
+      "Combustión espontánea"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué sustancia puede actuar como comburente para el hidrógeno?",
+    "respuestas": [
+      "Dióxido de carbono",
+      "Cloro gaseoso",
+      "Nitrógeno"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué productos se obtienen de una combustión completa?",
+    "respuestas": [
+      "Monóxido de carbono y humo",
+      "Dióxido de carbono y vapor de agua",
+      "Hidrógeno y oxígeno"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué ocurre en espacios cerrados durante una combustión incompleta por falta de renovación de oxígeno?",
+    "respuestas": [
+      "Se produce más energía luminosa",
+      "Se genera más humo y productos tóxicos",
+      "La visibilidad aumenta"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la principal composición de las fibras vegetales como el algodón y el lino?",
+    "respuestas": [
+      "Celulosa",
+      "Nitrógeno",
+      "Polímeros sintéticos"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué ocurre con la mayoría de las fibras textiles al alcanzar temperaturas entre 200 °C y 300 °C?",
+    "respuestas": [
+      "Se carbonizan",
+      "Se ablandan",
+      "Se vuelven incombustibles"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué factor NO se menciona como influyente en el comportamiento de los tejidos frente al fuego?",
+    "respuestas": [
+      "Color del tejido",
+      "Composición química",
+      "Tratamientos ignífugos"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la característica del papel prensado en comparación con el papel suelto durante un incendio?",
+    "respuestas": [
+      "Arde más rápidamente",
+      "Genera más humo",
+      "Arde con dificultad"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué efecto tiene un aumento en la concentración de oxígeno sobre la velocidad de la combustión?",
+    "respuestas": [
+      "No tiene efecto",
+      "Disminuye la velocidad",
+      "Aumenta la velocidad"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la función principal del punto de autoignición en la combustión?",
+    "respuestas": [
+      "Es la temperatura mínima para que una sustancia emita vapores inflamables",
+      "Es la temperatura a la cual una sustancia se inflama sin necesidad de una fuente externa de ignición",
+      "Es la temperatura a la que la combustión cesa"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cómo afecta un aumento de temperatura al Límite Inferior de Inflamabilidad (LII)?",
+    "respuestas": [
+      "No tiene ningún efecto sobre el LII",
+      "Aumenta el LII",
+      "Disminuye el LII"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué clase de fuego implica combustibles sólidos de alto punto de fusión como la madera o el papel?",
+    "respuestas": [
+      "Fuegos Clase A",
+      "Fuegos Clase B",
+      "Fuegos Clase D"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de fuego se clasifica según su forma en fuegos planos y fuegos verticales?",
+    "respuestas": [
+      "Fuegos clase D",
+      "Fuegos clase F",
+      "Según la forma del foco del incendio"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En un incendio interior, ¿qué fenómeno marca la transición hacia una combustión total y descontrolada?",
+    "respuestas": [
+      "Flashover",
+      "Backdraft",
+      "Ignición espontánea"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué indica que un fuego es de envergadura según la superficie afectada?",
+    "respuestas": [
+      "La superficie activa supera los 100 m²",
+      "La altura de las llamas es inferior a la diagonal media de la superficie",
+      "La combustión es completa"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de combustión se produce en presencia de una atmósfera rica en oxígeno?",
+    "respuestas": [
+      "Combustión incompleta",
+      "Combustión completa",
+      "Combustión lenta"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué es el poder calorífico superior (PCS) en el contexto de la combustión?",
+    "respuestas": [
+      "El calor perdido en la combustión",
+      "El calor verdaderamente producido en la reacción de combustión",
+      "El calor aprovechable después de la combustión"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué efecto tiene una atmósfera enriquecida en oxígeno sobre la temperatura de combustión?",
+    "respuestas": [
+      "No afecta la temperatura de combustión",
+      "Disminuye la temperatura de combustión",
+      "Aumenta la temperatura de combustión"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el principal mecanismo de transmisión de calor en los metales según el texto?",
+    "respuestas": [
+      "Convección",
+      "Radiación",
+      "Conducción"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué ocurre cuando la energía radiante incide sobre un cuerpo según el texto?",
+    "respuestas": [
+      "El cuerpo siempre se calienta",
+      "El cuerpo puede reflejar, absorber o transmitir la radiación",
+      "El cuerpo siempre refleja la radiación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de llama se produce cuando el combustible y el comburente se mezclan antes de la ignición?",
+    "respuestas": [
+      "Llama de difusión",
+      "Llama de premezcla",
+      "Llama estacionaria"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué característica tienen las llamas de premezcla en cuanto a su color?",
+    "respuestas": [
+      "Incoloras o azuladas",
+      "Naranja o rojo",
+      "Verde o blanco"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué indica un color de llama verde según el texto?",
+    "respuestas": [
+      "Presencia de alcohol y gas natural",
+      "Presencia de cobres y nitratos",
+      "Presencia de metales"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según el texto, ¿cuál es la temperatura asociada a una llama de color amarillo claro?",
+    "respuestas": [
+      "3200 ºC",
+      "4000 ºC",
+      "6000 ºC"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes gases se produce en mayor cantidad durante una combustión completa?",
+    "respuestas": [
+      "Monóxido de carbono (CO)",
+      "Dióxido de carbono (CO₂)",
+      "Amoniaco (NH₃)"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica la presencia de humo negro en un incendio?",
+    "respuestas": [
+      "Combustión completa y baja producción de CO₂",
+      "Combustión incompleta y presencia de hollín",
+      "Alta eficiencia en la quema de materiales"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué efecto tiene la inhalación de dióxido de carbono (CO₂) en concentraciones altas durante un incendio?",
+    "respuestas": [
+      "Provoca efectos estimulantes y aumenta la alerta",
+      "No tiene efecto alguno ya que es inerte",
+      "Puede provocar aceleración del ritmo respiratorio e inhalación de otros gases tóxicos"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la principal causa de muerte relacionada con la exposición al monóxido de carbono (CO) en incendios?",
+    "respuestas": [
+      "Explosión por mezclas inflamables",
+      "Formación de carboxihemoglobina que impide el transporte de O₂",
+      "Congelación al contacto con el gas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de gas produce el amoniaco cuando reacciona con la humedad de las mucosas?",
+    "respuestas": [
+      "Hidróxido de sodio",
+      "Ácido clorhídrico",
+      "Hidróxido amónico"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la densidad relativa del vapor de cianuro de hidrógeno comparado con el aire?",
+    "respuestas": [
+      "0.68 g/ml",
+      "0.94",
+      "1.19"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué concentración de oxígeno se debe administrar para tratar la intoxicación por monóxido de carbono?",
+    "respuestas": [
+      "Oxígeno al 50%",
+      "Oxígeno al 100%",
+      "Oxígeno al 75%"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué gas tóxico se produce al mezclar amoniaco doméstico con lejía?",
+    "respuestas": [
+      "Dióxido de azufre",
+      "Monóxido de carbono",
+      "Un gas muy irritante y tóxico no especificado"
+    ],
+    "correcta": 3
+  }
+]

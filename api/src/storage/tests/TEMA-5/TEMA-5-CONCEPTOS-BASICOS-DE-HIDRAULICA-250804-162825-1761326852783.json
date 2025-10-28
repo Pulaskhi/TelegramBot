@@ -1,0 +1,434 @@
+[
+  {
+    "pregunta": "¿Qué estudia la hidráulica?",
+    "respuestas": [
+      "El comportamiento de los sólidos en reposo",
+      "El comportamiento de los fluidos tanto en reposo como en movimiento",
+      "El comportamiento de los gases a altas velocidades"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué son los fluidos según la hidráulica?",
+    "respuestas": [
+      "Solo líquidos",
+      "Solo gases",
+      "Líquidos y gases"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la principal diferencia en la compresibilidad entre líquidos y gases?",
+    "respuestas": [
+      "Los gases son menos compresibles que los líquidos",
+      "Los líquidos son menos compresibles que los gases",
+      "Ambos son igualmente compresibles"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué es el punto crítico de una sustancia?",
+    "respuestas": [
+      "La temperatura mínima para que exista en estado gaseoso",
+      "La temperatura máxima en la que pueden coexistir las fases líquida y gaseosa",
+      "La presión mínima para cambiar de líquido a gas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué formula representa la densidad?",
+    "respuestas": [
+      "δ = m / V",
+      "ρ = P / V",
+      "v = V / m"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué unidades se utilizan comúnmente para medir la presión?",
+    "respuestas": [
+      "Newton y Joule",
+      "Pascal y atmósferas",
+      "Coulomb y Hertz"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de los fluidos, ¿qué característica principal permite diferenciar a los líquidos de los gases?",
+    "respuestas": [
+      "Su color",
+      "Su compresibilidad",
+      "Su viscosidad"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué campo de la mecánica de fluidos estudia los fluidos en movimiento?",
+    "respuestas": [
+      "Hidrostática",
+      "Hidrodinámica",
+      "Aerodinámica"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué propiedad de los líquidos permite el desplazamiento de insectos sobre el agua?",
+    "respuestas": [
+      "Viscosidad",
+      "Tensión superficial",
+      "Densidad"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según el Principio de Pascal, si se ejerce presión en un punto de un fluido encerrado e incompresible, ¿cómo se transmite esta presión?",
+    "respuestas": [
+      "Solo hacia abajo",
+      "Por igual en todas las direcciones",
+      "De forma aleatoria"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué propiedad mide la resistencia que ofrece un fluido al fluir bajo la acción de una fuerza?",
+    "respuestas": [
+      "Densidad",
+      "Tensión superficial",
+      "Viscosidad"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué sucede con la superficie de un líquido en reposo dentro de un recipiente abierto cuando solo actúa la gravedad?",
+    "respuestas": [
+      "Se inclina",
+      "Se vuelve horizontal",
+      "Forma una parábola"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "El Principio de Arquímedes establece que la fuerza de empuje es igual al peso del volumen de fluido que desaloja. ¿Qué indica la fuerza ascensional neta (Fa) cuando Fa > 0?",
+    "respuestas": [
+      "El objeto se hunde",
+      "El objeto flota",
+      "El objeto está en equilibrio"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cómo varía la presión hidrostática en un punto de un fluido según la fórmula ph = pa + d·g·h?",
+    "respuestas": [
+      "Varía con la temperatura",
+      "Varía con la densidad del recipiente",
+      "Varía con la altura o profundidad"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué característica de los fluidos en reposo asegura que la fuerza ejercida es igual en todas direcciones?",
+    "respuestas": [
+      "Principio de Pascal",
+      "Ley de Boyle",
+      "Principio de Bernoulli"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la causa principal de la presión atmosférica sobre la superficie terrestre?",
+    "respuestas": [
+      "La rotación de la Tierra",
+      "El campo magnético terrestre",
+      "El peso del aire que forma la atmósfera"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el valor normal de la presión atmosférica a 0 °C y a nivel del mar?",
+    "respuestas": [
+      "1 atmósfera = 1.013 hPa",
+      "1 atmósfera = 76 hPa",
+      "1 atmósfera = 100 hPa"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué mide un manómetro?",
+    "respuestas": [
+      "La presión absoluta",
+      "La diferencia entre la presión absoluta y la atmosférica",
+      "La presión atmosférica"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué se define como presión absoluta?",
+    "respuestas": [
+      "La presión atmosférica más la presión manométrica",
+      "La presión manométrica menos la presión atmosférica",
+      "Solo la presión atmosférica"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué principio se aplica en la prensa hidráulica para multiplicar fuerzas?",
+    "respuestas": [
+      "Principio de Arquímedes",
+      "Principio de Pascal",
+      "Principio de Bernoulli"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de régimen de flujo es más predecible y estable?",
+    "respuestas": [
+      "Régimen turbulento",
+      "Régimen laminar",
+      "Régimen estacionario"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según la ecuación de continuidad, si el área de la sección de una tubería disminuye, ¿qué sucede con la velocidad del fluido?",
+    "respuestas": [
+      "Disminuye",
+      "Aumenta",
+      "Permanece constante"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué condiciones se deben asumir para aplicar la ecuación de Bernoulli?",
+    "respuestas": [
+      "El fluido tiene alta viscosidad",
+      "El fluido circula en régimen estacionario y sin viscosidad",
+      "El fluido circula en régimen turbulento"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué representa la ecuación de Bernoulli en un fluido en movimiento?",
+    "respuestas": [
+      "La suma de las energías potencial, de presión y cinética",
+      "La diferencia entre las energías potencial y cinética",
+      "Solo la energía potencial"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué representa la ecuación de Bernoulli en hidrodinámica?",
+    "respuestas": [
+      "La suma de las energías potencial, cinética y de presión del fluido",
+      "La diferencia entre la presión inicial y final del fluido",
+      "El cálculo exclusivo de la energía cinética del fluido"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el efecto de aumentar la velocidad de un fluido en un tubo de Venturi?",
+    "respuestas": [
+      "La presión aumenta",
+      "La presión disminuye",
+      "La presión se mantiene constante"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué factor NO incrementa la pérdida de carga en una conducción hidráulica?",
+    "respuestas": [
+      "El diámetro de la conducción",
+      "La rugosidad de las paredes internas",
+      "La longitud de la conducción"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Según el teorema de Torricelli, ¿qué relación existe entre la velocidad del fluido y la sección del conducto?",
+    "respuestas": [
+      "Directamente proporcional",
+      "Inversamente proporcional",
+      "No hay relación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cómo se calcula el caudal en hidrodinámica?",
+    "respuestas": [
+      "Multiplicando la presión por la sección del conducto",
+      "Multiplicando la velocidad del fluido por la sección del conducto",
+      "Dividiendo la velocidad del fluido por la sección del conducto"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica la pérdida de carga en una instalación hidráulica?",
+    "respuestas": [
+      "La cantidad de fluido bombeado",
+      "La energía que se disipa debido a la resistencia al paso del agua",
+      "La eficiencia de la bomba utilizada"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué sucede con la pérdida de carga si se duplica el caudal en una conducción?",
+    "respuestas": [
+      "Se duplica la pérdida de carga",
+      "Se cuadruplica la pérdida de carga",
+      "La pérdida de carga permanece constante"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el principal uso del tubo de Venturi en hidrodinámica?",
+    "respuestas": [
+      "Medir la temperatura del fluido",
+      "Medir la velocidad del fluido",
+      "Medir la viscosidad del fluido"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué es el golpe de ariete en un sistema hidráulico?",
+    "respuestas": [
+      "Un incremento brusco de presión al cerrar las válvulas",
+      "Una disminución gradual de la presión al abrir las válvulas",
+      "Un método de clasificación de bombas"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes es una categoría general de bombas?",
+    "respuestas": [
+      "Bombas de energía solar",
+      "Bombas volumétricas",
+      "Bombas de gravedad"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de bomba utiliza un rodete que gira a gran velocidad?",
+    "respuestas": [
+      "Bomba volumétrica",
+      "Bomba dinámica",
+      "Bomba manual"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué fenómeno se debe evitar en todas las bombas para líquidos?",
+    "respuestas": [
+      "Condensación",
+      "Cavitación",
+      "Evaporación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de bomba se acciona por aire comprimido?",
+    "respuestas": [
+      "Bomba neumática",
+      "Bomba hidráulica",
+      "Bomba eléctrica"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué ocurre en una bomba de doble acción en cada ciclo de movimiento del pistón?",
+    "respuestas": [
+      "Solo se expulsa líquido",
+      "Se aspira y expulsa líquido en una sola dirección",
+      "Se produce tanto una aspiración como una expulsión de líquido"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué elemento de una bomba centrífuga impulsa el agua hacia el exterior?",
+    "respuestas": [
+      "Colector de salida tangencial",
+      "Carrete o rodete",
+      "Entrada axial"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el límite teórico de altura para cebar una bomba por aspiración?",
+    "respuestas": [
+      "6 metros",
+      "10.3 metros",
+      "15 metros"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué efecto tiene la temperatura del agua en la altura de aspiración de una bomba?",
+    "respuestas": [
+      "Aumenta la altura de aspiración al evaporarse más agua",
+      "Disminuye la altura de aspiración al evaporarse más agua",
+      "No tiene efecto sobre la altura de aspiración"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué ocurre si hay fugas o entradas de aire en el sistema de aspiración de una bomba?",
+    "respuestas": [
+      "La bomba genera más vacío",
+      "La bomba no puede generar vacío suficiente",
+      "La bomba aumenta su eficiencia"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la función de los mecanismos auxiliares de cebado en las bombas centrífugas?",
+    "respuestas": [
+      "Generar un vacío inicial para el proceso de aspiración",
+      "Aumentar la temperatura del agua",
+      "Disminuir la densidad del agua"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de mecanismos pueden ser utilizados como auxiliares de cebado en bombas centrífugas?",
+    "respuestas": [
+      "Compresores de aire",
+      "Anillos de agua, pistones, sistemas basados en el efecto Venturi",
+      "Filtros de agua"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué característica importante debe cumplir una turbobomba para funcionar correctamente?",
+    "respuestas": [
+      "Debe estar parcialmente sumergida",
+      "Debe estar completamente sumergida",
+      "No necesita estar sumergida"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué efecto tiene el caudal requerido en la altura de aspiración de una bomba?",
+    "respuestas": [
+      "No afecta la altura de aspiración",
+      "Aumenta la altura de aspiración",
+      "Disminuye la altura de aspiración"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué sucede si los mangotes tienen un diámetro menor al de la salida de la bomba?",
+    "respuestas": [
+      "Minimiza las pérdidas de carga",
+      "Maximiza las pérdidas de carga",
+      "No afecta las pérdidas de carga"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de dispositivo es una turbobomba?",
+    "respuestas": [
+      "Un hidroeyector",
+      "Un filtro de agua",
+      "Un generador de vacío"
+    ],
+    "correcta": 1
+  }
+]

@@ -49,7 +49,10 @@ function normalizeForTraining(q) {
 
   const opciones = {};
   rawOptions.forEach((opt, i) => {
-    let text = typeof opt === "string" ? opt : (opt?.label || opt?.text || opt?.value || "");
+    let text =
+      typeof opt === "string"
+        ? opt
+        : opt?.label || opt?.text || opt?.value || "";
     text = text.trim().replace(/^[A-Za-z]\)\s*/g, "");
     const key = String.fromCharCode(65 + i);
     opciones[key] = text;
@@ -68,7 +71,7 @@ function normalizeForTraining(q) {
 }
 
 /* ===========================================================
-   🧠 Generar preguntas desde PDF
+   🧠 Generar preguntas desde PDF (con feedback previo y variaciones)
    =========================================================== */
 router.post("/pdf-questions-stored", async (req, res) => {
   const { filename, save } = req.body;
@@ -83,12 +86,46 @@ router.post("/pdf-questions-stored", async (req, res) => {
 
     if (!pdfParse) throw new Error("pdf-parse no está disponible");
 
+    console.log(`📘 Procesando PDF: ${filename}`);
     const dataBuffer = fs.readFileSync(filePath);
     const pdfData = await pdfParse(dataBuffer);
     const fullText = (pdfData.text || "").trim();
     if (!fullText.length)
       return res.status(400).json({ message: "El PDF no tiene texto extraíble" });
 
+    const tema = detectarTema(filename);
+    console.log(`📚 Tema detectado: ${tema}`);
+
+    // 1️⃣ Cargar feedback previo
+    const trainedDir = path.join(trainedRoot, tema);
+    const badDir = path.join(badRoot, tema);
+    let trainedTests = [];
+    let badTests = [];
+
+    try {
+      if (fs.existsSync(trainedDir)) {
+        const files = fs.readdirSync(trainedDir).filter(f => f.endsWith(".json"));
+        for (const f of files) {
+          const raw = JSON.parse(fs.readFileSync(path.join(trainedDir, f), "utf8"));
+          const preguntas = Array.isArray(raw) ? raw : raw.preguntas || [];
+          trainedTests.push(...preguntas);
+        }
+      }
+      if (fs.existsSync(badDir)) {
+        const files = fs.readdirSync(badDir).filter(f => f.endsWith(".json"));
+        for (const f of files) {
+          const raw = JSON.parse(fs.readFileSync(path.join(badDir, f), "utf8"));
+          const preguntas = Array.isArray(raw) ? raw : raw.preguntas || [];
+          badTests.push(...preguntas);
+        }
+      }
+
+      console.log(`🧩 Feedback encontrado — Trained: ${trainedTests.length}, Bad: ${badTests.length}`);
+    } catch (err) {
+      console.warn(`⚠️ Error leyendo feedback previo de ${tema}:`, err.message);
+    }
+
+    // 2️⃣ Trocear el texto del PDF
     function chunkByChars(text, maxChars = 8000, overlap = 300) {
       const chunks = [];
       let start = 0;
@@ -102,40 +139,95 @@ router.post("/pdf-questions-stored", async (req, res) => {
     }
 
     const chunks = chunkByChars(fullText, 8000, 300);
+    console.log(`✂️ PDF dividido en ${chunks.length} fragmentos.`);
 
-    async function generateQuestionsFromChunk(chunk, idx, total, perChunk) {
-      const prompt = `
+    // 3️⃣ Generar preguntas con feedback + control de repeticiones
+ // dentro de router.post("/pdf-questions-stored", async (req, res) => { ... })
+
+async function generateQuestionsFromChunk(chunk, idx, total, perChunk) {
+  // ➊ genera un canary para esta llamada
+  const canary = `CANARY:${tema}:${Date.now() % 100000}`;
+
+  console.log(`🧠 Enviando chunk ${idx}/${total} a OpenAI (máx ${perChunk} preguntas)...`);
+  const feedbackPrompt = `
+Tienes acceso a feedback previo del tema "${tema}":
+
+✅ Ejemplos de preguntas útiles (trained-tests):
+${JSON.stringify(trainedTests.slice(0, 20), null, 2)}
+
+❌ Ejemplos de preguntas confusas o incorrectas (bad-tests):
+${JSON.stringify(badTests.slice(0, 20), null, 2)}
+
+Usa esta información para mejorar la calidad de las nuevas preguntas:
+- Inspírate en las buenas (estructura, claridad, tipo de contenido)
+- Evita errores comunes en las malas (ambigüedad, errores conceptuales, redacción confusa)
+- Evita repetir literalmente preguntas existentes; reescribe enunciados o enfoque.
+- Introduce preguntas nuevas cuando el contenido lo permita.
+`;
+
+  // ➋ Le pedimos al modelo que devuelva una línea META de confirmación
+  const prompt = `
 Eres un experto en oposiciones de BOMBEROS en España.
-Genera ${perChunk} preguntas tipo test basadas en este texto técnico.
-Formato JSON exacto:
+Genera ${perChunk} preguntas tipo test basadas en el texto y el feedback anterior.
+Primero escribe una línea "META: OK ${canary} TRAINED=${trainedTests.length} BAD=${badTests.length}"
+y DESPUÉS, en una línea nueva, el JSON EXACTO con SOLO el array de preguntas:
+
+Formato del JSON exacto:
 [
   {"pregunta":"Texto","respuestas":["Opción 1","Opción 2","Opción 3"],"correcta":2}
 ]
+
 Texto base (${idx}/${total}):
 """${chunk}"""
-`;
-      const completion = await openai.chat.completions.create({
-        model: "gpt-4-turbo",
-        temperature: 0.5,
-        max_tokens: 3500,
-        messages: [
-          { role: "system", content: "Eres un generador de tests técnicos de bomberos." },
-          { role: "user", content: prompt },
-        ],
-      });
 
-      const raw = completion.choices?.[0]?.message?.content || "";
-      const cleaned = raw.replace(/```json|```/gi, "").trim();
-      try {
-        return JSON.parse(cleaned);
-      } catch {
-        const s = cleaned.indexOf("[");
-        const e = cleaned.lastIndexOf("]");
-        if (s !== -1 && e !== -1)
-          try { return JSON.parse(cleaned.slice(s, e + 1)); } catch {}
-      }
-      return [];
+${feedbackPrompt}
+`.trim();
+
+  const completion = await openai.chat.completions.create({
+    model: "gpt-4-turbo",
+    temperature: 0.5,
+    max_tokens: 3500,
+    messages: [
+      { role: "system", content: "Eres un generador de tests técnicos de bomberos." },
+      { role: "user", content: prompt },
+    ],
+  });
+
+  // ➌ Log de uso de tokens si está disponible
+  if (completion.usage) {
+    console.log(`📏 Tokens — prompt:${completion.usage.prompt_tokens} completion:${completion.usage.completion_tokens} total:${completion.usage.total_tokens}`);
+  }
+
+  const raw = completion.choices?.[0]?.message?.content || "";
+  // ➍ Log breve (primeras 200 chars) para ver que viene la META
+  console.log(`🔎 Respuesta (head): ${raw.slice(0, 200).replace(/\n/g, ' ')}...`);
+
+  // ➎ Extraer la línea META
+  const metaMatch = raw.match(/^META:\s*OK\s*(CANARY:[^\s]+)\s*TRAINED=(\d+)\s*BAD=(\d+)/i);
+  if (metaMatch) {
+    console.log(`✅ META confirmada por el modelo — ${metaMatch[1]} TRAINED=${metaMatch[2]} BAD=${metaMatch[3]}`);
+  } else {
+    console.warn("⚠️ No se detectó línea META en la respuesta (puede que el modelo la omitiera, pero el feedback igualmente se envió).");
+  }
+
+  // ➏ Extraer el JSON (tu parser ya tolera texto antes/después)
+  const cleaned = raw.replace(/```json|```/gi, "").trim();
+  try {
+    // intenta parsear cualquier JSON array que aparezca
+    const s = cleaned.indexOf("[");
+    const epos = cleaned.lastIndexOf("]");
+    if (s !== -1 && epos !== -1) {
+      const arr = JSON.parse(cleaned.slice(s, epos + 1));
+      console.log(`✅ Chunk ${idx}: ${arr.length} preguntas generadas.`);
+      return arr;
     }
+  } catch (e) {
+    console.error(`⚠️ Error parseando JSON del chunk ${idx}:`, e.message);
+  }
+  console.warn(`⚠️ Chunk ${idx} sin preguntas válidas.`);
+  return [];
+}
+
 
     const targetTotal = 50;
     const perChunk = Math.max(1, Math.floor(targetTotal / chunks.length));
@@ -146,6 +238,9 @@ Texto base (${idx}/${total}):
       all.push(...qs);
     }
 
+    console.log(`🧮 Total bruto generado: ${all.length}`);
+
+    // 4️⃣ Filtrar duplicados y limpiar
     const seen = new Set();
     const questions = all.filter(q => {
       const text = (q?.pregunta || "").trim().toLowerCase();
@@ -155,10 +250,11 @@ Texto base (${idx}/${total}):
     });
 
     const finalQs = questions.slice(0, targetTotal);
-    let savedFile = null;
+    console.log(`📊 Total final tras limpieza: ${finalQs.length}`);
 
+    // 5️⃣ Guardar
+    let savedFile = null;
     if (save === true) {
-      const tema = detectarTema(filename);
       const temaDir = path.join(testsRoot, tema);
       if (!fs.existsSync(temaDir)) fs.mkdirSync(temaDir, { recursive: true });
       const base = path.parse(filename).name;
@@ -166,6 +262,7 @@ Texto base (${idx}/${total}):
       const outPath = path.join(temaDir, outName);
       fs.writeFileSync(outPath, JSON.stringify(finalQs, null, 2), "utf8");
       savedFile = path.join(tema, outName);
+      console.log(`💾 Test guardado en: ${outPath}`);
     }
 
     const normalized = finalQs.map(normalizeForTraining);
@@ -179,7 +276,6 @@ Texto base (${idx}/${total}):
 /* ===========================================================
    💾 Guardar entrenados (útiles) y malos (con comentario)
    =========================================================== */
-// ⭐ Guardar preguntas útiles
 router.post("/save-trained", (req, res) => {
   try {
     const { selectedQuestions, sourceTest, tema = "SIN_TEMA", feedback = "" } = req.body;
@@ -199,7 +295,7 @@ router.post("/save-trained", (req, res) => {
     if (latest) {
       try {
         const oldData = JSON.parse(fs.readFileSync(path.join(temaDir, latest), "utf8"));
-        all = Array.isArray(oldData) ? oldData : (oldData.preguntas || []);
+        all = Array.isArray(oldData) ? oldData : oldData.preguntas || [];
         oldFeedback = oldData.feedback || "";
       } catch {}
     }
@@ -217,12 +313,7 @@ router.post("/save-trained", (req, res) => {
     const outName = latest || `${(sourceTest ? path.parse(sourceTest).name : "custom")}-trained-${Date.now()}.json`;
     const outPath = path.join(temaDir, outName);
 
-    const data = {
-      tema,
-      fecha: new Date().toISOString(),
-      feedback: feedback || oldFeedback,
-      preguntas: all
-    };
+    const data = { tema, fecha: new Date().toISOString(), feedback: feedback || oldFeedback, preguntas: all };
 
     fs.writeFileSync(outPath, JSON.stringify(data, null, 2), "utf8");
     console.log(`💾 Preguntas útiles actualizadas en: ${outPath}`);
@@ -233,7 +324,6 @@ router.post("/save-trained", (req, res) => {
   }
 });
 
-// 👎 Guardar preguntas malas con comentario
 router.post("/save-bad", (req, res) => {
   try {
     const { selectedQuestions, sourceTest, tema = "SIN_TEMA", feedback = "" } = req.body;
@@ -253,14 +343,12 @@ router.post("/save-bad", (req, res) => {
     if (latest) {
       try {
         const oldData = JSON.parse(fs.readFileSync(path.join(temaDir, latest), "utf8"));
-        all = Array.isArray(oldData) ? oldData : (oldData.preguntas || []);
+        all = Array.isArray(oldData) ? oldData : oldData.preguntas || [];
         oldFeedback = oldData.feedback || "";
       } catch {}
     }
 
-    const normalized = selectedQuestions.map(q =>
-      normalizeForTraining({ ...q, comentario: q.comentario || "" })
-    );
+    const normalized = selectedQuestions.map(q => normalizeForTraining({ ...q, comentario: q.comentario || "" }));
     const seen = new Set(all.map(q => (q.pregunta || "").trim().toLowerCase()));
     normalized.forEach(q => {
       const key = (q.pregunta || "").trim().toLowerCase();
@@ -273,12 +361,7 @@ router.post("/save-bad", (req, res) => {
     const outName = latest || `${(sourceTest ? path.parse(sourceTest).name : "custom")}-bad-${Date.now()}.json`;
     const outPath = path.join(temaDir, outName);
 
-    const data = {
-      tema,
-      fecha: new Date().toISOString(),
-      feedback: feedback || oldFeedback,
-      preguntas: all
-    };
+    const data = { tema, fecha: new Date().toISOString(), feedback: feedback || oldFeedback, preguntas: all };
 
     fs.writeFileSync(outPath, JSON.stringify(data, null, 2), "utf8");
     console.log(`💾 Preguntas malas actualizadas en: ${outPath}`);
@@ -290,12 +373,11 @@ router.post("/save-bad", (req, res) => {
 });
 
 /* ===========================================================
-   📜 Listar y leer tests generados (storage/tests)
+   📜 Listar tests guardados y entrenados
    =========================================================== */
 router.get("/saved-tests", (req, res) => {
   try {
-    if (!fs.existsSync(testsRoot))
-      return res.json({ success: true, temas: [] });
+    if (!fs.existsSync(testsRoot)) return res.json({ success: true, temas: [] });
 
     const temas = fs.readdirSync(testsRoot).filter(f =>
       fs.statSync(path.join(testsRoot, f)).isDirectory()
@@ -307,11 +389,7 @@ router.get("/saved-tests", (req, res) => {
       const tests = files.map(file => {
         const filePath = path.join(dir, file);
         const stats = fs.statSync(filePath);
-        return {
-          name: file,
-          size: stats.size,
-          url: `/api/admin/assistants/saved-tests/${tema}/${file}`,
-        };
+        return { name: file, size: stats.size, url: `/api/admin/assistants/saved-tests/${tema}/${file}` };
       });
       return { tema, tests };
     });
@@ -331,7 +409,7 @@ router.get("/saved-tests/:tema/:name", (req, res) => {
       return res.status(404).json({ success: false, message: "Archivo no encontrado" });
 
     const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    const questions = Array.isArray(raw) ? raw : (raw.preguntas || []);
+    const questions = Array.isArray(raw) ? raw : raw.preguntas || [];
     res.json({ success: true, questions });
   } catch (err) {
     console.error("❌ Error leyendo saved-test:", err);
@@ -339,13 +417,9 @@ router.get("/saved-tests/:tema/:name", (req, res) => {
   }
 });
 
-/* ===========================================================
-   📜 Listar todos los tests entrenados disponibles
-   =========================================================== */
 router.get("/trained-tests", (req, res) => {
   try {
-    if (!fs.existsSync(trainedRoot))
-      return res.json({ success: true, tests: [] });
+    if (!fs.existsSync(trainedRoot)) return res.json({ success: true, tests: [] });
 
     const temas = fs.readdirSync(trainedRoot).filter(f =>
       fs.statSync(path.join(trainedRoot, f)).isDirectory()
@@ -380,7 +454,9 @@ router.get("/trained-tests/:tema/:name", (req, res) => {
       return res.status(404).json({ success: false, message: "Archivo no encontrado" });
 
     const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    const questions = Array.isArray(raw) ? raw.map(normalizeForTraining) : (raw.preguntas || []).map(normalizeForTraining);
+    const questions = Array.isArray(raw)
+      ? raw.map(normalizeForTraining)
+      : (raw.preguntas || []).map(normalizeForTraining);
     res.json({ success: true, questions, feedback: raw.feedback || "" });
   } catch (err) {
     console.error("❌ Error leyendo trained-test:", err);

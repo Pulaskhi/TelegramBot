@@ -1,0 +1,37 @@
+{
+  "tema": "TEMA-8",
+  "fecha": "2025-10-24T12:46:35.408Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué factor NO influye en la construcción de cimientos?",
+      "opciones": {
+        "A": "Color de los materiales utilizados",
+        "B": "Cargas del edificio",
+        "C": "Tipo de terreno"
+      },
+      "correcta": "A",
+      "comentario": "demasiado facil, los colores es obvio que no afectan"
+    },
+    {
+      "pregunta": "¿Qué tipo de carga soportan principalmente los cimientos de hormigón en masa?",
+      "opciones": {
+        "A": "Cargas de compresión y tracción",
+        "B": "Cargas ligeras y en terrenos resistentes",
+        "C": "Cargas muy elevadas y en terrenos blandos"
+      },
+      "correcta": "B",
+      "comentario": "es la c, el hormigón en masa es para cargas muy elevadas y terrenos resistentes"
+    },
+    {
+      "pregunta": "¿Qué problema principal enfrentan las cubiertas planas?",
+      "opciones": {
+        "A": "Filtraciones de agua",
+        "B": "Diferencias grandes de temperatura",
+        "C": "Desgaste rápido del material"
+      },
+      "correcta": "B",
+      "comentario": "en este caso seria la a"
+    }
+  ]
+}
