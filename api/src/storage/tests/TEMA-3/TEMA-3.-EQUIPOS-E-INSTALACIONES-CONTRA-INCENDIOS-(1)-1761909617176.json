@@ -1,0 +1,380 @@
+[
+  {
+    "pregunta": "¿Cuál es la presión mínima que debe tener la canalización de una red de distribución pública para garantizar un abastecimiento eficaz durante operaciones de extinción de incendios?",
+    "respuestas": [
+      "0.5 kg/cm²",
+      "1 kg/cm²",
+      "1.5 kg/cm²"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto del RIPCI, ¿qué tipo de inspecciones tienen una vigencia de 3 años, pudiendo ser renovadas a petición del interesado?",
+    "respuestas": [
+      "Inspecciones de extintores",
+      "Registro de instalaciones por empresas autorizadas",
+      "Inspecciones de sistemas automáticos de extinción"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según el RIPCI, ¿qué medida NO se especifica concretamente y en lugar de ello remite a normas UNE o EN?",
+    "respuestas": [
+      "Las cantidades de extintores necesarias en un edificio",
+      "Cómo deben instalarse los sistemas de protección contra incendios",
+      "La marca de conformidad de los equipos"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la principal función de las lanzas en las operaciones contra incendios?",
+    "respuestas": [
+      "Redistribuir el agua a otras mangueras",
+      "Dirigir el agua exactamente al lugar deseado",
+      "Incrementar la presión del agua"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según la normativa española, ¿qué tipo de racor es obligatorio utilizar en las conexiones de mangueras de incendio?",
+    "respuestas": [
+      "Racor Storz",
+      "Racor Guillemin",
+      "Racor Barcelona"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En el contexto de las operaciones contra incendios, ¿qué tipo de manguera es comúnmente usada para aspirar agua desde fuentes de abastecimiento?",
+    "respuestas": [
+      "Mangueras flexibles",
+      "Mangueras semirrígidas",
+      "Mangueras de aspiración (mangotes)"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la principal ventaja de utilizar lanza de caudal variable en comparación con una lanza de caudal constante durante la extinción de incendios?",
+    "respuestas": [
+      "Permite una mayor adaptabilidad al variar el tipo de chorro según la necesidad del momento",
+      "Requiere menos mantenimiento",
+      "Es más ligera y manejable"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el contexto de extinción de incendios, ¿cuál es la función principal de un formador de cortina?",
+    "respuestas": [
+      "Generar cortinas de agua para bloquear el avance de las llamas",
+      "Aumentar la presión del agua en la manguera",
+      "Reducir la cantidad de agua utilizada"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el propósito de usar lanza para fuegos eléctricos que pulveriza el agua en gotas muy finas?",
+    "respuestas": [
+      "Eliminar por completo el riesgo de electrocución",
+      "Aumentar la seguridad al reducir el riesgo de conductor eléctrico",
+      "Reducir el uso de agua en la extinción"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué factor es crucial para determinar la categoría de una lanza de espuma en las operaciones de extinción de incendios?",
+    "respuestas": [
+      "La cantidad de espumógeno utilizado",
+      "El caudal nominal de la lanza",
+      "El tipo de fuego a extinguir"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Cuando se habla de la instalación inclinada de mangueras para la extinción de incendios, ¿qué factor debe considerarse primordialmente para asegurar una eficaz transmisión del agua?",
+    "respuestas": [
+      "El material de la manguera",
+      "La pendiente de la instalación",
+      "El diámetro de la manguera"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de extinción de incendios, ¿cuál es la principal ventaja de utilizar una motobomba portátil en comparación con la bomba del camión?",
+    "respuestas": [
+      "Mayor rapidez en la puesta en marcha",
+      "Menor consumo de combustible",
+      "Mayor capacidad de almacenamiento de agua"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la proporción máxima de espumógeno que puede ser ajustada en un proporcionador de Venturi para la mezcla de agua y espumógeno en sistemas de lucha contra incendios?",
+    "respuestas": [
+      "3%",
+      "6%",
+      "9%"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En relación a los métodos de aplicación de la espuma en extinción de incendios, ¿qué técnica se utiliza específicamente para tratar con líquidos polares o cubrir derrames contenidos?",
+    "respuestas": [
+      "Método del 'Rodillo'",
+      "Método de Rebote",
+      "Método de Elevación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica el manómetro en un extintor según las normas de seguridad de equipos de extinción de incendios?",
+    "respuestas": [
+      "Nivel de agente extintor restante",
+      "Presión del gas impulsor",
+      "Temperatura interna del extintor"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué función principal tiene el uso de aditivos como humectantes o retardantes en extintores de agua?",
+    "respuestas": [
+      "Aumentar la viscosidad del agua",
+      "Mejorar la eficacia de enfriamiento del agua",
+      "Alterar el color del agua para identificación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En un extintor de presión no permanente, ¿qué sucede si se coloca el extintor en posición invertida durante su uso?",
+    "respuestas": [
+      "El agente extintor se libera más rápidamente",
+      "El gas impulsor no puede empujar el agente extintor",
+      "El manómetro muestra una lectura incorrecta"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la principal acción extintora del dióxido de carbono (CO₂) en un incendio?",
+    "respuestas": [
+      "Enfriamiento por absorción de calor",
+      "Inhibición de la reacción en cadena",
+      "Sofocación por desplazamiento de oxígeno"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la temperatura aproximada a la que el CO₂ se transforma en nieve carbónica cuando se libera de un extintor a la presión atmosférica?",
+    "respuestas": [
+      "-78 °C",
+      "-100 °C",
+      "-55 °C"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el contexto de los extintores, ¿qué indica el número presente en la indicación de eficacia extintora como en '21A'?",
+    "respuestas": [
+      "La cantidad de CO₂ en kilogramos",
+      "El número de usos efectivos",
+      "La cantidad de combustible sólido que puede apagar en unidades estándar"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la principal razón por la que los extintores de CO₂ deben ser sujetados por la base durante su uso?",
+    "respuestas": [
+      "Para mejorar la precisión al apuntar",
+      "Para evitar quemaduras por congelación debido a la baja temperatura de salida",
+      "Para mantener el equilibrio y evitar caídas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué característica especial tienen las bombas hidráulicas usadas en vehículos contra incendios según la norma UNE que les permite aumentar la presión de salida del agua?",
+    "respuestas": [
+      "Pueden lanzar agua sin necesidad de alimentación eléctrica",
+      "Pueden conectarse en serie formando etapas",
+      "Son capaces de lanzar agua a más de 10 metros de altura"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de los vehículos contra incendios, ¿cuál es la función específica del tabique rompeolas dentro del depósito cisterna?",
+    "respuestas": [
+      "Separar diferentes tipos de agentes extintores",
+      "Evitar la formación de remolinos e inertias durante el movimiento",
+      "Facilitar la mezcla de agua y espuma"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la capacidad mínima de una cisterna en un vehículo Bomba Urbana Pesado (BUP) según la norma UNE 23.900?",
+    "respuestas": [
+      "3200 litros",
+      "8000 litros",
+      "1500 litros"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el principal mecanismo por el cual un hidrante de columna seca evita la congelación del agua residencial después de su uso?",
+    "respuestas": [
+      "Mediante un sistema de calefacción integrado",
+      "Con la válvula de drenaje automático que evacúa el agua",
+      "A través de un agente anticongelante que se mezcla con el agua"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de la propagación del calor en un incendio, ¿cuál es el principal método de transferencia de calor que contribuye a la ignición de materiales combustibles alejados de la fuente de fuego inicial?",
+    "respuestas": [
+      "Conducción",
+      "Convección",
+      "Radiación"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué criterio se utiliza principalmente para clasificar los hidrantes de columna en húmedos o secos?",
+    "respuestas": [
+      "El material del que están hechos",
+      "El mecanismo de cierre de la válvula",
+      "Si el agua permanece o no en el interior del cuerpo del hidrante"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el procedimiento correcto para la utilización de la B.I.E. de 45 mm durante un incendio en un espacio con alta carga de fuego?",
+    "respuestas": [
+      "Desplegar completamente la manguera, abrir la válvula de volante y utilizar chorro sólido o cono de ataque según la situación.",
+      "Utilizar la manguera sin necesidad de desplegarla completamente, abrir la válvula de apertura automática y emplear cortina de protección.",
+      "Desplegar parcialmente la manguera, utilizar la válvula de cierre rápido y aplicar cortina de protección inmediatamente."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Dada la normativa NBE CPI 96, ¿cuál es la distancia máxima permitida entre hidrantes en áreas públicas para asegurar una cobertura adecuada?",
+    "respuestas": [
+      "100 metros",
+      "200 metros",
+      "300 metros"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de la resistencia de materiales al calor durante un incendio, ¿qué propiedad de la lanza es crucial para su funcionalidad?",
+    "respuestas": [
+      "Su capacidad para regular el tipo de chorro de agua.",
+      "Su resistencia a la corrosión y esfuerzos mecánicos.",
+      "Su color y diseño ergonómico."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la importancia de verificar la estanqueidad de racores, mangueras y juntas en el mantenimiento anual de equipos contra incendios según la normativa vigente?",
+    "respuestas": [
+      "Asegurar la operatividad del equipo sin fugas de agua.",
+      "Reemplazar componentes por obsolescencia.",
+      "Reducir el peso del equipo para facilitar su transporte."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el contexto de la propagación del calor en un incendio, ¿cómo influye la conductividad térmica de los materiales en la rapidez de propagación del fuego?",
+    "respuestas": [
+      "Materiales con alta conductividad térmica retardan la propagación del fuego.",
+      "Materiales con baja conductividad térmica aceleran la propagación del fuego.",
+      "Materiales con alta conductividad térmica aceleran la propagación del fuego."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué función cumple la llave de seccionamiento instalada en las bocas de columna seca según el R.D. 1942/1993?",
+    "respuestas": [
+      "Regular el caudal de agua a los pisos superiores.",
+      "Cerrar completamente el paso del agua durante el mantenimiento.",
+      "Proporcionar una conexión adicional para equipos externos."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la principal ventaja de los detectores térmicos compensados en comparación con los termovelocimétricos en la detección de incendios?",
+    "respuestas": [
+      "Reducen el riesgo de falsas alarmas y la demora en detectar incendios de desarrollo lento.",
+      "Aumentan la velocidad de respuesta al fuego.",
+      "Necesitan menos mantenimiento que los termovelocimétricos."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el contexto de los detectores de humo, ¿por qué es recomendable utilizar protectores o filtros en los detectores ópticos?",
+    "respuestas": [
+      "Para aumentar la sensibilidad del detector al humo.",
+      "Para evitar interferencias de la luz ambiente.",
+      "Para prevenir fallos debido a corrientes de aire o polvo."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué característica permite a los detectores lineales de haz ser especialmente eficaces en espacios con techos muy altos?",
+    "respuestas": [
+      "Su capacidad para detectar cambios rápidos de temperatura.",
+      "Su sensibilidad al promedio de densidad del humo en el haz de luz.",
+      "Su habilidad para funcionar sin supervisión continua."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué función adicional importante cumplen los sistemas de rociadores automáticos aparte de extinguir el incendio en construcciones de materiales deformables como madera o hierro?",
+    "respuestas": [
+      "Aislamiento acústico",
+      "Protección estructural mediante refrigeración",
+      "Estabilización estructural ante sismos"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En un sistema de rociadores de tubería seca, ¿qué provoca la activación del rociador y la consiguiente apertura de la válvula principal del sistema?",
+    "respuestas": [
+      "El aumento de la temperatura en la zona de incendio",
+      "La detección de humo o gases",
+      "La liberación del aire comprimido y la caída de presión en la tubería"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la principal diferencia entre los sistemas de rociadores de diluvio y los de tubería seca o mojada?",
+    "respuestas": [
+      "El tiempo de respuesta tras la activación del sistema",
+      "La presencia de rociadores que están siempre abiertos y que se activan simultáneamente",
+      "La utilización de agentes extintores diferentes al agua"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la función principal de una cámara de retardo en los sistemas de rociadores para evitar falsas alarmas?",
+    "respuestas": [
+      "Retrasar la activación de los rociadores para permitir la evacuación",
+      "Acumular pequeñas cantidades de agua antes de que lleguen al circuito de alarma",
+      "Reducir la presión del agua antes de activar los rociadores"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Los sistemas de rociadores de tipo diluvio son ideales para:",
+    "respuestas": [
+      "Instalaciones residenciales con decoración ornamental",
+      "Zonas con altos riesgos de incendios y necesidad de cobertura total y rápida",
+      "Entornos con baja probabilidad de incendios pero con requisitos estéticos altos"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el criterio principal por el que se determina la cantidad de espumógeno disponible en un sistema de rociadores de espuma?",
+    "respuestas": [
+      "El tipo de espumógeno utilizado",
+      "El nivel de riesgo que se pretende proteger",
+      "La capacidad total del sistema de almacenamiento de espumógeno"
+    ],
+    "correcta": 2
+  }
+]

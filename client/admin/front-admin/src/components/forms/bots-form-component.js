@@ -207,9 +207,6 @@ class BotsForm extends HTMLElement {
         <div class="form__header">
           <div class="form__header-box">
           <div class="tabs">
-              <div class="tab active" data-tab="general">
-                <button>General</button>
-              </div>
             </div class="tabs">
             <div class="form__header-icons">
               <button class="clean-icon">

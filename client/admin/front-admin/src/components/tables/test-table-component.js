@@ -148,7 +148,7 @@ class TestComponent extends HTMLElement {
       </style>
 
       <div class="container">
-        <h2>🧠 Test Generado</h2>
+        <h2> Test Generado</h2>
         <div class="content"></div>
         <button class="btn">Corregir todo</button>
         <button class="btn btn-trained">⭐ Guardar preguntas útiles</button>

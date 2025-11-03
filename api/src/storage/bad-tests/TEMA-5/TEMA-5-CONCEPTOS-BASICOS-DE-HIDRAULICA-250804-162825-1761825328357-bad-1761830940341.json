@@ -1,0 +1,34 @@
+{
+  "tema": "TEMA-5",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál de los siguientes no es una suposición necesaria para aplicar la ecuación de Bernoulli en un fluido en movimiento?",
+      "opciones": {
+        "A": "El fluido tiene una densidad constante",
+        "B": "El fluido es incompresible",
+        "C": "El fluido tiene una alta viscosidad"
+      },
+      "correcta": "C"
+    },
+    {
+      "pregunta": "En el contexto de la ecuación de Bernoulli, ¿qué tipo de energía representa el término m \\cdot g \\cdot h?",
+      "opciones": {
+        "A": "Energía cinética",
+        "B": "Energía potencial",
+        "C": "Energía de presión"
+      },
+      "correcta": "B",
+      "comentario": "no se entiende el formato"
+    },
+    {
+      "pregunta": "¿Qué característica de las turbobombas es crucial para su selección en aplicaciones de extinción de incendios?",
+      "opciones": {
+        "A": "Capacidad de operar a altas temperaturas",
+        "B": "Velocidad de rotación variable",
+        "C": "Altura de elevación del agua"
+      },
+      "correcta": "A"
+    }
+  ],
+  "feedback": ""
+}

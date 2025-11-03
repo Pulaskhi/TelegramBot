@@ -1,0 +1,398 @@
+[
+  {
+    "pregunta": "¿Qué tipo de fenómeno implica la transformación en la composición de las sustancias?",
+    "respuestas": [
+      "Fenómeno físico",
+      "Fenómeno químico",
+      "Fenómeno fisicoquímico"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el texto, ¿qué ejemplo se da de un fenómeno químico?",
+    "respuestas": [
+      "Patear una pelota",
+      "Combustión de un papel",
+      "Cambiar de sólido a líquido"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué proceso es un ejemplo de fenómeno fisicoquímico según el texto?",
+    "respuestas": [
+      "La fotosíntesis",
+      "La catálisis",
+      "La disolución"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según el texto, ¿qué caracteriza una reacción química de combustión?",
+    "respuestas": [
+      "Es un proceso lento y no libera energía visible",
+      "Es una reacción endotérmica",
+      "Es una oxidación rápida que libera mucho calor"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué sucede con el número de oxidación de una especie que se oxida en una reacción REDOX?",
+    "respuestas": [
+      "El número de oxidación disminuye",
+      "El número de oxidación aumenta",
+      "El número de oxidación se mantiene constante"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de una reacción de combustión, ¿qué rol desempeña el oxígeno?",
+    "respuestas": [
+      "Actúa como agente reductor",
+      "Actúa como agente oxidante",
+      "No tiene un rol específico"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según las definiciones proporcionadas, ¿qué diferencia fundamental existe entre el fuego y el incendio según la norma ISO 13943?",
+    "respuestas": [
+      "El fuego es controlado mientras que el incendio no lo está",
+      "El incendio es una forma de fuego beneficioso",
+      "No hay diferencia entre fuego e incendio"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué condiciones deben cumplirse para que se produzca una combustión según el texto?",
+    "respuestas": [
+      "Presencia de combustible, comburente en fase sólida y energía de activación",
+      "Solo presencia de combustible y energía de activación",
+      "Presencia de combustible, comburente en fase gaseosa y energía de activación"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es una característica de la combustión directa del sólido?",
+    "respuestas": [
+      "El sólido arde con formación de llamas visibles.",
+      "El sólido se vuelve incandescente y arde sin formación de llamas.",
+      "El sólido necesita una alta concentración de oxígeno para arder."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué factor aumenta la inflamabilidad en los combustibles sólidos disgregados?",
+    "respuestas": [
+      "Menor superficie de contacto entre el combustible y el comburente.",
+      "Menor capacidad de dispersión de las partículas en el aire.",
+      "Gran superficie de contacto entre el combustible y el comburente."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué sucede si el combustible está húmedo según el texto?",
+    "respuestas": [
+      "El agua presente en el combustible facilita la formación de mezclas inflamables.",
+      "El agua en el combustible absorbe calor, dificultando el encendido.",
+      "El agua disminuye la densidad del combustible, aumentando su inflamabilidad."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "De acuerdo con el texto, ¿qué indica el límite inferior de inflamabilidad (LII)?",
+    "respuestas": [
+      "Es la temperatura máxima a la que el gas puede inflamarse.",
+      "Es la concentración máxima de gas que permite la combustión.",
+      "Es la concentración mínima de gas en el aire necesaria para que se produzca una combustión."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes gases no tiene un límite superior de inflamabilidad definido según la información proporcionada?",
+    "respuestas": [
+      "Propano",
+      "Acetileno",
+      "Metano"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué elemento es el comburente más común en la combustión, presente en el aire en una proporción del 21% en volumen?",
+    "respuestas": [
+      "Nitrógeno",
+      "Oxígeno",
+      "Dióxido de carbono"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según el texto, ¿qué tipo de combustión se produce cuando no hay suficiente oxígeno y se generan productos como monóxido de carbono y humo?",
+    "respuestas": [
+      "Combustión completa",
+      "Combustión incompleta",
+      "Combustión espontánea"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de plástico, mencionado en el texto, es conocido por su resistencia al calor y a las llamas, siendo utilizado principalmente para revestir tableros de madera aglomerada?",
+    "respuestas": [
+      "Polietileno",
+      "Policloruro de vinilo (PVC)",
+      "Aminoplastos"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la principal propiedad de las espumas de poliestireno cuando se encuentran en espacios cerrados?",
+    "respuestas": [
+      "Continúan ardiendo intensamente",
+      "No se sostienen por sí solas",
+      "Generan mucho humo"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué caracteriza a las fibras vegetales como el algodón y el lino al arder?",
+    "respuestas": [
+      "Se funden y no generan humo",
+      "Generan un denso humo negro y no se funden",
+      "Son incombustibles y no generan humo"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Durante la combustión de la madera, ¿qué ocurre entre 300 °C y 500 °C?",
+    "respuestas": [
+      "Aparecen las primeras llamas",
+      "Se desarrolla una pirólisis intensa y la llama comienza a disminuir",
+      "La madera se autoinflama sin llama visible"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué factor incrementa el riesgo de explosión en una nube de polvo en suspensión?",
+    "respuestas": [
+      "Menor tamaño de las partículas",
+      "Menor concentración de polvo",
+      "Menor concentración de oxígeno"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué sucede con el Límite Inferior de Inflamabilidad (LII) cuando la temperatura aumenta?",
+    "respuestas": [
+      "El LII aumenta hacia valores más altos.",
+      "El LII disminuye hacia 0 %.",
+      "El LII permanece constante."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En una atmósfera con 40 % de oxígeno, ¿qué efecto tiene sobre la velocidad de la combustión?",
+    "respuestas": [
+      "La velocidad de combustión se reduce a la mitad.",
+      "La velocidad de combustión se duplica.",
+      "La velocidad de combustión se cuadruplica."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué indica un bajo punto de inflamación en una sustancia?",
+    "respuestas": [
+      "Menor riesgo de incendio.",
+      "Mayor riesgo de incendio.",
+      "No afecta el riesgo de incendio."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la diferencia principal entre el punto de autoignición y el punto de inflamación?",
+    "respuestas": [
+      "El punto de autoignición es mayor que el punto de inflamación.",
+      "El punto de inflamación es mayor que el punto de autoignición.",
+      "Ambos puntos son iguales pero varían según la sustancia."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de fuego clasifica a los originados por aceites y grasas en cocina según la normativa americana?",
+    "respuestas": [
+      "Clase A",
+      "Clase K",
+      "Clase B"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la secuencia correcta que describe la generación de un fuego en combustibles líquidos?",
+    "respuestas": [
+      "Líquido → Vapor → Calor → Combustión",
+      "Líquido → Calor → Vapor → Combustión",
+      "Calor → Líquido → Vapor → Combustión"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué agente extintor NO es adecuado para fuegos de clase D?",
+    "respuestas": [
+      "Agua",
+      "Polvo seco",
+      "Grafito"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En un incendio, si la altura de las llamas supera la diagonal media de la superficie horizontal afectada, ¿cómo se clasifica el fuego?",
+    "respuestas": [
+      "Fuego mediano",
+      "Fuego de envergadura",
+      "Fuego grande"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué efecto tiene un aumento de ventilación en un incendio limitado por el combustible?",
+    "respuestas": [
+      "Aumenta la velocidad de combustión inmediatamente.",
+      "No tiene efecto inmediato sobre la velocidad de combustión.",
+      "Reduce la concentración de gases tóxicos."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En un incendio limitado por ventilación (ILV), ¿cuál de los siguientes factores NO se incrementa?",
+    "respuestas": [
+      "Visibilidad",
+      "Concentración de gases tóxicos",
+      "Temperaturas muy elevadas"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué unidad se utiliza para medir el poder calorífico de un combustible por cantidad de sustancia?",
+    "respuestas": [
+      "kJ/kg",
+      "kJ/m³",
+      "kJ/mol"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el principal mecanismo de propagación del calor en los fluidos según el texto?",
+    "respuestas": [
+      "Conducción",
+      "Convección",
+      "Radiación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué sucede cuando la energía radiante incide sobre un cuerpo?",
+    "respuestas": [
+      "El cuerpo siempre se calienta independientemente de su color.",
+      "Puede absorber, reflejar o transmitir el calor.",
+      "El cuerpo cambia de estado físico."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la diferencia principal entre calor y temperatura según el texto?",
+    "respuestas": [
+      "La temperatura es la energía total del movimiento molecular, mientras que el calor es una medida de esta energía.",
+      "Calor y temperatura son términos sinónimos y se pueden usar indistintamente.",
+      "El calor es la energía total del movimiento molecular, mientras que la temperatura es una medida de la energía media molecular."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Según el texto, ¿qué característica tiene una llama cuando la combustión se realiza con suficiente oxígeno?",
+    "respuestas": [
+      "Es más luminosa y tiene colores más intensos.",
+      "Es menos luminosa y se conoce como llama de oxidación.",
+      "Emite una gran cantidad de humo."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica el color de la llama sobre la temperatura alcanzada, según el texto?",
+    "respuestas": [
+      "Una llama azul indica una temperatura de 6500 ºC.",
+      "Una llama roja indica una temperatura de 9000 ºC.",
+      "Una llama amarilla indica una temperatura de 3200 ºC."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué característica tiene la zona interna de una llama?",
+    "respuestas": [
+      "Es muy luminosa y tiene la temperatura más alta.",
+      "Es fría y oscura debido a la falta de oxígeno.",
+      "Es luminosa y presenta una combustión completa."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica la presencia de humo blanco en un incendio?",
+    "respuestas": [
+      "Presencia de sustancias químicas con azufre.",
+      "Combustión completa y principalmente vapor de agua.",
+      "Combustión incompleta y presencia de hollín."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué sucede cuando se queman materiales orgánicos en condiciones de combustión incompleta?",
+    "respuestas": [
+      "Se produce principalmente dióxido de carbono.",
+      "Se forman principalmente gases tóxicos como el amoniaco.",
+      "Se origina hollín, compuesto por partículas de carbono."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuáles son los principales componentes del humo generado en una combustión incompleta?",
+    "respuestas": [
+      "Nitrógeno, dióxido de carbono y vapor de agua.",
+      "Monóxido de carbono, dióxido de azufre y fosgeno.",
+      "Monóxido de carbono, hollín y dióxido de carbono."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el rango de explosividad del monóxido de carbono (CO) en mezcla con el aire?",
+    "respuestas": [
+      "12,5% a 74,2%",
+      "16% a 25%",
+      "4,5% a 45%"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué compuesto se forma al combinar el CO con la hemoglobina?",
+    "respuestas": [
+      "Oxihemoglobina",
+      "Carboxihemoglobina",
+      "Metahemoglobina"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tratamiento es fundamental en la intoxicación por monóxido de carbono?",
+    "respuestas": [
+      "Antídotos específicos",
+      "Oxígeno al 100%",
+      "Ventilación natural"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué gas se produce naturalmente por descomposición de la materia orgánica y también se fabrica de forma industrial?",
+    "respuestas": [
+      "Dióxido de azufre",
+      "Amoníaco",
+      "Ácido clorhídrico"
+    ],
+    "correcta": 2
+  }
+]

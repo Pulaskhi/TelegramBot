@@ -1,0 +1,398 @@
+[
+  {
+    "pregunta": "¿Qué tipo de fenómeno es la combustión según el texto?",
+    "respuestas": [
+      "Fenómeno físico",
+      "Fenómeno químico",
+      "Fenómeno biológico"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según el texto, ¿qué sucede con las sustancias originales en un fenómeno químico?",
+    "respuestas": [
+      "Se conservan sin cambios",
+      "Se transforman creando nuevas sustancias",
+      "Se disuelven sin reaccionar"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es un ejemplo de fenómeno físico mencionado en el texto?",
+    "respuestas": [
+      "La oxidación de un metal",
+      "La fotosíntesis",
+      "Patear una pelota"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué proceso describe el texto como un fenómeno químico que implica la transformación de sustancias?",
+    "respuestas": [
+      "La disolución de sal en agua",
+      "El cambio de estado de agua a hielo",
+      "La fotosíntesis"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué rol desempeña el oxígeno en una reacción de combustión según el texto?",
+    "respuestas": [
+      "Actúa como agente reductor",
+      "Actúa como agente oxidante",
+      "No tiene un rol específico"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué sucede con el número de oxidación de una especie que se oxida?",
+    "respuestas": [
+      "Disminuye",
+      "Aumenta",
+      "Permanece constante"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según el texto, ¿qué diferencia fundamental existe entre fuego e incendio?",
+    "respuestas": [
+      "El fuego es controlado y el incendio no",
+      "El incendio es controlado y el fuego no",
+      "No hay diferencias entre fuego e incendio"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuáles son las condiciones necesarias para que se produzca una combustión según el texto?",
+    "respuestas": [
+      "Presencia de materiales reaccionantes, fase líquida y energía de activación",
+      "Presencia de materiales reaccionantes, fase sólida y energía de activación",
+      "Presencia de materiales reaccionantes, fase gaseosa y energía de activación"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué papel desempeña el combustible en una reacción de combustión según el texto proporcionado?",
+    "respuestas": [
+      "Actúa como agente oxidante.",
+      "Actúa como agente reductor.",
+      "No participa directamente en la reacción."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el efecto de la humedad en la combustión de materiales sólidos según el texto?",
+    "respuestas": [
+      "Aumenta la facilidad de ignición.",
+      "Reduce la velocidad de combustión.",
+      "No tiene ningún efecto."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según el texto, ¿qué característica aumenta la inflamabilidad de los combustibles sólidos disgregados como el polvo?",
+    "respuestas": [
+      "Menor superficie de contacto con el comburente.",
+      "Mayor capacidad de dispersión en el aire.",
+      "Menor capacidad de dispersión en el aire."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica el límite superior de inflamabilidad (LSI) para un gas según el texto?",
+    "respuestas": [
+      "Es la concentración mínima de gas en el aire necesaria para que se produzca una combustión.",
+      "Es la temperatura a la que un gas se inflama.",
+      "Es la concentración máxima de gas que permite la combustión."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes elementos puede actuar como comburente además del oxígeno?",
+    "respuestas": [
+      "Dióxido de carbono",
+      "Helio",
+      "Cloro"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué se produce principalmente en una combustión completa?",
+    "respuestas": [
+      "Monóxido de carbono y humo",
+      "Dióxido de carbono y vapor de agua",
+      "Hidrógeno y ozono"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de combustión se da en presencia de suficiente oxígeno?",
+    "respuestas": [
+      "Combustión completa",
+      "Combustión incompleta",
+      "Combustión espontánea"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el contexto de los plásticos, ¿cuál es una característica del polietileno durante la combustión?",
+    "respuestas": [
+      "Combustión rápida y con llamas altas",
+      "Producción de una gran cantidad de humo negro",
+      "Combustión lenta y difícil de iniciar"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la principal composición de las fibras vegetales mencionadas en el texto, como el algodón y el lino?",
+    "respuestas": [
+      "Polímeros sintéticos",
+      "Celulosa",
+      "Proteínas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué sucede con la madera cuando se alcanza una temperatura entre 300 °C y 500 °C según el texto?",
+    "respuestas": [
+      "Se desarrolla una pirólisis intensa y la llama comienza a disminuir",
+      "Se elimina la humedad en forma de vapor de agua y gases volátiles",
+      "La madera entra en autoinflamación"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Según el texto, ¿qué efecto tiene un aumento de la concentración de oxígeno en el aire sobre los límites de inflamabilidad de un combustible?",
+    "respuestas": [
+      "Disminuye tanto el LII como el LSI",
+      "Aumenta tanto el LII como el LSI",
+      "Aumenta el LSI y el LII permanece estable"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la principal característica del punto estequiométrico en una mezcla de combustible y comburente, según el texto?",
+    "respuestas": [
+      "Es el punto con la menor velocidad de combustión",
+      "Es el punto donde la mezcla tiene una proporción óptima para una combustión intensa",
+      "Es el punto donde se consume menos oxígeno"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué sucede con el Límite Inferior de Inflamabilidad (LII) cuando aumenta la temperatura?",
+    "respuestas": [
+      "Aumenta hacia valores más altos",
+      "Permanece estable",
+      "Disminuye hacia 0%"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la principal consecuencia de un aumento en la concentración de oxígeno respecto a los límites de inflamabilidad?",
+    "respuestas": [
+      "Disminuye el Límite Superior de Inflamabilidad (LSI)",
+      "Aumenta el Límite Inferior de Inflamabilidad (LII)",
+      "Amplía el rango hacia el LSI"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué caracteriza al punto estequiométrico en una mezcla de combustible y comburente?",
+    "respuestas": [
+      "Es el punto con menor proporción de oxígeno",
+      "Es el punto donde la proporción de mezcla es óptima para una combustión productiva",
+      "Es el punto con la velocidad de combustión más lenta"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica un bajo punto de inflamación en una sustancia?",
+    "respuestas": [
+      "Es menos propensa a inflamarse",
+      "Requiere una temperatura más alta para inflamarse",
+      "Presenta un mayor riesgo de incendio"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué tipo de fuego no debe apagarse con agua debido al riesgo de salpicaduras violentas y empeoramiento del incendio?",
+    "respuestas": [
+      "FUEGOS CLASE D",
+      "FUEGOS CLASE F",
+      "FUEGOS CLASE A"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la característica principal de los fuegos planos según la descripción del texto?",
+    "respuestas": [
+      "Se propagan en varios planos",
+      "Se manifiestan en el plano horizontal",
+      "Se mantienen activos por un suministro continuo de combustible"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según el texto, ¿qué sucede en un incendio de interior durante la fase de crecimiento?",
+    "respuestas": [
+      "La temperatura disminuye gradualmente",
+      "Se produce principalmente por convección",
+      "El humo y gases calientes se acumulan en la parte superior del recinto"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "De acuerdo con la información proporcionada, ¿cuál es un ejemplo de un fuego alimentado?",
+    "respuestas": [
+      "Incendios de líquidos",
+      "Pacas de paja",
+      "Escapes de gas"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué sucede con las estructuras metálicas cuando están expuestas a un calor intenso durante un incendio?",
+    "respuestas": [
+      "Se enfrían y se vuelven más resistentes",
+      "Se funden o deforman",
+      "No sufren ningún cambio"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes es un producto principal de la combustión?",
+    "respuestas": [
+      "Oxígeno",
+      "Dióxido de carbono",
+      "Nitrógeno"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué mecanismo de transmisión de calor implica el movimiento de fluidos debido a diferencias de densidad?",
+    "respuestas": [
+      "Conducción",
+      "Convección",
+      "Radiación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica un mayor poder calorífico de un combustible?",
+    "respuestas": [
+      "Menor capacidad de liberar energía al arder",
+      "Mayor capacidad de mantener o propagar un incendio",
+      "No afecta la propagación del incendio"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué sucede con la temperatura si se quita calor a un cuerpo según el texto?",
+    "respuestas": [
+      "La temperatura se mantiene constante",
+      "La temperatura sube",
+      "La temperatura baja"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Según el texto, ¿qué caracteriza a una llama de oxidación?",
+    "respuestas": [
+      "Es una llama con exceso de oxígeno y poca luminosidad",
+      "Es una llama sin presencia de oxígeno y mucha luminosidad",
+      "Es una llama con insuficiente oxígeno y alta temperatura"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué indica una llama de color blanco según el texto?",
+    "respuestas": [
+      "Presencia de metales",
+      "Combustión de alcohol",
+      "Combustión de madera"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "De acuerdo con el texto, ¿cuál es la diferencia principal entre las llamas de premezcla y las llamas de difusión?",
+    "respuestas": [
+      "Las llamas de premezcla mezclan el gas y el oxígeno antes de la ignición, mientras que las de difusión no",
+      "Las llamas de premezcla son siempre de color azul y las de difusión de color rojo",
+      "Las llamas de premezcla no generan calor y las de difusión sí"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué indica la presencia de humo blanco en un incendio según el texto?",
+    "respuestas": [
+      "Presencia abundante de oxígeno",
+      "Combustión completa",
+      "Generación de dióxido de carbono (CO₂)"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de combustión se produce cuando hay poco oxígeno disponible?",
+    "respuestas": [
+      "Combustión completa",
+      "Combustión espontánea",
+      "Combustión incompleta"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes gases no es un producto principal de la combustión completa?",
+    "respuestas": [
+      "Dióxido de carbono (CO₂)",
+      "Monóxido de carbono (CO)",
+      "Amoniaco (NH₃)"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué efecto tiene el monóxido de carbono (CO) en el organismo humano?",
+    "respuestas": [
+      "Combina reversiblemente con la hemoglobina, reduciendo el transporte de O₂",
+      "Actúa como un gas asfixiante simple",
+      "Es un gas irritante y corrosivo"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la composición molecular del amoniaco?",
+    "respuestas": [
+      "Un átomo de nitrógeno y tres de hidrógeno",
+      "Dos átomos de nitrógeno y dos de hidrógeno",
+      "Un átomo de nitrógeno y dos de hidrógeno"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el tratamiento adecuado para una intoxicación por amoniaco cuando no hay antídoto eficaz disponible?",
+    "respuestas": [
+      "Administración de un antídoto específico",
+      "Medidas de soporte y esperar la recuperación",
+      "Inyección de adrenalina"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué gas se produce al mezclar amoniaco doméstico con lejía?",
+    "respuestas": [
+      "Dióxido de carbono",
+      "Gas cloro",
+      "Un gas muy irritante y tóxico"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué característica tiene el punto de ebullición del ácido clorhídrico según el texto?",
+    "respuestas": [
+      "Es superior a 0 ºC",
+      "Es inferior a -50 ºC",
+      "Es exactamente -52,5 ºC"
+    ],
+    "correcta": 3
+  }
+]

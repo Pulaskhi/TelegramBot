@@ -83,13 +83,11 @@ class AssistantForm extends HTMLElement {
         <div class="form__header">
           <div class="form__header-box">
             <div class="tabs">
-              <div class="tab active" data-tab="general"><button>General</button></div>
-              <div class="tab" data-tab="files"><button>Documentos</button></div>
+              <div class="tab active" data-tab="files"><button>Documentos</button></div>
               <div class="tab" data-tab="saved"><button>Tests Generados</button></div>
               <div class="tab" data-tab="trained"><button>Tests Entrenados</button></div>
             </div>
             <div class="form__header-icons">
-              <button class="clean-icon" title="Limpiar formulario">🧹</button>
               <button class="save-icon" title="Generar Test">💾</button>
             </div>
           </div>
@@ -99,18 +97,7 @@ class AssistantForm extends HTMLElement {
           <form>
             <input type="hidden" name="id">
 
-            <div class="tab-content active" data-tab="general">
-              <div class="form-element">
-                <label>Tema</label>
-                <div class="form-element-input"><input type="text" name="assistantName"></div>
-              </div>
-              <div class="form-element">
-                <label>Subtema</label>
-                <div class="form-element-input"><input type="text" name="assistantEndpoint"></div>
-              </div>
-            </div>
-
-            <div class="tab-content" data-tab="files">
+            <div class="tab-content active" data-tab="files">
               <div class="form-element">
                 <label>Sube tu documento PDF</label>
                 <div class="form-element-input">
@@ -148,7 +135,6 @@ class AssistantForm extends HTMLElement {
       e.preventDefault()
 
       if (e.target.closest('.save-icon')) this.generateTest()
-      if (e.target.closest('.clean-icon')) this.resetForm()
 
       const tab = e.target.closest('.tab')
       if (tab) {
@@ -222,19 +208,28 @@ class AssistantForm extends HTMLElement {
       groups.forEach(grupo => {
         const header = document.createElement('div')
         header.className = 'tema-header'
-        header.innerHTML = `<span class="caret">▶</span> ${grupo.tema}`
+        header.innerHTML = `<span class="caret">▶</span> ${grupo.tema || grupo?.name || 'Sin tema'}`
         list.appendChild(header)
 
         const inner = document.createElement('div')
         inner.className = 'tema-inner'
 
-        grupo.tests?.forEach(t => {
+        if (Array.isArray(grupo.tests)) {
+          grupo.tests.forEach(t => {
+            const row = document.createElement('div')
+            row.className = 'test-item'
+            row.innerHTML = `<span>${t.name}</span>`
+            row.addEventListener('click', () => this.openTest(grupo.tema, t.name, type))
+            inner.appendChild(row)
+          })
+        } else if (grupo.name && grupo.tema) {
           const row = document.createElement('div')
           row.className = 'test-item'
-          row.innerHTML = `<span>${t.name}</span>`
-          row.addEventListener('click', () => this.openTest(grupo.tema, t.name, type))
+          row.innerHTML = `<span>${grupo.name}</span>`
+          row.addEventListener('click', () => this.openTest(grupo.tema, grupo.name, type))
           inner.appendChild(row)
-        })
+        }
+
         list.appendChild(inner)
 
         header.addEventListener('click', () => {
@@ -297,9 +292,9 @@ class AssistantForm extends HTMLElement {
     const form = this.shadow.querySelector('form')
     form.reset()
     this.shadow.querySelector('.tab.active').classList.remove('active')
-    this.shadow.querySelector('[data-tab="general"]').classList.add('active')
+    this.shadow.querySelector('[data-tab="files"]').classList.add('active')
     this.shadow.querySelector('.tab-content.active').classList.remove('active')
-    this.shadow.querySelector('[data-tab="general"].tab-content')
+    this.shadow.querySelector('[data-tab="files"]').closest('.form').querySelector('[data-tab="files"].tab-content')
     store.dispatch(removeFiles())
   }
 
@@ -313,3 +308,5 @@ class AssistantForm extends HTMLElement {
 }
 
 customElements.define('assistant-form-component', AssistantForm)
+
+

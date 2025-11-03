@@ -1,0 +1,434 @@
+[
+  {
+    "pregunta": "¿Qué establece el Código Técnico de la Edificación (CTE) según la Ley 38/1999 de Ordenación de la Edificación (LOE)?",
+    "respuestas": [
+      "Los requisitos mínimos de seguridad y habitabilidad de los edificios",
+      "Los criterios de diseño urbano",
+      "Las normas de construcción de carreteras"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes no es una exigencia básica que deben cumplir los edificios según el CTE?",
+    "respuestas": [
+      "Seguridad estructural",
+      "Seguridad contra incendios",
+      "Protección contra insectos"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué documento del CTE se centra en la seguridad en caso de incendio?",
+    "respuestas": [
+      "DB SE",
+      "DB SI",
+      "DB SUA"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de construcciones requieren especial atención según el CTE?",
+    "respuestas": [
+      "Construcciones nuevas",
+      "Construcciones con valor histórico o artístico",
+      "Construcciones industriales"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué tipo de escaleras no son consideradas válidas para evacuaciones según el CTE?",
+    "respuestas": [
+      "Escaleras mecánicas y rampas móviles",
+      "Escaleras de emergencia",
+      "Escaleras protegidas"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué se considera 'zona de ocupación nula' según el CTE?",
+    "respuestas": [
+      "Zonas con alta densidad de ocupantes",
+      "Zonas donde la presencia de personas es ocasional",
+      "Zonas destinadas a la recreación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué describe la 'carga de fuego' según la normativa UNE-EN 1991-1-2:2004?",
+    "respuestas": [
+      "La resistencia al fuego de los materiales",
+      "La energía calorífica liberada durante la combustión de materiales combustibles",
+      "Los protocolos de seguridad contra incendios"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el objetivo principal del Código Técnico de la Edificación (CTE)?",
+    "respuestas": [
+      "Reducir los costos de construcción",
+      "Promover la sostenibilidad y mejorar la protección de los usuarios",
+      "Establecer un monopolio en la industria de la construcción"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué elementos incluye la 'carga de fuego' en un espacio?",
+    "respuestas": [
+      "Solo los contenidos del edificio",
+      "Solo los elementos constructivos",
+      "Tanto los contenidos del edificio como los elementos constructivos"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué documento del CTE se encarga de la seguridad estructural?",
+    "respuestas": [
+      "DB SE",
+      "DB SI",
+      "DB SUA"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de escaleras deben cumplir con condiciones de seguridad de utilización exigibles y estar compartimentadas del resto del edificio?",
+    "respuestas": [
+      "Escaleras mecánicas",
+      "Escaleras especialmente protegidas",
+      "Rampas móviles"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué no se considera al determinar la altura de evacuación en un edificio según el CTE?",
+    "respuestas": [
+      "Las plantas más altas con zonas de ocupación nula",
+      "Las plantas subterráneas",
+      "Las plantas con alta densidad de ocupación"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de puerta se utiliza en los accesos de cada planta al recinto de la escalera protegida?",
+    "respuestas": [
+      "Puertas EI2 60-C5",
+      "Puertas EI2 30-C3",
+      "Puertas EI2 90-C5"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿En qué condiciones pueden carecer de compartimentación las escaleras protegidas para evacuación descendente?",
+    "respuestas": [
+      "Cuando se encuentran en un sector de riesgo alto",
+      "Cuando se encuentran en un sector de riesgo mínimo",
+      "Cuando están en la planta baja"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué superficie útil de ventilación debe tener cada planta en el caso de ventilación natural en un recinto con protección frente al humo?",
+    "respuestas": [
+      "Al menos 0.5 m²",
+      "Al menos 1 m²",
+      "Al menos 1.5 m²"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la relación máxima permitida entre los lados de los conductos rectangulares para la ventilación en un recinto protegido contra el humo?",
+    "respuestas": [
+      "3",
+      "4",
+      "5"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿A qué altura debe estar situada la parte superior de las rejillas de entrada de aire en cada planta?",
+    "respuestas": [
+      "Menor que 0.5 m",
+      "Menor que 1 m",
+      "Menor que 1.5 m"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la altura mínima a la que debe estar situada la parte inferior de las rejillas de salida de aire en cada planta?",
+    "respuestas": [
+      "1.50 m",
+      "1.80 m",
+      "2.00 m"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué superficie mínima deben tener los huecos permanentemente abiertos al exterior en una escalera especialmente protegida por planta?",
+    "respuestas": [
+      "5A m²",
+      "10A m²",
+      "15A m²"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué diámetro mínimo debe tener el círculo inscrito en la proyección horizontal de un patio comunicado con huecos en una escalera especialmente protegida?",
+    "respuestas": [
+      "h/4 m",
+      "h/3 m",
+      "h/2 m"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué se considera origen de evacuación en un edificio?",
+    "respuestas": [
+      "Cualquier punto ocupable excepto espacios en viviendas y recintos menores de 50 m² con baja densidad de ocupación",
+      "Solo puntos en zonas de riesgo especial",
+      "Solo puntos en zonas de uso público"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la densidad máxima de ocupación permitida para que un espacio no sea considerado origen de evacuación?",
+    "respuestas": [
+      "1 persona por cada 3 m²",
+      "1 persona por cada 5 m²",
+      "1 persona por cada 10 m²"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué característica debe cumplir la resistencia al fuego de un elemento constructivo según la normativa?",
+    "respuestas": [
+      "Mantener su color y forma",
+      "Mantener su función estructural y aislamiento térmico por un tiempo determinado",
+      "Ser completamente incombustible"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué longitud no debe exceder el recorrido desde la puerta de salida del recinto de la escalera hasta una salida de edificio?",
+    "respuestas": [
+      "10 m",
+      "15 m",
+      "20 m"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la anchura libre mínima que deben tener los elementos de paso a través de las cajas para considerarse válidos de evacuación?",
+    "respuestas": [
+      "0,50 metros",
+      "0,70 metros",
+      "1,00 metros"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En aparcamientos, ¿por dónde deben discurrir los recorridos de evacuación?",
+    "respuestas": [
+      "Por itinerarios peatonales no protegidos",
+      "Por calles de circulación de vehículos o itinerarios peatonales protegidos",
+      "Solo por calles de circulación de vehículos"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En establecimientos comerciales con una superficie superior a 400 m², ¿cómo deben ser los recorridos de evacuación?",
+    "respuestas": [
+      "Por pasillos definidos sin delimitación fija",
+      "Por cualquier área disponible",
+      "Por pasillos definidos y delimitados por elementos fijos o señalización permanente"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la máxima distancia permitida entre cruces de pasillos transversales en establecimientos comerciales grandes?",
+    "respuestas": [
+      "10 metros",
+      "20 metros",
+      "30 metros"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué característica deben tener dos recorridos de evacuación para considerarse alternativos?",
+    "respuestas": [
+      "Formar un ángulo mayor de 45° o estar separados por elementos con resistencia al fuego EI 30",
+      "Estar a menos de 10 metros de distancia entre sí",
+      "Conducir a la misma salida de emergencia"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la resistencia al fuego mínima que deben tener los elementos constructivos que separan recorridos de evacuación alternativos?",
+    "respuestas": [
+      "EI 15",
+      "EI 25",
+      "EI 30"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué superficie mínima por ocupante debe tener una zona de hospitalización en una salida de planta?",
+    "respuestas": [
+      "0,70 m²",
+      "1,00 m²",
+      "1,50 m²"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la superficie mínima requerida por ocupante en áreas de tratamiento intensivo en una salida de planta?",
+    "respuestas": [
+      "0,70 m²",
+      "1,00 m²",
+      "1,50 m²"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué tipo de escalera se considera salida de planta en un sector de incendio?",
+    "respuestas": [
+      "Escalera no protegida",
+      "Escalera compartimentada o protegida",
+      "Cualquier tipo de escalera"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué condiciones debe cumplir un vestíbulo de independencia en un itinerario accesible?",
+    "respuestas": [
+      "Contener un círculo de Ø 1,20 m libre de obstáculos",
+      "Tener paredes con resistencia al fuego EI 120",
+      "Ambas opciones son correctas"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la resistencia al fuego mínima que deben tener las paredes de un vestíbulo de independencia?",
+    "respuestas": [
+      "EI 100",
+      "EI 120",
+      "EI 150"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la distancia mínima que deben tener los mecanismos de apertura de las puertas de un vestíbulo de independencia respecto del encuentro más próximo?",
+    "respuestas": [
+      "0,20 m",
+      "0,30 m",
+      "0,40 m"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el diámetro mínimo del círculo libre en un vestíbulo que contiene una zona de refugio y que puede invadir una plaza reservada para usuarios de silla de ruedas?",
+    "respuestas": [
+      "1,00 m",
+      "1,50 m",
+      "2,00 m"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál debe ser la distancia mínima entre los mecanismos de apertura de las puertas y el encuentro más próximo con la pared que contiene la puerta?",
+    "respuestas": [
+      "0,20 m",
+      "0,30 m",
+      "0,40 m"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué se entiende por 'zona de ocupación nula' en términos de evacuación?",
+    "respuestas": [
+      "Zona donde la presencia de personas es constante",
+      "Zona donde la presencia de personas es únicamente ocasional o para mantenimiento",
+      "Zona exclusivamente para el tránsito de personas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuáles son ejemplos de zonas de ocupación nula?",
+    "respuestas": [
+      "Comedores y salas de espera",
+      "Oficinas y salas de reuniones",
+      "Salas de máquinas y cuartos de instalaciones"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Aunque no se consideran para calcular la altura de evacuación, ¿qué deben cumplir los recorridos de evacuación que pasan por zonas de ocupación nula?",
+    "respuestas": [
+      "Nada en particular",
+      "Los límites establecidos de seguridad",
+      "Solo medidas contra incendios"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué criterios se aplican para que los recorridos de evacuación en zonas de ocupación nula deban cumplir los límites establecidos?",
+    "respuestas": [
+      "Si son zonas de riesgo especial o se evalúa la evacuación desde esa planta",
+      "Si son áreas de tránsito frecuente",
+      "Si son utilizadas por el personal administrativo"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de locales se consideran zonas de ocupación nula?",
+    "respuestas": [
+      "Locales comerciales y oficinas",
+      "Salas de conferencias y auditorios",
+      "Archivos y trasteros de viviendas"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué función tienen las zonas de ocupación nula en un edificio?",
+    "respuestas": [
+      "Servir como áreas principales de trabajo",
+      "Facilitar el acceso público general",
+      "Alojar actividades de mantenimiento o almacenamiento ocasional"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué tipo de actividades se realizan principalmente en las zonas de ocupación nula?",
+    "respuestas": [
+      "Operaciones diarias de la empresa",
+      "Mantenimiento y almacenamiento ocasional",
+      "Eventos y reuniones"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Las zonas de ocupación nula se consideran en el cálculo del número de ocupantes de un edificio?",
+    "respuestas": [
+      "Sí, siempre",
+      "No, nunca",
+      "Solo en casos especiales"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la función principal de los locales para material de limpieza en términos de clasificación de áreas en un edificio?",
+    "respuestas": [
+      "Zona de alta ocupación",
+      "Zona de ocupación nula",
+      "Zona de acceso restringido"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de evacuación, ¿qué implica que un local sea considerado como zona de ocupación nula?",
+    "respuestas": [
+      "Que debe tener medidas de seguridad adicionales",
+      "Que no se considera para cálculos de evacuación pero debe seguir normativas de seguridad",
+      "Que puede ser ignorado en términos de seguridad y evacuación"
+    ],
+    "correcta": 2
+  }
+]

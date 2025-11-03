@@ -71,7 +71,7 @@ function normalizeForTraining(q) {
 }
 
 /* ===========================================================
-   🧠 Generar preguntas desde PDF (con feedback previo y variaciones)
+   🧠 Generar preguntas desde PDF (mejorado y con variedad real)
    =========================================================== */
 router.post("/pdf-questions-stored", async (req, res) => {
   const { filename, save } = req.body;
@@ -119,14 +119,17 @@ router.post("/pdf-questions-stored", async (req, res) => {
           badTests.push(...preguntas);
         }
       }
+      // Aleatoriza el orden del feedback
+      trainedTests = trainedTests.sort(() => Math.random() - 0.5);
+      badTests = badTests.sort(() => Math.random() - 0.5);
 
       console.log(`🧩 Feedback encontrado — Trained: ${trainedTests.length}, Bad: ${badTests.length}`);
     } catch (err) {
-      console.warn(`⚠️ Error leyendo feedback previo de ${tema}:`, err.message);
+      console.warn(`⚠️ Error leyendo feedback previo: ${err.message}`);
     }
 
-    // 2️⃣ Trocear el texto del PDF
-    function chunkByChars(text, maxChars = 8000, overlap = 300) {
+    // 2️⃣ Dividir PDF en fragmentos más seguros (por caracteres)
+    function chunkByChars(text, maxChars = 6000, overlap = 200) {
       const chunks = [];
       let start = 0;
       while (start < text.length) {
@@ -138,41 +141,54 @@ router.post("/pdf-questions-stored", async (req, res) => {
       return chunks;
     }
 
-    const chunks = chunkByChars(fullText, 8000, 300);
+    const chunks = chunkByChars(fullText, 6000, 200);
     console.log(`✂️ PDF dividido en ${chunks.length} fragmentos.`);
 
-    // 3️⃣ Generar preguntas con feedback + control de repeticiones
- // dentro de router.post("/pdf-questions-stored", async (req, res) => { ... })
+    // 3️⃣ Timeout y reintentos automáticos
+    async function withTimeout(promise, ms = 180000) {
+      const timeout = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("⏰ Timeout al generar preguntas")), ms)
+      );
+      return Promise.race([promise, timeout]);
+    }
 
-async function generateQuestionsFromChunk(chunk, idx, total, perChunk) {
-  // ➊ genera un canary para esta llamada
-  const canary = `CANARY:${tema}:${Date.now() % 100000}`;
+    // Áreas temáticas aleatorias para variar el enfoque
+    const focusAreas = [
+      "normativa y legislación técnica",
+      "principios físicos y químicos aplicados",
+      "actuaciones operativas y protocolos",
+      "análisis de materiales, propagación y calor",
+      "medidas preventivas y seguridad"
+    ];
+    const focus = focusAreas[Math.floor(Math.random() * focusAreas.length)];
 
-  console.log(`🧠 Enviando chunk ${idx}/${total} a OpenAI (máx ${perChunk} preguntas)...`);
-  const feedbackPrompt = `
-Tienes acceso a feedback previo del tema "${tema}":
+    async function generateQuestionsFromChunk(chunk, idx, total, perChunk, retries = 2) {
+      const canary = `CANARY:${tema}:${Date.now() % 100000}`;
+      const feedbackPrompt = `
+Has generado preguntas anteriormente sobre el tema "${tema}".
 
-✅ Ejemplos de preguntas útiles (trained-tests):
-${JSON.stringify(trainedTests.slice(0, 20), null, 2)}
+✅ PREGUNTAS YA ENTRENADAS (no repitas ni reformules estas ideas):
+${trainedTests.slice(0, 20).map(q => `- ${q.pregunta}`).join("\n")}
 
-❌ Ejemplos de preguntas confusas o incorrectas (bad-tests):
-${JSON.stringify(badTests.slice(0, 20), null, 2)}
+❌ PREGUNTAS MALAS (evita errores similares):
+${badTests.slice(0, 10).map(q => `- ${q.pregunta}`).join("\n")}
 
-Usa esta información para mejorar la calidad de las nuevas preguntas:
-- Inspírate en las buenas (estructura, claridad, tipo de contenido)
-- Evita errores comunes en las malas (ambigüedad, errores conceptuales, redacción confusa)
-- Evita repetir literalmente preguntas existentes; reescribe enunciados o enfoque.
-- Introduce preguntas nuevas cuando el contenido lo permita.
+Tu misión:
+- Detectar **nuevos conceptos, relaciones o detalles técnicos** que aún no se hayan preguntado.
+- Cubre aspectos complementarios: causas, consecuencias, clasificaciones, ejemplos prácticos, normativa o cálculos simples.
+- Evita repetir literal o en esencia las preguntas anteriores.
+- Varía el tipo de razonamiento: comprensión, aplicación, normativa, física o análisis operativo.
+- Redacción formal y sin ambigüedades.
 `;
 
-  // ➋ Le pedimos al modelo que devuelva una línea META de confirmación
-  const prompt = `
-Eres un experto en oposiciones de BOMBEROS en España.
-Genera ${perChunk} preguntas tipo test basadas en el texto y el feedback anterior.
-Primero escribe una línea "META: OK ${canary} TRAINED=${trainedTests.length} BAD=${badTests.length}"
-y DESPUÉS, en una línea nueva, el JSON EXACTO con SOLO el array de preguntas:
+      const prompt = `
+Eres un experto en la preparación de oposiciones de BOMBEROS en España.
 
-Formato del JSON exacto:
+Genera ${perChunk} preguntas tipo test nuevas, variadas y de nivel profesional.
+Enfoca especialmente en el ámbito: "${focus}".
+
+Primero escribe "META: OK ${canary}" y luego devuelve ÚNICAMENTE el JSON con formato:
+
 [
   {"pregunta":"Texto","respuestas":["Opción 1","Opción 2","Opción 3"],"correcta":2}
 ]
@@ -183,52 +199,46 @@ Texto base (${idx}/${total}):
 ${feedbackPrompt}
 `.trim();
 
-  const completion = await openai.chat.completions.create({
-    model: "gpt-4-turbo",
-    temperature: 0.5,
-    max_tokens: 3500,
-    messages: [
-      { role: "system", content: "Eres un generador de tests técnicos de bomberos." },
-      { role: "user", content: prompt },
-    ],
-  });
+      for (let attempt = 1; attempt <= retries; attempt++) {
+        try {
+          console.log(`🚀 Enviando chunk ${idx}/${total} (intento ${attempt})...`);
+          const completion = await withTimeout(
+            openai.chat.completions.create({
+              model: "gpt-4-turbo",
+              temperature: 0.85,
+              max_tokens: 2500,
+              messages: [
+                { role: "system", content: "Eres un generador de tests técnicos y pedagógicos de bomberos." },
+                { role: "user", content: prompt },
+              ],
+            }),
+            180000
+          );
 
-  // ➌ Log de uso de tokens si está disponible
-  if (completion.usage) {
-    console.log(`📏 Tokens — prompt:${completion.usage.prompt_tokens} completion:${completion.usage.completion_tokens} total:${completion.usage.total_tokens}`);
-  }
-
-  const raw = completion.choices?.[0]?.message?.content || "";
-  // ➍ Log breve (primeras 200 chars) para ver que viene la META
-  console.log(`🔎 Respuesta (head): ${raw.slice(0, 200).replace(/\n/g, ' ')}...`);
-
-  // ➎ Extraer la línea META
-  const metaMatch = raw.match(/^META:\s*OK\s*(CANARY:[^\s]+)\s*TRAINED=(\d+)\s*BAD=(\d+)/i);
-  if (metaMatch) {
-    console.log(`✅ META confirmada por el modelo — ${metaMatch[1]} TRAINED=${metaMatch[2]} BAD=${metaMatch[3]}`);
-  } else {
-    console.warn("⚠️ No se detectó línea META en la respuesta (puede que el modelo la omitiera, pero el feedback igualmente se envió).");
-  }
-
-  // ➏ Extraer el JSON (tu parser ya tolera texto antes/después)
-  const cleaned = raw.replace(/```json|```/gi, "").trim();
-  try {
-    // intenta parsear cualquier JSON array que aparezca
-    const s = cleaned.indexOf("[");
-    const epos = cleaned.lastIndexOf("]");
-    if (s !== -1 && epos !== -1) {
-      const arr = JSON.parse(cleaned.slice(s, epos + 1));
-      console.log(`✅ Chunk ${idx}: ${arr.length} preguntas generadas.`);
-      return arr;
+          console.log(`✅ Respuesta recibida del chunk ${idx}/${total}`);
+          const raw = completion.choices?.[0]?.message?.content || "";
+          const cleaned = raw.replace(/```json|```/gi, "").trim();
+          const s = cleaned.indexOf("[");
+          const e = cleaned.lastIndexOf("]");
+          if (s !== -1 && e !== -1) {
+            const arr = JSON.parse(cleaned.slice(s, e + 1));
+            console.log(`✅ Chunk ${idx}: ${arr.length} preguntas generadas.`);
+            return arr;
+          }
+        } catch (err) {
+          console.error(`❌ Error en chunk ${idx} intento ${attempt}:`, err.message);
+          if (attempt < retries) {
+            console.log(`🔁 Reintentando chunk ${idx}...`);
+            await new Promise(r => setTimeout(r, 3000));
+          } else {
+            console.warn(`⚠️ Chunk ${idx} falló tras ${retries} intentos.`);
+          }
+        }
+      }
+      return [];
     }
-  } catch (e) {
-    console.error(`⚠️ Error parseando JSON del chunk ${idx}:`, e.message);
-  }
-  console.warn(`⚠️ Chunk ${idx} sin preguntas válidas.`);
-  return [];
-}
 
-
+    // 4️⃣ Procesar todos los fragmentos
     const targetTotal = 50;
     const perChunk = Math.max(1, Math.floor(targetTotal / chunks.length));
     let all = [];
@@ -240,19 +250,18 @@ ${feedbackPrompt}
 
     console.log(`🧮 Total bruto generado: ${all.length}`);
 
-    // 4️⃣ Filtrar duplicados y limpiar
+    // 5️⃣ Limpiar duplicados
     const seen = new Set();
-    const questions = all.filter(q => {
+    const finalQs = all.filter(q => {
       const text = (q?.pregunta || "").trim().toLowerCase();
       if (!text || seen.has(text)) return false;
       seen.add(text);
       return true;
-    });
+    }).slice(0, targetTotal);
 
-    const finalQs = questions.slice(0, targetTotal);
     console.log(`📊 Total final tras limpieza: ${finalQs.length}`);
 
-    // 5️⃣ Guardar
+    // 6️⃣ Guardar test
     let savedFile = null;
     if (save === true) {
       const temaDir = path.join(testsRoot, tema);
@@ -291,12 +300,10 @@ router.post("/save-trained", (req, res) => {
     )[0];
 
     let all = [];
-    let oldFeedback = "";
     if (latest) {
       try {
         const oldData = JSON.parse(fs.readFileSync(path.join(temaDir, latest), "utf8"));
         all = Array.isArray(oldData) ? oldData : oldData.preguntas || [];
-        oldFeedback = oldData.feedback || "";
       } catch {}
     }
 
@@ -312,10 +319,7 @@ router.post("/save-trained", (req, res) => {
 
     const outName = latest || `${(sourceTest ? path.parse(sourceTest).name : "custom")}-trained-${Date.now()}.json`;
     const outPath = path.join(temaDir, outName);
-
-    const data = { tema, fecha: new Date().toISOString(), feedback: feedback || oldFeedback, preguntas: all };
-
-    fs.writeFileSync(outPath, JSON.stringify(data, null, 2), "utf8");
+    fs.writeFileSync(outPath, JSON.stringify({ tema, preguntas: all, feedback }, null, 2), "utf8");
     console.log(`💾 Preguntas útiles actualizadas en: ${outPath}`);
     res.json({ success: true, file: path.join(tema, outName), total: all.length });
   } catch (err) {
@@ -339,12 +343,10 @@ router.post("/save-bad", (req, res) => {
     )[0];
 
     let all = [];
-    let oldFeedback = "";
     if (latest) {
       try {
         const oldData = JSON.parse(fs.readFileSync(path.join(temaDir, latest), "utf8"));
         all = Array.isArray(oldData) ? oldData : oldData.preguntas || [];
-        oldFeedback = oldData.feedback || "";
       } catch {}
     }
 
@@ -360,10 +362,7 @@ router.post("/save-bad", (req, res) => {
 
     const outName = latest || `${(sourceTest ? path.parse(sourceTest).name : "custom")}-bad-${Date.now()}.json`;
     const outPath = path.join(temaDir, outName);
-
-    const data = { tema, fecha: new Date().toISOString(), feedback: feedback || oldFeedback, preguntas: all };
-
-    fs.writeFileSync(outPath, JSON.stringify(data, null, 2), "utf8");
+    fs.writeFileSync(outPath, JSON.stringify({ tema, preguntas: all, feedback }, null, 2), "utf8");
     console.log(`💾 Preguntas malas actualizadas en: ${outPath}`);
     res.json({ success: true, file: path.join(tema, outName), total: all.length });
   } catch (err) {
@@ -386,11 +385,10 @@ router.get("/saved-tests", (req, res) => {
     const allTemas = temas.map(tema => {
       const dir = path.join(testsRoot, tema);
       const files = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
-      const tests = files.map(file => {
-        const filePath = path.join(dir, file);
-        const stats = fs.statSync(filePath);
-        return { name: file, size: stats.size, url: `/api/admin/assistants/saved-tests/${tema}/${file}` };
-      });
+      const tests = files.map(file => ({
+        name: file,
+        url: `/api/admin/assistants/saved-tests/${tema}/${file}`
+      }));
       return { tema, tests };
     });
 
@@ -425,18 +423,14 @@ router.get("/trained-tests", (req, res) => {
       fs.statSync(path.join(trainedRoot, f)).isDirectory()
     );
 
-    const allTests = [];
-    temas.forEach(tema => {
+    const allTests = temas.flatMap(tema => {
       const dir = path.join(trainedRoot, tema);
       const files = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
-      files.forEach(file => {
-        allTests.push({
-          tema,
-          name: file,
-          path: path.join(tema, file),
-          url: `/api/admin/assistants/trained-tests/${tema}/${file}`,
-        });
-      });
+      return files.map(file => ({
+        tema,
+        name: file,
+        url: `/api/admin/assistants/trained-tests/${tema}/${file}`,
+      }));
     });
 
     res.json({ success: true, tests: allTests });
@@ -454,10 +448,8 @@ router.get("/trained-tests/:tema/:name", (req, res) => {
       return res.status(404).json({ success: false, message: "Archivo no encontrado" });
 
     const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    const questions = Array.isArray(raw)
-      ? raw.map(normalizeForTraining)
-      : (raw.preguntas || []).map(normalizeForTraining);
-    res.json({ success: true, questions, feedback: raw.feedback || "" });
+    const data = Array.isArray(raw) ? { preguntas: raw } : raw;
+    res.json({ success: true, questions: data.preguntas || [], feedback: data.feedback || "" });
   } catch (err) {
     console.error("❌ Error leyendo trained-test:", err);
     res.status(500).json({ success: false, message: "Error leyendo trained-test" });
