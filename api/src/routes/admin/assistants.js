@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const router = require("express").Router();
 const OpenAI = require("openai");
+const OpenAIService = require("../../services/openai-service");
 
 // ✅ Carga universal de pdf-parse
 let pdfParse;
@@ -20,9 +21,10 @@ const galleryDir = path.join(__dirname, "../../storage/documents/gallery");
 const testsRoot = path.join(__dirname, "../../storage/tests");
 const trainedRoot = path.join(__dirname, "../../storage/trained-tests");
 const badRoot = path.join(__dirname, "../../storage/bad-tests");
+const flashcardsRoot = path.join(__dirname, "../../storage/flashcards");
 
 // 🧱 Asegura estructura base
-for (const dir of [testsRoot, trainedRoot, badRoot]) {
+for (const dir of [testsRoot, trainedRoot, badRoot, flashcardsRoot]) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
@@ -283,6 +285,78 @@ ${feedbackPrompt}
 });
 
 /* ===========================================================
+   ⚡ Generar FLASHCARDS desde PDF y guardarlas en carpeta
+   =========================================================== */
+// ⚡ CREAR FLASHCARDS A PARTIR DE UN TEST GUARDADO
+router.post('/flashcards-from-test', async (req, res) => {
+  try {
+    console.log("📩 BODY recibido en /flashcards-from-test:", req.body);
+
+    let { tema, test, testFile } = req.body;
+
+    // Permitir también formato "TEMA-9/archivo.json"
+    if (testFile) {
+      const parts = testFile.split("/");
+      tema = parts[0];
+      test = parts[1];
+    }
+
+    if (!tema || !test) {
+      return res.status(400).json({
+        success: false,
+        message: "Faltan el tema o el nombre del test"
+      });
+    }
+
+    const testPath = path.join(testsRoot, tema, test);
+    if (!fs.existsSync(testPath)) {
+      return res.status(404).json({ success: false, message: "Test no encontrado" });
+    }
+
+    const questionsRaw = fs.readFileSync(testPath, 'utf8');
+    const parsed = JSON.parse(questionsRaw);
+    const questions = Array.isArray(parsed) ? parsed : parsed.preguntas || [];
+
+    if (!questions.length) {
+      return res.status(400).json({ success: false, message: "El test no contiene preguntas" });
+    }
+
+    // 🧠 AQUÍ EL CAMBIO IMPORTANTE 👉 le pasamos también el tema
+    const openai = new OpenAIService();
+        // Usamos SOLO el contenido original del PDF para resumir
+    const textBase = questions.map(q => q.pregunta).join("\n");
+
+    const flashcards = await openai.generateFlashcardsFromTopicOnly(tema, textBase);
+
+
+    const folder = path.join(flashcardsRoot, tema);
+    if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true });
+
+    const fileName = `${Date.now()}-flashcards.json`;
+    const outPath = path.join(folder, fileName);
+    fs.writeFileSync(outPath, JSON.stringify(flashcards, null, 2), 'utf8');
+
+    return res.json({
+      success: true,
+      message: "Flashcards generadas correctamente",
+      file: `flashcards/${tema}/${fileName}`,
+      tema,          // 👈 también lo devolvemos por si lo quieres en el front
+      flashcards
+    });
+
+  } catch (err) {
+    console.error('❌ Error en /flashcards-from-test:', err);
+    return res.status(500).json({
+      success: false,
+      message: "Error generando flashcards",
+      error: err.message
+    });
+  }
+});
+
+
+
+/* ===========================================================
    💾 Guardar entrenados (útiles) y malos (con comentario)
    =========================================================== */
 router.post("/save-trained", (req, res) => {
@@ -453,6 +527,53 @@ router.get("/trained-tests/:tema/:name", (req, res) => {
   } catch (err) {
     console.error("❌ Error leyendo trained-test:", err);
     res.status(500).json({ success: false, message: "Error leyendo trained-test" });
+  }
+});
+
+/* ===========================================================
+   📜 Listar y leer FLASHCARDS
+   =========================================================== */
+router.get("/flashcards", (req, res) => {
+  try {
+    if (!fs.existsSync(flashcardsRoot)) {
+      return res.json({ success: true, temas: [] });
+    }
+
+    const temas = fs.readdirSync(flashcardsRoot).filter(f =>
+      fs.statSync(path.join(flashcardsRoot, f)).isDirectory()
+    );
+
+    const allTemas = temas.map(tema => {
+      const dir = path.join(flashcardsRoot, tema);
+      const files = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
+      const flashcards = files.map(file => ({
+        name: file,
+        url: `/api/admin/assistants/flashcards/${tema}/${file}`
+      }));
+      return { tema, flashcards };
+    });
+
+    res.json({ success: true, temas: allTemas });
+  } catch (err) {
+    console.error("❌ Error listando flashcards:", err);
+    res.status(500).json({ success: false, message: "Error listando flashcards" });
+  }
+});
+
+router.get("/flashcards/:tema/:name", (req, res) => {
+  try {
+    const { tema, name } = req.params;
+    const filePath = path.join(flashcardsRoot, tema, name);
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).json({ success: false, message: "Archivo no encontrado" });
+    }
+
+    const raw = fs.readFileSync(filePath, "utf8");
+    const data = JSON.parse(raw);
+    res.json({ success: true, flashcards: data });
+  } catch (err) {
+    console.error("❌ Error leyendo flashcards:", err);
+    res.status(500).json({ success: false, message: "Error leyendo flashcards" });
   }
 });
 

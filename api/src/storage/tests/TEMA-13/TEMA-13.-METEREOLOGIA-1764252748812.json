@@ -1,0 +1,434 @@
+[
+  {
+    "pregunta": "¿Cuál es la acción fundamental que demostró Galileo con su experimento sobre el peso del aire?",
+    "respuestas": [
+      "El aire no tiene peso.",
+      "El aire tiene un peso que puede ser medido.",
+      "El peso del aire es insignificante comparado con el agua."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Según la relación explicada por Torricelli, ¿qué representa una columna de mercurio de 760 mm de altura?",
+    "respuestas": [
+      "El peso equivalente a una columna de agua de misma altura.",
+      "La presión atmosférica normal al nivel del mar.",
+      "La altura máxima que el mercurio puede alcanzar."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de la presión atmosférica, ¿cómo se aplica el principio de Pascal?",
+    "respuestas": [
+      "La presión del aire se distribuye de manera desigual a través del cuerpo humano.",
+      "La presión atmosférica se ejerce igualmente en todas las direcciones, equilibrando las fuerzas internas del cuerpo.",
+      "El principio de Pascal no es aplicable a la atmósfera."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué unidad modernamente adoptada para medir la presión atmosférica es equivalente al milibar?",
+    "respuestas": [
+      "El Newton por metro cuadrado.",
+      "El Pascal.",
+      "El kilogramo por centímetro cuadrado."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la relación aproximada entre la presión atmosférica al nivel del mar y a una altitud de 5,5 kilómetros según el promedio de presión contribuida por cada capa de la atmósfera?",
+    "respuestas": [
+      "1000 hPa a 500 hPa",
+      "1012 hPa a 500 hPa",
+      "1000 hPa a 100 hPa"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el experimento de Torricelli, ¿cómo afecta la altitud a la altura de la columna de mercurio en el tubo?",
+    "respuestas": [
+      "A mayor altitud, menor altura de la columna",
+      "A mayor altitud, mayor altura de la columna",
+      "La altura de la columna no cambia con la altitud"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué forma adoptan las isobaras que representan zonas de alta presión en los mapas meteorológicos?",
+    "respuestas": [
+      "Formas rectilíneas",
+      "Formas curvilíneas cerradas",
+      "Formas curvilíneas abiertas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué representación se utiliza en los mapas del tiempo en España para indicar una zona de baja presión?",
+    "respuestas": [
+      "Una A",
+      "Una B",
+      "Una T"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el efecto principal cuando hay convergencia en el suelo en una depresión meteorológica?",
+    "respuestas": [
+      "Descenso de la temperatura",
+      "Ascenso de aire y formación de nubes",
+      "Aumento de la presión atmosférica"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En un anticiclón, si el aire calienta al descender, ¿qué fenómeno meteorológico es menos probable que ocurra?",
+    "respuestas": [
+      "Formación de niebla",
+      "Generación de lluvia",
+      "Aparición de vientos fuertes"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué caracteriza principalmente a las isobaras paralelas con un gradiente elevado?",
+    "respuestas": [
+      "Presencia de precipitaciones leves",
+      "Generación de vientos fuertes",
+      "Estabilidad y ausencia de viento"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de circulaciones anticiclónicas, ¿qué se espera en términos de movimiento del aire en superficie?",
+    "respuestas": [
+      "Convergencia del aire hacia el centro",
+      "Divergencia del aire desde el centro",
+      "Movimiento vertical ascendente constante"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué fenómeno se produce cuando el aire más cálido que la superficie subyacente asciende generando corrientes convectivas?",
+    "respuestas": [
+      "Formación de anticiclones",
+      "Formación de nubes y precipitaciones",
+      "Estabilidad atmosférica"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el comportamiento de las masas de aire, ¿cuál es la tendencia del aire frío en relación a la superficie?",
+    "respuestas": [
+      "Ascender por ser más ligero",
+      "Aplastarse contra el suelo por ser más denso",
+      "Mantenerse neutro sin cambios de altitud"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Durante la formación de un frente polar, ¿cómo se comporta el aire frío en comparación con el aire cálido?",
+    "respuestas": [
+      "El aire cálido se desliza por debajo del aire frío",
+      "El aire frío se desliza por debajo del aire cálido, formando una cuña",
+      "Ambos tipos de aire se mezclan homogéneamente"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la principal consecuencia meteorológica del desplazamiento del frente polar en latitud según la estación?",
+    "respuestas": [
+      "Generación constante de altas presiones",
+      "Desplazamiento uniforme de las masas de aire tropical y polar",
+      "Formación de borrascas y variación del clima en latitudes medias"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué indica una línea continua gruesa con semicírculos en un lado en los mapas del tiempo?",
+    "respuestas": [
+      "Frente oclusivo",
+      "Frente cálido",
+      "Frente estacionario"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de un frente frío, ¿qué tipo de nubes se forma debido al ascenso brusco de aire cálido?",
+    "respuestas": [
+      "Nubes estratiformes",
+      "Nubes de desarrollo vertical",
+      "Nubes cirrostratos"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué fenómeno meteorológico se representa en los mapas a 500 hPa como una borrasca con isóteras muy inferiores a las del entorno?",
+    "respuestas": [
+      "Corriente en chorro",
+      "DANA",
+      "Anticiclón"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuáles son las principales características de la localización de las corrientes en chorro?",
+    "respuestas": [
+      "Ubicadas en la mesosfera",
+      "Próximas a la tropopausa",
+      "En la superficie terrestre"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica un alto índice de circulación en la corriente en chorro respecto a sus ondulaciones?",
+    "respuestas": [
+      "Las ondulaciones son más acentuadas y frecuentes",
+      "Las ondulaciones son menos marcadas y el tubo de viento es más recto",
+      "No influye en la formación de ondulaciones"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de las corrientes en chorro, ¿qué fenómeno suele seguir a una bifurcación de estas corrientes?",
+    "respuestas": [
+      "Aumento de la presión en superficie y mejoría del tiempo",
+      "Descenso de la presión en superficie y empeoramiento del tiempo",
+      "No hay cambios significativos en las condiciones meteorológicas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la función principal de las isobaras en un mapa de análisis en superficie?",
+    "respuestas": [
+      "Representar las diferentes alturas de las nubes",
+      "Indicar zonas de igual presión atmosférica reducida al nivel del mar",
+      "Mostrar la dirección e intensidad del viento en altitud"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué representa una configuración estacionaria en la corriente en chorro polar?",
+    "respuestas": [
+      "Una situación de bloqueo que puede dificultar el paso de borrascas",
+      "El inicio de un índice de circulación alto con mínimas ondulaciones",
+      "Un estado de confluencia de ramales de la corriente"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el propósito principal de incluir isotermas en los mapas de altura meteorológicos?",
+    "respuestas": [
+      "Indicar áreas de alta presión atmosférica",
+      "Detectar acumulaciones de aire frío en altura que pueden influir en las precipitaciones",
+      "Representar zonas con igual cantidad de luz solar durante el día"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Si en un mapa de altura de 500 hPa, las isohipsas muestran una disminución de altitudes hacia el centro, ¿qué fenómeno meteorológico indican?",
+    "respuestas": [
+      "Anticlón",
+      "Ciclón tropical",
+      "Borrasca"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En la interpretación de mapas meteorológicos de altura, ¿qué implica encontrar una borrasca en superficie al este de una vaguada en 500 hPa?",
+    "respuestas": [
+      "Una tendencia a la estabilización del tiempo",
+      "Un incremento en la divergencia y posible desarrollo o intensificación de la borrasca",
+      "Una disminución notable en los niveles de humedad ambiental"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué indica sobre las condiciones meteorológicas futuras si las isohipsas sobre un frente frío tienen curvatura ciclónica?",
+    "respuestas": [
+      "Ausencia de nubosidad y precipitaciones",
+      "Desarrollo de precipitaciones y nubes de desarrollo vertical",
+      "Condiciones de tiempo seco y estable"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el efecto de la latitud en la radiación solar recibida en la Tierra y cómo afecta esto al clima de las Islas Baleares?",
+    "respuestas": [
+      "La mayor latitud provoca una mayor radiación solar, resultando en inviernos más fríos y veranos más cálidos en las Islas Baleares.",
+      "La menor latitud resulta en una menor radiación solar, generando condiciones más frías durante todo el año.",
+      "La latitud influye en la variabilidad de la radiación solar entre estaciones, con más insolación en verano y menos en invierno, afectando las características del clima mediterráneo de las islas."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cómo influye el relieve montañoso de Mallorca en las condiciones meteorológicas locales?",
+    "respuestas": [
+      "Aumenta la temperatura promedio de la isla debido a la acumulación de aire caliente en altitudes más bajas.",
+      "Reduce la cantidad de precipitaciones al bloquear el paso de nubes lluviosas.",
+      "Provoca un aumento de precipitaciones al actuar como barrera orográfica, lo que hace que el aire húmedo ascienda y se condense."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Durante los cambios estacionales, ¿cómo afecta la circulación atmosférica del oeste a las condiciones climáticas en Mallorca?",
+    "respuestas": [
+      "En verano, permite un clima más seco al posicionar a Mallorca bajo la influencia de zonas subtropicales oceánicas.",
+      "En invierno, provoca un clima más cálido y húmedo debido al desplazamiento del frente polar hacia el sur.",
+      "En otoño e invierno, introduce un ambiente más templado y seco con menos variabilidad climática."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué rol juega el mar en la regulación de las temperaturas en Mallorca durante las estaciones?",
+    "respuestas": [
+      "En invierno, el mar libera calor lentamente, lo que reduce las temperaturas extremas; en verano, absorbe más calor, moderando las temperaturas.",
+      "El mar tiene un efecto mínimo en las temperaturas estacionales debido a su capacidad limitada para almacenar calor.",
+      "En invierno y verano, el mar no tiene ningún efecto significativo sobre las temperaturas."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué factor provoca la formación de vientos de embat durante el verano en Mallorca?",
+    "respuestas": [
+      "La diferencia de presión entre el mar y la montaña",
+      "El rápido calentamiento del suelo en comparación con el mar",
+      "La dirección de las corrientes marinas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el efecto principal de la Sierra de Tramuntana en el régimen de vientos de Mallorca?",
+    "respuestas": [
+      "Potencia los vientos del sur",
+      "Disminuye la intensidad de los vientos del norte sobre la isla",
+      "Genera una circulación de vientos predominante SO-NE en el Raiguer y el Pla"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En el contexto de las precipitaciones en Mallorca, ¿qué indica un carácter intenso y torrencial de las lluvias?",
+    "respuestas": [
+      "Que las lluvias son moderadas y prolongadas",
+      "Que ocurren principalmente en verano",
+      "Que caen grandes volúmenes de agua en muy pocos días"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Según la Escala de Beaufort, ¿cómo se describe un viento de intensidad 'Flojito' y sus efectos en tierra?",
+    "respuestas": [
+      "Crestas de olas con apariencia vítrea y movimiento leve de hojas en los árboles",
+      "Olas grandes con mucha espuma y árboles que se agitan fuertemente",
+      "No hay olas y el humo asciende verticalmente"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el efecto predominante de la configuración geomorfológica de un valle fluvial en forma de 'uve' durante episodios de lluvias intensas y repentinas?",
+    "respuestas": [
+      "La reducción del caudal del río",
+      "El aumento de la capacidad de retención de agua del valle",
+      "El desbordamiento del río debido a la superación de la capacidad del lecho"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En el contexto de la escala de Douglas, ¿qué fenómeno describe el nivel de 'Mar Montañosa' en relación con la visibilidad y la seguridad de las embarcaciones?",
+    "respuestas": [
+      "Visibilidad casi nula y embarcaciones de pequeño y mediano tamaño desaparecen de la vista",
+      "Visibilidad total y navegación segura para todas las embarcaciones",
+      "Visibilidad moderada y riesgo solo para embarcaciones muy pequeñas"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué característica específica de las 'Marejadillas' según la escala de Douglas implica un cambio en la superficie del agua?",
+    "respuestas": [
+      "Presencia de espuma con aspecto vidrioso en las crestas",
+      "Ausencia total de espuma y olas largas",
+      "Olas altas sin romper y sin espuma"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Según estudios de riesgo de inundación, ¿qué factor es crucial para la aplicación de medidas correctoras en territorios propensos a inundaciones?",
+    "respuestas": [
+      "Únicamente la frecuencia de las lluvias intensas",
+      "La magnitud de las lluvias y el área geográfica afectada cada año",
+      "La evaluación de la frecuencia y magnitud de los eventos de inundación"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué fenómeno describe el depósito de sedimentos en forma de estructura en abanico al pie de una montaña debido a la pérdida de energía del agua?",
+    "respuestas": [
+      "Formación de un delta fluvial",
+      "Formación de un abanico aluvial",
+      "Desarrollo de una llanura aluvial"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de los riesgos naturales, ¿cómo se clasifica una zona endorreica?",
+    "respuestas": [
+      "Área con excesiva permeabilidad del suelo",
+      "Zona que carece de desagüe natural",
+      "Región con alta pluviosidad y drenaje eficiente"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el efecto de una crecida de río que supera la capacidad de desagüe del cauce en una llanura de inundación?",
+    "respuestas": [
+      "Reducción del nivel de sedimentos en el cauce",
+      "Estabilidad vertical del flujo del río",
+      "Expansión bidimensional del agua en la llanura"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué puede causar una mayor afectación en las condiciones de desagüe en desembocaduras de ríos durante eventos de bajas presiones atmosféricas?",
+    "respuestas": [
+      "Descenso considerable del nivel medio del mar",
+      "Elevación del nivel medio del mar",
+      "Estabilidad del nivel medio del mar"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el principio físico que describe el aumento de la velocidad del agua en torrentes de mucha pendiente, como los cercanos a Na Burguesa?",
+    "respuestas": [
+      "Ley de Pascal",
+      "Ecuación de Bernoulli",
+      "Principio de Arquímedes"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de intervenciones en zonas de escorrentía, ¿qué medida es más efectiva para reducir el riesgo de inundaciones en zonas urbana?",
+    "respuestas": [
+      "Incrementar el número de desagües pluviales",
+      "Construir muros de contención en los cauces",
+      "Restaurar los cauces a su estado natural"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes opciones no es un factor que contribuye al aumento del riesgo de inundaciones en zonas de baja pendiente como Manacor?",
+    "respuestas": [
+      "Elevada escorrentía de los torrentes",
+      "Construcción en zonas de alto relieve",
+      "Acumulación de agua por insuficiente drenaje"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué efecto tiene la urbanización en el aumento del riesgo de inundaciones, según el estudio realizado en la isla de Mallorca?",
+    "respuestas": [
+      "Disminuye el riesgo al mejorar la infraestructura",
+      "Aumenta el riesgo al destruir el lecho natural de los cauces",
+      "No afecta el riesgo de inundaciones"
+    ],
+    "correcta": 2
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "titulo": "Presión Atmosférica",
+    "explicacion": "La presión atmosférica es el peso del aire sobre la superficie terrestre, medido en unidades como el Pascal o milibar. A nivel del mar, es aproximadamente 1013 hPa. Esta presión varía según la altitud y las condiciones meteorológicas.",
+    "clave_memoria": "Imagina una bolsa de aire: cuanto más aire, más peso, y a mayor altitud, menos aire en la bolsa.",
+    "pregunta_rapida": "¿Qué es la presión atmosférica?",
+    "respuesta_corta": "Es el peso del aire que ejerce presión sobre la superficie terrestre."
+  },
+  {
+    "titulo": "Experimento de Torricelli",
+    "explicacion": "Galileo demostró que el aire tiene peso mediante un tubo lleno de mercurio. Al crear un vacío en la parte superior, el mercurio se eleva, revelando que la presión atmosférica puede sostener una columna de mercurio de 760 mm.",
+    "clave_memoria": "Piensa en un tubo de ensayo donde el aire juega a ser el 'héroe' manteniendo el mercurio en su lugar.",
+    "pregunta_rapida": "¿Qué demostró el experimento de Torricelli?",
+    "respuesta_corta": "Que el aire tiene un peso que puede ser medido."
+  },
+  {
+    "titulo": "Principio de Pascal",
+    "explicacion": "Este principio establece que la presión se transmite de manera uniforme en todas las direcciones en un fluido. En términos atmosféricos, esto significa que la presión atmosférica actúa igual en todas las direcciones, equilibrando fuerzas internas.",
+    "clave_memoria": "Visualiza un globo: al apretarlo, el aire se desplaza uniformemente hacia todos los lados.",
+    "pregunta_rapida": "¿Cómo se aplica el principio de Pascal en la atmósfera?",
+    "respuesta_corta": "La presión atmosférica se ejerce uniformemente en todas direcciones."
+  },
+  {
+    "titulo": "Isobaras",
+    "explicacion": "Las isobaras son líneas que conectan puntos de igual presión en un mapa meteorológico. Las formas curvilíneas cerradas indican áreas de alta presión, mientras que las abiertas representan zonas de baja presión.",
+    "clave_memoria": "Imagina que dibujas círculos en un mapa, cada uno representando la presión que sientes al inflar un globo: más cerca del centro, más presión.",
+    "pregunta_rapida": "¿Qué representan las isobaras en un mapa?",
+    "respuesta_corta": "Conectan puntos de igual presión atmosférica."
+  },
+  {
+    "titulo": "Anticiclones y Borrascas",
+    "explicacion": "Los anticiclones son áreas de alta presión donde el aire desciende, generando buen tiempo. Las borrascas son áreas de baja presión donde el aire asciende, favoreciendo la formación de nubes y precipitaciones.",
+    "clave_memoria": "Piensa en un castillo (anticiclón) donde hay calma y en una tormenta (borrasca) donde todo se agita.",
+    "pregunta_rapida": "¿Qué caracteriza a un anticiclón y a una borrasca?",
+    "respuesta_corta": "El anticiclón genera buen tiempo, mientras que la borrasca trae nubes y lluvias."
+  },
+  {
+    "titulo": "Frentes Meteorológicos",
+    "explicacion": "Los frentes son zonas de transición entre dos masas de aire de diferentes temperaturas. Los frentes fríos, cálidos y oclusos determinan el tiempo atmosférico y suelen estar asociados a fenómenos como lluvias y cambios bruscos de temperatura.",
+    "clave_memoria": "Imagina un encuentro de dos equipos: el frío y el cálido; el choque genera una tormenta de ideas (nubes y lluvias).",
+    "pregunta_rapida": "¿Qué son los frentes meteorológicos?",
+    "respuesta_corta": "Zonas de transición entre masas de aire de diferentes temperaturas."
+  },
+  {
+    "titulo": "Corrientes en Chorro",
+    "explicacion": "Las corrientes en chorro son flujos de aire rápidos y estrechos en la atmósfera superior. Son cruciales para entender el tiempo, ya que influyen en el movimiento de frentes y la formación de sistemas de baja y alta presión.",
+    "clave_memoria": "Visualiza una cinta de correr: si la velocidad es alta (corriente en chorro), arrastra todo a su paso.",
+    "pregunta_rapida": "¿Qué función tienen las corrientes en chorro?",
+    "respuesta_corta": "Influyen en el movimiento de frentes y sistemas de presión."
+  },
+  {
+    "titulo": "Efecto de la Altitud en la Presión",
+    "explicacion": "A medida que se asciende en altitud, la presión atmosférica disminuye. Por ejemplo, a 5.5 km sobre el nivel del mar, la presión puede caer a 500 hPa. Este efecto es fundamental en meteorología y escaladas.",
+    "clave_memoria": "Imagina un globo que se desinfla al subir: al alejarse del mar, la presión cae.",
+    "pregunta_rapida": "¿Cómo afecta la altitud a la presión atmosférica?",
+    "respuesta_corta": "La presión disminuye con el aumento de la altitud."
+  },
+  {
+    "titulo": "Riesgos Meteorológicos",
+    "explicacion": "Los riesgos meteorológicos incluyen inundaciones, tormentas y sequías, derivados de la interacción entre presión atmosférica, humedad y temperatura. La comprensión de estos riesgos es crucial para la planificación y respuesta ante emergencias.",
+    "clave_memoria": "Piensa en un tablero de dominó: un pequeño cambio en el clima puede derribar toda la cadena de eventos meteorológicos.",
+    "pregunta_rapida": "¿Cuáles son algunos riesgos meteorológicos?",
+    "respuesta_corta": "Inundaciones, tormentas y sequías."
+  }
+]

@@ -1,0 +1,434 @@
+[
+  {
+    "pregunta": "¿Cuál es la importancia de los embalses situados en la zona de Cúber en términos de seguridad contra incendios forestales en Mallorca?",
+    "respuestas": [
+      "Almacenar agua para usos agrícolas solamente",
+      "Proveer un recurso crítico para el combate de incendios",
+      "Ser únicamente reservas naturales de agua"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de la Sierra de Tramuntana, ¿qué medida preventiva es fundamental para reducir el riesgo de incendios forestales en áreas con acantilados altos?",
+    "respuestas": [
+      "Instalación de barreras físicas en los acantilados",
+      "Mantenimiento de la vegetación y creación de cortafuegos",
+      "Construcción de más caminos para facilitar el acceso"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el principal propósito de los municipios de la Serra de Tramuntana en cuanto a la gestión y prevención de desastres naturales?",
+    "respuestas": [
+      "Promover el turismo en todas las épocas del año",
+      "Desarrollar infraestructura urbana sin control",
+      "Planificar y ejecutar medidas de prevención y respuesta rápida"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué rol juegan las unidades de relieve como Sierra de Tramuntana en la planificación de rutas de evacuación en caso de emergencias?",
+    "respuestas": [
+      "Son irrelevantes para la planificación",
+      "Determinan los puntos altos seguros en casos de inundación",
+      "Obstaculizan completamente la creación de rutas efectivas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cómo contribuye el conocimiento de la geografía física de Mallorca a la eficacia de las operaciones de rescate por parte de los bomberos?",
+    "respuestas": [
+      "Permite una mejor selección de equipos técnicos",
+      "Ayuda en la predicción precisa del clima local",
+      "Facilita la rápida localización y acceso a áreas críticas"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En el contexto de prevención de incendios, ¿qué importancia tiene la gestión de la vegetación específica mencionada en las formaciones vegetales de la Sierra de Tramuntana?",
+    "respuestas": [
+      "Ninguna, ya que la vegetación no afecta el riesgo de incendios",
+      "Es vital para mantener la biodiversidad sin considerar los incendios",
+      "Es crucial para eliminar combustibles naturales y reducir el riesgo de incendios"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué papel juega la proximidad de una fuente de agua natural como las Albuferas en la planificación de la seguridad contra incendios en zonas forestales?",
+    "respuestas": [
+      "Solo sirve como atracción turística, sin función en la seguridad",
+      "Es esencial para la disponibilidad de agua en operaciones de extinción de incendios",
+      "No se considera en la planificación del control de incendios"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál sería una medida efectiva para mejorar la seguridad en las 'badies' o bahías de Mallorca en términos de protección civil y emergencias?",
+    "respuestas": [
+      "Incrementar el desarrollo comercial en las bahías",
+      "Establecer protocolos de respuesta rápida y zonas de evacuación claras",
+      "Disminuir la población residente en las áreas cercanas a las bahías"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la principal preocupación en la gestión preventiva de zonas con acantilados, como el Cap Blanc en Llucmajor, para la seguridad de los bomberos durante las operaciones de rescate?",
+    "respuestas": [
+      "Estabilidad del terreno",
+      "Presencia de fauna peligrosa",
+      "Intensidad de la señal de radio"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el contexto de prevención de incendios forestales, ¿qué característica del Raiguer, debido a su composición sedimentaria, puede influir en la rapidez de propagación del fuego?",
+    "respuestas": [
+      "Alta humedad del suelo",
+      "Presencia de rocas calcáreas",
+      "Gran cantidad de conglomerados y gravas"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Cuando se implementan medidas de seguridad en zonas costeras como la Bahía de Palma, ¿qué factor debe ser prioritario para prevenir accidentes durante operaciones de rescate?",
+    "respuestas": [
+      "Control de la contaminación acuática",
+      "Evaluación de corrientes marinas",
+      "Monitoreo de actividades turísticas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En la planificación de la seguridad para operaciones de emergencia en zonas como Punta de n’Amer, ¿qué aspecto es crucial evaluar debido a su historia y condiciones geográficas?",
+    "respuestas": [
+      "Accesibilidad por carretera",
+      "Probabilidad de ataques externos",
+      "Vulnerabilidad a deslizamientos de tierra"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cómo afecta la característica de 'depresión llena de sedimentos' del Raiguer a las estrategias de manejo de emergencias en esta área?",
+    "respuestas": [
+      "Hace necesario el uso de vehículos especiales para terrenos blandos",
+      "Requiere entrenamiento especializado en escalada",
+      "Implica mayor riesgo de inundaciones repentinas"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué medida preventiva es fundamental en la zona de Migjorn para la protección contra incendios forestales, dada su topografía calcárea y paisaje árido?",
+    "respuestas": [
+      "Instalación de sistemas de riego automático",
+      "Mantenimiento regular de la vegetación",
+      "Creación de barreras naturales contra el fuego"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el análisis de riesgos para la seguridad de los bomberos en altos acantilados como los de Llucmajor, ¿qué factor físico debe ser evaluado rigurosamente?",
+    "respuestas": [
+      "Altura de los acantilados",
+      "Tipo de vegetación predominante",
+      "Frecuencia de las lluvias"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la importancia de la evaluación continua de las condiciones geológicas en áreas como el Pla de Mallorca para la seguridad durante las operaciones de rescate?",
+    "respuestas": [
+      "Prevenir accidentes por desmoronamiento de suelos",
+      "Evitar disturbios en la fauna local",
+      "Adaptar las técnicas de rescate a la topografía variada"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es una de las consecuencias principales de la intervención humana en un ecosistema costero, según estudios como el del Instituto Mediterráneo de Estudios Avanzados?",
+    "respuestas": [
+      "Aumento de la diversidad biológica",
+      "Pérdida de la diversidad biológica y aumento de la vulnerabilidad",
+      "Desarrollo sustentable del área"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de prevención de incendios forestales, ¿qué práctica puede disminuir el riesgo en zonas adyacentes a extensos arenales y prados?",
+    "respuestas": [
+      "Aumentar las actividades turísticas",
+      "Instalar sistemas de riego automatizado",
+      "Crear cortafuegos y mantener la vegetación baja"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el principal propósito de establecer una clasificación de las aguas como superficiales o subterráneas desde el punto de vista de la gestión y seguridad?",
+    "respuestas": [
+      "Facilitar la explotación comercial",
+      "Simplificar estudios científicos",
+      "Mejorar la planificación en protección civil y respuesta a emergencias"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué efecto tiene la escorrentía superficial en la estabilidad de una región costera en caso de lluvias intensas?",
+    "respuestas": [
+      "Aumento de la infiltración subterránea",
+      "Reducción del nivel freático",
+      "Puede provocar erosión y aumentar el riesgo de deslizamientos"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Desde el punto de vista de la seguridad y prevención, ¿qué medida es esencial en la construcción de infraestructuras en áreas con alta escorrentía superficial?",
+    "respuestas": [
+      "Uso de materiales impermeables en todas las construcciones",
+      "Diseño de sistemas de drenaje adecuados para manejar el flujo de agua",
+      "Construcción de barreras físicas alrededor de las edificaciones"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la implicación de la pérdida de diversidad biológica en la bahía según el informe del Instituto Mediterráneo de Estudios Avanzados para la seguridad de la región?",
+    "respuestas": [
+      "Incremento en actividades recreativas",
+      "Reducción de la resiliencia ecológica frente a desastres naturales",
+      "Mayor facilidad para la pesca comercial"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cómo afecta la transpiración de las plantas al ciclo local del agua y por ende a la planificación de medidas preventivas en áreas forestales?",
+    "respuestas": [
+      "Disminuye la humedad ambiental aumentando el riesgo de incendios",
+      "Contribuye a la humedad ambiental, reduciendo el riesgo de incendios",
+      "No tiene un impacto significativo en el riesgo de incendios"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué técnica de prevención se recomienda en zonas costeras para manejar mejor el impacto del agua de lluvia y proteger las áreas urbanas?",
+    "respuestas": [
+      "Construcción de muros de contención solamente",
+      "Ampliación de las zonas urbanizadas hacia las playas",
+      "Instalación de sistemas de drenaje eficientes y sostenibles"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es una medida preventiva adecuada para evitar la contaminación de acuíferos en áreas agrícolas?",
+    "respuestas": [
+      "Uso intensivo de fertilizantes y pesticidas",
+      "Implementar zonas de amortiguamiento con vegetación",
+      "Incrementar la densidad de pozos de extracción"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué estrategia es efectiva para reducir el riesgo de inundaciones en zonas cercanas a torrentes?",
+    "respuestas": [
+      "Construcción de más embalses en la cabecera de los torrentes",
+      "Reducción de la vegetación en las riveras",
+      "Desarrollo urbano sin restricciones en las planicies de inundación"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el contexto de la seguridad contra incendios forestales, ¿qué característica de las Fonts Ufanes es relevante para la planificación de respuestas de emergencia?",
+    "respuestas": [
+      "Su localización en áreas urbanas",
+      "Su capacidad de manar agua estacionalmente",
+      "Su proximidad a zonas industriales"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué papel juegan los humedales como las Albuferas en la prevención de desastres naturales?",
+    "respuestas": [
+      "Contribuyen al incremento de incendios forestales",
+      "Actúan como barreras naturales contra tormentas",
+      "Facilitan la erosión del suelo"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es una práctica recomendada para la conservación del agua en la gestión de embalses en zonas de alta pluviometría?",
+    "respuestas": [
+      "Mantenimiento de niveles de agua mínimos durante todo el año",
+      "Vaciado periódico completo del embalse",
+      "Uso exclusivo para actividades recreativas"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cómo afecta la intrusión marina a la calidad del agua en los acuíferos costeros?",
+    "respuestas": [
+      "Mejora la calidad del agua al incrementar su salinidad",
+      "Reduce la calidad del agua al incrementar su salinidad",
+      "No afecta la calidad del agua"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Desde un punto de vista de seguridad y prevención, ¿qué medida es crucial antes de la temporada de lluvias en áreas con presencia de torrentes?",
+    "respuestas": [
+      "Reducción del monitoreo de cauces",
+      "Limpieza y desbroce de los cauces",
+      "Construcción de nuevas infraestructuras en el cauce"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué técnica de prevención de riesgos se recomienda para áreas propensas a la salinización de acuíferos?",
+    "respuestas": [
+      "Incrementar el uso de agua para riego",
+      "Implementar sistemas de desalinización portátiles",
+      "Restricción del bombeo en acuíferos costeros"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes arbustos es característico de la garriga de brezo y romero en Mallorca?",
+    "respuestas": [
+      "Madroño",
+      "Brezo",
+      "Acebuche"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de seguridad en zonas forestales, ¿qué especie arbórea se considera invasora y ocupa rápidamente terrenos de cultivo abandonados?",
+    "respuestas": [
+      "Encina",
+      "Pino piñonero",
+      "Pinus halepensis"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es una medida preventiva adecuada para reducir el riesgo de incendio en áreas con presencia de acebuche?",
+    "respuestas": [
+      "Eliminación selectiva de arbustos inflamables",
+      "Plantación de más acebuches",
+      "Fertilización intensiva del suelo"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué acción es fundamental para mitigar el impacto ambiental en zonas de vegetación dunar afectadas por actividades recreativas?",
+    "respuestas": [
+      "Aumentar las zonas de parking",
+      "Restringir el acceso a zonas específicas",
+      "Promocionar el uso de vehículos recreativos"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En la gestión de seguridad y prevención, ¿qué planta se considera riesgosa por su fácil combustibilidad en las formaciones de matorrales?",
+    "respuestas": [
+      "Lavanda",
+      "Romero",
+      "Salicornia"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes es una estrategia efectiva para preservar la vegetación flotante en hábitats lacustres?",
+    "respuestas": [
+      "Introducir especies de peces depredadores",
+      "Controlar los niveles de nutrientes en el agua",
+      "Permitir el libre desarrollo de actividades náuticas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué especie de arbusto es predominante en las comunidades de montaña y posee alto riesgo de incendio por su capacidad para propagar rápidamente el fuego?",
+    "respuestas": [
+      "Estepa joana",
+      "Coixinets espinosos",
+      "Teix"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el marco de las operaciones de prevención de incendios, ¿qué tipo de vegetación requiere especial atención debido a su alto contenido de aceites esenciales inflamables?",
+    "respuestas": [
+      "Vegetación halófila",
+      "Vegetación rupícola",
+      "Vegetación de rosmarino-ericion"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el principal objetivo de las medidas de seguridad contra incendios en edificaciones con estructuras de madera?",
+    "respuestas": [
+      "Reducir el costo de las primas de seguro",
+      "Facilitar el acceso a los servicios de emergencia",
+      "Limitar la propagación del fuego y garantizar la estabilidad estructural"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En el contexto de la evacuación de un edificio, ¿qué sistema debe ser inspeccionado regularmente para garantizar su funcionamiento en caso de emergencia?",
+    "respuestas": [
+      "Sistema de calefacción",
+      "Sistema de iluminación de emergencia",
+      "Sistema de sonido ambiental"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué elemento es esencial incluir en un plan de seguridad contra incendios en una zona industrial?",
+    "respuestas": [
+      "Listado de empleados por departamento",
+      "Rutas de evacuación y puntos de reunión claramente señalizados",
+      "Decoración a base de materiales inflamables"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es una medida preventiva fundamental en la gestión de riesgos de incendios forestales?",
+    "respuestas": [
+      "Introducción de especies animales",
+      "Creación de cortafuegos perimetrales",
+      "Organización de eventos recreativos en la zona"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En la normativa de seguridad, ¿qué factor debe considerarse al diseñar las salidas de emergencia en un teatro?",
+    "respuestas": [
+      "La estética del diseño",
+      "La capacidad máxima del teatro",
+      "El color de las paredes"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué técnica de prevención es recomendada para minimizar el riesgo de incendios en los almacenes?",
+    "respuestas": [
+      "Utilizar iluminación de alta intensidad constantemente",
+      "Mantener mercancías inflamables cerca de las salidas de emergencia",
+      "Separar y almacenar adecuadamente los materiales inflamables"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué normativa especifica las distancias mínimas de seguridad entre instalaciones eléctricas y áreas susceptibles de generar chispas en un entorno industrial?",
+    "respuestas": [
+      "Normativa de seguridad vial",
+      "Reglamento Electrotécnico para Baja Tensión",
+      "Código de construcción residencial"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la función de la señalización de seguridad en el contexto de la prevención de riesgos laborales?",
+    "respuestas": [
+      "Indicar los lugares para pausas recreativas",
+      "Proporcionar instrucciones claras en situaciones de emergencia",
+      "Promover mensajes publicitarios"
+    ],
+    "correcta": 2
+  }
+]

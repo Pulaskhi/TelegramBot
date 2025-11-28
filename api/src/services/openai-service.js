@@ -127,38 +127,178 @@ module.exports = class OpenAIService {
   /**
    * Genera preguntas a partir de un archivo subido
    */
-async generateQuestionsFromFile(fileId) {
-  try {
-    const completion = await this.openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        {
-          role: 'system',
-          content:
-            'Eres un asistente que genera preguntas tipo test basadas en documentos PDF. Devuelve un JSON con la estructura: [{"pregunta":"...","opciones":["A","B","C","D"],"correcta":"A"}]'
-        },
-        {
-          role: 'user',
-          content: [
-            {
-              type: 'text',
-              text: 'Genera preguntas tipo test sobre el contenido del siguiente archivo PDF.'
-            },
-            {
-              type: 'file',
-              file: { file_id: fileId } // ✅ CORREGIDO AQUÍ
-            }
-          ]
-        }
-      ]
-    })
+// =======================================================
+// GENERAR FLASHCARDS DESDE PREGUNTAS + TEMA + MNEMOTECNICAS
+// =======================================================
+// ============================================
+//  ⚡ GENERAR FLASHCARDS DESDE PREGUNTAS
+// ============================================
+// ============================================
+//  ⚡ GENERAR PREGUNTAS TIPO TEST DESDE TEXTO
+// ============================================
+async generateQuestionsFromText(text, tema = "SIN_TEMA") {
+  const prompt = `
+Eres un generador profesional de PREGUNTAS TIPO TEST para oposiciones de BOMBEROS.
 
-    return completion.choices[0].message.content
-  } catch (error) {
-    console.error('Error generando preguntas desde el archivo:', error)
-    throw error
+🔍 TEMA: ${tema}
+
+Tu tarea es generar preguntas variadas y de nivel competente:
+- Definiciones
+- Causas y consecuencias
+- Ejemplos reales de emergencias
+- Normativa / clasificaciones
+- Datos numéricos importantes
+
+⚠️ FORMATO OBLIGATORIO (SOLO JSON VÁLIDO):
+[
+  {
+    "pregunta": "Texto claro",
+    "opciones": ["A) ...", "B) ...", "C) ..."],
+    "correcta": "A"
+  }
+]
+
+Texto base para extraer ideas:
+"""
+${text}
+"""
+`.trim();
+
+  const response = await this.openai.chat.completions.create({
+    model: 'gpt-4o-mini',
+    temperature: 0.8,
+    max_tokens: 2000,
+    messages: [
+      { role: "system", content: "Especialista en pedagogía para bomberos" },
+      { role: "user", content: prompt }
+    ]
+  });
+
+  let raw = response.choices?.[0]?.message?.content || "[]";
+  raw = raw.replace(/```json|```/g, "").trim();
+
+  try {
+    return JSON.parse(raw);
+  } catch (err) {
+    console.error("❌ JSON inválido devuelto por OpenAI:", raw);
+    throw new Error("JSON de test mal formado");
   }
 }
+
+async generateFlashcardsFromQuestions(questions, tema = "") {
+  try {
+    const prompt = `
+💡 TU MISIÓN:
+Generar flashcards de ESTUDIO COMPLETO del tema **${tema}**.
+Las preguntas del test son SOLO una pista de lo que es importante,
+pero el objetivo es **explicar TODO EL TEMA** como si fuera un resumen profesional para opositores.
+
+📌 DEBES CREAR 3 CAPAS DE FLASHCARDS:
+1️⃣ CONCEPTOS PRINCIPALES del tema  
+2️⃣ SUBTEMAS – procesos, clasificaciones, causas, efectos  
+3️⃣ ALTO NIVEL – normativa, ejemplos reales, riesgos, aplicaciones en emergencias
+
+🧠 Las claves de memoria deben ser:
+- mnemotecnias VISUALES o auditivas
+- acrónimos simples
+- metáforas fáciles de recordar
+- asociaciones mentales
+
+⚠️ FORMATO OBLIGATORIO – SOLO JSON VÁLIDO:
+[
+  {
+    "titulo": "título claro y corto",
+    "explicacion": "explicación de 3–6 líneas, muy pedagógica",
+    "clave_memoria": "truco REAL para recordarlo",
+    "pregunta_rapida": "pregunta directa",
+    "respuesta_corta": "respuesta precisa"
+  }
+]
+
+📌 Preguntas de test para detectar lo importante del tema:
+${JSON.stringify(questions, null, 2)}
+
+NO GENERES flashcards de las preguntas directamente.
+USA las preguntas como GUÍA para extraer conceptos clave del tema.
+`.trim();
+
+    const response = await this.openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      temperature: 0.8,
+      messages: [
+        { role: "system", content: "Eres un experto en pedagogía y oposiciones de bomberos." },
+        { role: "user", content: prompt }
+      ]
+    });
+
+    let raw = response.choices?.[0]?.message?.content || "[]";
+    raw = raw.replace(/```json|```/g, "").trim();
+
+    // Validar JSON
+    let data;
+    try {
+      data = JSON.parse(raw);
+    } catch (err) {
+      console.error("❌ JSON inválido devuelto por OpenAI:", raw);
+      throw new Error("OpenAI devolvió un JSON mal formado");
+    }
+
+    return data; // 🔥 IMPORTANTE: aquí SI devuelve 👍
+
+  } catch (err) {
+    console.error("❌ Error en generateFlashcardsFromQuestions:", err);
+    throw err;
+  }
+}
+
+// ⚡ SOLO FLASHCARDS GENERALES (sin preguntas tipo test)
+async generateFlashcardsFromTopicOnly(tema, textBase) {
+  const prompt = `
+Eres un especialista en pedagogía de oposiciones de BOMBEROS.
+
+Tu misión:
+RESUMIR el tema **${tema}** en forma de FLASHCARDS de estudio,
+sin depender de preguntas tipo test, SOLO teoría clave bien explicada.
+
+⚠️ FORMATO OBLIGATORIO (SOLO JSON VÁLIDO):
+[
+  {
+    "titulo": "título claro",
+    "explicacion": "explicación pedagógica del concepto",
+    "clave_memoria": "truco real o mnemotecnia visual",
+    "pregunta_rapida": "pregunta directa",
+    "respuesta_corta": "respuesta precisa"
+  }
+]
+
+Texto base del PDF:
+"""${textBase}"""
+
+Genera entre 15 y 25 flashcards, bien organizadas y variadas.
+`.trim();
+
+  const response = await this.openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    temperature: 0.8,
+    messages: [
+      { role: "system", content: "Experto en pedagogía y memory training para oposiciones." },
+      { role: "user", content: prompt }
+    ]
+  });
+
+  let raw = response.choices?.[0]?.message?.content || "[]";
+  raw = raw.replace(/```json|```/g, "").trim();
+
+  try {
+    return JSON.parse(raw);
+  } catch (err) {
+    console.error("❌ JSON inválido devuelto por OpenAI:", raw);
+    throw new Error("JSON de flashcards mal formado");
+  }
+}
+
+
+
 
 
   /** ======================
