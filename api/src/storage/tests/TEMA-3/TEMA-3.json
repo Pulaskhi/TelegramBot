@@ -1,0 +1,452 @@
+[
+  {
+    "pregunta": "¿Cuál es el procedimiento estándar para los bomberos al llegar a un incendio de estructura residencial donde se sospecha de personas atrapadas?",
+    "respuestas": [
+      "Establecimiento inmediato del perímetro de seguridad y evacuación de las áreas adyacentes, seguido de una búsqueda intensiva.",
+      "Primero realizar una evaluación externa completa de la estructura para identificar la intensidad y origen del fuego, luego proceder con la extinción.",
+      "Asegurar el área, coordinar con los servicios médicos mientras se realiza la extinción del fuego y posteriormente la búsqueda y rescate."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Durante una operación de rescate en un accidente de tráfico, ¿qué protocolo deben seguir los bomberos para asegurar la escena?",
+    "respuestas": [
+      "Colocar conos de señalización y asegurar los vehículos involucrados antes de iniciar el rescate.",
+      "Coordinar con la policía para desviar el tráfico y luego comenzar las maniobras de extracción.",
+      "Evaluar primero la estabilidad de los vehículos involucrados y proceder a usar herramientas de extracción."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué metodología utilizan los bomberos para determinar la ruta de ataque en un incendio forestal?",
+    "respuestas": [
+      "Evaluación de la topografía, dirección del viento y tipos de vegetación presentes.",
+      "Solo la dirección del viento y la velocidad de propagación del fuego.",
+      "Uso exclusivo de mapas de vegetación y áreas residenciales cercanas para decidir la dirección de ataque."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo de actuación para los bomberos en caso de fuga de gas en un edificio residencial?",
+    "respuestas": [
+      "Evacuar el edificio inmediatamente y cerrar la válvula principal de gas antes de ventilar el área.",
+      "Ventilar el área afectada mientras se realiza una búsqueda para localizar la fuga.",
+      "Cerciorarse de no utilizar equipos eléctricos que puedan generar chispas y evacuar el edificio."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En el contexto de un incendio en un edificio de múltiples pisos, ¿cuál es la mejor práctica para la utilización de sistemas de supresión de incendios internos?",
+    "respuestas": [
+      "Activar el sistema de rociadores tan pronto como se confirme la ubicación y magnitud del fuego.",
+      "Utilizar el sistema de rociadores solo en el piso afectado para evitar daños por agua en otros niveles.",
+      "Verificar que el sistema de rociadores esté operativo y activarlo completo para controlar la propagación del fuego."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo inicial que debe seguir un bombero al llegar al lugar de un incendio en un edificio residencial?",
+    "respuestas": [
+      "Evaluar la seguridad estructural del edificio, identificar rutas de escape y comenzar la evacuación.",
+      "Solicitar refuerzos inmediatamente sin realizar evaluación preliminar.",
+      "Comenzar la extinción del fuego sin evaluar la seguridad del entorno."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En una situación de rescate vehicular, ¿qué técnica es prioritaria para asegurar la estabilidad del vehículo accidentado?",
+    "respuestas": [
+      "Remoción inmediata del vehículo de la carretera.",
+      "Estabilización utilizando soportes de rescate o bloques.",
+      "Verificar primero la integridad de las ruedas del vehículo."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Durante una operación de evacuación, ¿qué factor es crucial para determinar la ruta de evacuación más segura?",
+    "respuestas": [
+      "La proximidad de la salida más cercana.",
+      "El número de personas a evacuar.",
+      "La presencia de humo y la dirección del viento."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el procedimiento estándar para la coordinación con otros servicios de emergencia en la escena de un accidente múltiple?",
+    "respuestas": [
+      "Los bomberos deben establecer un perímetro y esperar instrucciones.",
+      "Establecimiento de un puesto de mando unificado para la gestión compartida de la emergencia.",
+      "Cada servicio opera de manera independiente sin coordinación central."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué acción es prioritaria para un bombero al enfrentarse a un incendio forestal que amenaza con propagarse a áreas residenciales?",
+    "respuestas": [
+      "Comenzar la extinción del fuego en el área residencial primero.",
+      "Realizar cortafuegos y proteger estructuras críticas.",
+      "Evacuar inmediatamente a todos los residentes sin intentar controlar el fuego."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo inicial para la actuación en un incendio forestal que amenaza una zona residencial?",
+    "respuestas": [
+      "Solicitar refuerzos inmediatamente y comenzar la evacuación de la zona.",
+      "Esperar a que las llamas se aproximen a 100 metros de la residencia más cercana antes de actuar.",
+      "Evaluar la dirección del viento antes de tomar cualquier acción."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el contexto de un accidente de tráfico múltiple, ¿qué medida es prioritaria según los protocolos de seguridad vial?",
+    "respuestas": [
+      "Despejar los vehículos de la carretera para restablecer el tráfico.",
+      "Asegurar la zona y evaluar las necesidades médicas urgentes de los involucrados.",
+      "Tomar declaraciones inmediatas a los conductores para reportes de seguro."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué recursos son esenciales para la gestión de un incidente con materiales peligrosos?",
+    "respuestas": [
+      "Equipos de respiración autónoma y trajes de protección contra materiales corrosivos.",
+      "Extintores de incendio de espuma y vehículos de escalada.",
+      "Herramientas de corte y equipos de iluminación."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Durante un rescate en un edificio colapsado, ¿cuál es el procedimiento estándar para asegurar la estructura?",
+    "respuestas": [
+      "Uso de soportes temporales para reforzar áreas críticas.",
+      "Evacuación total del área sin intentar entrar al edificio.",
+      "Solicitar asistencia inmediata de ingenieros estructurales antes de proceder."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la acción inmediata requerida por un bombero al detectar la presencia de un gas inflamable durante una intervención?",
+    "respuestas": [
+      "Continuar la operación y monitorizar los niveles de gas.",
+      "Retirar al personal y al público de la zona y ventilar si es posible.",
+      "Utilizar equipamiento especializado para contener el gas."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué protocolo deben seguir los bomberos cuando se enfrentan a un incendio en una planta química con materiales peligrosos identificados?",
+    "respuestas": [
+      "Aplicar técnicas de enfriamiento desde una distancia segura, utilizar EPI específico y notificar a las autoridades competentes",
+      "Iniciar inmediatamente el ataque directo con agua",
+      "Evacuar la zona sin tomar otras medidas operativas"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Ante un accidente de tráfico con múltiples vehículos implicados, ¿cuál es la prioridad operativa inicial para los bomberos?",
+    "respuestas": [
+      "Control del tráfico y protección de la escena",
+      "Evaluación de la estabilidad estructural de los vehículos",
+      "Rescate inmediato de las víctimas atrapadas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el procedimiento estándar para la ventilación táctica en un incendio confinado en un edificio de apartamentos?",
+    "respuestas": [
+      "Abrir todos los accesos posibles para permitir la entrada de aire",
+      "Utilizar ventiladores para forzar la salida del humo y mejorar la visibilidad y condiciones internas",
+      "Selar el área afectada para contener el incendio"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En una operación de rescate en altura, ¿qué sistema prefieren usar los bomberos para asegurar la estabilidad de las víctimas durante el descenso?",
+    "respuestas": [
+      "Sistemas de poleas complejos",
+      "El uso exclusivo de cuerdas dinámicas",
+      "Sistemas de arnés completo con doble línea de seguridad"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Durante la respuesta a un derrame de combustible, ¿qué estrategia es fundamental para prevenir la ignición del material inflamable?",
+    "respuestas": [
+      "Cubrir el combustible con espuma para suprimir los vapores",
+      "Rociar agua sobre el combustible para dispersarlo",
+      "Recoger el combustible con materiales absorbentes únicamente"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo estándar al llegar a un incendio en un edificio comercial con múltiples plantas?",
+    "respuestas": [
+      "Evacuación inmediata de todas las plantas comenzando por la más cercana al fuego.",
+      "Comprobación de la estructura del edificio antes de comenzar la extinción.",
+      "Establecimiento de una zona de seguridad y evaluación de la situación por el jefe de intervención."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En un rescate de vehículos accidentados, ¿qué técnica es prioritaria para asegurar la escena?",
+    "respuestas": [
+      "Retirar inmediatamente a las personas del vehículo.",
+      "Estabilizar el vehículo para evitar movimientos adicionales.",
+      "Cubrir el vehículo con una lona para proteger a las víctimas de los curiosos."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el primer paso en la actuación de los bomberos al abordar un incendio forestal?",
+    "respuestas": [
+      "Dar prioridad a la evacuación de animales salvajes.",
+      "Identificar la dirección del viento y la velocidad para prever la propagación del fuego.",
+      "Comenzar la extinción con agua desde el punto más cercano al fuego."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es la práctica recomendada para comunicarse en situaciones de emergencia con ruido extremo?",
+    "respuestas": [
+      "Uso exclusivo de señales manuales.",
+      "Uso de megáfonos para superar el ruido ambiental.",
+      "Utilización de equipos de comunicación con cancelación de ruido."
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué protocolo siguen los bomberos para la actuación en incidentes con materiales peligrosos?",
+    "respuestas": [
+      "Aproximación directa para rápida neutralización.",
+      "Evaluación remota inicial para identificación del material y seguimiento de procedimientos específicos de aproximación.",
+      "Solicitar apoyo policial sin aproximarse al área contaminada."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo inicial que deben seguir los bomberos al llegar a un incidente con materiales peligrosos?",
+    "respuestas": [
+      "Establecer un perímetro de seguridad y evaluar la necesidad de evacuación",
+      "Iniciar inmediatamente la neutralización de los materiales",
+      "Buscar testigos para obtener más información sobre el incidente"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En caso de rescate en un edificio colapsado, ¿cuál es la prioridad operativa para los bomberos?",
+    "respuestas": [
+      "Buscar la manera más rápida de demoler el resto del edificio",
+      "Determinar la estabilidad estructural antes de entrar",
+      "Rescatar primero los bienes materiales para evitar pérdidas económicas"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué procedimiento deben seguir los bomberos para la ventilación controlada durante un incendio en un espacio cerrado?",
+    "respuestas": [
+      "Abrir todas las ventanas y puertas inmediatamente",
+      "Usar ventiladores desde el inicio del incendio",
+      "Evaluar el comportamiento del fuego y utilizar ventiladores de manera estratégica para evitar la propagación"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo estándar para la actuación de bomberos en un accidente vehicular con riesgo de incendio?",
+    "respuestas": [
+      "Esperar a que el fuego se inicie antes de actuar",
+      "Retirar a las personas y asegurar el área inmediatamente",
+      "Registrar el incidente antes de hacer cualquier intervención"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de un incendio forestal, ¿cuál es la estrategia operativa principal para controlar la propagación del fuego?",
+    "respuestas": [
+      "Ignorar las áreas menos afectadas y concentrarse solo en las zonas críticas",
+      "Utilizar helicópteros para verter agua indiscriminadamente sobre el fuego",
+      "Crear cortafuegos y utilizar retardantes de llama de forma dirigida"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el procedimiento adecuado para los bomberos al recibir una llamada de emergencia relacionada con materiales peligrosos?",
+    "respuestas": [
+      "Evacuar inmediatamente la zona sin más acciones",
+      "Establecer un perímetro de seguridad y esperar refuerzos especializados",
+      "Proceder a neutralizar el material sin medidas de seguridad adicionales"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Durante una operación de rescate en estructuras colapsadas, ¿qué técnica es esencial para asegurar la estabilidad del entorno y la seguridad del equipo de rescate?",
+    "respuestas": [
+      "Uso indiscriminado de maquinaria pesada para remover escombros",
+      "Aplicación de técnicas de apuntalamiento y soporte",
+      "Intervención rápida sin evaluación previa del sitio"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo estándar para la extinción de un incendio en instalaciones con sistemas de supresión automática de incendios?",
+    "respuestas": [
+      "Desactivar el sistema automático inmediatamente al ingresar",
+      "Verificar el funcionamiento del sistema y complementar con extinción manual si es necesario",
+      "Ignorar el sistema automático y proceder con técnicas tradicionales de extinción"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de un incendio forestal, ¿qué factor debe priorizarse al decidir la estrategia de contención?",
+    "respuestas": [
+      "La proximidad del fuego a las áreas urbanas",
+      "El tipo de vegetación involucrada exclusivamente",
+      "La dirección y velocidad del viento en el momento"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué acción es fundamental realizar primero al llegar al sitio de un accidente vehicular para la extracción de víctimas?",
+    "respuestas": [
+      "Comenzar la extracción inmediata de las víctimas",
+      "Asegurar el vehículo para evitar movimientos adicionales",
+      "Solicitar asistencia médica antes de evaluar la escena"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo adecuado para la actuación de bomberos en un incendio de gran escala en un edificio residencial?",
+    "respuestas": [
+      "Evacuación inmediata de los residentes sin evaluación previa de la situación",
+      "Establecimiento de un perímetro de seguridad y evaluación de la estructura antes de la intervención",
+      "Llamada inmediata a los medios de comunicación para reportar la situación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de un accidente químico, ¿qué información es esencial que los bomberos conozcan para manejar adecuadamente la situación?",
+    "respuestas": [
+      "El color y cantidad de la sustancia derramada",
+      "Tipo de químico involucrado y sus riesgos asociados",
+      "Número de vehículos afectados en el accidente"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué medidas deben tomar los bomberos antes de entrar a un espacio confinado con posible presencia de gases tóxicos?",
+    "respuestas": [
+      "Colocación de equipos de respiración autónoma y medición de gases",
+      "Entrar rápidamente para salvar a posibles víctimas",
+      "Ventilación del área sin evaluación previa de riesgos"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Durante una operación de rescate en una inundación, ¿qué protocolo es prioritario para garantizar la seguridad del equipo de bomberos?",
+    "respuestas": [
+      "Reunir a todos los ciudadanos en un punto sin evaluar corrientes de agua",
+      "Uso de equipo de protección personal y aseguramiento de zonas estables",
+      "Distribución de alimentos y bebidas a los afectados inmediatamente"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo operativo para la extinción de un incendio forestal que amenaza una zona residencial?",
+    "respuestas": [
+      "Realizar quemas controladas sin considerar la dirección del viento",
+      "Establecer líneas de defensa y coordinar con otros cuerpos de emergencia",
+      "Evacuar a los residentes sin asegurar rutas de escape seguras"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el protocolo a seguir por un bombero al evaluar la estabilidad de una estructura comprometida en un incendio?",
+    "respuestas": [
+      "Realizar una evaluación visual y retirarse inmediatamente",
+      "Coordinar con ingenieros estructurales antes de proceder",
+      "Primero apagar el fuego y luego evaluar"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En un incendio forestal, ¿qué técnica se utiliza para controlar la dirección del fuego?",
+    "respuestas": [
+      "Uso indiscriminado de retardantes",
+      "Creación de cortafuegos",
+      "Solicitar apoyo aéreo exclusivamente"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Cuando un bombero encuentra materiales peligrosos en un incendio, ¿qué acción debe tomar de acuerdo a los protocolos de seguridad?",
+    "respuestas": [
+      "Seguir combatiendo el fuego con agua",
+      "Evacuar el área inmediatamente y alertar al equipo de materiales peligrosos",
+      "Usar cualquier extintor disponible"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el procedimiento correcto para la ventilación de un espacio confinado en un incendio?",
+    "respuestas": [
+      "Abrir todas las ventanas y puertas inmediatamente",
+      "Utilizar ventiladores solo después de apagar el fuego",
+      "Hacer una evaluación de la atmósfera y ventilar mecánicamente si es necesario"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En la escena de un accidente vehicular, ¿cuál es la prioridad inmediata para un equipo de bomberos?",
+    "respuestas": [
+      "Despejar la carretera",
+      "Evaluar y asegurar la estabilidad de los vehículos involucrados",
+      "Rescatar a las personas atrapadas en los vehículos"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el procedimiento estándar para el uso de equipos de respiración autónoma en un incendio confinado?",
+    "respuestas": [
+      "Revisión exhaustiva antes de entrar, uso durante la permanencia y desactivación tras salir del área.",
+      "Solo utilizarlos al detectar humo visible.",
+      "Usarlos solo cuando se sienta dificultad para respirar."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En el contexto de un incendio en un edificio alto, ¿qué protocolo de evacuación se considera más efectivo?",
+    "respuestas": [
+      "Evacuación por las escaleras de emergencia, evitando los ascensores.",
+      "Usar el ascensor si no hay humo en los pasillos.",
+      "Salto desde ventanas con redes de seguridad."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es la prioridad inmediata al llegar al lugar de un accidente vehicular según los protocolos de actuación de bomberos?",
+    "respuestas": [
+      "Estabilizar el vehículo involucrado.",
+      "Hablar con los testigos para entender cómo ocurrió el accidente.",
+      "Comenzar a rociar el vehículo con agua."
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué técnica se recomienda para la extinción de un incendio de líquidos inflamables?",
+    "respuestas": [
+      "Uso de agua a alta presión.",
+      "Aplicación de espuma formadora de película acuosa (AFFF).",
+      "Ventilación forzada del área."
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "Al enfrentarse a un incendio forestal, ¿qué técnica de contención es preferible utilizar para evitar la propagación del fuego?",
+    "respuestas": [
+      "Encendido de fuegos controlados para crear barreras de fuego.",
+      "Rociar con agua las áreas circundantes inmediatamente.",
+      "Esperar a que el fuego se extinga naturalmente."
+    ],
+    "correcta": 1
+  }
+]

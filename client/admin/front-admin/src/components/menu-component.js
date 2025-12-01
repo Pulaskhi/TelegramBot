@@ -42,12 +42,34 @@ class Menu extends HTMLElement {
       }
 
 
-      .header__menu svg {
-        width: 30px;
-        height: 30px;
-        fill: white;
-        cursor: pointer;
+      :host{ display:block; }
+
+      /* Fixed left sidebar */
+      .sidebar{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: var(--sidebar-width);
+        height: 100vh;
+        padding: 24px 16px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(8,10,14,0.04));
+        border-right: 1px solid rgba(16,24,40,0.04);
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+        z-index: 1002;
       }
+
+      .brand{ display:flex; gap:12px; align-items:center; margin-bottom:8px; }
+      .brand .logo-mark{ width:40px; height:40px; border-radius:8px; background:linear-gradient(135deg,var(--brand-1),var(--brand-2)); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800 }
+      .brand h3{ font-size:16px; margin:0; color: var(--text); }
+
+      nav{ margin-top:8px; display:flex; flex-direction:column; gap:6px; }
+      nav a{ display:flex; gap:10px; align-items:center; padding:10px 12px; border-radius:10px; color: var(--muted); text-decoration:none; font-weight:700; }
+      nav a:hover{ background: rgba(99,102,241,0.06); color: var(--brand-1); }
+      nav a.active{ background: linear-gradient(90deg, var(--brand-1), var(--brand-2)); color: white; box-shadow: 0 6px 18px rgba(99,102,241,0.12); }
+
+      .footer-info{ margin-top:auto; font-size:12px; color:var(--muted); }
 
     </style>
     

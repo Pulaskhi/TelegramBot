@@ -7,6 +7,8 @@
   --muted: hsl(215 16% 47%);
   --brand-1: hsl(222 90% 56%); /* acento azul elegante */
   --brand-2: hsl(252 84% 60%); /* ligero violeta para degradé */
+  --sidebar-width: 300px;
+  --header-height: 72px;
 }
 
 *{ box-sizing: border-box; }
@@ -22,6 +24,22 @@ body{
   background-attachment: fixed;
   font-family: "Nunito Sans", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
 }
+
+/* Layout: full screen admin dashboard */
+page-component, main-component, body > * {
+  box-sizing: border-box;
+}
+
+/* Content area sits to the right of the fixed sidebar */
+.admin-content {
+  margin-left: var(--sidebar-width);
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+  padding: 20px 28px;
+}
+
+/* Utility to make any element fill the main viewport area */
+.fill-viewport{ min-height: calc(100vh - var(--header-height)); }
 
 /* Contenido principal con respiración */
 main-component{
@@ -89,4 +107,27 @@ a:hover{ text-decoration: underline; }
   }
   .test-modal{ border-color: hsl(222 18% 22%); }
   .test-modal-content{ background: linear-gradient(180deg, hsl(222 24% 14%), hsl(222 24% 12%)); }
+}
+
+/* ===== Admin controls: buttons, tables, inputs ===== */
+.btn{
+  display:inline-flex; gap:8px; align-items:center; justify-content:center; padding:8px 12px; border-radius:10px; font-weight:700; cursor:pointer; border:none;
+}
+.btn-primary{ background: linear-gradient(90deg,var(--brand-1),var(--brand-2)); color:#fff; box-shadow: 0 8px 22px rgba(99,102,241,0.12); }
+.btn-ghost{ background: transparent; border:1px solid rgba(16,24,40,0.06); color:var(--text); }
+
+.card-title{ font-size:16px; font-weight:800; margin-bottom:12px; }
+.card-sub{ color:var(--muted); font-size:13px; margin-bottom:8px; }
+
+table{ width:100%; border-collapse: collapse; background: transparent; }
+th, td{ padding:12px 10px; text-align:left; border-bottom:1px solid rgba(16,24,40,0.04); }
+th{ font-size:13px; color:var(--muted); font-weight:700; }
+tr:hover td{ background: linear-gradient(90deg, rgba(99,102,241,0.03), transparent); }
+
+.toolbar{ display:flex; gap:8px; align-items:center; margin-bottom:12px; }
+.filters{ display:flex; gap:8px; align-items:center; }
+
+/* responsive tweaks */
+@media (max-width: 900px){
+  .toolbar{ flex-direction:column; align-items:stretch; }
 }

@@ -1,0 +1,447 @@
+{
+  "tema": "TEMA-16",
+  "fecha": "2025-11-29T12:45:07.772Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es el código asignado a la carretera que conecta Palma de Mallorca con Andrach dentro de la red primaria básica?",
+      "opciones": {
+        "A": "Ma-1",
+        "B": "Ma-13",
+        "C": "Ma-19",
+        "D": "Ma-15"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué función cumple la Ma-15E dentro de la red primaria complementaria de Mallorca?",
+      "opciones": {
+        "A": "Conecta Palma con Capdepera",
+        "B": "Variante de Algaida",
+        "C": "Une Ma-19 con Ma-13",
+        "D": "Conecta Palma con Santanyi"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes puertos comerciales de Mallorca está situado más al este?",
+      "opciones": {
+        "A": "Puerto de Palma",
+        "B": "Puerto de Alcúdia",
+        "C": "Puerto de Andratx",
+        "D": "Puerto de Portopetro"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de los puertos comerciales de Mallorca, ¿qué característica principal diferencia al Puerto de Palma del Puerto de Alcúdia?",
+      "opciones": {
+        "A": "Número de muelles",
+        "B": "Profundidad máxima",
+        "C": "Capacidad de carga anual",
+        "D": "Facilidades para pasajeros"
+      },
+      "correcta": "D",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuál es la principal función de la red primaria básica en la infraestructura de transporte ferroviario en Mallorca?",
+      "opciones": {
+        "A": "Comunicar las principales localidades y comarcas",
+        "B": "Facilitar el transporte de mercancías peligrosas",
+        "C": "Exclusivamente para uso turístico",
+        "D": "Servir únicamente al tráfico local"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto del transporte ferroviario en Mallorca, ¿qué característica distingue principalmente a la red secundaria?",
+      "opciones": {
+        "A": "Limitada a soluciones de transporte dentro del término municipal",
+        "B": "Conecta exclusivamente con el aeropuerto",
+        "C": "Diseñada para tráfico pesado y de larga distancia",
+        "D": "Utilizada principalmente para el tráfico de pasajeros internacionales"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica define a las carreteras de la Red Primaria Básica en Mallorca?",
+      "opciones": {
+        "A": "Conectan las principales localidades y comunican puertos y aeropuertos",
+        "B": "Solo comunican los aeropuertos con las localidades más cercanas",
+        "C": "Están limitadas a un uso exclusivamente turístico",
+        "D": "Conectan únicamente las localidades dentro de una misma comarca"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Si una carretera en Mallorca tiene un número impar en su codificación, ¿qué indica esto sobre su trazado?",
+      "opciones": {
+        "A": "Es una vía radial con centro en Palma y creciente en sentido horario",
+        "B": "Es una vía de circunvalación",
+        "C": "Es una carretera secundaria",
+        "D": "Está diseñada exclusivamente para el tráfico pesado"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal función de la Red Primaria Complementaria en el sistema de carreteras de Mallorca?",
+      "opciones": {
+        "A": "Conectar localidades y comarcas principales",
+        "B": "Comunicación intercomarcal y distribución del tráfico insular",
+        "C": "Solución al transporte en el ámbito municipal",
+        "D": "Unir las principales zonas turísticas y económicas"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de carretera corresponde al identificador Ma-15E dentro de la Red Primaria Complementaria?",
+      "opciones": {
+        "A": "Variante de Algaida",
+        "B": "Variante de Son Ferriol",
+        "C": "Desdoblamiento de Manacor",
+        "D": "Variante de Sant Llorenç"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de las carreteras que forman parte de la red secundaria en Mallorca?",
+      "opciones": {
+        "A": "Solucionar el transporte viario preferentemente en el ámbito municipal",
+        "B": "Comunicar principales localidades o comarcas",
+        "C": "Servir de base a los principales ejes económicos, comerciales y turísticos",
+        "D": "Distribuir tráfico intercomarcal"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "Si una carretera en Mallorca tiene un identificador que comienza con 'Ma-2', ¿en qué zona de la red secundaria se encuentra?",
+      "opciones": {
+        "A": "Zona 2",
+        "B": "Zona 1",
+        "C": "Zona 3",
+        "D": "Zona 4"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de mercancías predominan en la entrada por el Puerto de Alcudia según la clasificación de mercancías peligrosas?",
+      "opciones": {
+        "A": "Clase 2: Gases",
+        "B": "Clase 1: Explosivos",
+        "C": "Clase 3: Líquidos inflamables",
+        "D": "Clase 9: Sustancias peligrosas diversas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe correctamente las instalaciones del Puerto de Alcudia?",
+      "opciones": {
+        "A": "Predomina el manejo de cargas sólidas como el carbón y los cereales.",
+        "B": "Se especializa únicamente en el tránsito de pasajeros entre la isla de Menorca y la península.",
+        "C": "Es un puerto exclusivamente deportivo sin actividad comercial significativa.",
+        "D": "En sus instalaciones se descarga carbón para producir energía eléctrica, así como gas butano y propano."
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal tipo de mercancías peligrosas que entra por el Puerto de Palma?",
+      "opciones": {
+        "A": "Líquidos inflamables (clase 3)",
+        "B": "Gases inflamables (clase 2)",
+        "C": "Materias corrosivas (clase 8)",
+        "D": "Materias peligrosas diversas (clase 9)"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué característica distingue principalmente al Puerto de Palma en el contexto del tráfico de cruceros en el Mediterráneo?",
+      "opciones": {
+        "A": "Es el más grande de los cinco puertos gestionados por la Autoridad Portuaria de Baleares",
+        "B": "Está equipado para el manejo de cargas explosivas",
+        "C": "Es reconocido por su eficiencia en el manejo de mercancías",
+        "D": "Es el principal puerto para la entrada de gases inflamables"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué indica el código numérico impar en la nomenclatura de las carreteras de Mallorca?",
+      "opciones": {
+        "A": "Designa vías radiales centradas en Palma y crecientes en sentido horario",
+        "B": "Representa carreteras con trazado antiguo o travesía de población",
+        "C": "Identifica las carreteras de circunvalación",
+        "D": "Se asigna a vías que no pertenecen a la red primaria básica"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la nomenclatura de las carreteras de Mallorca, una vía que mantiene su código de cuatro dígitos sin guión, ¿qué representa en términos de cambios recientes?",
+      "opciones": {
+        "A": "La vía ha cambiado su trazado a una variante",
+        "B": "La vía ha mantenido el mismo trazado y no ha sido renombrada",
+        "C": "La vía ha sido recategorizada de red secundaria a primaria",
+        "D": "La vía ha sido degradada a una categoría inferior"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué indica el código 'Ma-11' en la nomenclatura de las carreteras de Mallorca?",
+      "opciones": {
+        "A": "Carretera de Sóller, parte de la red primaria básica",
+        "B": "Carretera de circunvalación de Palma",
+        "C": "Carretera secundaria en la zona este de Mallorca",
+        "D": "Camino rural en la comarca de Tramuntana"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué criterio se utiliza para asignar un número impar en la codificación de las carreteras de Mallorca?",
+      "opciones": {
+        "A": "Vías radiales con centro en Palma y creciente en sentido horario",
+        "B": "Vías de circunvalación",
+        "C": "Vías que siguen el trazado antiguo o el de una travesía de población",
+        "D": "Carreteras secundarias sin especificaciones adicionales"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué indica el código numérico par en la nomenclatura de las carreteras de Mallorca según el nuevo sistema de codificación?",
+      "opciones": {
+        "A": "Vías de circunvalación",
+        "B": "Vías radiales",
+        "C": "Vías secundarias",
+        "D": "Vías de travesía de población"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la nueva codificación de las carreteras de Mallorca, ¿qué implica la adición de una letra mayúscula al final de la parte numérica del código?",
+      "opciones": {
+        "A": "La carretera sigue el trazado antiguo o una travesía de población",
+        "B": "La carretera es de nueva creación",
+        "C": "La carretera pertenece a la red primaria básica",
+        "D": "La carretera ha sido recientemente renovada"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Según la nueva nomenclatura para las carreteras de Mallorca, ¿qué indica un número impar en la parte numérica del código de una vía?",
+      "opciones": {
+        "A": "Que la vía es una carretera radial con centro en Palma y su numeración crece en sentido horario.",
+        "B": "Que la vía es una carretera de circunvalación.",
+        "C": "Que la vía sigue el trazado de una carretera secundaria.",
+        "D": "Que la vía ha sido recientemente renombrada."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica corresponde a las carreteras de la Red Primaria Complementaria en Mallorca?",
+      "opciones": {
+        "A": "Conectan principalmente aeropuertos y puertos.",
+        "B": "Están limitadas a soluciones de transporte viario municipal.",
+        "C": "Comunican entre comarcas superando el ámbito municipal y distribuyen el tráfico insular.",
+        "D": "Sirven exclusivamente como rutas turísticas."
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué criterio se sigue para la numeración impar de las vías de la Red de Carreteras de Mallorca?",
+      "opciones": {
+        "A": "Vías radiales con centro en Palma y numeración creciente en sentido horario",
+        "B": "Vías de circunvalación alrededor de Palma",
+        "C": "Vías que conectan directamente con los puertos",
+        "D": "Vías secundarias de importancia intercomarcal"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la nueva nomenclatura de carreteras en Mallorca, ¿qué indica la presencia de una letra mayúscula al final del código numérico de una vía?",
+      "opciones": {
+        "A": "Que la vía sigue el trazado antiguo o de una travesía de población",
+        "B": "Que la vía ha sido recientemente renovada",
+        "C": "Que la vía es de uso exclusivo para vehículos de emergencia",
+        "D": "Que la vía pertenece a la red primaria básica"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué criterio se utiliza para la numeración impar en las vías radiales de la red de carreteras de Mallorca que tienen centro en Palma?",
+      "opciones": {
+        "A": "La numeración disminuye en sentido horario.",
+        "B": "La numeración aumenta en sentido antihorario.",
+        "C": "La numeración aumenta en sentido horario.",
+        "D": "La numeración disminuye en sentido antihorario."
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la nueva nomenclatura de carreteras de Mallorca, ¿qué indicación se da a las vías que siguen el trazado antiguo o el de una travesía de población?",
+      "opciones": {
+        "A": "Se les añade una letra mayúscula al final de la parte numérica.",
+        "B": "Se les añade un número al final de la parte numérica.",
+        "C": "Se les elimina cualquier letra mayúscula previa.",
+        "D": "Se les asigna un nuevo código numérico sin letras."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué código se asigna a las vías de circunvalación en la nomenclatura de carreteras de Mallorca?",
+      "opciones": {
+        "A": "Números impares",
+        "B": "Números pares",
+        "C": "Cuatro dígitos",
+        "D": "Letra mayúscula al final"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la codificación de las carreteras de Mallorca, ¿qué indican los números que se han transformado de tres a cuatro dígitos agregando un cero?",
+      "opciones": {
+        "A": "Vías de la red secundaria",
+        "B": "Vías radiales",
+        "C": "Vías antiguas o travesías de población",
+        "D": "Vías de circunvalación"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de las carreteras que integran la Red Secundaria en Mallorca?",
+      "opciones": {
+        "A": "Comunicar las principales localidades o comarcas",
+        "B": "Distribuir el tráfico por todo el ámbito insular",
+        "C": "Resolver principalmente el transporte viario local",
+        "D": "Conectar los puertos y aeropuertos"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el sistema de nomenclatura y codificación de carreteras de Mallorca, ¿qué indican los números pares en la parte numérica de las vías?",
+      "opciones": {
+        "A": "Identifican las carreteras radiales",
+        "B": "Denotan las vías de circunvalación",
+        "C": "Corresponden a las carreteras intercomarcales",
+        "D": "Se asignan a las vías que siguen el trazado antiguo"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal riesgo asociado a la intervención de los bomberos en un incendio en un puerto deportivo?",
+      "opciones": {
+        "A": "La alta inflamabilidad del combustible de las embarcaciones",
+        "B": "El riesgo de electrocución debido a equipos eléctricos",
+        "C": "La posibilidad de derrumbe de infraestructuras portuarias",
+        "D": "La rápida propagación del fuego por el viento"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la extinción de un incendio en un puerto deportivo, ¿qué método es preferible utilizar para minimizar el daño ambiental?",
+      "opciones": {
+        "A": "Uso de agua de mar para extinguir el fuego",
+        "B": "Uso de espumas formadoras de película acuosa (AFFF)",
+        "C": "Uso de polvo químico seco",
+        "D": "Uso de agentes limpios como gases inertes"
+      },
+      "correcta": "D",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuánto tiempo tarda en completarse un viaje en la línea de tren Palma-Inca?",
+      "opciones": {
+        "A": "38 minutos",
+        "B": "53 minutos",
+        "C": "60 minutos",
+        "D": "45 minutos"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué tipo de locomotora utiliza el tren de Sóller, único en su especie en uso hoy en día?",
+      "opciones": {
+        "A": "Locomotora eléctrica",
+        "B": "Locomotora diésel",
+        "C": "Locomotora de vapor",
+        "D": "Locomotora híbrida"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de la Red Primaria Básica de carreteras en Mallorca?",
+      "opciones": {
+        "A": "Conectar las principales localidades y ejes económicos de la isla",
+        "B": "Proporcionar rutas alternativas a las carreteras secundarias",
+        "C": "Servir exclusivamente al tráfico local y municipal",
+        "D": "Mantener el tráfico pesado fuera de las áreas urbanas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué caracteriza a la numeración de las vías radiales en la red de carreteras de Mallorca?",
+      "opciones": {
+        "A": "Número impar que crece en sentido horario desde Palma",
+        "B": "Número par asignado a todas las vías radiales",
+        "C": "Numeración que inicia con un cero para todas las vías nuevas",
+        "D": "Numeración que siempre incluye una letra mayúscula al final"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué indica la parte alfabética 'Ma' en la nomenclatura de las carreteras de Mallorca?",
+      "opciones": {
+        "A": "Las iniciales de Mallorca",
+        "B": "Una clasificación de carretera principal",
+        "C": "Una designación de carretera secundaria",
+        "D": "Un código específico de la zona de Palma"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En la codificación de carreteras de Mallorca, ¿qué significa que un número sea impar?",
+      "opciones": {
+        "A": "Identifica una vía radial con centro en Palma, numeración creciente en sentido horario",
+        "B": "Indica una carretera de circunvalación",
+        "C": "Se refiere a una carretera secundaria",
+        "D": "Denota una carretera con tráfico ligero"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    }
+  ]
+}

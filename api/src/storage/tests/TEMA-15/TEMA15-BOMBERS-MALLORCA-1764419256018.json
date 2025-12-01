@@ -1,0 +1,447 @@
+{
+  "tema": "TEMA-15",
+  "fecha": "2025-11-29T12:27:36.018Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál de las siguientes opciones NO es un impacto negativo de la insularidad en la economía de Mallorca?",
+      "opciones": {
+        "A": "Costes elevados de transporte para la importación de materias primas",
+        "B": "Dificultades para exportar productos fabricados en la isla",
+        "C": "Desarrollo limitado de industrias de materias pesadas",
+        "D": "Aumento del turismo debido al atractivo del aislamiento marítimo"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En términos biogeográficos, ¿qué característica distingue a la flora y fauna de las Islas Baleares?",
+      "opciones": {
+        "A": "Presencia predominante de especies invasoras",
+        "B": "Homogeneidad con las especies del continente europeo",
+        "C": "Presencia de endemismos y subespecies únicas",
+        "D": "Menor diversidad biológica comparada con el continente"
+      },
+      "correcta": "C",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes aspectos representa un beneficio económico de la insularidad de Mallorca?",
+      "opciones": {
+        "A": "El alto costo de transporte de mercancías",
+        "B": "La imposibilidad de desarrollar industrias pesadas",
+        "C": "El atractivo turístico del hecho insular",
+        "D": "La limitada disponibilidad de servicios especializados"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué repercusión tiene la insularidad en la dotación de infraestructuras en las islas Baleares comparada con áreas continentales de similar extensión?",
+      "opciones": {
+        "A": "Requiere menos financiación debido a su tamaño reducido",
+        "B": "Genera un costo superior en el presupuesto para infraestructuras adecuadas",
+        "C": "No tiene impacto significativo en la financiación de infraestructuras",
+        "D": "Promueve una mayor independencia económica"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué impacto directo tiene la insularidad en los costes de transporte para los productos fabricados en Mallorca?",
+      "opciones": {
+        "A": "Aumenta los costes debido a la necesidad de utilizar transporte marítimo o aéreo",
+        "B": "Disminuye los costes gracias a la proximidad de los mercados europeos",
+        "C": "No tiene impacto alguno en los costes de transporte",
+        "D": "Reduce los costes mediante subsidios estatales continuos"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes no es un aspecto negativo de la insularidad mencionado en relación con Mallorca?",
+      "opciones": {
+        "A": "Imposibilidad de desarrollar economías de aglomeración",
+        "B": "Incremento en los costes de exportación de productos locales",
+        "C": "Facilidad de acceso a servicios especializados comparado con el continente",
+        "D": "Dificultades en el desarrollo de industrias de materias pesadas"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes zonas turísticas de Mallorca se caracteriza principalmente por su elevada concentración de servicios turísticos y accesibilidad debido a la proximidad del aeropuerto de Son Sant Joan?",
+      "opciones": {
+        "A": "Serra de Tramuntana",
+        "B": "Playa de Palma",
+        "C": "Cala Ratjada",
+        "D": "Valldemossa"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En relación con la insularidad de Mallorca, ¿cuál de las siguientes afirmaciones es verdadera respecto a las dificultades en el transporte?",
+      "opciones": {
+        "A": "La insularidad no afecta los costes de transporte",
+        "B": "La insularidad reduce los costes de transporte y aumenta la eficiencia",
+        "C": "La insularidad incrementa los costes de transporte y limita la frecuencia de servicios",
+        "D": "La insularidad mejora la conexión terrestre con el continente europeo"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes sectores industriales se ve más afectado por los costes adicionales de transporte debido a la insularidad de Mallorca?",
+      "opciones": {
+        "A": "Industria ligera y tecnológica",
+        "B": "Industrias pesadas y de materias primas",
+        "C": "Industria turística",
+        "D": "Servicios digitales y de telecomunicaciones"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué ventaja competitiva puede tener una industria en Mallorca gracias a su condición insular?",
+      "opciones": {
+        "A": "Menores costes de exportación debido a la proximidad de mercados internacionales",
+        "B": "Desarrollo de mercados interiores protegidos por el aislamiento geográfico",
+        "C": "Mayor facilidad para la importación de materias primas",
+        "D": "Reducción de costes operativos en comparación con la península"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es uno de los principales impactos negativos de la insularidad en la economía de Mallorca?",
+      "opciones": {
+        "A": "Incremento de los costes de transporte",
+        "B": "Disminución del turismo",
+        "C": "Aumento de la producción agrícola local",
+        "D": "Reducción de la biodiversidad"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué aspecto biogeográfico es característico de las islas como Mallorca debido a su insularidad?",
+      "opciones": {
+        "A": "Presencia de especies animales y vegetales endémicas",
+        "B": "Erosión acelerada del suelo",
+        "C": "Disminución de espacios naturales protegidos",
+        "D": "Aumento de las áreas industrializadas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes aspectos es considerado un impacto negativo de la insularidad en la economía de Mallorca?",
+      "opciones": {
+        "A": "Aumento del turismo debido al atractivo de la isla",
+        "B": "Desarrollo de industrias de materias pesadas",
+        "C": "Costes elevados de transporte de mercancías",
+        "D": "Mayor facilidad de acceso a mercados internacionales"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Desde el punto de vista biogeográfico, ¿qué característica es distintiva de la flora y fauna de Mallorca debido a su insularidad?",
+      "opciones": {
+        "A": "Predominancia de especies invasoras",
+        "B": "Homogeneidad biológica con el continente",
+        "C": "Presencia de endemismos y subespecies",
+        "D": "Uniformidad del paisaje natural"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un aspecto positivo de la insularidad en términos económicos para Mallorca?",
+      "opciones": {
+        "A": "La creación de industrias para un mercado interior aislado",
+        "B": "La facilidad de acceso a materias primas",
+        "C": "El desarrollo de economías de aglomeración",
+        "D": "La reducción de costes de transporte"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Desde el punto de vista social, ¿qué consecuencia tiene la insularidad para las islas como Mallorca?",
+      "opciones": {
+        "A": "Mayor número de servicios especializados",
+        "B": "Menos servicios y mayores dificultades de acceso",
+        "C": "Mejora en la conectividad con el continente",
+        "D": "Incremento en la calidad de la educación básica"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una de las principales desventajas económicas de la insularidad que afecta a Mallorca?",
+      "opciones": {
+        "A": "Costes elevados de transporte de mercancías y pasajeros",
+        "B": "Exceso de infraestructuras de transporte",
+        "C": "Baja demanda turística",
+        "D": "Saturación de mercados locales"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En términos biogeográficos, ¿qué característica destacada tienen las Islas Baleares?",
+      "opciones": {
+        "A": "Presencia de endemismos y subespecies únicas",
+        "B": "Predominio de especies invasoras",
+        "C": "Escasez de biodiversidad vegetal",
+        "D": "Homogeneidad biológica con el continente"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes municipios de Mallorca es conocido por su alta concentración de polígonos industriales?",
+      "opciones": {
+        "A": "Marratxí",
+        "B": "Sóller",
+        "C": "Artà",
+        "D": "Valldemossa"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de los impactos de la insularidad en Mallorca, ¿cuál de las siguientes afirmaciones es correcta?",
+      "opciones": {
+        "A": "La insularidad no afecta los costes de transporte de mercancías.",
+        "B": "La insularidad crea oportunidades únicas para industrias debido al mercado interior protegido.",
+        "C": "La insularidad facilita el acceso a servicios especializados comparado con zonas continentales.",
+        "D": "No existen impactos positivos de la insularidad en la economía local."
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes comarcas de Mallorca es conocida por una alta concentración de zonas turísticas?",
+      "opciones": {
+        "A": "Raiguer",
+        "B": "Pla de Mallorca",
+        "C": "Serra de Tramuntana",
+        "D": "Llevant"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de los incendios forestales en Mallorca, ¿qué comarca presenta un mayor riesgo debido a su densidad de zonas forestales?",
+      "opciones": {
+        "A": "Serra de Tramuntana",
+        "B": "Pla de Mallorca",
+        "C": "Raiguer",
+        "D": "Migjorn"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes factores es un impacto positivo de la insularidad en la economía de Mallorca?",
+      "opciones": {
+        "A": "Atractivo turístico del hecho insular",
+        "B": "Desarrollo de industrias de materias pesadas",
+        "C": "Menor necesidad de infraestructuras de transporte",
+        "D": "Reducción de costes de importación"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Considerando la insularidad, ¿qué desafío enfrenta Mallorca en términos de servicios?",
+      "opciones": {
+        "A": "Mayor facilidad para acceder a servicios especializados",
+        "B": "Existencia de menos servicios y dificultades mayores para acceder a ellos",
+        "C": "Sobresaturación de servicios debido al turismo estacional",
+        "D": "Ninguno, los servicios están distribuidos equitativamente"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes municipios de Mallorca tiene la mayor densidad de población?",
+      "opciones": {
+        "A": "Palma de Mallorca",
+        "B": "Manacor",
+        "C": "Inca",
+        "D": "Alcúdia"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En relación con la distribución poblacional en Mallorca, ¿qué área experimenta un notable incremento de población en temporada alta debido al turismo?",
+      "opciones": {
+        "A": "La Sierra de Tramuntana",
+        "B": "La Serra de Llevant",
+        "C": "El Pla de Mallorca",
+        "D": "La Bahía de Palma"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una de las principales dificultades económicas derivadas de la insularidad en Mallorca?",
+      "opciones": {
+        "A": "Costos elevados de transporte y limitaciones en la industria de materias pesadas",
+        "B": "Excesiva dependencia de las tecnologías de información",
+        "C": "Facilidad en el acceso a mercados internacionales",
+        "D": "Baja incidencia del turismo en la economía local"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En términos biogeográficos, ¿cuál es una característica distintiva de las islas Baleares mencionada en el texto?",
+      "opciones": {
+        "A": "Presencia de endemismos y subespecies únicas",
+        "B": "Predominio de especies invasoras sobre las locales",
+        "C": "Uniformidad biológica con el continente europeo",
+        "D": "Alta densidad de población humana que afecta la biodiversidad"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe mejor el impacto económico de la insularidad en Mallorca?",
+      "opciones": {
+        "A": "Favorece el desarrollo de industrias pesadas debido a la abundancia de materias primas.",
+        "B": "Incrementa los costes de transporte, afectando tanto la importación como la exportación de productos.",
+        "C": "Reduce los costes de transporte de pasajeros debido a la alta frecuencia de viajes.",
+        "D": "Elimina la necesidad de importar productos manufacturados debido a la producción local."
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes es una consecuencia social de la insularidad en Mallorca mencionada en el texto?",
+      "opciones": {
+        "A": "Menor necesidad de servicios especializados debido a la baja población.",
+        "B": "Mayor financiación requerida para infraestructuras adecuadas debido a la discontinuidad espacial.",
+        "C": "Acceso más fácil a servicios especializados comparado con zonas continentales.",
+        "D": "Reducción de la financiación estatal debido al atractivo turístico de la isla."
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes parques es un espacio natural protegido en Mallorca?",
+      "opciones": {
+        "A": "Parque Natural de Sa Dragonera",
+        "B": "Parque Nacional de Doñana",
+        "C": "Parque Natural de la Sierra de Grazalema",
+        "D": "Parque Nacional de Guadarrama"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué función principal tiene el Parque Natural de Mondragó en términos de conservación en Mallorca?",
+      "opciones": {
+        "A": "Conservación de hábitats acuáticos",
+        "B": "Protección de especies de aves migratorias",
+        "C": "Preservación de ecosistemas de dunas y playas",
+        "D": "Fomento de la agricultura tradicional"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie total del Parque Nacional de Cabrera, incluyendo zonas marinas y terrestres?",
+      "opciones": {
+        "A": "10.021,51 hectáreas",
+        "B": "8.705,26 hectáreas",
+        "C": "1.316,25 hectáreas",
+        "D": "274,39 hectáreas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿A cuántas millas náuticas de distancia del puerto de la Colonia de Sant Jordi (ses Salines) se encuentra el Parque Nacional de Cabrera?",
+      "opciones": {
+        "A": "Cinco millas náuticas",
+        "B": "Diez millas náuticas",
+        "C": "Quince millas náuticas",
+        "D": "Veinte millas náuticas"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica geográfica protege al Parque Natural S'Albufera de Mallorca del impacto directo del mar?",
+      "opciones": {
+        "A": "Un cordón de dunas",
+        "B": "Una barrera de arrecifes de coral",
+        "C": "Una serie de montañas costeras",
+        "D": "No tiene protección geográfica natural"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuánto tiempo hace que se formó la actual zona húmeda del Parque Natural S'Albufera de Mallorca?",
+      "opciones": {
+        "A": "Menos de 10,000 años",
+        "B": "Alrededor de 100,000 años",
+        "C": "Más de 1 millón de años",
+        "D": "18 millones de años"
+      },
+      "correcta": "B",
+      "dificultad": "dificil"
+    },
+    {
+      "pregunta": "¿Cuál es la característica principal que distingue al Parque Natural de Mondragó?",
+      "opciones": {
+        "A": "Su diversidad paisajística compuesta por diversos hábitats naturales",
+        "B": "Ser el parque natural más antiguo de las Islas Baleares",
+        "C": "Contiene la única montaña de la isla de Mallorca",
+        "D": "Es el único parque natural en España que está completamente urbanizado"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elementos etnológicos son destacables en el Parque Natural de Mondragó?",
+      "opciones": {
+        "A": "Las casetas de roter y las barracas de curucull",
+        "B": "Los molinos de viento tradicionales",
+        "C": "Las estructuras de piedra caliza típicas de la región",
+        "D": "Las antiguas salinas en uso"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes islotes NO forma parte del Parque Natural de Sa Dragonera?",
+      "opciones": {
+        "A": "Es Pataleu",
+        "B": "Sa Mitjana",
+        "C": "Es Vedrà",
+        "D": "Els Calafats"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué organismo gestiona el Parque Natural de Sa Dragonera junto con el Gobierno de las Islas Baleares?",
+      "opciones": {
+        "A": "El Consejo de Mallorca",
+        "B": "El Ayuntamiento de Andratx",
+        "C": "El Parque Nacional de Cabrera",
+        "D": "La Comunidad Autónoma de las Islas Baleares"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    }
+  ]
+}

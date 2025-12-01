@@ -1,0 +1,434 @@
+[
+  {
+    "pregunta": "¿Cuál de los siguientes factores afecta más directamente a la velocidad de propagación de un incendio forestal en una isla como Mallorca?",
+    "respuestas": [
+      "Humedad relativa del aire",
+      "Color de la vegetación",
+      "Número de visitantes turísticos"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En contextos de insularidad como Mallorca, ¿qué método se considera más eficaz para controlar emergencias en áreas remotas y de difícil acceso?",
+    "respuestas": [
+      "Uso exclusivo de vehículos terrestres",
+      "Implementación de drones y tecnología aérea",
+      "Convocatoria de voluntarios locales"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué propiedad física es crucial para determinar la resistencia del material de construcción al fuego en zonas urbanas y polígonos industriales en Mallorca?",
+    "respuestas": [
+      "Conductividad térmica",
+      "Flexibilidad material",
+      "Capacidad de carga"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cómo afecta el aumento estacional de la población debido al turismo a las operaciones de respuesta a emergencias en Mallorca?",
+    "respuestas": [
+      "Disminución en la eficacia de los servicios",
+      "No tiene efecto",
+      "Aumenta la eficiencia operativa"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En la prevención de incendios forestales, ¿qué técnica es recomendable debido a las características insulares de Mallorca, que incluyen zonas protegidas y una rica biodiversidad?",
+    "respuestas": [
+      "Uso intensivo de agentes químicos",
+      "Control biológico mediante especies nativas",
+      "Quemas controladas"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de estos elementos no se considera un factor directo en la evaluación de riesgos de incendio en polígonos industriales de Mallorca?",
+    "respuestas": [
+      "Proximidad al mar",
+      "Tipo de industria operativa",
+      "Distancia entre edificaciones"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "La termólisis, proceso clave en la ignición de materiales, ¿cómo se ve influenciada por las condiciones climáticas típicas del verano en Mallorca?",
+    "respuestas": [
+      "Es acelerada por altas temperaturas",
+      "Es retardada por la humedad elevada",
+      "No se ve afectada por el clima"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué estrategia de mitigación de riesgos es prioritaria en áreas con alta insularidad y turismo estacional, como Mallorca?",
+    "respuestas": [
+      "Fortalecimiento continuo de infraestructuras",
+      "Reducción programada de habitantes",
+      "Incremento de importaciones de recursos"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cómo afecta la densidad del aire en la extinción de incendios en altitudes elevadas comparado con el nivel del mar?",
+    "respuestas": [
+      "El aire más denso mejora la eficacia de la extinción",
+      "No hay diferencia significativa",
+      "El aire menos denso reduce la eficacia de la extinción"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En el contexto de la dilatación térmica, ¿qué precaución es crucial considerar durante el uso de escaleras metálicas en un incendio?",
+    "respuestas": [
+      "Verificar su resistencia al calor",
+      "Verificar la estabilidad en su base",
+      "Evitar el sobrecalentamiento para prevenir la expansión y deformación"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes gases es más probable que se produzca en mayor cantidad durante la combustión de materiales plásticos en un incendio?",
+    "respuestas": [
+      "Dióxido de carbono",
+      "Monóxido de carbono",
+      "Cianuro de hidrógeno"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué principio físico explica el funcionamiento efectivo de las mantas ignífugas en la supresión de incendios pequeños?",
+    "respuestas": [
+      "Transferencia de calor por convección",
+      "Reducción del oxígeno disponible para la combustión",
+      "Transferencia de calor por radiación"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En la lucha contra incendios, la conductividad térmica de los materiales del equipo es crucial. ¿Qué característica deberían optimizar los materiales utilizados en las vestimentas de protección?",
+    "respuestas": [
+      "Alta conductividad térmica para disipar calor",
+      "Baja conductividad térmica para aislar el calor",
+      "Moderada conductividad térmica para balancear protección y flexibilidad"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cómo influye la presión atmosférica en el uso de agua nebulizada para combatir incendios en entornos cerrados?",
+    "respuestas": [
+      "Mejora la absorción del calor en altas presiones",
+      "Disminuye la eficacia en altas presiones",
+      "No tiene efecto significativo"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el principal factor que contribuye a la autoignición de los gases inflamables en un ambiente con variación de presiones?",
+    "respuestas": [
+      "Variación de la concentración de oxígeno",
+      "Variación de la temperatura ambiente",
+      "Ambos factores son igualmente importantes"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué método se utiliza para calcular la cantidad necesaria de agente extintor en función del volumen de un espacio cerrado durante un incendio?",
+    "respuestas": [
+      "Cálculos basados en la geometría del espacio",
+      "Estimaciones basadas en experiencias previas",
+      "Cálculos basados en la temperatura y concentración de oxígeno"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Qué principio físico explica la capacidad de los extintores de CO2 para sofocar el fuego en un ambiente cerrado?",
+    "respuestas": [
+      "Reducción de la temperatura ambiente",
+      "Desplazamiento del oxígeno necesario para la combustión",
+      "Incremento de la humedad relativa del aire"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el contexto de la transmisión de calor, ¿cuál es el principal método por el cual el calor se propaga en los líquidos y gases durante un incendio?",
+    "respuestas": [
+      "Conducción",
+      "Radiación",
+      "Convección"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la importancia del triángulo de fuego en la extinción de incendios?",
+    "respuestas": [
+      "Indica las tres etapas de un incendio",
+      "Muestra los tres elementos esenciales para la existencia del fuego: calor, oxígeno y combustible",
+      "Describe las tres técnicas principales de lucha contra incendios"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué ley física se utiliza para calcular la presión necesaria en las mangueras de los camiones de bomberos?",
+    "respuestas": [
+      "Ley de Charles",
+      "Ley de Boyle",
+      "Ley de Pascal"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes gases es más probable que contribuya al fenómeno de 'backdraft' en un incendio?",
+    "respuestas": [
+      "Dióxido de carbono",
+      "Oxígeno",
+      "Monóxido de carbono"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Al aplicar agua a un incendio de aceite, ¿cuál es el resultado debido a la diferencia de densidad y el efecto de vaporización?",
+    "respuestas": [
+      "El aceite se enfría y el fuego se extingue rápidamente",
+      "El agua se evapora instantáneamente causando una explosión de vapor",
+      "El agua se hunde, dispersando el aceite y extendiendo el fuego"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué característica de los halones los hace efectivos como agente extintor en incendios de equipos electrónicos?",
+    "respuestas": [
+      "Su alta densidad",
+      "Su capacidad para enfriar rápidamente la zona",
+      "La interrupción de la reacción química del fuego"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En la aplicación de técnicas de enfriamiento en un incendio, ¿qué principio físico es fundamental para la transferencia efectiva de calor?",
+    "respuestas": [
+      "La termodinámica del cambio de estado",
+      "La ley de conservación de la energía",
+      "La radiación de cuerpo negro"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el efecto de las resinas en la inflamabilidad de los pinos durante un incendio forestal?",
+    "respuestas": [
+      "Bajan la temperatura de combustión de la madera",
+      "Aumentan la velocidad de propagación del fuego debido a su alta inflamabilidad",
+      "Actúan como retardantes del fuego"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué característica de los incendios forestales es influenciada directamente por el relieve y las pendientes acusadas?",
+    "respuestas": [
+      "La velocidad de extinción del fuego",
+      "La dirección predominante del viento",
+      "La rápida expansión del fuego de abajo hacia arriba"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "Durante un verano de calor intenso y sin precipitaciones, ¿cómo afecta esta condición al comportamiento de un incendio forestal?",
+    "respuestas": [
+      "Disminuye la probabilidad de incendios",
+      "No tiene ningún efecto significativo",
+      "Favorece la rápida extensión del incendio"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cómo influye un día ventoso en la propagación de un incendio forestal?",
+    "respuestas": [
+      "Reduce significativamente la propagación del incendio",
+      "Tiene un efecto neutro sobre la propagación",
+      "Favorece la expansión rápida del incendio"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Qué significa que una planta sea clasificada como 'pirófita' en el contexto de incendios forestales?",
+    "respuestas": [
+      "Es resistente al fuego y puede inhibir la propagación de llamas",
+      "Es especialmente inflamable y contribuye a la propagación del fuego",
+      "Ayuda en la regeneración del bosque post-incendio"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el papel principal de los medios aéreos en el control de incendios forestales en zonas de difícil acceso?",
+    "respuestas": [
+      "Realizar mapeo del área afectada",
+      "Sofocar el fuego mediante el despliegue de retardantes o agua",
+      "Actuar como coordinadores para los equipos terrestres"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es una de las principales consecuencias ecológicas de los incendios forestales sobre el manto vegetal?",
+    "respuestas": [
+      "Mejora del manto vegetal debido al aporte de nutrientes",
+      "Cambio temporal en la composición de especies del manto",
+      "Destrucción extensa que puede ser difícilmente reversible"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "En relación a la regeneración de un bosque post-incendio, ¿qué factor NO juega un papel en su contra?",
+    "respuestas": [
+      "La abundante precipitación posterior al evento",
+      "La pérdida del suelo que dificulta el rebrote de nuevas plantas",
+      "La reproducción de incendios antes de la completa regeneración"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el principio de operación de un extintor de CO2 en la extinción de fuegos?",
+    "respuestas": [
+      "Desplazamiento de oxígeno y enfriamiento del combustible",
+      "Reacción química con el combustible",
+      "Aumento de la concentración de oxígeno en el ambiente"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En términos de conductividad térmica, ¿qué material es preferible para la construcción de un traje de protección contra el fuego para bomberos?",
+    "respuestas": [
+      "Material con alta conductividad térmica",
+      "Material con baja conductividad térmica",
+      "Material con conductividad térmica variable"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el efecto de la radiación térmica en la propagación del fuego en un entorno cerrado?",
+    "respuestas": [
+      "Aumenta la velocidad de propagación del fuego",
+      "No tiene ningún efecto",
+      "Disminuye la propagación debido al enfriamiento de las superficies cercanas"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "¿Cómo afecta la presencia de vientos en la eficacia de las operaciones de extinción de incendios forestales?",
+    "respuestas": [
+      "Facilita la dispersión del agua y otros agentes extintores",
+      "Reduce la visibilidad y control sobre la dirección del fuego",
+      "No tiene efecto significativo"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué propiedad del agua la hace efectiva para la extinción de incendios?",
+    "respuestas": [
+      "Su color y olor",
+      "Su capacidad para absorber calor",
+      "Su densidad"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En el uso de espumas como agente extintor, ¿cuál es su principal mecanismo de acción?",
+    "respuestas": [
+      "Catalización de reacciones químicas con el fuego",
+      "Formación de una barrera física que impide el acceso del oxígeno",
+      "Aumento de la temperatura del combustible"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el efecto de aumentar la concentración de un agente extintor en un incendio?",
+    "respuestas": [
+      "Disminuye la eficiencia de extinción",
+      "Aumenta la eficiencia de extinción hasta un cierto límite",
+      "No tiene efecto sobre la eficiencia de extinción"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Por qué es importante la estratificación de la temperatura en el control de incendios en espacios cerrados?",
+    "respuestas": [
+      "Permite una mejor distribución del agente extintor",
+      "Facilita la identificación de las zonas más calientes para un ataque más efectivo",
+      "Aumenta el riesgo de rebrote del fuego"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué ley describe la relación entre la presión y el volumen de un gas a temperatura constante, relevante en el uso de equipos de respiración autónoma?",
+    "respuestas": [
+      "Ley de Boyle",
+      "Ley de Charles",
+      "Ley de Avogadro"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "En la extinción de incendios, ¿qué tipo de reacción química es la combustión?",
+    "respuestas": [
+      "Reacción endotérmica",
+      "Reacción exotérmica",
+      "Reacción isotérmica"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el principal efecto de aplicar agua a un incendio en términos de transferencia de calor?",
+    "respuestas": [
+      "Conducción",
+      "Convección",
+      "Absorción"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es el propósito principal del uso de espuma en la extinción de incendios de hidrocarburos?",
+    "respuestas": [
+      "Enfriar el combustible",
+      "Separar el oxígeno del combustible",
+      "Iniciar una reacción química"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿Qué principio explica la eficacia de los rociadores automáticos en la detección y extinción de incendios?",
+    "respuestas": [
+      "Dilatación térmica de los líquidos",
+      "Cambios de estado del agua",
+      "Conductividad eléctrica del agua"
+    ],
+    "correcta": 1
+  },
+  {
+    "pregunta": "Al operar una motobomba, ¿cuál de las siguientes opciones describe mejor el principio de operación mecánico involucrado?",
+    "respuestas": [
+      "Principio de Pascal",
+      "Principio de Bernoulli",
+      "Principio de Venturi"
+    ],
+    "correcta": 2
+  },
+  {
+    "pregunta": "En la extinción de incendios forestales, ¿qué técnica se basa en el principio de contrafuego?",
+    "respuestas": [
+      "Tala de árboles",
+      "Excavación de zanjas",
+      "Quema controlada"
+    ],
+    "correcta": 3
+  },
+  {
+    "pregunta": "¿Cuál es la importancia del triángulo del fuego en la formación de bomberos?",
+    "respuestas": [
+      "Enseña sobre los tipos de mangueras",
+      "Explica la necesidad de calor, oxígeno y combustible para que ocurra un incendio",
+      "Proporciona la base para la clasificación de extintores"
+    ],
+    "correcta": 2
+  }
+]

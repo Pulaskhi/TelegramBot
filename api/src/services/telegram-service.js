@@ -7,8 +7,13 @@ class TelegramService {
     this.groupId = parseFloat(groupId)
     this.bot = new TelegramBot(this.token, { polling: true })
     this.sessionAnchors = new Map()
+    // Map threadId -> telegram chat id (user who clicked the deep-link)
+    this.userSessions = new Map()
 
     this.bot.on('message', (msg) => this.handleGroupMessage(msg))
+
+    // Handle deep links: /start <threadId>
+    this.bot.onText(/\/start(?:\s+(.*))?/, (msg, match) => this.handleStart(msg, match))
   }
 
   async escalateToHuman (threadId, preview) {
@@ -33,12 +38,64 @@ class TelegramService {
 
       const message = msg.text || '(adjunto)'
 
+      // Broadcast to web client (if any)
       broadcast(threadId, {
         threadId,
         message
       })
+
+      // If a Telegram user started a session for this thread, forward the admin reply to them
+      const chatId = this.userSessions.get(threadId)
+      if (chatId) {
+        try {
+          await this.bot.sendMessage(chatId, `👨‍💼 Respuesta del humano: ${message}`)
+        } catch (e) {
+          console.log('Error enviando mensaje al usuario de Telegram', e.message)
+        }
+      }
     } catch (e) {
       console.log(e)
+    }
+  }
+
+  async handleStart (msg, match) {
+    try {
+      const chatId = msg.chat.id
+      const payload = match && match[1] ? match[1].trim() : null
+
+      if (!payload) {
+        // No payload: just send a welcome message
+        await this.bot.sendMessage(chatId, 'Bienvenido. Si tienes un enlace de asistencia, ábrelo desde el enlace proporcionado.')
+        return
+      }
+
+      const threadId = payload
+
+      // Store mapping so later we can forward messages from the admin group to this telegram chat
+      this.userSessions.set(threadId, chatId)
+
+      // Notify user and admin group
+      await this.bot.sendMessage(chatId, '✅ Conexión establecida. Un humano se pondrá en contacto contigo en breve.')
+
+      // Notify admin group (optional) so they know the user opened the bot
+      await this.bot.sendMessage(this.groupId, `🔗 El usuario ${chatId} ha abierto el bot para el hilo [${threadId}].`, { reply_markup: { remove_keyboard: true } })
+    } catch (e) {
+      console.log('Error en handleStart:', e.message)
+    }
+  }
+
+  /**
+   * Enviar mensaje directo al usuario de Telegram asociado a un thread
+   */
+  async sendMessageToUser (threadId, text, options = {}) {
+    const chatId = this.userSessions.get(threadId)
+    if (!chatId) return false
+    try {
+      await this.bot.sendMessage(chatId, text, options)
+      return true
+    } catch (e) {
+      console.log('Error enviando mensaje a usuario:', e.message)
+      return false
     }
   }
 

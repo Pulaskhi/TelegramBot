@@ -30,8 +30,30 @@ for (const dir of [testsRoot, trainedRoot, badRoot, flashcardsRoot]) {
 
 // 🧩 Utilidades
 function detectarTema(filename) {
-  const match = filename?.match?.(/TEMA[-_\s]?(\d+)/i);
-  return match ? `TEMA-${match[1]}` : "SIN_TEMA";
+  if (!filename || typeof filename !== 'string') return 'SIN_TEMA'
+
+  const text = filename.toUpperCase()
+
+  // Busca todas las ocurrencias tipo TEMA-<num> o TEMA<num>
+  const re = /TEMA[-_\s]?(\d+)/ig
+  const matches = []
+  let m
+  while ((m = re.exec(text)) !== null) {
+    if (m[1]) matches.push(m[1])
+  }
+
+  if (matches.length) {
+    // Escoge la coincidencia con más dígitos (evita emparejar '3' de timestamps, prefiere '13' o '103')
+    const best = matches.sort((a, b) => b.length - a.length)[0]
+    return `TEMA-${best}`
+  }
+
+  // Fallback: buscar la palabra "TEMA" seguida de cualquier número en el filename
+  const re2 = /TEMA[^0-9]*(\d+)/i
+  const m2 = text.match(re2)
+  if (m2 && m2[1]) return `TEMA-${m2[1]}`
+
+  return 'SIN_TEMA'
 }
 
 function letterFromIndex1(idx) {
@@ -72,11 +94,84 @@ function normalizeForTraining(q) {
   return out;
 }
 
+// Heurística simple para asignar dificultad si el modelo no la devuelve
+function estimateDifficulty(preguntaText, opciones) {
+  if (!preguntaText) return 'media'
+  const txt = preguntaText.toLowerCase()
+  // palabras que suelen indicar mayor dificultad
+  const hardKeywords = ['calcula', 'determine', 'razona', 'justifica', 'explica', 'según la normativa', 'normativa']
+  const mediumKeywords = ['qué', 'cuál', 'indica', 'señala', 'mencione']
+
+  if (hardKeywords.some(k => txt.includes(k))) return 'dificil'
+  if (opciones && Object.keys(opciones).length >= 4 && preguntaText.length > 120) return 'dificil'
+  if (mediumKeywords.some(k => txt.includes(k))) return 'media'
+  return 'facil'
+}
+
+// Valida y normaliza preguntas devueltas por el modelo
+function validateAndNormalizeGenerated(arr) {
+  if (!Array.isArray(arr)) return []
+  const out = []
+  for (const q of arr) {
+    try {
+      const pregunta = q.pregunta || q.question || q.text || ''
+      if (!pregunta || typeof pregunta !== 'string') continue
+
+      // opciones: puede llegar como array o como objeto
+      let opcionesObj = {}
+      if (Array.isArray(q.respuestas) && q.respuestas.length) {
+        q.respuestas.forEach((opt, i) => { opcionesObj[String.fromCharCode(65 + i)] = String(opt) })
+      } else if (Array.isArray(q.respuestasText) && q.respuestasText.length) {
+        q.respuestasText.forEach((opt, i) => { opcionesObj[String.fromCharCode(65 + i)] = String(opt) })
+      } else if (Array.isArray(q.respuestasRaw) && q.respuestasRaw.length) {
+        q.respuestasRaw.forEach((opt, i) => { opcionesObj[String.fromCharCode(65 + i)] = String(opt) })
+      } else if (Array.isArray(q.respuestas) === false && Array.isArray(q.opciones)) {
+        q.opciones.forEach((opt, i) => { opcionesObj[String.fromCharCode(65 + i)] = String(opt) })
+      } else if (Array.isArray(q.opciones)) {
+        q.opciones.forEach((opt, i) => { opcionesObj[String.fromCharCode(65 + i)] = String(opt) })
+      } else if (q.opciones && typeof q.opciones === 'object') {
+        // ya en formato {A:..,B:..}
+        opcionesObj = Object.fromEntries(Object.entries(q.opciones).slice(0, 5).map(([k, v]) => [String(k).toUpperCase(), String(v)]))
+      } else if (Array.isArray(q.respuestas) || Array.isArray(q.answers) || Array.isArray(q.answersText)) {
+        const raw = q.respuestas || q.answers || q.answersText
+        raw.forEach((opt, i) => { opcionesObj[String.fromCharCode(65 + i)] = String(opt) })
+      }
+
+      // fallback: if no opciones, skip
+      if (!Object.keys(opcionesObj).length) continue
+
+      // correcta: convertir a letra
+      let correcta = q.correcta ?? q.correct ?? q.correct_index ?? q.answer ?? q.answer_index ?? null
+      if (typeof correcta === 'number') correcta = String.fromCharCode(64 + Number(correcta)) // 1->A
+      if (typeof correcta === 'string') {
+        const m = correcta.trim().match(/[A-Za-z]/)
+        correcta = m ? m[0].toUpperCase() : null
+      }
+      if (!correcta || !opcionesObj[correcta]) {
+        // intentar inferir por posición 1-based
+        if (typeof q.correcta === 'number' && q.correcta >= 1) correcta = String.fromCharCode(64 + q.correcta)
+        else correcta = Object.keys(opcionesObj)[0]
+      }
+
+      // dificultad
+      const dificultad = (q.dificultad || q.difficulty || q.level) ? String(q.dificultad || q.difficulty || q.level) : estimateDifficulty(pregunta, opcionesObj)
+
+      out.push({ pregunta: String(pregunta), opciones: opcionesObj, correcta, dificultad })
+    } catch (err) {
+      // skip malformed
+      continue
+    }
+  }
+  return out
+}
+
 /* ===========================================================
    🧠 Generar preguntas desde PDF (mejorado y con variedad real)
    =========================================================== */
 router.post("/pdf-questions-stored", async (req, res) => {
   const { filename, save } = req.body;
+  // Allow overriding detected tema from client
+  const temaOverride = req.body.tema || req.body.topic || null;
 
   try {
     if (!filename)
@@ -95,16 +190,18 @@ router.post("/pdf-questions-stored", async (req, res) => {
     if (!fullText.length)
       return res.status(400).json({ message: "El PDF no tiene texto extraíble" });
 
-    const tema = detectarTema(filename);
-    console.log(`📚 Tema detectado: ${tema}`);
+    let tema = temaOverride || detectarTema(filename);
+    console.log(`📚 Tema detectado/elegido: ${tema} ${temaOverride ? '(override desde body)' : ''}`);
 
     // 1️⃣ Cargar feedback previo
     const trainedDir = path.join(trainedRoot, tema);
     const badDir = path.join(badRoot, tema);
     let trainedTests = [];
     let badTests = [];
+    let savedTests = [];
 
     try {
+      // load trained tests
       if (fs.existsSync(trainedDir)) {
         const files = fs.readdirSync(trainedDir).filter(f => f.endsWith(".json"));
         for (const f of files) {
@@ -113,6 +210,7 @@ router.post("/pdf-questions-stored", async (req, res) => {
           trainedTests.push(...preguntas);
         }
       }
+      // load bad tests
       if (fs.existsSync(badDir)) {
         const files = fs.readdirSync(badDir).filter(f => f.endsWith(".json"));
         for (const f of files) {
@@ -121,11 +219,27 @@ router.post("/pdf-questions-stored", async (req, res) => {
           badTests.push(...preguntas);
         }
       }
+      // load saved/generated tests (existing tests in testsRoot) to avoid duplicates
+      const savedDir = path.join(testsRoot, tema);
+      let savedTests = [];
+      if (fs.existsSync(savedDir)) {
+        const files = fs.readdirSync(savedDir).filter(f => f.endsWith('.json'));
+        for (const f of files) {
+          try {
+            const raw = JSON.parse(fs.readFileSync(path.join(savedDir, f), 'utf8'));
+            const preguntas = Array.isArray(raw) ? raw : raw.preguntas || [];
+            savedTests.push(...preguntas);
+          } catch (e) {
+            // ignore parse errors for individual files
+          }
+        }
+      }
       // Aleatoriza el orden del feedback
       trainedTests = trainedTests.sort(() => Math.random() - 0.5);
       badTests = badTests.sort(() => Math.random() - 0.5);
+      savedTests = savedTests.sort(() => Math.random() - 0.5);
 
-      console.log(`🧩 Feedback encontrado — Trained: ${trainedTests.length}, Bad: ${badTests.length}`);
+      console.log(`🧩 Feedback encontrado — Trained: ${trainedTests.length}, Saved: ${savedTests.length}, Bad: ${badTests.length}`);
     } catch (err) {
       console.warn(`⚠️ Error leyendo feedback previo: ${err.message}`);
     }
@@ -154,46 +268,98 @@ router.post("/pdf-questions-stored", async (req, res) => {
       return Promise.race([promise, timeout]);
     }
 
-    // Áreas temáticas aleatorias para variar el enfoque
-    const focusAreas = [
-      "normativa y legislación técnica",
-      "principios físicos y químicos aplicados",
-      "actuaciones operativas y protocolos",
-      "análisis de materiales, propagación y calor",
-      "medidas preventivas y seguridad"
-    ];
-    const focus = focusAreas[Math.floor(Math.random() * focusAreas.length)];
+    // Intento más robusto: extraer conceptos clave del PDF
+    async function extractKeyConcepts(text, maxConcepts = 20) {
+      try {
+        const prompt = `Extrae una lista de los conceptos, términos y subtemas más importantes del texto (sin explicaciones). Devuelve SOLO un JSON en formato: ["concepto1","concepto2",...]. Limítalo a máximo ${maxConcepts} ítems, ordenados por importancia.`;
+        const completion = await withTimeout(
+          openai.chat.completions.create({
+            model: "gpt-4-turbo",
+            temperature: 0.0,
+            max_tokens: 800,
+            messages: [
+              { role: "system", content: `Eres un asistente que resume en conceptos clave para generar preguntas de examen.` },
+              { role: "user", content: prompt + "\n\nTexto:\n" + text.slice(0, 15000) }
+            ]
+          }),
+          30000
+        );
 
-    async function generateQuestionsFromChunk(chunk, idx, total, perChunk, retries = 2) {
+        const raw = completion.choices?.[0]?.message?.content || "";
+        const cleaned = raw.replace(/```json|```/gi, "").trim();
+        const s = cleaned.indexOf("[");
+        const e = cleaned.lastIndexOf("]");
+        if (s !== -1 && e !== -1) {
+          const arr = JSON.parse(cleaned.slice(s, e + 1));
+          if (Array.isArray(arr) && arr.length) return arr.map(c => String(c).trim()).slice(0, maxConcepts);
+        }
+      } catch (err) {
+        console.warn('⚠️ No se pudieron extraer conceptos:', err.message);
+      }
+      return [];
+    }
+
+    function snippetForConcept(text, concept, radius = 2000) {
+      try {
+        const idx = text.toLowerCase().indexOf(String(concept).toLowerCase());
+        if (idx === -1) return text.slice(0, Math.min(text.length, radius));
+        const start = Math.max(0, idx - radius);
+        const end = Math.min(text.length, idx + radius);
+        return text.slice(start, end);
+      } catch (e) {
+        return text.slice(0, Math.min(text.length, radius));
+      }
+    }
+
+    async function generateQuestionsFromChunk(chunk, idx, total, perChunk, retries = 2, contextLabel = null) {
       const canary = `CANARY:${tema}:${Date.now() % 100000}`;
+      // Build a compact but informative feedback prompt including sample trained/bad questions
+      const trainedSample = trainedTests.slice(0, 20).map(q => `- ${q.pregunta}`).join("\n") || '(ninguna)';
+      const badSample = badTests.slice(0, 12).map(q => `- ${q.pregunta}`).join("\n") || '(ninguna)';
+      const savedSample = savedTests.slice(0, 20).map(q => `- ${q.pregunta}`).join("\n") || '(ninguna)';
+
       const feedbackPrompt = `
-Has generado preguntas anteriormente sobre el tema "${tema}".
+    Contexto del tema: "${tema}".
 
-✅ PREGUNTAS YA ENTRENADAS (no repitas ni reformules estas ideas):
-${trainedTests.slice(0, 20).map(q => `- ${q.pregunta}`).join("\n")}
+    HALLAZGOS PREVIOS:
+    ✅ Preguntas ya entrenadas (no repitas, ni reformules en esencia):
+    ${trainedSample}
 
-❌ PREGUNTAS MALAS (evita errores similares):
-${badTests.slice(0, 10).map(q => `- ${q.pregunta}`).join("\n")}
+    📦 Tests previamente generados y guardados (evítalos o reencuadralos):
+    ${savedSample}
 
-Tu misión:
-- Detectar **nuevos conceptos, relaciones o detalles técnicos** que aún no se hayan preguntado.
-- Cubre aspectos complementarios: causas, consecuencias, clasificaciones, ejemplos prácticos, normativa o cálculos simples.
-- Evita repetir literal o en esencia las preguntas anteriores.
-- Varía el tipo de razonamiento: comprensión, aplicación, normativa, física o análisis operativo.
-- Redacción formal y sin ambigüedades.
-`;
+    ❌ Preguntas marcadas como malas (evita errores, ambigüedades o formatos incorrectos):
+    ${badSample}
+
+    Reglas claras para la generación:
+    1) NO repitas preguntas existentes en las listas anteriores. Si la idea está muy cerca, cambia el enfoque o descártala.
+    2) Devuelve SOLO JSON válido (sin explicaciones, sin código, sin texto adicional). Cualquier otro texto será ignorado.
+    3) Genera preguntas variadas: comprensión, aplicación, normativa, cálculo sencillo, y casos prácticos.
+    4) Cada pregunta debe tener exactamente 3-5 opciones y señalar la opción correcta con un índice o letra.
+    5) Prioriza claridad y precisión en el enunciado; evita ambigüedades.
+    6) Incluye un rango de dificultades (fácil/medio/difícil) repartido entre las preguntas.
+
+    Objetivo: producir preguntas profesionales y no redundantes que amplíen la cobertura temática.
+    `;
 
       const prompt = `
 Eres un experto en la preparación de oposiciones de BOMBEROS en España.
 
-Genera ${perChunk} preguntas tipo test nuevas, variadas y de nivel profesional.
-Enfoca especialmente en el ámbito: "${focus}".
+Objetivo: generar ${perChunk} preguntas tipo test nuevas y profesionales para el tema "${tema}".
+    Enfoque sugerido por área: "${contextLabel || 'general'}".
 
-Primero escribe "META: OK ${canary}" y luego devuelve ÚNICAMENTE el JSON con formato:
+RESPUESTA OBLIGATORIA: Para facilitar el parseado, primero escribe exactamente: META: OK ${canary}
+A continuación devuelve ÚNICAMENTE el JSON en una única respuesta, con el siguiente formato JSON válido:
 
 [
-  {"pregunta":"Texto","respuestas":["Opción 1","Opción 2","Opción 3"],"correcta":2}
+  {"pregunta":"Texto claro y conciso","respuestas":["Opción A","Opción B","Opción C","Opción D"],"correcta":1,"dificultad":"media"}
 ]
+
+Notas sobre contenido:
+- Cada pregunta debe tener entre 3 y 5 opciones.
+- El campo "correcta" es la posición (1-based) de la opción correcta.
+- Añade el campo "dificultad" con uno de: "facil", "media", "dificil".
+- Evita repetir ideas de las preguntas ya entrenadas o listadas como malas.
 
 Texto base (${idx}/${total}):
 """${chunk}"""
@@ -207,10 +373,15 @@ ${feedbackPrompt}
           const completion = await withTimeout(
             openai.chat.completions.create({
               model: "gpt-4-turbo",
-              temperature: 0.85,
+              temperature: 0.7,
               max_tokens: 2500,
               messages: [
-                { role: "system", content: "Eres un generador de tests técnicos y pedagógicos de bomberos." },
+                {
+                  role: "system",
+                  content: `Eres un profesor examinador experto en oposiciones de Bombero. Tu objetivo es producir preguntas tipo examen de alta calidad, desafiantes, precisas y no redundantes. ` +
+                    `Cada pregunta debe ser adecuada para una prueba de oposición: enunciados técnicos claros, distractores plausibles y una única respuesta correcta. ` +
+                    `Devuelve siempre JSON válido y estrictamente en el formato solicitado por la API. Si el prompt incluye ejemplos, utilízalos como guía de formato, no como contenido para repetir.`
+                },
                 { role: "user", content: prompt },
               ],
             }),
@@ -240,21 +411,46 @@ ${feedbackPrompt}
       return [];
     }
 
-    // 4️⃣ Procesar todos los fragmentos
+    // 4️⃣ Procesar: extraer conceptos y generar por concepto para cubrir todo el tema
     const targetTotal = 50;
-    const perChunk = Math.max(1, Math.floor(targetTotal / chunks.length));
     let all = [];
 
-    for (let i = 0; i < chunks.length; i++) {
-      const qs = await generateQuestionsFromChunk(chunks[i], i + 1, chunks.length, perChunk);
-      all.push(...qs);
+    try {
+      const concepts = await extractKeyConcepts(fullText, 20);
+      if (Array.isArray(concepts) && concepts.length) {
+        console.log(`🔎 Conceptos extraídos: ${concepts.length}`);
+        const perConcept = Math.max(1, Math.floor(targetTotal / concepts.length));
+        for (let i = 0; i < concepts.length; i++) {
+          const concept = concepts[i];
+          const snippet = snippetForConcept(fullText, concept, 2500);
+          const qs = await generateQuestionsFromChunk(snippet, i + 1, concepts.length, perConcept, 2, concept);
+          all.push(...qs);
+        }
+      } else {
+        // Fallback: generación por chunks si no conseguimos conceptos
+        const perChunk = Math.max(1, Math.floor(targetTotal / chunks.length));
+        for (let i = 0; i < chunks.length; i++) {
+          const qs = await generateQuestionsFromChunk(chunks[i], i + 1, chunks.length, perChunk);
+          all.push(...qs);
+        }
+      }
+    } catch (err) {
+      console.warn('⚠️ Error generando por conceptos, usando chunks como fallback:', err.message);
+      const perChunk = Math.max(1, Math.floor(targetTotal / chunks.length));
+      for (let i = 0; i < chunks.length; i++) {
+        const qs = await generateQuestionsFromChunk(chunks[i], i + 1, chunks.length, perChunk);
+        all.push(...qs);
+      }
     }
 
     console.log(`🧮 Total bruto generado: ${all.length}`);
 
-    // 5️⃣ Limpiar duplicados
+    // 5️⃣ Limpiar duplicados y validar/enriquecer preguntas
     const seen = new Set();
-    const finalQs = all.filter(q => {
+    // Primero validar y normalizar la salida del modelo
+    const validated = validateAndNormalizeGenerated(all);
+
+    const finalQs = validated.filter(q => {
       const text = (q?.pregunta || "").trim().toLowerCase();
       if (!text || seen.has(text)) return false;
       seen.add(text);
@@ -263,21 +459,100 @@ ${feedbackPrompt}
 
     console.log(`📊 Total final tras limpieza: ${finalQs.length}`);
 
-    // 6️⃣ Guardar test
+    // 6️⃣ Guardar test en el formato solicitado
     let savedFile = null;
+    let savedObject = null;
     if (save === true) {
       const temaDir = path.join(testsRoot, tema);
       if (!fs.existsSync(temaDir)) fs.mkdirSync(temaDir, { recursive: true });
       const base = path.parse(filename).name;
       const outName = `${base}-${Date.now()}.json`;
       const outPath = path.join(temaDir, outName);
-      fs.writeFileSync(outPath, JSON.stringify(finalQs, null, 2), "utf8");
+
+      // convertir cada pregunta al formato requerido: {pregunta, opciones: {A:..,B:..}, correcta: "D"}
+      const toLetter = (i) => String.fromCharCode(65 + (Number(i) - 1));
+      const mapQuestion = (q) => {
+        const pregunta = q.pregunta || q.question || q.text || '';
+
+        // Build opciones object from multiple possible shapes (object or arrays)
+        let opcionesObj = {};
+
+        // Case: q.opciones provided as an object {A: '...', B: '...'}
+        if (q.opciones && typeof q.opciones === 'object' && !Array.isArray(q.opciones)) {
+          opcionesObj = Object.fromEntries(
+            Object.entries(q.opciones)
+              .slice(0, 5)
+              .map(([k, v]) => [String(k).toUpperCase(), String(v)])
+          );
+        } else {
+          const rawOptions = Array.isArray(q.opciones)
+            ? q.opciones
+            : Array.isArray(q.respuestas)
+            ? q.respuestas
+            : Array.isArray(q.answers)
+            ? q.answers
+            : [];
+
+          rawOptions.forEach((opt, idx) => {
+            const key = String.fromCharCode(65 + idx); // A, B, C...
+            opcionesObj[key] = typeof opt === 'string' ? opt : (opt?.label || opt?.text || opt?.value || '');
+          });
+        }
+
+        // determinar correcta como letra
+        let correcta = q.correcta ?? q.correct ?? q.correct_index ?? q.answer ?? q.answer_index ?? null;
+        if (typeof correcta === 'number') correcta = toLetter(correcta);
+        if (typeof correcta === 'string') {
+          const m = correcta.trim().match(/[A-Za-z]/);
+          correcta = m ? m[0].toUpperCase() : null;
+        }
+
+        // fallback to first option if missing
+        const finalCorrecta = correcta || Object.keys(opcionesObj)[0] || 'A';
+
+        // Include dificultad if available or estimate it
+        const dificultad = (q.dificultad || q.difficulty || q.level) ? String(q.dificultad || q.difficulty || q.level) : estimateDifficulty(pregunta, opcionesObj);
+
+        return {
+          pregunta: String(pregunta),
+          opciones: opcionesObj,
+          correcta: finalCorrecta,
+          dificultad
+        };
+      };
+
+      const preguntas = finalQs.map(mapQuestion);
+
+      savedObject = {
+        tema,
+        fecha: new Date().toISOString(),
+        feedback: '',
+        preguntas
+      };
+
+      fs.writeFileSync(outPath, JSON.stringify(savedObject, null, 2), 'utf8');
       savedFile = path.join(tema, outName);
       console.log(`💾 Test guardado en: ${outPath}`);
     }
 
+    // Opción: auto-entrenar (guardar como trained) si el cliente lo solicita
+    if (req.body.autoTrain === true && finalQs.length) {
+      try {
+        const trainedDir2 = path.join(trainedRoot, tema);
+        if (!fs.existsSync(trainedDir2)) fs.mkdirSync(trainedDir2, { recursive: true });
+        const trainedName = `${path.parse(filename).name}-autotrain-${Date.now()}.json`;
+        const trainedPath = path.join(trainedDir2, trainedName);
+        // Guardar sólo las preguntas normalizadas (sin metadata extra)
+        fs.writeFileSync(trainedPath, JSON.stringify({ tema, preguntas: finalQs, feedback: 'auto-train' }, null, 2), 'utf8');
+        console.log(`🔁 Auto-train guardado en: ${trainedPath}`);
+      } catch (err) {
+        console.warn('⚠️ No se pudo guardar auto-train:', err.message);
+      }
+    }
+
     const normalized = finalQs.map(normalizeForTraining);
-    res.json({ success: true, questions: normalized, file: savedFile });
+    // devolver la estructura normalizada para uso inmediato y, si guardamos, también el objeto completo
+    res.json({ success: true, questions: normalized, file: savedFile, saved: savedObject });
   } catch (err) {
     console.error("❌ Error general:", err);
     res.status(500).json({ message: "Error generando preguntas", error: err.message });

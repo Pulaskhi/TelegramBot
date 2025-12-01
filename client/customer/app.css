@@ -1,16 +1,42 @@
-*{
-  box-sizing: border-box;
+:root{
+  --bg: hsl(198, 100%, 98%);
+  --hero-bg: '/images/pulaski.png';
+  --surface: #ffffff;
+  --primary: #ff4500; /* naranja */
+  --primary-2: #ff6347;
+  --accent: #ffdd33;
+  --text: #111111;
+  --muted: rgba(0,0,0,0.6);
+  --font-family: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+*{ box-sizing: border-box; }
+
+html,body{ width:100%; height:100%; margin:0; padding:0; }
 
 body{
-  background-color: hsl(198, 100%, 85%);
+  background-color: var(--bg);
+  /* hero image as fixed background for the whole page */
+  background-image: url(var(--hero-bg));
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  color: var(--text);
+  font-family: var(--font-family);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
+
+/* subtle global overlay to help text legibility over the photo */
+/* no global overlay here; hero has its own overlay for readability */
+
+/* Reduce motion and heavy animations when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+/* Utility responsive helpers */
+.container{ max-width:1200px; margin:0 auto; padding:1rem; }
+
 
 
