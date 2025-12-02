@@ -14,16 +14,16 @@ class Cards extends HTMLElement {
   loadData() {
     this.data = {
       title: 'Tu entrenamiento, nuestra fuerza',
-      description: 'Más allá de la manguera y el hacha, la verdadera preparación de un bombero reside en la disciplina. Desde la agilidad en espacios confinados hasta la resistencia en rescates de alto riesgo, cada desafío se convierte en una oportunidad para salvar vidas.',
+      description: 'Reentrenate constantemente como nuestros ',
       cards: [{
-        title: 'Entrenamiento de Resistencia',
+        title: 'Genera test automáticamente',
         color: 'fire'
       }, {
-        title: 'Simulacros de Rescate',
+        title: 'Genera Flashcards',
+        color: 'fire'
+      }, {
+        title: 'Reentrena',
         color: 'smoke'
-      }, {
-        title: 'Habilidades con Manguera',
-        color: 'fire'
       }]
     };
   }

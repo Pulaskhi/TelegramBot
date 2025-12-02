@@ -33,11 +33,11 @@ class AssistantForm extends HTMLElement {
 
   render() {
     this.shadow.innerHTML = `
-     <style>
-      :host { display: block; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; z-index: 1000; background: #f9fafb; }
+    <style>
+     :host { display: block; width: 100%; height: auto; overflow: visible; position: relative; z-index: 10; background: transparent; padding: 20px 12px; box-sizing: border-box }
       * { box-sizing: border-box; font-family: 'Inter','Nunito Sans',sans-serif; }
       button { background: transparent; border: none; cursor: pointer; }
-      .form { display:flex; flex-direction:column; gap:1rem; background:#f9fafb; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.05); padding:20px; height:100%; }
+      .form { display:flex; flex-direction:column; gap:1rem; background:#f9fafb; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.05); padding:20px; height:auto; max-height: calc(100vh - 160px); overflow:auto; }
       .form__header-box {
         display:flex; justify-content:space-between; align-items:center;
         background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff;
@@ -81,11 +81,11 @@ class AssistantForm extends HTMLElement {
       .close-btn { background:transparent; border:none; color:#fff; font-size:1.6rem; cursor:pointer; }
       .close-btn:hover { color:#fbbf24; transform:scale(1.05); }
 
-      .panel { background: var(--surface, #f9fafb); padding: 18px; border-radius: 12px; box-shadow: 0 10px 30px rgba(2,6,10,0.45); height: 100%; box-sizing: border-box; display: flex; flex-direction: column; }
-      .grid { display: grid; grid-template-columns: 300px minmax(520px, 1fr); gap: 18px; flex: 1; }
+      .panel { background: var(--surface, #f9fafb); padding: 18px; border-radius: 12px; box-shadow: 0 10px 30px rgba(2,6,10,0.12); height: auto; box-sizing: border-box; display: flex; flex-direction: column; max-width: var(--max-width,1200px); margin: 0 auto; }
+      .grid { display: grid; grid-template-columns: 320px minmax(520px, 1fr); gap: 18px; flex: 1; min-height: 0 }
       .preview-area { background: #fff; border-radius: 10px; padding: 20px; box-shadow: inset 0 0 5px rgba(0,0,0,0.05); display:flex; flex-direction:column; height:100%; }
       #previewArea { flex:1; overflow:auto; }
-      .preview-controls { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; position:sticky; bottom:16px; background:transparent; }
+      .preview-controls { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; position:sticky; bottom:16px; background:transparent; padding-top:6px }
       .btn { padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; border: none; }
       .btn-primary { background: #2563eb; color: #fff; }
       .btn-primary:hover { background: #1d4ed8; }
@@ -146,11 +146,15 @@ class AssistantForm extends HTMLElement {
             </div>
             <div class="form__header">
               <div class="form__header-box">
-                <div class="tabs">
-                  <div class="tab" data-tab="files"><button>Documentos</button></div>
-                  <div class="tab" data-tab="saved"><button>Tests Generados</button></div>
-                  <div class="tab active" data-tab="trained"><button>Tests Entrenados</button></div>
-                </div>
+                  <div class="tabs">
+                    <div class="tab" data-tab="files"><button>Documentos</button></div>
+                    <div class="tab" data-tab="saved"><button>Tests Generados</button></div>
+                    <div class="tab active" data-tab="trained"><button>Tests Entrenados</button></div>
+                  </div>
+                  <div style="margin-left:12px; display:flex; align-items:center; gap:8px">
+                    <label style="font-weight:600; color:#fff; font-size:0.9rem">Tema:</label>
+                    <select id="filterTopic" style="min-width:180px; padding:6px 8px; border-radius:6px; border:none"></select>
+                  </div>
                 <div class="form__header-icons">
                 </div>
               </div>
@@ -200,10 +204,11 @@ class AssistantForm extends HTMLElement {
           <section class="preview-area">
             <h3 style="margin-top:0">Vista Previa del Test</h3>
             <div id="previewArea"></div>
-            <div class="preview-controls">
-              <label style="display:flex;align-items:center;gap:8px">Mostrar: <select id="selectLimit"><option value="0">Todas</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></label>
-              <button class="btn" id="btnDownload">Descargar</button>
-            </div>
+                  <div class="preview-controls">
+                    <label style="display:flex;align-items:center;gap:8px">Mostrar: <select id="selectLimit"><option value="0">Todas</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></label>
+              <button class="btn" id="btnStart">Iniciar Test</button>
+                    <button class="btn" id="btnDownload">Descargar</button>
+                  </div>
           </section>
         </div>
 
@@ -241,6 +246,21 @@ class AssistantForm extends HTMLElement {
         a.click()
         a.remove()
         URL.revokeObjectURL(url)
+      }
+      if (e.target.closest('#btnStart')) {
+        const preview = this.shadow.querySelector('#previewArea')
+        const tc = preview.querySelector('test-component')
+        if (!tc) {
+          document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'No hay test para iniciar', type: 'error' } }))
+          return
+        }
+        let questions = []
+        try { questions = JSON.parse(tc.getAttribute('data-questions') || '[]') } catch (err) { questions = [] }
+        const tema = tc.getAttribute('data-tema') || null
+        const source = tc.getAttribute('data-source') || null
+        // emit a custom event so the app can react (navigate to runner, open modal, etc.)
+        document.dispatchEvent(new CustomEvent('start-test', { detail: { questions, tema, source } }))
+        document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Iniciando test seleccionado...', type: 'success' } }))
       }
       if (e.target.closest('#selectLimit')) {
         const select = e.target.closest('#selectLimit')
