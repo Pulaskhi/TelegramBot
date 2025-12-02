@@ -55,14 +55,17 @@ class SubscriptionForm extends HTMLElement {
 
       .subscription-form{
         align-items: center;
-        /* Fondo con gradiente oscuro para que coincida con el tema de fuego */
-        background-image: linear-gradient(135deg, #330000 0%, #1a0000 100%);
         display: grid;
         gap: 2rem;
         grid-template-columns: 1fr;
         min-height: 100vh;
         padding: 3rem 1rem;
+        background: transparent;
+        position: relative;
       }
+
+      .subscription-form .section-overlay{ display:none }
+      .explanation, .form-container{ position: relative; z-index:2 }
 
       @media (min-width: 768px) {
         .subscription-form {
@@ -81,7 +84,7 @@ class SubscriptionForm extends HTMLElement {
         align-items: center;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.25rem;
       }
 
       @media (min-width: 1280px) {
@@ -92,11 +95,10 @@ class SubscriptionForm extends HTMLElement {
       }
 
       .explanation-title h3 {
-        color: #ffdd33; /* Amarillo para el título */
-        font-size: 2rem;
-        font-weight: 800;
-        text-align: center;
-        text-shadow: 0 0 10px rgba(255, 221, 51, 0.5); /* Sombra para efecto de brillo */
+        background: linear-gradient(90deg,var(--accent,#ff6b2d),var(--accent-600,#e85a27));
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+        font-size: clamp(1.2rem,3vw,1.8rem);
+        font-weight: 800; text-transform: uppercase; letter-spacing:0.10em; text-align:center
       }
 
       @media (min-width: 768px) {
@@ -113,10 +115,10 @@ class SubscriptionForm extends HTMLElement {
       }
 
       .explanation-info p{
-        color: #ddd; /* Gris claro para el texto de información */
-        font-size: 1.2rem;
+        color: var(--muted);
+        font-size: clamp(.9rem,2.2vw,1.1rem);
         font-weight: 600;
-        line-height: 2rem;
+        line-height: 1.6;
         text-align: center;
       }
 
@@ -133,21 +135,12 @@ class SubscriptionForm extends HTMLElement {
       }
 
       .explanation-featured{
-        /* Estilo de "chip" de fuego */
-        background-color: rgba(255, 69, 0, 0.2); 
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 69, 0, 0.4);
-        border-radius: 9999px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        padding: 0.5rem 1.5rem;
-        width: max-content;
+        display:inline-flex; align-items:center; gap:8px; padding:0.45rem 1rem; border-radius:9999px;
+        background: linear-gradient(90deg, rgba(255,107,45,0.12), rgba(232,90,39,0.08));
+        border: 1px solid rgba(232,90,39,0.12); box-shadow: 0 6px 18px rgba(0,0,0,0.28)
       }
 
-      .explanation-featured span{
-        color: #ffdd33; /* Texto amarillo */
-        font-size: 1rem;
-        font-weight: 600;
-      }
+      .explanation-featured span{ color: var(--accent); font-weight:700 }
 
       @media (min-width: 768px) {
         .explanation-featured span {
@@ -156,15 +149,8 @@ class SubscriptionForm extends HTMLElement {
       }
 
       .form-container {
-        background-color: white;
-        border-radius: 1.5rem;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding: 3rem;
-        width: 100%;
-        margin: auto;
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)), rgba(8,12,16,0.32);
+        border-radius: 12px; box-shadow: 0 12px 30px rgba(2,6,10,0.28); display:flex; flex-direction:column; gap:1.25rem; padding:1.5rem; width:100%; margin:auto; color:var(--text)
       }
 
       .info-area {
@@ -180,8 +166,8 @@ class SubscriptionForm extends HTMLElement {
       }
 
       .info-area-title h4 {
-        color: #333;
-        font-size: 1.5rem;
+        color: var(--text);
+        font-size: 1.25rem;
         font-weight: 800;
       }
 
@@ -192,8 +178,8 @@ class SubscriptionForm extends HTMLElement {
       }
 
       .info-area-subtitle span {
-        color: #888;
-        font-size: 0.9rem;
+        color: var(--muted);
+        font-size: 0.95rem;
         font-weight: 600;
       }
 
@@ -203,12 +189,7 @@ class SubscriptionForm extends HTMLElement {
         }
       }
 
-      .info-area-icon svg {
-        animation: top-bottom 2s infinite;
-        width: 5rem;
-        /* Nuevo color de fuego para el icono */
-        fill: #ff4500;
-      }
+      .info-area-icon svg { animation: top-bottom 2s infinite; width:4.2rem; fill: var(--accent) }
 
       @keyframes top-bottom {
         0%, 100%, 20%, 50%, 80% {
@@ -236,43 +217,19 @@ class SubscriptionForm extends HTMLElement {
       }
 
       .form-element-input input {
-        border: 2px solid #ddd;
-        border-radius: 0.75rem;
-        font-size: 1rem;
-        outline: none;
-        padding: 1rem;
-        width: 100%;
-        transition: border-color 0.3s ease;
+        border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); color: var(--text); border-radius:12px; font-size:1rem; outline:none; padding:0.95rem; width:100%; transition:border-color .18s var(--ease), box-shadow .18s var(--ease)
       }
 
-      .form-element-input input:hover,
-      .form-element-input input:focus {
-        border-color: #ff6347; /* Borde de color de fuego al pasar el cursor */
-      }
+      .form-element-input input:hover, .form-element-input input:focus { border-color: var(--accent); box-shadow: 0 6px 20px rgba(232,90,39,0.06) }
 
-      .form-element-button button{
-        /* Estilos de botón de fuego */
-        background-color: #ff4500;
-        border-radius: 0.75rem;
-        color: white;
-        font-size: 1.2rem;
-        font-weight: 600;
-        padding: 1rem;
-        width: 100%;
-        transition: background-color 0.3s ease, transform 0.1s ease;
-      }
-
-      .form-element-button button:hover{
-        background-color: #ff6347;
-      }
-
-      .form-element-button button:active {
-        transform: scale(0.98);
-      }
+      .form-element-button button{ background: linear-gradient(90deg,var(--accent),var(--accent-600)); border-radius:12px; color:#041211; font-size:1.05rem; font-weight:700; padding:0.9rem; width:100%; transition: transform .12s var(--ease), box-shadow .12s var(--ease); box-shadow: 0 10px 30px rgba(232,90,39,0.12) }
+      .form-element-button button:hover{ transform: translateY(-2px); box-shadow:0 14px 40px rgba(232,90,39,0.16) }
+      .form-element-button button:active{ transform: translateY(0) scale(.99) }
     
     </style>
 
     <section class="subscription-form">
+      <div class="section-overlay" aria-hidden="true"></div>
       <div class="explanation">
         <div class="explanation-title">
           <h3>${this.data.explanationTitle}</h3>

@@ -33,135 +33,35 @@ class Cards extends HTMLElement {
       /* html */
       `
             <style>
-              @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&display=swap');
+              @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
-              * {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-              }
+              * { box-sizing: border-box; margin: 0; padding: 0 }
+              :host { display:block }
+              h1,h2,h3,h4,h5,h6,p,a,span,li,label,input,button { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Nunito Sans', sans-serif }
 
-              h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, button {
-                font-family: "Nunito Sans", serif;
-                margin: 0;
-              }
+              .cards { display:flex; flex-direction:column; align-items:center; gap:2.25rem; padding:3.5rem 1.25rem; position:relative; background: transparent; border-radius: 0; box-shadow: none }
+              .section-overlay{ display:none }
+              .cards-info, .cards-list{ position:relative; z-index:2; width:100%; max-width:var(--max-width,1200px) }
 
-              .cards {
-                align-items: center;
-                background: #330000;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 4rem 2rem;
-              }
-              
-              @media (min-width: 768px) {
-                .cards { 
-                  padding: 4rem 10%; 
-                }
-              }
+              @media(min-width:768px){ .cards{ padding:3.5rem 8% } }
+              @media(min-width:1280px){ .cards{ padding:4rem 12% } }
 
-              @media (min-width: 1280px) {
-                .cards { 
-                  padding: 4rem 20%; 
-                }
-              }
-              
-              .cards-info {
-                display: flex;
-                flex-direction: column;
-                gap: 5rem;
-                padding-bottom: 5rem;
-                text-align: center;
-              }
-              
-              .cards-title h2 {
-                background: linear-gradient(270deg, #ff6347, #ffdd33);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                font-size: 3rem;
-                font-weight: 700;
-                line-height: 1.2;
-              }
-              
-              @media (min-width: 768px) {
-                .cards-title h2 {
-                  font-size: 5rem;
-                }
-              }
+              .cards-info { display:flex; flex-direction:column; gap:1.25rem; text-align:center }
+              .cards-title h2 { background: linear-gradient(90deg,var(--accent,#ff6b2d),var(--accent-600,#e85a27)); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:800; font-size:clamp(1.4rem,4vw,2.6rem); letter-spacing:0.06em }
+              .cards-description p { color:var(--muted); font-size:clamp(.95rem,2.2vw,1.05rem); line-height:1.6 }
 
-              .cards-description p {
-                color: #f0f0f0;
-                font-size: 1.2rem;
-                line-height: 1.5;
-                font-weight: 400;
-                text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-              }
+              .cards-list { display:flex; flex-wrap:wrap; gap:1.25rem; justify-content:center; align-items:stretch }
+              .card { border-radius:16px; padding:1.6rem; text-align:center; flex:0 1 320px; max-width:360px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)), rgba(8,12,16,0.28); color:var(--text); box-shadow: 0 12px 30px rgba(2,6,10,0.28); transition:transform .28s var(--ease), box-shadow .28s var(--ease) }
+              .card:hover { transform: translateY(-8px); box-shadow:0 22px 44px rgba(2,6,10,0.5) }
 
-              @media (min-width: 768px) {
-                .cards-description p { 
-                  font-size: 2rem; 
-                }
-              }
+              .card.fire { background: linear-gradient(135deg, rgba(255,98,46,0.12), rgba(255,122,63,0.08)), linear-gradient(135deg,var(--accent,#ff6b2d),#ff7a4d) }
+              .card.smoke { background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.12)), linear-gradient(135deg,#3b3b3b,#222) }
 
-              .cards-list {
-                display: flex;
-                flex-wrap: wrap; 
-                gap: 2rem;
-                width: 100%;
-                justify-content: center;
-              }
-
-              @media (min-width: 1024px) {
-                .cards-list {
-                  flex-direction: row;
-                }
-              }
-
-              .card {
-                border-radius: 2rem;
-                padding: 2.5rem;
-                text-align: center;
-                flex: 1;
-                /* Propiedades para controlar el desbordamiento de texto */
-                word-wrap: break-word; 
-                overflow-wrap: break-word;
-                /* Establecer un ancho máximo para que no se extienda demasiado */
-                max-width: 350px; 
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              }
-
-              .card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-              }
-
-              .card.fire {
-                background: linear-gradient(135deg, #ff3300, #ff6347);
-              }
-
-              .card.smoke {
-                background: linear-gradient(135deg, #444444, #222222);
-              }
-
-              .card-title {
-                color: #ffdd33;
-                font-size: 2rem;
-                font-weight: 800;
-                line-height: 1.2;
-                text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-              }
-              
-              @media (min-width: 768px) {
-                .card-title {
-                  font-size: 1rem;
-                }
-              }
+              .card-title { color: var(--text); font-size:1rem; font-weight:800; text-transform:uppercase; letter-spacing:0.06em }
             </style>
 
             <section class="cards">
+              <div class="section-overlay" aria-hidden="true"></div>
               <div class="cards-info">
                 <div class="cards-title">
                   <h2>${this.data.title}</h2>

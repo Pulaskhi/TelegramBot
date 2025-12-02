@@ -8,172 +8,282 @@ class FlashcardsFormComponent extends HTMLElement {
     this.render();
     this.bindEvents();
     this.loadSavedTests(); // cargar tests guardados al inicio
+    this.loadTemas();
   }
 
   render() {
     this.shadow.innerHTML = `
-      <style>
-        * { box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        button { cursor: pointer; padding: 8px 14px; border-radius: 6px; border: none; }
-        .form { display:flex; flex-direction:column; gap:1rem; background:#f9fafb; border-radius:12px; padding:20px; }
-        .tabs { display:flex; gap:10px; }
-        .tab button { background:#e5e7eb; font-weight:600; }
-        .tab.active button { background:#2563eb; color:white; }
-        .tab-content { display:none; }
-        .tab-content.active { display:block; }
-        .test-list { border:1px solid #e5e7eb; padding:10px; border-radius:8px; margin-top:10px; }
-        .tema-header { cursor:pointer; background:#ddd; margin-top:6px; padding:8px 10px; border-radius:6px; }
-        .tema-inner { display:none; padding-left:10px; }
-        .test-item { cursor:pointer; padding:6px 0; }
-        .test-item:hover { color:#2563eb; }
-        .form-element { margin-top: 15px; }
-        input { padding: 8px; width: 100%; }
-      </style>
+<style>
+.host-wrapper{ display:block; width:100vw; height:100vh; position:fixed; top:0; left:0; z-index:1000; background:var(--bg-100); }
+:host{ display:block }
+*{ box-sizing:border-box; font-family:var(--font-sans); }
+.panel{ background:var(--surface); padding:18px; border-radius:12px; box-shadow:0 10px 30px rgba(2,6,10,0.45); height:100%; box-sizing:border-box; display:flex; flex-direction:column; min-height:0; }
+.tabs{ display:flex; gap:12px }
+.tab button{ padding:8px 12px; border-radius:10px }
+.grid{ display:grid; grid-template-columns:380px 1fr; gap:18px; flex:1; min-height:0; }
+.search{ background:var(--glass); padding:8px 12px; border-radius:10px }
+.test-item{ padding:8px; border-radius:8px; margin:6px 0; background:rgba(255,255,255,0.02); cursor:pointer }
+#conceptsContainer{ /* ensure topic list can scroll independently */
+  overflow:auto;
+  flex:1;
+  min-height:0;
+  padding-right:6px;
+}
+.tab-content{ display:none }
+.tab-content.active{ display:block }
+.tab.active button{ background:var(--accent) }
+  .panel.full-screen { position: fixed; inset: 0; z-index: 10000; background: #fff; padding: 0; border-radius: 0; box-shadow: none; display: flex; flex-direction: column; }
+  .panel.full-screen .grid { display: none; }
+  /* preview-full is a sibling of .panel, show it when panel has full-screen */
+  .panel.full-screen + .preview-full { display: block; position: fixed; inset: 0; z-index: 10001; background: #fff; padding: 18px; box-sizing: border-box; overflow: auto; }
+  .preview-full { display: none; }
+.close-full { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.1); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10001; }
+.close-full:hover { background: rgba(0,0,0,0.2); }
+</style>
 
-      <section class="form">
-        <div class="tabs">
-          <div class="tab active" data-tab="tests"><button>Tests Disponibles</button></div>
-          <div class="tab" data-tab="flashcards"><button>Generar Flashcards</button></div>
+<style>
+/* Scrollbar niceties for webkit and Firefox */
+#conceptsContainer::-webkit-scrollbar, #flashCardArea::-webkit-scrollbar, .preview-full::-webkit-scrollbar { width:10px; height:10px }
+#conceptsContainer::-webkit-scrollbar-track, #flashCardArea::-webkit-scrollbar-track, .preview-full::-webkit-scrollbar-track { background: transparent }
+#conceptsContainer::-webkit-scrollbar-thumb, #flashCardArea::-webkit-scrollbar-thumb, .preview-full::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.25); border-radius:8px }
+#conceptsContainer { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.25) transparent }
+#flashCardArea { overflow:auto; min-height:0 }
+#flashPreview.panel { display:flex; flex-direction:column; min-height:0 }
+.panel > .grid { min-height:0 }
+.panel aside.panel, .panel section.panel { min-height:0; display:flex; flex-direction:column }
+</style>
+
+      <section class="panel">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <h2 style="margin:0">Flashcards — Repaso inteligente</h2>
+            <p style="margin:6px 0 0;color:var(--muted)">Genera tarjetas por concepto y programa repasos.</p>
+          </div>
         </div>
 
-        <div class="form__body">
-          
-          <!-- TAB 1: SELECCIONAR TEMA + TEST -->
-          <div class="tab-content active" data-tab="tests">
-            <h3>Selecciona un Test</h3>
-            <div class="test-list saved-list"></div>
+        <div style="height:14px"></div>
+
+        <div class="tabs">
+          <div class="tab active" data-tab="available"><button>Tests Disponibles</button></div>
+          <div class="tab" data-tab="generate"><button>Generar Flashcards</button></div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="tab-content active" data-tab="available">
+          <div class="grid">
+            <aside class="panel" id="flashList" style="display:flex;flex-direction:column;height:100%">
+              <div class="toolbar"><input class="search" placeholder="Buscar tema..."></div>
+              <div id="conceptsContainer" style="flex:1; overflow:auto"></div>
+              <input type="hidden" id="temaSelected" />
+              <input type="hidden" id="testSelected" />
+            </aside>
+
+            <section class="panel" id="flashPreview" style="display:flex;flex-direction:column;">
+              <h3 style="margin-top:0">Tarjeta seleccionada</h3>
+              <div id="flashCardArea" style="flex:1; overflow:auto"></div>
+              <div style="margin-top:12px; display:flex; gap:8px;">
+                <button class="btn" id="btnSchedule">Programar repaso</button>
+                <button class="btn" id="btnExport">Exportar</button>
+              </div>
+            </section>
           </div>
+        </div>
 
-          <!-- TAB 2: GENERAR FLASHCARDS -->
-          <div class="tab-content" data-tab="flashcards">
-            <h3>Generar Flashcards desde Test</h3>
-
-            <div class="form-element">
-              <label>Tema:</label>
-              <input type="text" id="temaSelected" readonly>
+        <div class="tab-content" data-tab="generate">
+          <div class="panel">
+            <h3>Generar Flashcards</h3>
+            <p>Selecciona un tema y un test para generar flashcards.</p>
+            <div style="display:flex; gap:8px; align-items:center;">
+              <select id="selectTema"><option value="">Selecciona tema</option></select>
+              <select id="selectTest"><option value="">Selecciona test</option></select>
+              <button class="btn btn-primary" id="btnGenerateFlash">Generar</button>
             </div>
-
-            <div class="form-element">
-              <label>Test:</label>
-              <input type="text" id="testSelected" readonly>
-            </div>
-
-            <button id="btnGenerateFlashcards">⚡ Generar Flashcards</button>
           </div>
         </div>
       </section>
+
+      <div class="preview-full">
+        <button class="close-full">×</button>
+        <div id="flashCardAreaFull"></div>
+      </div>
     `;
   }
 
   bindEvents() {
-    // Cambio de pestaña
-    this.shadow.querySelector(".tabs").addEventListener("click", (e) => {
-      const tab = e.target.closest(".tab");
-      if (!tab) return;
+    // Tab switching
+    this.shadow.addEventListener('click', (e) => {
+      const tab = e.target.closest('.tab')
+      if (tab) {
+        this.changeTab(tab.dataset.tab)
+      }
 
-      this.shadow.querySelector(".tab.active").classList.remove("active");
-      tab.classList.add("active");
-
-      this.shadow.querySelector(".tab-content.active").classList.remove("active");
-      this.shadow.querySelector(`.tab-content[data-tab="${tab.dataset.tab}"]`).classList.add("active");
-    });
+      // Close full-screen
+      if (e.target.closest('.close-full')) {
+        this.shadow.querySelector('.panel').classList.remove('full-screen')
+      }
+    })
 
     // Botón generar flashcards
-    this.shadow.querySelector("#btnGenerateFlashcards")
-      .addEventListener("click", () => this.generateFlashcards());
+    const btn = this.shadow.querySelector("#btnGenerateFlash")
+    if (btn) btn.addEventListener("click", () => this.generateFlashcards());
+
+    // Delegación en la lista de temas/tests
+    const list = this.shadow.querySelector('#conceptsContainer')
+    if (list) {
+      list.addEventListener('click', (e) => {
+        const temaEl = e.target.closest('.tema-header')
+        if (temaEl) {
+          const tema = temaEl.dataset.tema
+          // toggle show tests under tema
+          const inner = temaEl.nextElementSibling
+          if (inner && inner.classList.contains('tema-inner')) {
+            inner.style.display = inner.style.display === 'block' ? 'none' : 'block'
+          }
+          return
+        }
+
+        const testEl = e.target.closest('.test-item')
+        if (testEl) {
+          const tema = testEl.dataset.tema
+          const name = testEl.dataset.name
+          this.shadow.querySelector('#temaSelected').value = tema
+          this.shadow.querySelector('#testSelected').value = name
+          // highlight selection
+          Array.from(this.shadow.querySelectorAll('.test-item')).forEach(el => el.classList.remove('selected'))
+          testEl.classList.add('selected')
+          // show preview
+          this.showFlashPreview(tema, name)
+        }
+      })
+    }
+
+    // Selects in generate tab
+    const temaSel = this.shadow.querySelector('#selectTema')
+    const testSel = this.shadow.querySelector('#selectTest')
+    if (temaSel) {
+      temaSel.addEventListener('change', () => this.loadTestsForTema(temaSel.value))
+    }
   }
 
   /* ===============================================================
      📌 CARGAR LISTA DE TEMAS + TESTS (exacto como assistant-form)
      =============================================================== */
   async loadSavedTests() {
-    const list = this.shadow.querySelector('.saved-list');
-    list.innerHTML = "<p>Cargando tests...</p>";
+    const container = this.shadow.querySelector('#conceptsContainer')
+    container.innerHTML = "<p>Cargando temas...</p>";
 
     try {
       const res = await fetch('/api/admin/assistants/saved-tests');
       const data = await res.json();
 
       if (!data.success || !data.temas?.length) {
-        list.innerHTML = "<p>No hay tests guardados.</p>";
+        container.innerHTML = "<p>No hay tests guardados.</p>";
         return;
       }
 
-      list.innerHTML = '';
-      data.temas.forEach(grupo => {
-        const header = document.createElement("div");
-        header.className = "tema-header";
-        header.innerHTML = `<b>${grupo.tema}</b>`;
+      // Save temas for later (populate selects)
+      this._savedTemas = data.temas || [];
 
-        const inner = document.createElement("div");
-        inner.className = "tema-inner";
+      container.innerHTML = this._savedTemas.map(t => {
+        let testsHtml = (t.tests || []).map(test => `<div class="test-item" data-tema="${t.tema}" data-name="${test.name}">${test.name}</div>`).join('');
+        return `<div class="tema-header" data-tema="${t.tema}">${t.tema}</div><div class="tema-inner" style="display:none">${testsHtml}</div>`;
+      }).join('');
 
-        grupo.tests.forEach(t => {
-          const row = document.createElement("div");
-          row.className = "test-item";
-          row.textContent = t.name;
-
-          row.addEventListener("click", () => {
-            this.shadow.querySelector('#temaSelected').value = grupo.tema;
-            this.shadow.querySelector('#testSelected').value = t.name;
-            this.changeTab("flashcards");
-          });
-
-          inner.appendChild(row);
+      // Populate selectTema in the 'generate' tab if present
+      const selectTema = this.shadow.querySelector('#selectTema');
+      if (selectTema) {
+        selectTema.innerHTML = '<option value="">Selecciona tema</option>';
+        this._savedTemas.forEach(t => {
+          const opt = document.createElement('option');
+          opt.value = t.tema;
+          opt.text = t.tema;
+          selectTema.appendChild(opt);
         });
-
-        header.addEventListener("click", () => {
-          inner.style.display = inner.style.display === "block" ? "none" : "block";
-        });
-
-        list.appendChild(header);
-        list.appendChild(inner);
-      });
-
+      }
+    // removed extra closing brace
     } catch (err) {
-      console.error("❌ Error cargando tests:", err);
-      list.innerHTML = "<p>Error cargando tests.</p>";
+      console.error('Error loading temas:', err)
     }
   }
 
-  changeTab(tabName) {
-    this.shadow.querySelector(".tab-content.active").classList.remove("active");
-    this.shadow.querySelector(`.tab-content[data-tab="${tabName}"]`).classList.add("active");
-
-    this.shadow.querySelector(".tab.active").classList.remove("active");
-    this.shadow.querySelector(`.tab[data-tab="${tabName}"]`).classList.add("active");
+  async loadTestsForTema(tema) {
+    const sel = this.shadow.querySelector('#selectTest')
+    sel.innerHTML = '<option value="">Selecciona test</option>';
+    if (!tema) return
+    try {
+      // use cached temas loaded in loadSavedTests to populate tests for the selected tema
+      const temas = this._savedTemas || []
+      const found = temas.find(t => t.tema === tema)
+      if (found && Array.isArray(found.tests)) {
+        found.tests.forEach(t => {
+          const opt = document.createElement('option')
+          opt.value = t.name
+          opt.text = t.name
+          sel.appendChild(opt)
+        })
+      }
+    } catch (err) {
+      console.error('Error loading tests for tema:', err)
+    }
   }
 
   /* ===============================================================
      ⚡ ENVIAR AL BACKEND Y GENERAR FLASHCARDS
      =============================================================== */
   async generateFlashcards() {
-    const tema = this.shadow.querySelector("#temaSelected").value;
-    const test = this.shadow.querySelector("#testSelected").value;
+    const tema = this.shadow.querySelector('#selectTema').value || this.shadow.querySelector('#temaSelected').value
+    const test = this.shadow.querySelector('#selectTest').value || this.shadow.querySelector('#testSelected').value
 
-    if (!tema || !test) {
-      alert("Selecciona primero un tema y un test");
-      return;
+    if (!tema) {
+      document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Selecciona un tema primero', type: 'error' } }))
+      return
     }
 
     try {
-      const res = await fetch("/api/admin/assistants/flashcards-from-test", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ tema, test })
-      });
+      const payload = test ? { tema, test } : { tema }
+      const res = await fetch('/api/admin/assistants/flashcards-from-test', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
 
-      const data = await res.json();
+      const data = await res.json()
       if (data.success) {
-        alert("Flashcards generadas correctamente!");
+        document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Flashcards generadas correctamente!', type: 'success' } }))
+        // show some preview
+        this.showFlashcardsPreview(data.flashcards || data)
       } else {
-        alert("Error generando flashcards.");
+        document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Error generando flashcards.', type: 'error' } }))
       }
     } catch (err) {
-      console.error("❌ Error:", err);
-      alert("Error al comunicar con el backend.");
+      console.error('❌ Error:', err)
+      document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Error al comunicar con el backend.', type: 'error' } }))
     }
+  }
+
+  showFlashPreview(tema, test) {
+    const area = this.shadow.querySelector('#flashCardArea')
+    area.innerHTML = `<p style="color:var(--muted)">Vista previa para <b>${tema}</b>${test ? ' / ' + test : ''}</p>`
+  }
+
+  showFlashcardsPreview(flashcards) {
+    const panel = this.shadow.querySelector('.panel')
+    panel.classList.add('full-screen')
+    const area = this.shadow.querySelector('#flashCardAreaFull')
+    area.innerHTML = ''
+    if (!flashcards || !flashcards.length) {
+      area.innerHTML = '<p>No se generaron flashcards</p>'
+      return
+    }
+    const wrapper = document.createElement('div');
+    wrapper.style.display = 'grid';
+    wrapper.style.gridTemplateColumns = '1fr 1fr';
+    wrapper.style.gap = '10px';
+    area.innerHTML = (flashcards || []).map(card => {
+      return `<div class="flashcard"><div class="flashcard-header"><span class="flashcard-title">${card.concepto || card.title || 'Sin título'}</span></div><div>${card.texto || card.text || 'Sin contenido'}</div></div>`;
+    }).join('');
   }
 }
 
-customElements.define("flashcards-form-component", FlashcardsFormComponent);
+customElements.define('flashcards-form-component', FlashcardsFormComponent);

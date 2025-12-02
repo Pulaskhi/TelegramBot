@@ -25,20 +25,24 @@ class Faqs extends HTMLElement {
     this.shadow.innerHTML =
     /* html */`
     <style>
-      *{ box-sizing: border-box; }
-      h1,h2,h3,h4,h5,h6,p{ margin: 0; }
-      h1,h2,h3,h4,h5,h6,p,a,span,li,label,input,button{ font-family:"Nunito Sans",serif; font-optical-sizing:auto; }
-      .faqs{ background-color: hsl(0, 0%, 100%); padding: 2rem; }
-      .faqs-title{ padding: 2rem 0; }
-      .faqs-title h3{ font-weight: 600; font-size: 2rem; text-transform: uppercase; }
-      .faqs-content{ display: flex; flex-direction: column; gap: 1rem; }
-      .faq:first-child{ border-top: 1px solid black; }
-      .faqs summary{ border-bottom: 1px solid black; display: grid; font-size: 1.3rem; gap: 2rem; grid-template-columns: 8fr 1fr; padding: 1rem 0; }
-      .faqs details[open] summary{ border: none; }
-      .faqs details[open]{ border-bottom: 1px solid black; padding-bottom: 2rem; }
-      .faqs details p{ font-size: 1.5rem; line-height: 1.5; }
-      .faq-button{ cursor: pointer; }
-      .faq-button svg{ width: 3rem; }
+      *{ box-sizing: border-box }
+      :host{ display:block }
+      h1,h2,h3,h4,h5,h6,p{ margin:0 }
+      h1,h2,h3,h4,h5,h6,p,a,span,li,label,input,button{ font-family: Inter, 'Nunito Sans', system-ui, sans-serif }
+      .faqs{ background: var(--surface); padding:2.25rem; border-radius: 0; color:var(--text); }
+      .faqs-title{ padding: 0 0 1rem 0 }
+      .faqs-title h3{ font-weight:700; font-size:1.5rem; text-transform:uppercase; color:var(--accent) }
+      .faqs-content{ display:flex; flex-direction:column; gap:0.75rem }
+      .faq{ border-radius:10px; overflow:hidden }
+      .faqs summary{ list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.85rem 1rem; background:transparent; border-bottom:1px solid rgba(255,255,255,0.04) }
+      .faqs details[open] summary{ background: rgba(255,255,255,0.02); }
+      .faqs details[open]{ border-bottom: none }
+      .faqs details p{ font-size:0.98rem; line-height:1.6; color:var(--muted); padding:0.75rem 1rem 1rem 1rem }
+      .faq-button{ display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:8px }
+      .faq-button svg{ width:20px; height:20px; fill:var(--muted) }
+      details[open] .faq-button svg{ transform:rotate(45deg); fill:var(--accent) }
+      summary::-webkit-details-marker{ display:none }
+      @media(min-width:768px){ .faqs-title h3{ font-size:2rem } }
     </style>
 
     <section class="faqs">

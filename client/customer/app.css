@@ -1,42 +1,97 @@
 :root{
-  --bg: hsl(198, 100%, 98%);
-  --hero-bg: '/images/pulaski.png';
-  --surface: #ffffff;
-  --primary: #ff4500; /* naranja */
-  --primary-2: #ff6347;
-  --accent: #ffdd33;
-  --text: #111111;
-  --muted: rgba(0,0,0,0.6);
-  --font-family: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  /* Palette tuned to the Pulaski image: deep forest background + fiery accents */
+  --bg-900: #041612; /* very dark green/near-black */
+  --bg-800: #0d2a1f; /* deep forest green */
+  --surface: rgba(12,10,8,0.62); /* translucent surface for cards */
+  --muted: #bfc9bf; /* soft green-gray for secondary text */
+  --text: #f7efe6; /* warm off-white for primary text */
+  --accent: #ff6b2d; /* fiery orange accent */
+  --accent-600: #e85a27; /* darker orange */
+  --glass: rgba(255,255,255,0.03);
+  --card: linear-gradient(180deg, rgba(8,6,4,0.46), rgba(8,6,4,0.30));
+  --radius: 12px;
+  --header-height: 72px;
+  --sidebar-width: 300px;
+  --max-width: 1200px;
+  --font-sans: "Inter", "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  --ease: cubic-bezier(.2,.9,.2,1);
 }
 
-*{ box-sizing: border-box; }
-
-html,body{ width:100%; height:100%; margin:0; padding:0; }
-
+*{box-sizing:border-box}
+html,body,#app{height:100%}
 body{
-  background-color: var(--bg);
-  /* hero image as fixed background for the whole page */
-  background-image: url(var(--hero-bg));
+  margin:0;
+  font-family:var(--font-sans);
+  background-image: url('/images/pulaski.png');
+  /* restore the original behavior: show full emblem without zooming */
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center center;
-  color: var(--text);
-  font-family: var(--font-family);
+  background-color: #000;
+  color: #e6f0f2;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  position: relative;
 }
 
-/* subtle global overlay to help text legibility over the photo */
-/* no global overlay here; hero has its own overlay for readability */
+/* global overlay placed above the background but below the app content */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3,6,8,0.28), rgba(3,6,8,0.46));
+  pointer-events: none;
+  z-index: 0;
+}
 
-/* Reduce motion and heavy animations when user prefers reduced motion */
+/* ensure app content sits above the global overlay */
+#app{ position: relative; z-index: 1; }
+
+/* (background-size set to cover globally) */
+
+/* hero full-screen */
+.hero {
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  padding: 48px 24px;
+}
+.hero-overlay{
+  position:absolute; inset:0; background: linear-gradient(180deg, rgba(3,6,8,0.28), rgba(3,6,8,0.46));
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative; z-index:2; width:100%; max-width:var(--max-width);
+  display:grid; grid-template-columns: 1fr 420px; gap:32px; align-items:center;
+}
+.hero-card{
+  background: rgba(8,12,16,0.48); backdrop-filter: blur(8px) saturate(120%);
+  padding:28px; border-radius:var(--radius);
+  box-shadow: 0 8px 24px rgba(2,6,10,0.6);
+}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-inner{ grid-template-columns:1fr; }
+  .hero { padding:28px 16px; }
+}
+
+/* utilities */
+.btn { display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:10px; cursor:pointer; font-weight:600 }
+.btn-primary{ background: linear-gradient(90deg,var(--accent),var(--accent-600)); color:#051417; box-shadow: 0 6px 18px rgba(29,185,84,0.16) }
+.card { background:var(--surface); padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(2,6,10,0.6) }
+/* Make cards slightly translucent so background shows through */
+.card { background: rgba(6,10,14,0.55); }
+
+/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
 }
 
-/* Utility responsive helpers */
-.container{ max-width:1200px; margin:0 auto; padding:1rem; }
+.container{ max-width:var(--max-width); margin:0 auto; padding:1rem; }
 
 
 

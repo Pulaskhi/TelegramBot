@@ -92,26 +92,26 @@ class ChatBot extends HTMLElement {
           position: fixed;
           bottom: 30px;
           right: 30px;
-          background: linear-gradient(135deg, #e74c3c, #c0392b);
-          color: white;
+          background: linear-gradient(90deg,var(--accent,#ff6b2d),var(--accent-600,#e85a27));
+          color: #041211;
           border: none;
-          padding: 15px 25px;
-          border-radius: 25px;
+          padding: 12px 20px;
+          border-radius: 12px;
           cursor: pointer;
-          font-size: 14px;
-          font-weight: 600;
-          box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-          transition: all 0.3s ease;
+          font-size: 13px;
+          font-weight: 700;
+          box-shadow: 0 8px 24px rgba(232,90,39,0.12);
+          transition: all 0.25s var(--ease, cubic-bezier(.2,.9,.2,1));
           z-index: 1000;
-          min-width: 280px;
+          min-width: 220px;
           text-align: center;
-          font-family: "SoehneBuch", sans-serif;
+          font-family: "Inter", "Nunito Sans", sans-serif;
         }
 
         .chatbot-button:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
-          background: linear-gradient(135deg, #c0392b, #a93226);
+          box-shadow: 0 10px 28px rgba(232,90,39,0.18);
+          background: var(--accent-600,#e85a27);
         }
 
         .chatbot-button:active {
@@ -122,19 +122,19 @@ class ChatBot extends HTMLElement {
           position: fixed;
           bottom: 30px;
           right: 30px;
-          width: 380px;
-          height: 500px;
-          background: hsl(235, 7%, 31%);
-          border: 1px solid hsl(0, 0%, 40%);
+          width: 320px;
+          height: 400px;
+          background: #fff;
+          border: 1px solid #e5e7eb;
           border-radius: 15px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(2, 6, 10, 0.45);
           display: none;
           flex-direction: column;
           z-index: 1001;
           overflow: hidden;
           animation: slideUp 0.3s ease-out;
-          font-family: "SoehneBuch", sans-serif;
-          color: hsl(0, 0%, 100%);
+          font-family: "Inter", "Nunito Sans", sans-serif;
+          color: #374151;
         }
 
         .chat-container.active {
@@ -153,11 +153,13 @@ class ChatBot extends HTMLElement {
         }
 
         .chat-header {
-          background: linear-gradient(135deg, #e74c3c, #c0392b);
-          color: white;
-          padding: 20px;
+          background: linear-gradient(90deg,var(--accent,#ff6b2d),var(--accent-600,#e85a27));
+          color: #041211;
+          padding: 14px;
           text-align: center;
           position: relative;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
         }
 
         .chat-header h3 {
@@ -197,7 +199,7 @@ class ChatBot extends HTMLElement {
           flex: 1;
           padding: 20px;
           overflow-y: auto;
-          background-color: hsl(235, 7%, 31%);
+          background-color: #f9fafb;
           display: flex;
           flex-direction: column;
           gap: 1rem;
@@ -208,17 +210,17 @@ class ChatBot extends HTMLElement {
         }
 
         .chat-messages::-webkit-scrollbar-track {
-          background: hsl(0, 0%, 20%);
+          background: #f3f4f6;
           border-radius: 3px;
         }
 
         .chat-messages::-webkit-scrollbar-thumb {
-          background: hsl(0, 0%, 50%);
+          background: #d1d5db;
           border-radius: 3px;
         }
 
         .chat-messages::-webkit-scrollbar-thumb:hover {
-          background: hsl(0, 0%, 60%);
+          background: #9ca3af;
         }
 
         .prompt {
@@ -245,19 +247,19 @@ class ChatBot extends HTMLElement {
         .message h3 {
           font-size: 0.9rem;
           margin: 0;
-          color: hsl(0, 0%, 100%);
+          color: #374151;
         }
 
         .message p {
           font-size: 1rem;
           margin: 0;
-          color: hsl(0, 0%, 100%);
+          color: #374151;
           line-height: 1.4;
         }
 
         .avatar {
           align-items: center;
-          border: 1px solid hsl(0, 0%, 40%);
+          border: 1px solid #e5e7eb;
           border-radius: 50%;
           display: flex;
           height: 1.5rem;
@@ -265,14 +267,15 @@ class ChatBot extends HTMLElement {
           min-width: 1.5rem;
           overflow: hidden;
           width: 1.5rem;
-          background: linear-gradient(135deg, #3498db, #2980b9);
-          color: white;
+          background: #e5e7eb;
+          color: #374151;
           font-size: 12px;
           font-weight: bold;
         }
 
         .avatar.assistant {
-          background: linear-gradient(135deg, #27ae60, #229954);
+          background: var(--accent,#ff6b2d);
+          color: #041211;
         }
 
         .state {
@@ -282,7 +285,7 @@ class ChatBot extends HTMLElement {
         }
 
         .state-bubble {
-          background-color: hsl(0, 0%, 100%);
+          background-color: #374151;
           border-radius: 50%;
           height: 1rem;
           width: 1rem;
@@ -294,7 +297,7 @@ class ChatBot extends HTMLElement {
 
         .state-message {
           font-size: 0.9rem;
-          color: hsl(0, 0%, 100%);
+          color: #6b7280;
         }
 
         @keyframes pulse {
@@ -311,8 +314,8 @@ class ChatBot extends HTMLElement {
 
         .chat-input-area {
           padding: 20px;
-          background: hsl(235, 7%, 31%);
-          border-top: 1px solid hsl(0, 0%, 40%);
+          background: #fff;
+          border-top: 1px solid #e5e7eb;
           display: flex;
           gap: 10px;
         }
@@ -320,27 +323,28 @@ class ChatBot extends HTMLElement {
         .chat-input {
           flex: 1;
           padding: 12px 16px;
-          border: 1px solid hsl(0, 0%, 40%);
+          border: 1px solid #d1d5db;
           border-radius: 25px;
           font-size: 14px;
           outline: none;
           transition: border-color 0.2s;
-          font-family: "SoehneBuch", sans-serif;
-          background: hsl(235, 7%, 25%);
-          color: hsl(0, 0%, 100%);
+          font-family: "Inter", "Nunito Sans", sans-serif;
+          background: #f9fafb;
+          color: #374151;
         }
 
         .chat-input:focus {
-          border-color: #e74c3c;
+          border-color: var(--accent,#ff6b2d);
+          box-shadow: 0 4px 18px rgba(232,90,39,0.06);
         }
 
         .chat-input::placeholder {
-          color: hsl(0, 0%, 60%);
+          color: #9ca3af;
         }
 
         .send-button {
-          background: linear-gradient(135deg, #e74c3c, #c0392b);
-          color: white;
+          background: linear-gradient(90deg,var(--accent,#ff6b2d),var(--accent-600,#e85a27));
+          color: #041211;
           border: none;
           width: 45px;
           height: 45px;
@@ -349,13 +353,15 @@ class ChatBot extends HTMLElement {
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: all 0.2s;
+          transition: all 0.18s var(--ease, cubic-bezier(.2,.9,.2,1));
           font-size: 16px;
+          box-shadow: 0 6px 18px rgba(232,90,39,0.08);
         }
 
         .send-button:hover {
           transform: scale(1.05);
-          box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+          box-shadow: 0 8px 22px rgba(232,90,39,0.14);
+          background: var(--accent-600,#e85a27);
         }
 
         .send-button:disabled {
@@ -367,7 +373,7 @@ class ChatBot extends HTMLElement {
         .welcome-message {
           text-align: center;
           padding: 20px;
-          color: hsl(0, 0%, 80%);
+          color: #6b7280;
           font-size: 14px;
         }
 

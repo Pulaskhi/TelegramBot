@@ -37,7 +37,6 @@ class FeaturesTitles extends HTMLElement {
 
       .features-titles {
         align-items: center;
-        background: linear-gradient(to bottom, #ff4500 0%, #330000 100%);
         display: flex;
         flex-direction: column;
         height: 175vh;
@@ -45,6 +44,11 @@ class FeaturesTitles extends HTMLElement {
         position: relative;
         width: 100%;
       }
+
+      .features-titles-list { position: relative; z-index: 2; }
+
+      /* Use same surface background for continuity */
+      .features-titles { background: var(--surface); }
 
       @media (min-width: 1024px) {
         .features-titles { height: 200vh; }
@@ -55,21 +59,26 @@ class FeaturesTitles extends HTMLElement {
       }
 
       .features-titles ul li {
-        color: #ffdd33;
-        font-size: 3rem;
-        text-shadow: 0 0 20px #ff4500, 0 0 40px rgba(255, 215, 51, 0.8);
+        color: var(--accent);
+        font-size: clamp(1.8rem, 6vw, 4.2rem);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        text-shadow: 0 6px 22px rgba(232,90,39,0.12);
         height: 100vh;
         margin-top: calc(-80vh + 1.1em);
-        padding-top: 50vh;
+        padding-top: 46vh;
         position: sticky;
         top: 0;
-        transform: translateY(calc((var(--index) - var(--items)* .5)* 1.5em));
+        transform: translateY(calc((var(--index) - var(--items)* .5)* 0.9em));
         text-align: center;
-        transition: transform 0.3s ease, color 0.3s ease;
+        transition: transform 0.28s var(--ease), color 0.2s var(--ease);
+        line-height: 1;
+        font-weight: 900;
       }
 
       .features-titles ul li:first-child {
         margin-top: 0;
+      <div class="section-overlay" aria-hidden="true"></div>
       }
 
       .features-titles ul li:hover {
