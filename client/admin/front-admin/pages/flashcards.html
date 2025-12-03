@@ -1,10 +1,17 @@
+<style>
+  html, body { height: 100%; margin: 0 }
+  main-component.fullscreen { display:flex; align-items:stretch; justify-content:center; height:100vh; width:100vw; padding:0; box-sizing:border-box }
+  .flashcards-wrapper { width:100%; height:100%; overflow:auto; display:flex; align-items:stretch }
+  flashcards-form-component { width:100%; height:100%; display:block }
+</style>
 
-
-<main-component>
-  <flashcards-form-component></flashcards-form-component>
+<main-component class="fullscreen">
+  <div class="flashcards-wrapper">
+    <flashcards-form-component class="fullscreen"></flashcards-form-component>
+  </div>
 </main-component>
 
 <file-gallery-component></file-gallery-component>
 <font-loader-component></font-loader-component>
 <message-component></message-component>
-<delete-modal-component><delete-modal-component>
+<delete-modal-component></delete-modal-component>

@@ -1,0 +1,114 @@
+[
+  {
+    "titulo": "Presión atmosférica y altitud",
+    "explicacion": "La presión atmosférica disminuye con la altitud debido a la menor cantidad de aire en la parte superior de la atmósfera. A medida que ascendemos, hay menos moléculas de aire que ejercen presión.",
+    "clave_memoria": "Visualiza un globo que se desinfla a medida que sube en el aire.",
+    "pregunta_rapida": "¿Cómo varía la presión atmosférica con la altitud?",
+    "respuesta_corta": "Disminuye."
+  },
+  {
+    "titulo": "Experimento de Torricelli",
+    "explicacion": "Torricelli utilizó un tubo lleno de mercurio invertido en un recipiente, demostrando que la presión atmosférica puede sostener una columna de mercurio de aproximadamente 760 mm.",
+    "clave_memoria": "Imagina un tubo de mercurio que se sostiene solo por el aire.",
+    "pregunta_rapida": "¿Qué demostró el experimento de Torricelli?",
+    "respuesta_corta": "La presión atmosférica puede sostener mercurio."
+  },
+  {
+    "titulo": "Masa de aire",
+    "explicacion": "Una masa de aire es una gran masa de aire cuyas propiedades térmicas y de humedad son homogéneas. Estas masas se clasifican según su origen: polar, tropical, marítima o continental.",
+    "clave_memoria": "Visualiza un enorme bloque de aire con características uniformes.",
+    "pregunta_rapida": "¿Qué es una masa de aire?",
+    "respuesta_corta": "Una gran masa de aire homogénea."
+  },
+  {
+    "titulo": "Frentes meteorológicos",
+    "explicacion": "Las masas de aire polar pueden enfriar drásticamente las regiones donde se encuentran, provocando cambios en el clima y a menudo generando precipitaciones.",
+    "clave_memoria": "Piensa en un glaciar que trae frío a su paso.",
+    "pregunta_rapida": "¿Cómo afecta una masa de aire polar al clima?",
+    "respuesta_corta": "Enfría y puede causar precipitaciones."
+  },
+  {
+    "titulo": "Isobaras",
+    "explicacion": "Las isobaras son líneas en un mapa meteorológico que conectan puntos de igual presión atmosférica. Su análisis ayuda a identificar áreas de alta y baja presión.",
+    "clave_memoria": "Imagina una cuerda que une puntos con la misma altura.",
+    "pregunta_rapida": "¿Qué indican las isobaras en un mapa meteorológico?",
+    "respuesta_corta": "Conectan puntos de igual presión atmosférica."
+  },
+  {
+    "titulo": "Anticiclón en mapas meteorológicos",
+    "explicacion": "Un anticiclón se representa en los mapas con un símbolo en forma de letra 'H'. Se caracteriza por ser una zona de alta presión, donde el aire desciende y se estabiliza.",
+    "clave_memoria": "La 'H' de 'High' como alta presión.",
+    "pregunta_rapida": "¿Cómo se representa un anticiclón en un mapa meteorológico?",
+    "respuesta_corta": "Con la letra 'H'."
+  },
+  {
+    "titulo": "Borrasca",
+    "explicacion": "Una borrasca, o baja presión, se representa en mapas meteorológicos con una 'L'. Está asociada con condiciones climáticas inestables y precipitaciones.",
+    "clave_memoria": "La 'L' de 'Low' como baja presión.",
+    "pregunta_rapida": "¿Qué indica la 'L' en un mapa meteorológico?",
+    "respuesta_corta": "Baja presión o borrasca."
+  },
+  {
+    "titulo": "Dorsales anticiclónicas",
+    "explicacion": "Una dorsal anticiclónica es una extensión de alta presión que puede provocar climas estables y soleados. En verano, suele generar calor en regiones costeras.",
+    "clave_memoria": "Visualiza una montaña de aire estable que atrapa el calor.",
+    "pregunta_rapida": "¿Qué provoca una dorsal anticiclónica en verano?",
+    "respuesta_corta": "Climas cálidos y estables."
+  },
+  {
+    "titulo": "Vaguada",
+    "explicacion": "Una vaguada es una depresión en el campo de presión que generalmente se representa como un área de baja presión en un mapa meteorológico.",
+    "clave_memoria": "Piensa en un valle que se hunde entre montañas.",
+    "pregunta_rapida": "¿Qué forma adopta típicamente una vaguada en un mapa?",
+    "respuesta_corta": "Una depresión o área de baja presión."
+  },
+  {
+    "titulo": "Principio de Pascal",
+    "explicacion": "El principio de Pascal establece que cuando se aplica presión a un fluido confinado, esta presión se transmite de manera uniforme en todas direcciones.",
+    "clave_memoria": "Visualiza un globo que se infla de manera uniforme al apretarlo.",
+    "pregunta_rapida": "¿Qué establece el principio de Pascal?",
+    "respuesta_corta": "La presión se transmite uniformemente en un fluido."
+  },
+  {
+    "titulo": "Corriente en chorro",
+    "explicacion": "La corriente en chorro es un flujo de aire rápido en la atmósfera que puede influir significativamente en las condiciones meteorológicas locales, como la formación de tormentas.",
+    "clave_memoria": "Imagina un río de aire rápido en el cielo.",
+    "pregunta_rapida": "¿Qué es la corriente en chorro?",
+    "respuesta_corta": "Un flujo de aire rápido en la atmósfera."
+  },
+  {
+    "titulo": "Gota fría",
+    "explicacion": "La gota fría es un fenómeno meteorológico que se produce cuando una masa de aire frío se separa de la corriente en chorro, generando inestabilidad y precipitaciones intensas.",
+    "clave_memoria": "Imagina una gota de agua fría que cae y provoca tormentas.",
+    "pregunta_rapida": "¿Qué es una gota fría?",
+    "respuesta_corta": "Una masa de aire frío que causa tormentas intensas."
+  },
+  {
+    "titulo": "Inundaciones repentinas",
+    "explicacion": "Las inundaciones repentinas son causadas por lluvias intensas en un corto periodo, a menudo relacionadas con fenómenos como la gota fría, que pueden superar la capacidad de drenaje de la tierra.",
+    "clave_memoria": "Visualiza un vaso que se desborda rápidamente.",
+    "pregunta_rapida": "¿Qué causa las inundaciones repentinas?",
+    "respuesta_corta": "Lluvias intensas en corto tiempo."
+  },
+  {
+    "titulo": "Mapas de altura",
+    "explicacion": "Los mapas de altura muestran la distribución de la presión en la atmósfera a diferentes niveles, fundamentales para prever fenómenos meteorológicos y su impacto en las operaciones de los bomberos.",
+    "clave_memoria": "Piensa en un mapa que muestra diferentes capas de presión como un pastel.",
+    "pregunta_rapida": "¿Cuál es la función de los mapas de altura en meteorología?",
+    "respuesta_corta": "Prever fenómenos meteorológicos."
+  },
+  {
+    "titulo": "Isohipsas",
+    "explicacion": "Las isohipsas son líneas en mapas de altura que conectan puntos de igual altitud de una superficie isobárica. Ayudan a visualizar la estructura de la atmósfera.",
+    "clave_memoria": "Visualiza un mapa de elevaciones que conecta las cimas de montañas.",
+    "pregunta_rapida": "¿Qué representan las isohipsas en un mapa de altura?",
+    "respuesta_corta": "Puntos de igual altitud en una superficie isobárica."
+  },
+  {
+    "titulo": "Riesgos meteorológicos",
+    "explicacion": "Los bomberos deben estar atentos a indicadores como la formación de nubes de tormenta y el aumento de la humedad para prever situaciones de riesgo, como tormentas severas.",
+    "clave_memoria": "Imagina una alarma que se activa con signos de tormenta.",
+    "pregunta_rapida": "¿Cuál es un indicador crucial para prever tormentas severas?",
+    "respuesta_corta": "Formación de nubes de tormenta."
+  }
+]

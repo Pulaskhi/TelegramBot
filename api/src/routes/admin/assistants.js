@@ -3,6 +3,7 @@ const path = require("path");
 const router = require("express").Router();
 const OpenAI = require("openai");
 const OpenAIService = require("../../services/openai-service");
+const PDFStruct = require("../../services/pdf-structure-service");
 
 // ✅ Carga universal de pdf-parse
 let pdfParse;
@@ -185,8 +186,22 @@ router.post("/pdf-questions-stored", async (req, res) => {
 
     console.log(`📘 Procesando PDF: ${filename}`);
     const dataBuffer = fs.readFileSync(filePath);
-    const pdfData = await pdfParse(dataBuffer);
-    const fullText = (pdfData.text || "").trim();
+    // Use the PDF structure service which also detects simple lists and tables
+    const pdfData = await PDFStruct.parsePDFBuffer(dataBuffer, filename);
+    let fullText = (pdfData.text || "").trim();
+    // Append detected lists and tables (CSV) to the text used for generation
+    try {
+      if (Array.isArray(pdfData.lists) && pdfData.lists.length) {
+        const listsText = pdfData.lists.map((l, i) => `LISTA_${i + 1}: ${l.items.join(' | ')}`).join('\n');
+        fullText += '\n\n' + 'DETALLE_LISTAS:\n' + listsText;
+      }
+      if (Array.isArray(pdfData.tables) && pdfData.tables.length) {
+        const tablesText = pdfData.tables.map((t, i) => `TABLA_${i + 1}:\n${t.csv}`).join('\n\n');
+        fullText += '\n\n' + 'DETALLE_TABLAS:\n' + tablesText;
+      }
+    } catch (e) {
+      console.warn('⚠️ Error anexando listas/tablas al texto:', e.message);
+    }
     if (!fullText.length)
       return res.status(400).json({ message: "El PDF no tiene texto extraíble" });
 
@@ -851,5 +866,109 @@ router.get("/flashcards/:tema/:name", (req, res) => {
     res.status(500).json({ success: false, message: "Error leyendo flashcards" });
   }
 });
+
+/* ===========================================================
+   🔎 Generar FLASHCARDS a partir de todo el material disponible
+   =========================================================== */
+router.post('/flashcards-from-topic', async (req, res) => {
+  try {
+    const { tema } = req.body || {}
+    const autoTrain = !!req.body?.autoTrain
+
+    if (!tema || typeof tema !== 'string') return res.status(400).json({ success: false, message: 'Falta el campo tema' })
+
+    console.log(`📩 Generando flashcards para tema: ${tema} (autoTrain=${autoTrain})`)
+
+    // 1) recolectar texto desde tests guardados
+    let textParts = []
+    try {
+      const temaDir = path.join(testsRoot, tema)
+      if (fs.existsSync(temaDir)) {
+        const files = fs.readdirSync(temaDir).filter(f => f.endsWith('.json'))
+        for (const f of files) {
+          try {
+            const raw = fs.readFileSync(path.join(temaDir, f), 'utf8')
+            const parsed = JSON.parse(raw)
+            const preguntas = Array.isArray(parsed) ? parsed : parsed.preguntas || []
+            preguntas.forEach(q => {
+              if (q.pregunta) textParts.push(String(q.pregunta))
+              if (q.opciones && typeof q.opciones === 'object') textParts.push(Object.values(q.opciones).join(' '))
+            })
+          } catch (e) { /* ignore file parse errors */ }
+        }
+      }
+    } catch (err) { console.warn('⚠️ Error leyendo tests para tema:', err.message) }
+
+    // 2) buscar PDFs en gallery que pertenezcan al tema y extraer texto
+    try {
+      if (fs.existsSync(galleryDir)) {
+        const files = fs.readdirSync(galleryDir).filter(f => f.toLowerCase().endsWith('.pdf'))
+        for (const f of files) {
+          const detected = detectarTema(f)
+          if (detected && detected.toUpperCase() === tema.toUpperCase()) {
+            try {
+              if (pdfParse) {
+                const buf = fs.readFileSync(path.join(galleryDir, f))
+                const pdfData = await pdfParse(buf)
+                const txt = (pdfData && pdfData.text) ? String(pdfData.text).trim() : ''
+                if (txt.length) textParts.push(txt)
+              }
+            } catch (e) { console.warn('⚠️ Error parseando PDF', f, e.message) }
+          }
+        }
+      }
+    } catch (err) { console.warn('⚠️ Error buscando PDFs en gallery:', err.message) }
+
+    // 3) fallback: si no encontramos nada por nombre, intentar agregar todo el contenido de la carpeta tema si existe
+    if (!textParts.length) {
+      try {
+        const temaDir = path.join(testsRoot, tema)
+        if (fs.existsSync(temaDir)) {
+          const files = fs.readdirSync(temaDir).filter(f => f.endsWith('.json'))
+          for (const f of files) {
+            try {
+              const raw = fs.readFileSync(path.join(temaDir, f), 'utf8')
+              textParts.push(raw)
+            } catch (e) {}
+          }
+        }
+      } catch (e) {}
+    }
+
+    if (!textParts.length) return res.status(400).json({ success: false, message: 'No se encontró material para este tema' })
+
+    const textBase = textParts.join('\n\n').slice(0, 150000)
+
+    const openai = new OpenAIService()
+    const flashcards = await openai.generateFlashcardsFromTopicOnly(tema, textBase)
+
+    // guardar en storage/flashcards/<tema>
+    const folder = path.join(flashcardsRoot, tema)
+    if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true })
+    const fileName = `${Date.now()}-flashcards.json`
+    const outPath = path.join(folder, fileName)
+    try {
+      fs.writeFileSync(outPath, JSON.stringify(flashcards, null, 2), 'utf8')
+    } catch (e) { console.warn('⚠️ No se pudo guardar flashcards:', e.message) }
+
+    // opcional: si autoTrain, guardar una versión resumida en trained-tests para feedback
+    if (autoTrain && Array.isArray(flashcards) && flashcards.length) {
+      try {
+        const trainedDir2 = path.join(trainedRoot, tema)
+        if (!fs.existsSync(trainedDir2)) fs.mkdirSync(trainedDir2, { recursive: true })
+        const trainedName = `flashcards-autotrain-${Date.now()}.json`
+        const trainedPath = path.join(trainedDir2, trainedName)
+        // convertir flashcards a preguntas sencillas (titulo -> pregunta)
+        const preguntas = flashcards.map((c, i) => ({ pregunta: c.titulo || c.concepto || `Flashcard ${i + 1}`, opciones: [], correcta: null }))
+        fs.writeFileSync(trainedPath, JSON.stringify({ tema, preguntas, source: 'flashcards-autotrain' }, null, 2), 'utf8')
+      } catch (e) { console.warn('⚠️ No se pudo guardar autoTrain desde flashcards:', e.message) }
+    }
+
+    return res.json({ success: true, message: 'Flashcards generadas', tema, file: `flashcards/${tema}/${fileName}`, flashcards })
+  } catch (err) {
+    console.error('❌ Error en /flashcards-from-topic:', err)
+    return res.status(500).json({ success: false, message: 'Error generando flashcards por tema', error: err.message })
+  }
+})
 
 module.exports = router;

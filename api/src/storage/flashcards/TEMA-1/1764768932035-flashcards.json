@@ -1,0 +1,128 @@
+[
+  {
+    "titulo": "Reacción Química",
+    "explicacion": "Una reacción química es un proceso en el que una o más sustancias se transforman en otras sustancias diferentes, implicando cambios en la estructura molecular y formación de nuevos enlaces químicos.",
+    "clave_memoria": "Imagina una receta de cocina donde cambias ingredientes para crear un platillo nuevo.",
+    "pregunta_rapida": "¿Qué es una reacción química?",
+    "respuesta_corta": "Transformación de sustancias en otras diferentes."
+  },
+  {
+    "titulo": "Combustión",
+    "explicacion": "La combustión es una reacción química de oxidación rápida entre un combustible y un comburente, generalmente oxígeno, que libera energía en forma de calor y luz.",
+    "clave_memoria": "Visualiza una hoguera en la que se queman troncos y se emite luz y calor.",
+    "pregunta_rapida": "¿Qué es la combustión?",
+    "respuesta_corta": "Reacción rápida de oxidación que libera calor y luz."
+  },
+  {
+    "titulo": "Triángulo del Fuego",
+    "explicacion": "El triángulo del fuego representa los tres elementos necesarios para que se produzca un incendio: combustible, comburente (oxígeno) y energía de activación (calor).",
+    "clave_memoria": "Piensa en un triángulo donde cada vértice es un elemento esencial para el fuego.",
+    "pregunta_rapida": "¿Cuáles son los elementos del triángulo del fuego?",
+    "respuesta_corta": "Combustible, oxígeno y energía de activación."
+  },
+  {
+    "titulo": "Reacciones REDOX",
+    "explicacion": "Las reacciones REDOX son procesos químicos en los que hay un intercambio de electrones. Durante estas reacciones, una sustancia se oxida y otra se reduce.",
+    "clave_memoria": "Recuerda 'REDox' para recordar que se trata de reducción y oxidación.",
+    "pregunta_rapida": "¿Qué son las reacciones REDOX?",
+    "respuesta_corta": "Reacciones de intercambio de electrones entre sustancias."
+  },
+  {
+    "titulo": "Fuego vs. Incendio",
+    "explicacion": "El fuego es una combustión controlada que produce calor y luz, mientras que un incendio es una combustión no controlada que se propaga y puede causar destrucción.",
+    "clave_memoria": "Visualiza una vela (fuego) versus un bosque en llamas (incendio).",
+    "pregunta_rapida": "¿Cuál es la diferencia entre fuego e incendio?",
+    "respuesta_corta": "Fuego es controlado, incendio es descontrolado."
+  },
+  {
+    "titulo": "Combustibles",
+    "explicacion": "Los combustibles son sustancias que pueden arder al reaccionar con un comburente, liberando energía. Ejemplos son madera, gasolina y gas.",
+    "clave_memoria": "Imagina una fogata donde se queman diferentes tipos de madera.",
+    "pregunta_rapida": "¿Qué son los combustibles?",
+    "respuesta_corta": "Sustancias que arden al reaccionar con oxígeno."
+  },
+  {
+    "titulo": "Condiciones para Combustión",
+    "explicacion": "Para que se produzca una combustión, deben cumplirse tres condiciones: presencia de combustible, oxígeno y energía de activación.",
+    "clave_memoria": "Recuerda el triángulo del fuego para visualizar estas condiciones.",
+    "pregunta_rapida": "¿Qué condiciones son necesarias para la combustión?",
+    "respuesta_corta": "Combustible, oxígeno y energía de activación."
+  },
+  {
+    "titulo": "Combustión Completa vs Incompleta",
+    "explicacion": "La combustión completa ocurre con suficiente oxígeno, generando CO₂ y agua. La incompleta se da con falta de oxígeno y produce CO y humo.",
+    "clave_memoria": "Piensa en una fogata bien ventilada (completa) vs. una chimenea tapada (incompleta).",
+    "pregunta_rapida": "¿Cuál es la diferencia entre combustión completa e incompleta?",
+    "respuesta_corta": "Completa genera CO₂; incompleta genera CO."
+  },
+  {
+    "titulo": "Pirólisis",
+    "explicacion": "La pirólisis es la descomposición térmica de un material en ausencia de oxígeno, produciendo gases combustibles y otros productos intermedios, y es la etapa previa a la combustión.",
+    "clave_memoria": "Imagina un tronco que se calienta y empieza a soltar gases antes de arder.",
+    "pregunta_rapida": "¿Qué es la pirólisis?",
+    "respuesta_corta": "Descomposición térmica sin oxígeno que precede a la combustión."
+  },
+  {
+    "titulo": "Límite Inferior de Inflamabilidad (LII)",
+    "explicacion": "El LII es la concentración mínima de vapor o gas en aire necesaria para que se produzca una combustión. Si la mezcla es más pobre, no habrá combustión.",
+    "clave_memoria": "Visualiza un umbral que debe alcanzarse para que ocurra la llama.",
+    "pregunta_rapida": "¿Qué es el Límite Inferior de Inflamabilidad?",
+    "respuesta_corta": "Concentración mínima de vapor para que ocurra la combustión."
+  },
+  {
+    "titulo": "Punto de Inflamación",
+    "explicacion": "El punto de inflamación es la temperatura a la que un líquido emite vapores suficientes para encenderse en presencia de una fuente de ignición.",
+    "clave_memoria": "Imagina un aceite en una sartén que empieza a humear antes de prenderse.",
+    "pregunta_rapida": "¿Qué es el punto de inflamación?",
+    "respuesta_corta": "Temperatura a la cual un líquido puede encenderse."
+  },
+  {
+    "titulo": "Clases de Incendios",
+    "explicacion": "Los incendios se clasifican en diferentes clases según el tipo de combustible: Clase A (sólidos), Clase B (líquidos), Clase C (gases), Clase D (metales) y Clase F (aceites y grasas).",
+    "clave_memoria": "Visualiza diferentes tipos de incendios en una escena de cocina, taller y bosque.",
+    "pregunta_rapida": "¿Cómo se clasifican los incendios?",
+    "respuesta_corta": "Por el tipo de combustible involucrado."
+  },
+  {
+    "titulo": "Reacción en Cadena",
+    "explicacion": "La reacción en cadena en un incendio ocurre cuando el calor liberado en la combustión activa nuevas reacciones, permitiendo la propagación del fuego si no se elimina uno de los elementos del triángulo de fuego.",
+    "clave_memoria": "Imagina una fila de fichas de dominó que caen una tras otra en un incendio.",
+    "pregunta_rapida": "¿Qué es una reacción en cadena en un incendio?",
+    "respuesta_corta": "Propagación de fuego por calor que activa nuevas reacciones."
+  },
+  {
+    "titulo": "Energía de Activación",
+    "explicacion": "Es la energía mínima necesaria para iniciar una reacción de combustión. Sin esta energía, el combustible y el comburente no reaccionan.",
+    "clave_memoria": "Imagina la chispa que inicia una fogata.",
+    "pregunta_rapida": "¿Qué es la energía de activación?",
+    "respuesta_corta": "Energía mínima para iniciar una reacción de combustión."
+  },
+  {
+    "titulo": "Temperatura y Calor",
+    "explicacion": "El calor es la energía transferida entre sistemas debido a una diferencia de temperatura. La temperatura es una medida de la energía térmica promedio de las partículas en una sustancia.",
+    "clave_memoria": "Piensa en un vaso de agua caliente (más calor) versus un cubo de hielo (menos calor).",
+    "pregunta_rapida": "¿Cuál es la diferencia entre calor y temperatura?",
+    "respuesta_corta": "Calor es energía; temperatura es medida de energía térmica promedio."
+  },
+  {
+    "titulo": "Humos en Incendios",
+    "explicacion": "Los humos son partículas y gases resultantes de la combustión incompleta y pueden ser tóxicos. La composición del humo depende del material que arde y la eficiencia de la combustión.",
+    "clave_memoria": "Imagina una habitación llena de humo denso y oscuro tras un incendio.",
+    "pregunta_rapida": "¿Qué son los humos en incendios?",
+    "respuesta_corta": "Partículas y gases resultantes de la combustión incompleta."
+  },
+  {
+    "titulo": "Gases Tóxicos",
+    "explicacion": "Los incendios producen varios gases tóxicos, como monóxido de carbono (CO) y dióxido de carbono (CO₂), que pueden ser mortales en altas concentraciones.",
+    "clave_memoria": "Visualiza el riesgo de inhalar gases peligrosos en un incendio.",
+    "pregunta_rapida": "¿Qué gases se producen en los incendios?",
+    "respuesta_corta": "Monóxido de carbono y dióxido de carbono, entre otros."
+  },
+  {
+    "titulo": "Inflamabilidad",
+    "explicacion": "La inflamabilidad se refiere a la capacidad de un material para arder. Se clasifica en combustible (punto de inflamación ≥ 38 °C) e inflamable (punto de inflamación < 38 °C).",
+    "clave_memoria": "Piensa en líquidos que arden fácilmente frente a otros que requieren calor intenso para inflamarse.",
+    "pregunta_rapida": "¿Cuál es la diferencia entre inflamable y combustible?",
+    "respuesta_corta": "Inflamable tiene bajo punto de inflamación; combustible tiene alto."
+  }
+]
