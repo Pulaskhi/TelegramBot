@@ -1,0 +1,444 @@
+{
+  "tema": "TEMA-13",
+  "fecha": "2025-12-03T11:32:52.494Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe correctamente el comportamiento de la presión atmosférica con la altitud?",
+      "opciones": {
+        "A": "La presión atmosférica aumenta con la altitud debido a una mayor concentración de gases.",
+        "B": "La presión atmosférica disminuye con la altitud debido a una disminución en la concentración de gases.",
+        "C": "La presión atmosférica se mantiene constante independientemente de la altitud."
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál fue el resultado del experimento de Torricelli para medir la presión atmosférica?",
+      "opciones": {
+        "A": "Una columna de mercurio se mantuvo a 760 mm de altura debido a la presión atmosférica.",
+        "B": "El mercurio fluyó libremente sin formar la columna debido a la ausencia de presión.",
+        "C": "El nivel de mercurio alcanzó 1000 mm mostrando una presión atmosférica superior a la normal."
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe mejor una 'masa de aire' según la meteorología?",
+      "opciones": {
+        "A": "Un volumen de aire con propiedades homogéneas de temperatura y humedad",
+        "B": "Una región de aire donde se mezclan diferentes propiedades atmosféricas",
+        "C": "Una zona donde el aire es predominantemente seco y caliente en cualquier época del año",
+        "D": "Una columna de aire que asciende continuamente debido a la convección"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la formación de frentes meteorológicos, ¿cómo afecta una masa de aire polar al clima de una región?",
+      "opciones": {
+        "A": "Provoca un aumento significativo de la temperatura",
+        "B": "Introduce aire frío y potencialmente precipitaciones",
+        "C": "Reduce la humedad ambiental y estabiliza el clima",
+        "D": "Genera un aumento constante en la velocidad del viento"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué indican las isobaras en un mapa meteorológico?",
+      "opciones": {
+        "A": "Unen puntos con la misma presión atmosférica",
+        "B": "Unen puntos con la misma temperatura",
+        "C": "Unen puntos con la misma humedad",
+        "D": "Unen puntos con la misma velocidad del viento"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En un mapa del tiempo, ¿cómo se representa comúnmente una zona de alta presión en España?",
+      "opciones": {
+        "A": "Con la letra A",
+        "B": "Con la letra H",
+        "C": "Con la letra B",
+        "D": "Con la letra L"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué simboliza una línea continua gruesa con semicírculos en un mapa meteorológico?",
+      "opciones": {
+        "A": "Frente cálido",
+        "B": "Frente frío",
+        "C": "Frente oclusivo",
+        "D": "Zona de alta presión"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En un mapa meteorológico, ¿cómo se representa un frente frío?",
+      "opciones": {
+        "A": "Línea continua gruesa con triángulos",
+        "B": "Línea discontinua",
+        "C": "Línea continua con círculos",
+        "D": "Línea continua gruesa con semicírculos y triángulos"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En un mapa sinóptico, ¿qué representan las isobaras que forman un patrón circular con presión decreciente hacia el centro?",
+      "opciones": {
+        "A": "Anticiclón",
+        "B": "Borrasca",
+        "C": "Frente cálido",
+        "D": "Frente frío"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el intervalo estándar con el que se trazan las isobaras en los mapas meteorológicos de superficie?",
+      "opciones": {
+        "A": "2 milibares",
+        "B": "4 milibares",
+        "C": "6 milibares",
+        "D": "8 milibares"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En un mapa meteorológico, ¿qué representación tiene un anticiclón en España?",
+      "opciones": {
+        "A": "Se representa con la letra A",
+        "B": "Se representa con la letra B",
+        "C": "Se representa con la letra H",
+        "D": "Se representa con la letra D"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué característica principal define a un anticiclón?",
+      "opciones": {
+        "A": "La presión disminuye hacia el interior",
+        "B": "La presión aumenta hacia el interior",
+        "C": "Las isobaras son abiertas y no cerradas"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué marca en los mapas meteorológicos españoles indica una borrasca?",
+      "opciones": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "L"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En el contexto de las borrascas, ¿cuál es un sinónimo menos común para referirse a estas configuraciones de baja presión?",
+      "opciones": {
+        "A": "Depresión extratropical",
+        "B": "Ciclón",
+        "C": "Alta presión",
+        "D": "Anticiclón"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué efecto climático suele asociarse con una dorsal anticiclónica durante el verano en regiones costeras?",
+      "opciones": {
+        "A": "Aumento significativo de la temperatura",
+        "B": "Precipitaciones intensas frecuentes",
+        "C": "Descenso notable de las temperaturas",
+        "D": "Aumento de la nubosidad sin precipitaciones"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de una dorsal anticiclónica, ¿qué se espera generalmente en términos de presión atmosférica?",
+      "opciones": {
+        "A": "Presión atmosférica baja",
+        "B": "Presión atmosférica alta",
+        "C": "Presión atmosférica variable",
+        "D": "No tiene efecto sobre la presión atmosférica"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En un mapa meteorológico, ¿qué forma adopta típicamente una vaguada?",
+      "opciones": {
+        "A": "Forma de V inclinada",
+        "B": "Forma circular",
+        "C": "Forma de U invertida",
+        "D": "Forma rectilínea"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el comportamiento de las isobaras en una vaguada según su gradiente de presión?",
+      "opciones": {
+        "A": "Las isobaras presentan un gradiente de presión muy elevado",
+        "B": "Las isobaras se caracterizan por un gradiente de presión inexistente",
+        "C": "Las isobaras muestran un gradiente de presión muy bajo",
+        "D": "No hay isobaras visibles"
+      },
+      "correcta": "C",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuál es el efecto principal de una configuración isobárica de alta presión en la meteorología?",
+      "opciones": {
+        "A": "Tiempo estable con cielos despejados generalmente",
+        "B": "Precipitaciones intensas y frecuentes",
+        "C": "Temperaturas extremadamente bajas",
+        "D": "Aumento de la velocidad del viento"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En un mapa meteorológico, ¿qué indica una configuración isobárica cerrada con isobaras muy juntas?",
+      "opciones": {
+        "A": "Presión atmosférica estable y uniforme",
+        "B": "Cambios mínimos en las condiciones climáticas",
+        "C": "Fuertes vientos debido a la alta diferencia de presión",
+        "D": "Temperaturas consistentemente altas"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la función principal del tubo de Torricelli en la medición de la presión atmosférica?",
+      "opciones": {
+        "A": "Medir la densidad del aire",
+        "B": "Calcular la altura del punto de medición",
+        "C": "Determinar la presión atmosférica mediante una columna de mercurio",
+        "D": "Estimar la temperatura ambiental"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Si se realiza el experimento de Torricelli en la cima de una montaña, ¿cómo se espera que sea la altura de la columna de mercurio en comparación con la realizada al nivel del mar?",
+      "opciones": {
+        "A": "Más alta porque hay menos presión atmosférica",
+        "B": "Menor debido a la reducción de la presión atmosférica",
+        "C": "Igual, ya que la presión atmosférica no cambia con la altitud",
+        "D": "Variable dependiendo de la temperatura del aire"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la equivalencia en hectopascales (hPa) de una presión atmosférica de 760 milímetros de mercurio (mmHg)?",
+      "opciones": {
+        "A": "1.013,2 hPa",
+        "B": "760 hPa",
+        "C": "1.000 hPa",
+        "D": "1.033,2 hPa"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Si la presión atmosférica se mide en milibares (mb), ¿cuál es la conversión correcta de 1.013,2 dinas/cm²?",
+      "opciones": {
+        "A": "1,0132 mb",
+        "B": "10,132 mb",
+        "C": "101,32 mb",
+        "D": "0,10132 mb"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Según el principio de Pascal, si se aplica una presión en un punto de un fluido confinado, ¿cómo se transmite esta presión?",
+      "opciones": {
+        "A": "Se transmite íntegramente a todos los puntos del fluido en todas las direcciones.",
+        "B": "Solo se transmite verticalmente hacia arriba.",
+        "C": "Se transmite mayormente hacia los lados del contenedor.",
+        "D": "Se disipa rápidamente y no afecta a otros puntos."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la implicación práctica del principio de Pascal en el funcionamiento de los sistemas hidráulicos usados por los bomberos?",
+      "opciones": {
+        "A": "Permite que una pequeña fuerza aplicada en un pistón se transforme en una fuerza mayor en otro pistón.",
+        "B": "Hace que el agua se caliente al ser bombeada.",
+        "C": "Reduce la eficiencia de los equipos al dispersar la fuerza aplicada.",
+        "D": "No tiene ninguna influencia en el funcionamiento de los sistemas hidráulicos."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe correctamente la corriente en chorro o 'jet stream'?",
+      "opciones": {
+        "A": "Es un fenómeno climático que sucede únicamente en los polos.",
+        "B": "Es un viento fuerte y estrecho que fluye en la alta troposfera.",
+        "C": "Es un movimiento de aire que se produce solamente en la superficie terrestre.",
+        "D": "Es un tipo de viento que cambia de dirección con las estaciones del año."
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un efecto común de las corrientes en chorro sobre el clima local en la superficie?",
+      "opciones": {
+        "A": "Provocan una disminución permanente de las temperaturas locales.",
+        "B": "No tienen efecto alguno sobre el clima local.",
+        "C": "Pueden influir en la formación y dirección de sistemas de tormentas.",
+        "D": "Causan un aumento constante de la humedad en la región."
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes fenómenos meteorológicos se asocia más estrechamente con la formación de una gota fría?",
+      "opciones": {
+        "A": "Alta presión atmosférica persistente",
+        "B": "Encuentro de masas de aire de diferentes temperaturas",
+        "C": "Aumento súbito de la temperatura superficial del mar",
+        "D": "Actividad volcánica submarina"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de una gota fría, ¿qué efecto tiene típicamente en el clima de una región afectada?",
+      "opciones": {
+        "A": "Disminución notable de las precipitaciones",
+        "B": "Aumento de las temperaturas diurnas",
+        "C": "Intensificación de las precipitaciones y posibles inundaciones",
+        "D": "Estabilización de las condiciones climáticas"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué fenómeno meteorológico se caracteriza por el rápido descenso de aire frío y húmedo, que al interactuar con el aire cálido genera precipitaciones intensas y tormentas?",
+      "opciones": {
+        "A": "El fenómeno del Niño",
+        "B": "La DANA o gota fría",
+        "C": "El frente polar",
+        "D": "El monzón"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones es correcta respecto a la influencia de la corriente en chorro en las condiciones meteorológicas a nivel local?",
+      "opciones": {
+        "A": "No tiene influencia significativa en el clima",
+        "B": "Acelera la formación de huracanes",
+        "C": "Modula la intensidad y trayectoria de sistemas de baja presión",
+        "D": "Provoca un aumento de las temperaturas globales"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes fenómenos meteorológicos puede generar un aumento significativo del riesgo de inundaciones repentinas?",
+      "opciones": {
+        "A": "Gota fría (DANA)",
+        "B": "Corriente en chorro",
+        "C": "Anticiclón",
+        "D": "Presión atmosférica estable"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de riesgos meteorológicos, ¿qué indicador es crucial para prever la formación de tormentas severas?",
+      "opciones": {
+        "A": "Temperatura superficial del mar",
+        "B": "Humedad relativa baja",
+        "C": "Presión atmosférica alta",
+        "D": "Velocidad del viento moderada"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal función de los mapas de altura en meteorología para la labor de un bombero?",
+      "opciones": {
+        "A": "Predecir las precipitaciones en una región",
+        "B": "Indicar las zonas de riesgo de incendio según la orografía",
+        "C": "Determinar las rutas de evacuación seguras",
+        "D": "Evaluar las variaciones de temperatura con la altitud"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué representan las isohipsas en un mapa de altura?",
+      "opciones": {
+        "A": "Las líneas de presión atmosférica constante",
+        "B": "Las líneas de igual altitud sobre el nivel del mar",
+        "C": "Las áreas con igual humedad relativa",
+        "D": "Las zonas con igual velocidad del viento"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el fenómeno meteorológico conocido como 'gota fría' que afecta a Mallorca durante el otoño?",
+      "opciones": {
+        "A": "Una masa de aire frío que se encuentra con una cálida, generando precipitaciones intensas",
+        "B": "Un aumento súbito de la temperatura durante el mes de octubre",
+        "C": "Un fenómeno de vientos fuertes y secos provenientes del Sahara",
+        "D": "Una disminución inusual de la presión atmosférica sin precipitaciones"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de mapa es fundamental para la previsión de fenómenos meteorológicos extremos en Mallorca, como las inundaciones?",
+      "opciones": {
+        "A": "Mapas de altura",
+        "B": "Mapas de superficie",
+        "C": "Mapas de precipitación acumulada",
+        "D": "Mapas de temperatura media"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica geomorfológica favorece la formación de inundaciones en valles fluviales durante lluvias intensas y repentinas en Mallorca?",
+      "opciones": {
+        "A": "Caudal reducido y pendiente elevada del terreno",
+        "B": "Forma cóncava del valle que aumenta la acumulación de agua",
+        "C": "Elevación súbita del terreno cerca del cauce",
+        "D": "Aumento de la absorción del suelo durante la lluvia"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una de las consecuencias inmediatas de la disminución repentina de la pendiente del terreno en la base de la montaña en Mallorca?",
+      "opciones": {
+        "A": "Incremento en la capacidad del torrente para transportar sedimentos",
+        "B": "Reducción en la capacidad del torrente para transportar sedimentos",
+        "C": "Aumento súbito en la velocidad del flujo de agua",
+        "D": "Formación de un nuevo cauce principal"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    }
+  ]
+}
