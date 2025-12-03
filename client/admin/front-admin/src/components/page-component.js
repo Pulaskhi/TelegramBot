@@ -32,6 +32,8 @@ class PageComponent extends HTMLElement {
       '/admin/promotores':'promoters.html',
       '/admin/faqs':'faqs.html',
       '/admin/asistentes':'assistants.html',
+      // Fullscreen assistant form endpoint
+      '/admin/assistant-form': 'assistant-form.html',
       '/admin/flashcards':'flashcards.html',
       '/admin/headers':'headers.html',
       '/admin/lenguajes':'/admin/languages'

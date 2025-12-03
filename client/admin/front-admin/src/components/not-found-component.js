@@ -4,7 +4,11 @@ class NotFound extends HTMLElement {
     this.shadow = this.attachShadow({ mode: 'open' })
     this.data = {}
     
-    document.addEventListener('notice', this.handleMessage.bind(this))
+    // If a handler exists on this element, bind it to keep context.
+    // Some pages/components may not implement `handleMessage`, avoid calling bind on undefined.
+    if (typeof this.handleMessage === 'function') {
+      document.addEventListener('notice', this.handleMessage.bind(this))
+    }
   }
 
   async connectedCallback () {

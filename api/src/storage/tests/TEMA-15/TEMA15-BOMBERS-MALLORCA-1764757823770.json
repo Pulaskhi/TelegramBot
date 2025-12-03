@@ -1,0 +1,446 @@
+{
+  "tema": "TEMA-15",
+  "fecha": "2025-12-03T10:30:23.771Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál de los siguientes es un aspecto negativo de la insularidad en términos económicos para una isla como Mallorca?",
+      "opciones": {
+        "A": "Aumento del coste de transporte de mercancías y pasajeros",
+        "B": "Desarrollo de industrias para un mercado interior protegido",
+        "C": "Atractivo turístico del hecho insular",
+        "D": "Mayor facilidad en el transporte marítimo"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Desde un punto de vista biogeográfico, ¿qué característica distingue a la flora y fauna de las islas Baleares?",
+      "opciones": {
+        "A": "Presencia de endemismos y subespecies únicas",
+        "B": "Diversidad biológica menor que en el continente",
+        "C": "Predominio de especies invasoras"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes aspectos es considerado un beneficio de la insularidad de Mallorca en términos económicos?",
+      "opciones": {
+        "A": "Mayor facilidad para el desarrollo de industrias pesadas",
+        "B": "Reducción de costos de transporte de mercancías",
+        "C": "Atractivo turístico y mercado interior protegido",
+        "D": "Expansión de la economía de aglomeración"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En Mallorca, ¿cuál es una consecuencia directa del aislamiento insular en términos sociales?",
+      "opciones": {
+        "A": "Mayor número de servicios especializados",
+        "B": "Facilidad de acceso a servicios como universidades y hospitales especializados",
+        "C": "Dificultades en el acceso a servicios especializados",
+        "D": "Disminución de la demanda de servicios públicos"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el municipio más poblado de Mallorca?",
+      "opciones": {
+        "A": "Palma",
+        "B": "Manacor",
+        "C": "Inca",
+        "D": "Alcúdia"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En el contexto de los espacios naturales protegidos en Mallorca, ¿cuál de las siguientes zonas es reconocida por su alta concentración de aves migratorias?",
+      "opciones": {
+        "A": "Sierra de Tramuntana",
+        "B": "S'Albufera de Mallorca",
+        "C": "Cuevas del Drach",
+        "D": "Cala Millor"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes comarcas de Mallorca es conocida principalmente por sus extensas zonas forestales?",
+      "opciones": {
+        "A": "Serra de Tramuntana",
+        "B": "Pla de Mallorca",
+        "C": "Raiguer",
+        "D": "Migjorn"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué comarca de Mallorca se caracteriza por una alta concentración de infraestructura turística?",
+      "opciones": {
+        "A": "Migjorn",
+        "B": "Serra de Tramuntana",
+        "C": "Raiguer",
+        "D": "Llevant"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes aspectos es considerado un impacto negativo de la insularidad en Mallorca respecto a la economía local?",
+      "opciones": {
+        "A": "Aumento del turismo",
+        "B": "Desarrollo de industrias locales",
+        "C": "Costes elevados de transporte de mercancías",
+        "D": "Fácil acceso a servicios continentales"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué medida es más probable que requiera Mallorca debido a su condición de insularidad para mejorar la calidad de vida de sus habitantes?",
+      "opciones": {
+        "A": "Reducción de impuestos para productos importados",
+        "B": "Mayor financiación para infraestructuras",
+        "C": "Disminución de áreas protegidas",
+        "D": "Expansión de industrias pesadas"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una de las principales consecuencias socioeconómicas de la insularidad en Mallorca respecto a la distribución de la población?",
+      "opciones": {
+        "A": "Concentración de la población en zonas costeras debido a la actividad turística",
+        "B": "Despoblación generalizada en todas las zonas de la isla",
+        "C": "Distribución uniforme de la población en toda la isla",
+        "D": "Gran densidad de población en el interior de la isla"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué efecto tiene la estacionalidad poblacional en la distribución de servicios en Mallorca?",
+      "opciones": {
+        "A": "Aumento de servicios en zonas turísticas durante la temporada alta",
+        "B": "Disminución de servicios en zonas rurales durante todo el año",
+        "C": "Mantenimiento constante de servicios a lo largo del año en todas las zonas",
+        "D": "Aumento de servicios en el interior de la isla durante la temporada baja"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie total del Parque Nacional de Cabrera?",
+      "opciones": {
+        "A": "10.021,51 hectáreas",
+        "B": "1.646,48 hectáreas",
+        "C": "8.705,26 hectáreas",
+        "D": "1.316,25 hectáreas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica distingue principalmente al Parque Natural de Mondragó?",
+      "opciones": {
+        "A": "Su diversidad paisajística debido a la combinación de diferentes ambientes",
+        "B": "Ser la zona húmeda más extensa de las Islas Baleares",
+        "C": "Estar formado exclusivamente por zonas marinas",
+        "D": "Ubicarse en el municipio de Palma"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal factor de riesgo en la propagación de incendios forestales en zonas insulares como Mallorca?",
+      "opciones": {
+        "A": "El turismo estacional que aumenta la carga de los servicios de emergencia",
+        "B": "La presencia de especies vegetales altamente inflamables",
+        "C": "La densidad de la población en las áreas urbanas",
+        "D": "La escasez de fuentes de agua para combatir incendios"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En relación con la insularidad, ¿qué medida es crucial para mejorar la eficacia del servicio de bomberos en Mallorca?",
+      "opciones": {
+        "A": "Incrementar la cantidad de personal durante la temporada alta",
+        "B": "Establecer más estaciones de bomberos en zonas turísticas",
+        "C": "Mejorar las infraestructuras de transporte y acceso a áreas remotas",
+        "D": "Desarrollar programas educativos para turistas sobre prevención de incendios"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué factor climático es especialmente determinante para la rápida expansión de los incendios forestales en Mallorca durante el verano?",
+      "opciones": {
+        "A": "Alta humedad",
+        "B": "Precipitaciones frecuentes",
+        "C": "Vientos intensos",
+        "D": "Temperaturas moderadas"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de la gestión y prevención de incendios forestales, ¿qué práctica implementada desde 1996 ha contribuido significativamente a la reducción de la superficie afectada por incendios?",
+      "opciones": {
+        "A": "Despacho automático de medios",
+        "B": "Reforestación con especies menos inflamables",
+        "C": "Prohibición total de quemas controladas",
+        "D": "Aumento de las multas por negligencias"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes factores representa un desafío demográfico particular para Mallorca debido al turismo estacional?",
+      "opciones": {
+        "A": "Fluctuaciones en la disponibilidad de servicios públicos",
+        "B": "Disminución constante de la población local",
+        "C": "Aumento del desempleo durante la temporada baja",
+        "D": "Reducción de áreas naturales protegidas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cómo afecta el turismo estacional a la distribución de la población en Mallorca?",
+      "opciones": {
+        "A": "Concentración de población en zonas costeras durante la temporada alta",
+        "B": "Despoblación permanente de zonas urbanas",
+        "C": "Incremento de la población en zonas montañosas",
+        "D": "Estabilidad demográfica a lo largo del año"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes factores es un impacto positivo de la estacionalidad poblacional en Mallorca?",
+      "opciones": {
+        "A": "Incremento en la demanda de servicios turísticos",
+        "B": "Reducción del espacio disponible para residentes permanentes",
+        "C": "Aumento de la congestión vehicular",
+        "D": "Desgaste acelerado de la infraestructura local"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Durante los meses de alta estacionalidad turística, ¿qué medida es más crucial para mejorar la eficacia de los servicios de emergencia en Mallorca?",
+      "opciones": {
+        "A": "Aumentar temporalmente el número de efectivos de emergencia",
+        "B": "Reducir el número de turistas permitidos en la isla",
+        "C": "Cerrar temporalmente las zonas turísticas más populares",
+        "D": "Limitar la exportación de productos locales"
+      },
+      "correcta": "A",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuál es uno de los principales retos en la gestión de emergencias en zonas turísticas de Mallorca durante la temporada alta?",
+      "opciones": {
+        "A": "El incremento de la población estacional dificulta la rápida respuesta de los servicios de emergencia",
+        "B": "La disminución de turistas facilita la gestión de emergencias",
+        "C": "Las carreteras están menos congestionadas, lo que permite una mejor respuesta",
+        "D": "Los turistas generalmente no requieren servicios de emergencia"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de insularidad de Mallorca, ¿cuál de las siguientes afirmaciones describe mejor un aspecto positivo que afecta al turismo?",
+      "opciones": {
+        "A": "El aislamiento marítimo protege el mercado interior, atrayendo turismo",
+        "B": "La falta de servicios especializados atrae turismo médico",
+        "C": "Las dificultades en el transporte disuaden a los turistas",
+        "D": "La exportación de productos locales es más económica debido al aislamiento"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una desventaja significativa de la localización industrial en Mallorca, debido a su condición de insularidad?",
+      "opciones": {
+        "A": "Costes elevados de transporte para materias primas y productos manufacturados",
+        "B": "Facilidad de acceso a mercados internacionales",
+        "C": "Disponibilidad excesiva de recursos naturales",
+        "D": "Reducción de costes laborales"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué factor positivo puede influir en la localización industrial en Mallorca, a pesar de la insularidad?",
+      "opciones": {
+        "A": "Atractivo turístico que puede generar demanda para productos locales",
+        "B": "Gran disponibilidad de materias primas industriales",
+        "C": "Conexión terrestre directa con el continente europeo",
+        "D": "Bajos costes de importación y exportación"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes factores es una desventaja principal de los polígonos industriales en Mallorca debido a la insularidad?",
+      "opciones": {
+        "A": "Menor disponibilidad de servicios de emergencia",
+        "B": "Altos costos de transporte de materias primas",
+        "C": "Escasez de mano de obra cualificada",
+        "D": "Facilidad de acceso a mercados internacionales"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de la respuesta de emergencia, ¿qué aspecto es crucial al considerar la localización de un polígono industrial en una isla como Mallorca?",
+      "opciones": {
+        "A": "Proximidad a hospitales especializados",
+        "B": "Disponibilidad de rutas de evacuación eficientes",
+        "C": "Accesibilidad por vías marítimas",
+        "D": "Todas las anteriores"
+      },
+      "correcta": "D",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un impacto negativo de la insularidad en la economía de Mallorca?",
+      "opciones": {
+        "A": "Costes elevados de transporte de mercancías",
+        "B": "Mejora en la eficiencia de la producción local",
+        "C": "Reducción de la dependencia de importaciones",
+        "D": "Aumento del turismo"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Desde el punto de vista administrativo, ¿qué caracteriza a la organización política de Mallorca dentro de la Comunidad Autónoma de las Islas Baleares?",
+      "opciones": {
+        "A": "Un gobierno único para todas las islas",
+        "B": "Un Consejo Insular en cada isla y un Gobierno Balear para el conjunto",
+        "C": "Independencia administrativa completa de otras islas",
+        "D": "Un sistema de gobierno único sin subdivisiones"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de la insularidad de Mallorca, ¿cuál de los siguientes factores impacta negativamente en el transporte de mercancías?",
+      "opciones": {
+        "A": "Costes elevados de importación y exportación",
+        "B": "Mejora de infraestructuras turísticas",
+        "C": "Desarrollo de especies endémicas",
+        "D": "Aumento de financiación gubernamental"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué ventaja proporciona la insularidad de Mallorca respecto a la industria local?",
+      "opciones": {
+        "A": "Desarrollo de economías de aglomeración",
+        "B": "Creación de industrias para un mercado interior protegido",
+        "C": "Facilidad para el desarrollo de industrias de materias pesadas",
+        "D": "Reducción de costes en transporte de pasajeros"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una de las principales desventajas económicas de la insularidad mencionada en relación con la economía de aglomeración en Mallorca?",
+      "opciones": {
+        "A": "Aumento de los costes de transporte de mercancías",
+        "B": "Reducción en la variedad de servicios turísticos disponibles",
+        "C": "Incremento en la producción de bienes manufacturados",
+        "D": "Disminución en el costo de vida"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones NO representa una ventaja económica de la insularidad para Mallorca?",
+      "opciones": {
+        "A": "Atracción turística por su carácter insular",
+        "B": "Desarrollo de industrias pesadas gracias a la insularidad",
+        "C": "Creación de industrias orientadas al mercado interior",
+        "D": "Protección del mercado interior debido al aislamiento marítimo"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes factores representa un coste adicional significativo para la economía de Mallorca debido a la insularidad?",
+      "opciones": {
+        "A": "Importación de materias primas",
+        "B": "Transporte terrestre interno en la isla",
+        "C": "Comunicaciones digitales con el continente",
+        "D": "Producción local de productos agrícolas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de Mallorca, ¿qué medida podría reducir los efectos negativos de los costes de transporte asociados a la insularidad?",
+      "opciones": {
+        "A": "Incrementar las tarifas turísticas",
+        "B": "Desarrollar industrias ligeras y de servicios",
+        "C": "Reducir la exportación de productos manufacturados",
+        "D": "Limitar el número de vuelos hacia y desde la isla"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes municipios de Mallorca se destaca particularmente por su atractivo turístico debido a su puerto y playas, siendo un punto clave en la oferta turística de la isla?",
+      "opciones": {
+        "A": "Algaida",
+        "B": "Andratx",
+        "C": "Alaró",
+        "D": "Algaida"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de la insularidad y el turismo en Mallorca, ¿cuál es un aspecto positivo mencionado específicamente en el texto?",
+      "opciones": {
+        "A": "Costos elevados de transporte",
+        "B": "Desarrollo limitado de industrias pesadas",
+        "C": "Atractivo turístico del hecho insular",
+        "D": "Menor número de servicios disponibles"
+      },
+      "correcta": "C",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes afirmaciones describe mejor un impacto negativo de la insularidad en la economía de Mallorca?",
+      "opciones": {
+        "A": "Incremento en los costes de transporte de materias primas y productos manufacturados",
+        "B": "Mejora en la eficiencia de la industria turística",
+        "C": "Reducción de la necesidad de importar productos",
+        "D": "Aumento de la producción local de materias pesadas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de la insularidad, ¿cuál es un aspecto positivo para la economía de Mallorca?",
+      "opciones": {
+        "A": "Desarrollo limitado de industrias de materias pesadas",
+        "B": "Atractivo turístico aumentado por el carácter insular",
+        "C": "Facilidad en la exportación de productos industriales",
+        "D": "Reducción en la diversidad de servicios disponibles"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    }
+  ]
+}

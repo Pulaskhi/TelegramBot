@@ -1,8 +1,6 @@
 import isEqual from 'lodash-es/isEqual'
 import { store } from '../../redux/store.js'
 import { showFiles, removeFiles } from '../../redux/files-slice.js'
-import '../tables/test-table-component.js'
-
 class AssistantForm extends HTMLElement {
   constructor() {
     super()
@@ -34,192 +32,123 @@ class AssistantForm extends HTMLElement {
   render() {
     this.shadow.innerHTML = `
     <style>
-     :host { display: block; width: 100%; height: auto; overflow: visible; position: relative; z-index: 10; background: transparent; padding: 20px 12px; box-sizing: border-box }
-      * { box-sizing: border-box; font-family: 'Inter','Nunito Sans',sans-serif; }
-      button { background: transparent; border: none; cursor: pointer; }
-      .form { display:flex; flex-direction:column; gap:1rem; background:#f9fafb; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.05); padding:20px; height:auto; max-height: calc(100vh - 160px); overflow:auto; }
-      .form__header-box {
-        display:flex; justify-content:space-between; align-items:center;
-        background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff;
-        border-radius:10px; padding:10px 20px; box-shadow:0 2px 10px rgba(37,99,235,0.3);
-      }
-      .tabs { display:flex; gap:10px; }
-      .tab button { font-weight:600; background:transparent; color:#fff; padding:8px 15px; border-radius:6px; }
-      .tab.active button { background:rgba(255,255,255,0.2); box-shadow:inset 0 2px 4px rgba(255,255,255,0.2); }
-      .form__header-icons { display:flex; gap:12px; }
-      .form__header-icons button { font-size:1.2rem; background:rgba(255,255,255,0.15);
-        color:#fff; border-radius:50%; width:40px; height:40px;
-        display:flex; justify-content:center; align-items:center; }
-      .form__header-icons button:hover { background:rgba(255,255,255,0.35); transform:scale(1.05); }
-      .form__body { background:#fff; border-radius:10px; padding:20px; box-shadow:inset 0 0 5px rgba(0,0,0,0.05); flex:1; overflow:auto; }
-      .form__body form { display:flex; flex-direction:column; height:100%; }
-      .tab-content { display:none; }
-      .tab-content.active { display:block; }
-      .form-element { display:flex; flex-direction:column; margin-bottom:1rem; }
-      .form-element label { font-weight:600; color:#374151; margin-bottom:6px; }
+      :host { display:block; width:100%; box-sizing:border-box; font-family: 'Inter','Nunito Sans',sans-serif }
+      *{ box-sizing: border-box }
 
-      .test-list { border:1px solid #e5e7eb; border-radius:8px; background:#fff; overflow:auto; padding:8px; display:flex; flex-direction:column; flex:1; min-height:0; box-sizing:border-box }
-      .tema-header { font-weight:700; background:#1e40af; color:#fff; padding:10px 12px;
-        border-radius:8px; margin:8px 4px 6px; cursor:pointer; display:flex; align-items:center; gap:8px; }
-      .tema-header .caret { transition:transform .2s ease; }
-      .tema-header.open .caret { transform:rotate(90deg); }
-      .tema-inner { margin:6px 0 12px 10px; display:none; }
-      .test-item { display:flex; justify-content:space-between; align-items:center;
-        padding:10px 12px; border:1px solid #f3f4f6; border-radius:8px; cursor:pointer; margin:6px 2px;
-        background:#f9fafb; }
-      .test-item:hover { background:#eff6ff; transform:translateX(3px); }
-      .test-item span { font-weight:600; color:#1e3a8a; }
-      .test-item small { color:#6b7280; font-size:0.85rem; }
+      /* Panel container */
+      .panel { display:flex; flex-direction:column; height:100%; padding:18px; gap:12px; }
 
-      .test-overlay { position:fixed; inset:0; background:rgba(17,24,39,0.6);
-        display:flex; justify-content:flex-end; align-items:stretch; z-index:9999; backdrop-filter:blur(2px); }
-      .test-modal { width:45%; background:#fff; border-radius:16px 0 0 16px; overflow-y:auto;
-        display:flex; flex-direction:column; box-shadow:-6px 0 16px rgba(0,0,0,0.15); }
-      .test-modal-header { background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff; padding:16px 20px;
-        display:flex; justify-content:space-between; align-items:center; font-weight:600; border-radius:16px 0 0 0; }
-      .test-modal-content { flex:1; padding:20px; background:#f9fafb; }
-      .close-btn { background:transparent; border:none; color:#fff; font-size:1.6rem; cursor:pointer; }
-      .close-btn:hover { color:#fbbf24; transform:scale(1.05); }
+      /* Grid layout: left sidebar and right preview. Ensure both columns can scroll internally. */
+      .grid { display:grid; grid-template-columns: 320px 1fr; gap:18px; height: calc(100vh - 72px); min-height:0 }
 
-      .panel { background: var(--surface, #f9fafb); padding: 18px; border-radius: 12px; box-shadow: 0 10px 30px rgba(2,6,10,0.12); height: auto; box-sizing: border-box; display: flex; flex-direction: column; max-width: var(--max-width,1200px); margin: 0 auto; }
-      .grid { display: grid; grid-template-columns: 320px minmax(520px, 1fr); gap: 18px; flex: 1; min-height: 0 }
-      .preview-area { background: #fff; border-radius: 10px; padding: 20px; box-shadow: inset 0 0 5px rgba(0,0,0,0.05); display:flex; flex-direction:column; height:100%; }
-      #previewArea { flex:1; overflow:auto; }
-      .preview-controls { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; position:sticky; bottom:16px; background:transparent; padding-top:6px }
-      .btn { padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; border: none; }
-      .btn-primary { background: #2563eb; color: #fff; }
-      .btn-primary:hover { background: #1d4ed8; }
-      .btn { background: #e5e7eb; color: #374151; }
-      .btn:hover { background: #d1d5db; }
-     </style>
+      /* Sidebar form */
+      .sidebar { background: #fff; border-radius:12px; padding:16px; box-shadow: 0 6px 20px rgba(2,6,23,0.06); display:flex; flex-direction:column; gap:12px; min-height:0 }
+      .sidebar .header { display:flex; flex-direction:column; gap:6px }
+      .tabs { display:flex; gap:8px }
+      .tab { padding:8px 12px; border-radius:8px; cursor:pointer; background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff; font-weight:600 }
+      .tab.inactive { opacity:0.6; background:transparent; color:#374151; border:1px solid #e6eefc }
 
-    <style>
-      /* Scroll & layout fixes: allow inner areas to scroll without double scrollbars */
-      .grid, .panel, .preview-area, .form__body, .test-list, .preview-area, #previewArea { min-height: 0; }
+      .form-body { overflow:auto; padding-top:6px; display:flex; flex-direction:column; gap:10px; min-height:0 }
+      form { display:flex; flex-direction:column; gap:12px }
+      label { font-weight:700; color:#374151 }
 
-      .test-list, .saved-list, .trained-list {
-        overflow: auto;
-        padding-right: 8px;
-        box-sizing: border-box;
-        display:flex; flex-direction:column; flex:1; min-height:0;
-      }
+      .upload-row { display:flex; gap:12px; align-items:flex-start }
+      upload-file-button-component { display:block }
 
-      /* Ensure form tab content elements size correctly inside flex form */
-      .tab-content { min-height:0; display:block }
-      .tab-content .form-element { display:flex; flex-direction:column; flex:1; min-height:0 }
+      .test-list { display:flex; flex-direction:column; gap:8px; overflow:auto; padding:6px; border-radius:8px; border:1px solid #eef2ff; min-height:0 }
+      .tema-header { display:flex; align-items:center; gap:10px; padding:10px; border-radius:8px; background:#eef2ff; }
+      .open-group-btn { margin-left:auto; padding:8px 12px; border-radius:8px; border:none; background:#1e3a8a; color:#fff; cursor:pointer }
+      /* Inline expanded panel under a tema header */
+      .expanded-panel { background:#fff; border:1px solid #e6eefc; border-radius:8px; margin:8px 0 6px 0; padding:8px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); }
+      .expanded-row { display:flex; justify-content:space-between; align-items:center; padding:10px; border-bottom:1px solid #f3f4f6 }
+      .expanded-row:last-child { border-bottom: none }
 
-      #previewArea {
-        overflow: auto;
-        max-height: calc(100vh - 120px);
-        padding-right: 8px;
-        box-sizing: border-box;
-      }
+      /* Preview */
+      .preview { background:#fff; border-radius:12px; padding:16px; box-shadow: inset 0 0 5px rgba(0,0,0,0.03); display:flex; flex-direction:column; min-height:0 }
+      #previewArea { flex:1; overflow:auto; min-height:0 }
+      .preview-controls { display:flex; gap:8px; align-items:center; margin-top:8px }
 
-      /* Push form actions to bottom */
-      .form-actions { margin-top: auto; display:flex; justify-content:flex-start }
+      /* Modal overlay (reused) */
+      .test-overlay { position:fixed; inset:0; background:rgba(17,24,39,0.5); display:flex; justify-content:center; align-items:center; z-index:9999 }
+      .test-modal { width:720px; max-width:95%; max-height:85vh; overflow:auto; background:#fff; border-radius:12px; }
+      .test-modal-header { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff; border-radius:12px 12px 0 0 }
+      .test-modal-content { padding:12px 16px }
+      .modal-row { display:flex; justify-content:space-between; align-items:center; padding:8px 6px; border-bottom:1px solid #f3f4f6 }
 
-      /* Slightly reduce padding of preview area to show more content */
-      .preview-area { padding: 14px }
-
-      /* nicer scrollbars */
-      .test-list::-webkit-scrollbar, #previewArea::-webkit-scrollbar { width:10px; height:10px }
-      .test-list::-webkit-scrollbar-track, #previewArea::-webkit-scrollbar-track { background: transparent }
-      .test-list::-webkit-scrollbar-thumb, #previewArea::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius:8px }
-      .test-list { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.15) transparent }
-
-      /* Keep header inside the form column (avoid escaping layout) */
-      .form__header-box { position: relative; width: 100%; z-index: 1; box-sizing: border-box; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
-      .form__header-box .tabs { flex:1 1 auto; min-width:0 }
-      .form__header-box .tabs .tab { flex:0 0 auto }
-      .form__header-box .tabs button { white-space:nowrap; }
-      .form__header-box .form__header-icons { flex:0 0 auto; display:flex; gap:8px; align-items:center }
+      /* Responsive */
+      @media(max-width:900px){ .grid{ grid-template-columns: 1fr; height: auto } .panel{ padding:12px } }
     </style>
 
-      <section class="panel">
-        <div class="grid">
-          <aside class="form">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-              <div>
-                <h2 style="margin:0">Generador de Tests</h2>
-                <p style="margin:6px 0 0;color:#6b7280">Sube PDFs, genera preguntas y guarda tests por tema.</p>
+    <section class="panel">
+      <div class="grid">
+        <aside class="sidebar">
+          <div class="header">
+            <div>
+              <h2 style="margin:0">Generador de Tests</h2>
+              <p style="margin:6px 0 0;color:#6b7280">Sube PDFs, genera preguntas y guarda tests por tema.</p>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <div class="tabs" role="tablist">
+                <div class="tab" data-tab="files">Documentos</div>
+                <div class="tab inactive" data-tab="saved">Tests Generados</div>
+                <div class="tab inactive" data-tab="trained">Tests Entrenados</div>
               </div>
+              <select id="filterTopic" style="margin-left:auto;padding:8px;border-radius:8px;border:1px solid #e6eefc"></select>
             </div>
-            <div class="form__header">
-              <div class="form__header-box">
-                  <div class="tabs">
-                    <div class="tab" data-tab="files"><button>Documentos</button></div>
-                    <div class="tab" data-tab="saved"><button>Tests Generados</button></div>
-                    <div class="tab active" data-tab="trained"><button>Tests Entrenados</button></div>
-                  </div>
-                  <div style="margin-left:12px; display:flex; align-items:center; gap:8px">
-                    <label style="font-weight:600; color:#fff; font-size:0.9rem">Tema:</label>
-                    <select id="filterTopic" style="min-width:180px; padding:6px 8px; border-radius:6px; border:none"></select>
-                  </div>
-                <div class="form__header-icons">
+          </div>
+
+          <div class="form-body">
+            <form>
+              <input type="hidden" name="id">
+
+              <div class="tab-content" data-tab="files">
+                <label>Sube tu documento PDF</label>
+                <div class="upload-row">
+                  <upload-file-button-component icon="documents" name="assistantDocuments" language-alias="all" quantity="single" file-type="documents"></upload-file-button-component>
                 </div>
+                <div style="display:flex;gap:8px">
+                  <button type="button" class="btn btn-primary" id="btnCreateGenerate">Generar y guardar</button>
+                  <button type="button" class="btn" id="btnCreateGenerateAuto">Generar + Auto-train</button>
+                </div>
+                <small style="color:#6b7280">Selecciona un PDF y pulsa generar. El test se guardará en el tema detectado.</small>
               </div>
-            </div>
 
-            <div class="form__body">
-              <form>
-                <input type="hidden" name="id">
+              <div class="tab-content" data-tab="saved" style="display:none">
+                <label>Tests generados previamente</label>
+                <div class="test-list saved-list"></div>
+              </div>
 
-                <div class="tab-content" data-tab="files">
-                  <div class="form-element">
-                    <label>Sube tu documento PDF</label>
-                    <div class="form-element-input">
-                      <upload-file-button-component
-                        icon="documents"
-                        name="assistantDocuments"
-                        language-alias="all"
-                        quantity="single"
-                        file-type="documents">
-                      </upload-file-button-component>
-                    </div>
-                  </div>
-                  <div class="form-actions" style="margin-top:10px;">
-                    <div style="display:flex; gap:8px;">
-                      <button class="btn btn-primary" id="btnCreateGenerate">Generar y guardar</button>
-                      <button class="btn" id="btnCreateGenerateAuto">Generar + Auto-train</button>
-                    </div>
-                  </div>
-                  <small style="color:#6b7280; margin-top:6px;">Selecciona un PDF y pulsa generar. El test se guardará en el tema detectado.</small>
-                </div>
+              <div class="tab-content" data-tab="trained" style="display:none">
+                <label>Tests entrenados</label>
+                <div class="test-list trained-list"></div>
+              </div>
+            </form>
+          </div>
+        </aside>
 
-                <div class="tab-content" data-tab="saved">
-                  <div class="form-element"><label>Tests generados previamente</label>
-                    <div class="test-list saved-list"></div>
-                  </div>
-                </div>
-
-                <div class="tab-content active" data-tab="trained">
-                  <div class="form-element"><label>Tests entrenados</label>
-                    <div class="test-list trained-list"></div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </aside>
-
-          <section class="preview-area">
-            <h3 style="margin-top:0">Vista Previa del Test</h3>
-            <div id="previewArea"></div>
-                  <div class="preview-controls">
-                    <label style="display:flex;align-items:center;gap:8px">Mostrar: <select id="selectLimit"><option value="0">Todas</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></label>
+        <section class="preview">
+          <h3 style="margin:0 0 8px">Vista Previa del Test</h3>
+          <div id="previewArea"></div>
+          <div class="preview-controls">
+            <label style="display:flex;align-items:center;gap:8px">Mostrar:
+              <select id="selectLimit"><option value="0">Todas</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select>
+            </label>
+            <div style="margin-left:auto;display:flex;gap:8px">
               <button class="btn" id="btnStart">Iniciar Test</button>
-                    <button class="btn" id="btnDownload">Descargar</button>
-                  </div>
-          </section>
-        </div>
-
-      </section>
+              <button class="btn" id="btnDownload">Descargar</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
     `
     this.bindEvents()
   }
 
   bindEvents() {
-      this.shadow.querySelector('.form').addEventListener('click', async (e) => {
-      e.preventDefault()
+      // Use shadow root as event delegation container (no more .form element)
+      this.shadow.addEventListener('click', async (e) => {
+        // don't call preventDefault globally; only for actionable buttons
 
       if (e.target.closest('#btnCreateGenerate')) {
         this.generateAndShowTest(false)
@@ -287,13 +216,55 @@ class AssistantForm extends HTMLElement {
 
       const tab = e.target.closest('.tab')
       if (tab) {
-        this.shadow.querySelector('.tab.active').classList.remove('active')
+        // handle tab visual state
+        const prev = this.shadow.querySelector('.tab.active')
+        if (prev) {
+          prev.classList.remove('active')
+          prev.classList.add('inactive')
+        }
+        tab.classList.remove('inactive')
         tab.classList.add('active')
-        this.shadow.querySelector('.tab-content.active').classList.remove('active')
-        this.shadow.querySelector(`.tab-content[data-tab="${tab.dataset.tab}"]`).classList.add('active')
+
+        // hide all tab-content and show the selected one
+        this.shadow.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none')
+        const target = this.shadow.querySelector(`.tab-content[data-tab="${tab.dataset.tab}"]`)
+        if (target) target.style.display = 'block'
 
         if (tab.dataset.tab === 'saved') this.loadSavedTests()
         if (tab.dataset.tab === 'trained') this.loadTrainedTests()
+      }
+
+      // open-group-btn (delegated): read header dataset and open modal
+      const openBtn = e.target.closest('.open-group-btn')
+      if (openBtn) {
+        const header = openBtn.closest('.tema-header')
+        if (header) {
+          let tests = []
+          try { tests = JSON.parse(header.dataset.tests || '[]') } catch (err) { tests = [] }
+          const tema = header.dataset.tema || 'Sin tema'
+          const listType = header.dataset.type || 'trained'
+          // if no tests available, attempt to fetch tests for that tema from the server as a fallback
+          if (!tests.length) {
+            const endpoint = listType === 'trained'
+              ? `/api/admin/assistants/trained-tests/${encodeURIComponent(tema)}`
+              : `/api/admin/assistants/saved-tests/${encodeURIComponent(tema)}`
+            try {
+              const res = await fetch(endpoint)
+              const data = await res.json()
+              // data may be { tests: [...] } or array
+              tests = data.tests || data || []
+            } catch (err) {
+              console.warn('No se pudieron cargar tests por tema', err)
+              tests = []
+            }
+          }
+          // show inline panel under the header (preferred) — falls back to modal if not possible
+          if (header.parentElement) {
+            this.toggleInlinePanel(header, tests, listType)
+          } else {
+            this.showGroupModal(tema, tests, listType)
+          }
+        }
       }
     })
 
@@ -492,35 +463,22 @@ class AssistantForm extends HTMLElement {
       groups.forEach(grupo => {
         const header = document.createElement('div')
         header.className = 'tema-header'
-        header.innerHTML = `<span class="caret">▶</span> ${grupo.tema || grupo?.name || 'Sin tema'}`
+        const temaText = grupo.tema || grupo?.name || 'Sin tema'
+        // determine tests array safely
+        const testsArr = Array.isArray(grupo.tests)
+          ? grupo.tests
+          : Array.isArray(grupo.tests) === false && grupo.name && grupo.tema
+            ? [ { name: grupo.name } ]
+            : (Array.isArray(grupo) ? grupo : [])
+
+        // store metadata on the header for robust delegation
+        header.dataset.tema = temaText
+        header.dataset.tests = JSON.stringify(testsArr || [])
+        header.dataset.type = type
+
+        // show a title and a small action button to open a modal listing the tests
+        header.innerHTML = `<span class="tema-title">${temaText}</span> <button type="button" class="open-group-btn" style="margin-left:auto;padding:6px 10px;border-radius:6px;border:none;background:#1e3a8a;color:#fff;cursor:pointer">Ver</button>`
         list.appendChild(header)
-
-        const inner = document.createElement('div')
-        inner.className = 'tema-inner'
-
-        if (Array.isArray(grupo.tests)) {
-          grupo.tests.forEach(t => {
-            const row = document.createElement('div')
-            row.className = 'test-item'
-            row.innerHTML = `<span>${t.name}</span>`
-            row.addEventListener('click', () => this.openTest(grupo.tema, t.name, type))
-            inner.appendChild(row)
-          })
-        } else if (grupo.name && grupo.tema) {
-          const row = document.createElement('div')
-          row.className = 'test-item'
-          row.innerHTML = `<span>${grupo.name}</span>`
-          row.addEventListener('click', () => this.openTest(grupo.tema, grupo.name, type))
-          inner.appendChild(row)
-        }
-
-        list.appendChild(inner)
-
-        header.addEventListener('click', () => {
-          const open = inner.style.display === 'block'
-          inner.style.display = open ? 'none' : 'block'
-          header.classList.toggle('open', !open)
-        })
       })
     } catch (err) {
       console.error('❌ Error cargando tests:', err)
@@ -570,6 +528,115 @@ class AssistantForm extends HTMLElement {
 
     overlay.querySelector('.close-btn').addEventListener('click', () => overlay.remove())
     overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove() })
+  }
+
+  showGroupModal(tema, tests = [], type = 'trained') {
+    const old = document.querySelector('.test-overlay')
+    if (old) old.remove()
+
+    const overlay = document.createElement('div')
+    overlay.className = 'test-overlay'
+    overlay.innerHTML = `
+      <div class="test-modal">
+        <div class="test-modal-header">
+          <span>${tema}</span>
+          <button class="close-btn">×</button>
+        </div>
+        <div class="test-modal-content"></div>
+      </div>
+    `
+    document.body.appendChild(overlay)
+
+    const container = overlay.querySelector('.test-modal-content')
+    if (Array.isArray(tests) && tests.length) {
+      tests.forEach(t => {
+        const row = document.createElement('div')
+        row.className = 'test-item'
+        row.style.display = 'flex'
+        row.style.justifyContent = 'space-between'
+        row.style.alignItems = 'center'
+        row.style.margin = '6px 0'
+        row.innerHTML = `<span style="font-weight:600;color:#1e3a8a">${t.name}</span> <div style="display:flex;gap:8px"><button type="button" class="btn btn-primary open-test">Abrir</button><button type="button" class="btn download-test">Descargar</button></div>`
+        container.appendChild(row)
+
+        row.querySelector('.open-test').addEventListener('click', () => {
+          this.openTest(tema, t.name, type)
+          overlay.remove()
+        })
+
+        row.querySelector('.download-test').addEventListener('click', () => {
+          this.downloadTest(tema, t.name, type)
+        })
+      })
+    } else {
+      container.innerHTML = '<p>No hay tests en este tema.</p>'
+    }
+
+    overlay.querySelector('.close-btn').addEventListener('click', () => overlay.remove())
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove() })
+  }
+
+  toggleInlinePanel(header, tests = [], type = 'trained') {
+    // If there's already an expanded panel immediately after header, remove it (toggle close)
+    const next = header.nextElementSibling
+    if (next && next.classList && next.classList.contains('expanded-panel')) {
+      next.remove()
+      return
+    }
+
+    // Remove any other open panels in the list to keep UI tidy
+    const other = this.shadow.querySelectorAll('.expanded-panel')
+    other.forEach(p => p.remove())
+
+    // Create a new panel and insert after header
+    const panel = document.createElement('div')
+    panel.className = 'expanded-panel'
+
+    if (!Array.isArray(tests) || tests.length === 0) {
+      panel.innerHTML = '<div class="expanded-row">No hay tests en este tema.</div>'
+      header.parentNode.insertBefore(panel, header.nextSibling)
+      return
+    }
+
+    tests.forEach(t => {
+      const row = document.createElement('div')
+      row.className = 'expanded-row'
+      const nameSpan = document.createElement('span')
+      nameSpan.textContent = t.name || (t.title || 'Sin nombre')
+      nameSpan.style.fontWeight = '600'
+      nameSpan.style.color = '#1e3a8a'
+
+      const actions = document.createElement('div')
+      actions.style.display = 'flex'
+      actions.style.gap = '8px'
+
+      const openBtn = document.createElement('button')
+      openBtn.type = 'button'
+      openBtn.className = 'btn btn-primary open-test'
+      openBtn.textContent = 'Abrir'
+      openBtn.addEventListener('click', () => {
+        this.openTest(header.dataset.tema || header.dataset.name || '', t.name || t.title || '', type)
+      })
+
+      const downloadBtn = document.createElement('button')
+      downloadBtn.type = 'button'
+      downloadBtn.className = 'btn download-test'
+      downloadBtn.textContent = 'Descargar'
+      downloadBtn.addEventListener('click', () => {
+        this.downloadTest(header.dataset.tema || header.dataset.name || '', t.name || t.title || '', type)
+      })
+
+      actions.appendChild(openBtn)
+      actions.appendChild(downloadBtn)
+
+      row.appendChild(nameSpan)
+      row.appendChild(actions)
+      panel.appendChild(row)
+    })
+
+    header.parentNode.insertBefore(panel, header.nextSibling)
+    // Scroll panel into view inside sidebar if needed
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
   }
 
   resetForm() {

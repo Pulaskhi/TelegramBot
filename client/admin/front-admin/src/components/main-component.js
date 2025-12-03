@@ -15,6 +15,7 @@ class Main extends HTMLElement {
 
       * { box-sizing: border-box; }
 
+      /* Default layout: content + right panel */
       main {
         display: grid;
         grid-template-columns: 1fr 420px; /* content + right panel (form/details) */
@@ -24,6 +25,27 @@ class Main extends HTMLElement {
         margin-left: var(--sidebar-width);
         margin-top: var(--header-height);
         min-height: calc(100vh - var(--header-height));
+      }
+
+      /* Fullscreen mode: when the host element has class 'fullscreen' make the inner main occupy whole viewport
+         and use a single column layout so slotted full-page components can take entire width/height. */
+      :host(.fullscreen) main {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        min-height: 100vh;
+      }
+
+      /* Make slotted children expand when in fullscreen */
+      :host(.fullscreen) ::slotted(*) {
+        width: 100%;
+        height: 100vh;
+        display: block;
+        padding: 0;
+        margin: 0;
       }
 
       @media (max-width: 1000px){

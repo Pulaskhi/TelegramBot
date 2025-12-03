@@ -101,9 +101,11 @@ class UploadFileButton extends HTMLElement {
           width: 135px;
         }
 
+        /* In single mode we don't absolutely position the thumbnail to avoid overlapping other content
+           and collapsing the layout. Instead keep it in-flow so container height adjusts normally. */
         .upload-file.single {
-          position: absolute;
-          z-index: 2001;
+          position: static;
+          z-index: auto;
         }
 
         .upload-file span {
@@ -161,7 +163,7 @@ class UploadFileButton extends HTMLElement {
       </style>
 
       <div class="upload-file-container">
-        <button class="square-button"></button>
+        <button type="button" class="square-button"></button>
       </div>
     `
 
@@ -208,6 +210,13 @@ class UploadFileButton extends HTMLElement {
     fileContainer.appendChild(span)
     uploadfileContainer.appendChild(fileContainer)
 
+    // If quantity is single, remove or hide the original square button so the thumbnail stays in flow
+    // and doesn't overlap other elements. The delete handler will recreate it when needed.
+    if (this.quantity === 'single') {
+      const square = this.shadow.querySelector('.square-button')
+      if (square) square.remove()
+    }
+
     uploadfileContainer.addEventListener('click', (event) => {
       file = { ...file, filename: fileContainer.dataset.filename }
       store.dispatch(setFileGallery(file))
@@ -223,6 +232,7 @@ class UploadFileButton extends HTMLElement {
         const uploadFileContainer = this.shadow.querySelector('.upload-file-container')
         uploadFileContainer.innerHTML = ''
         const squareButton = document.createElement('button')
+        squareButton.type = 'button'
         squareButton.classList.add('square-button')
         uploadFileContainer.appendChild(squareButton)
         squareButton.innerHTML = this.icons[this.getAttribute('icon')]
