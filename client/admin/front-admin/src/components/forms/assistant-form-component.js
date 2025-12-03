@@ -39,7 +39,7 @@ class AssistantForm extends HTMLElement {
       .panel { display:flex; flex-direction:column; height:100%; padding:18px; gap:12px; }
 
       /* Grid layout: left sidebar and right preview. Ensure both columns can scroll internally. */
-      .grid { display:grid; grid-template-columns: 320px 1fr; gap:18px; height: calc(100vh - 72px); min-height:0 }
+      .grid { display:grid; grid-template-columns: 380px 1fr; gap:18px; height: calc(100vh - 72px); min-height:0 }
 
       /* Sidebar form */
       .sidebar { background: #fff; border-radius:12px; padding:16px; box-shadow: 0 6px 20px rgba(2,6,23,0.06); display:flex; flex-direction:column; gap:12px; min-height:0 }
@@ -57,6 +57,7 @@ class AssistantForm extends HTMLElement {
 
       .test-list { display:flex; flex-direction:column; gap:8px; overflow:auto; padding:6px; border-radius:8px; border:1px solid #eef2ff; min-height:0 }
       .tema-header { display:flex; align-items:center; gap:10px; padding:10px; border-radius:8px; background:#eef2ff; }
+      .tema-title{ font-weight:700; color:#1e3a8a; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:calc(100% - 48px); }
       .open-group-btn { margin-left:auto; padding:8px 12px; border-radius:8px; border:none; background:#1e3a8a; color:#fff; cursor:pointer }
       /* Inline expanded panel under a tema header */
       .expanded-panel { background:#fff; border:1px solid #e6eefc; border-radius:8px; margin:8px 0 6px 0; padding:8px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); }
@@ -135,7 +136,6 @@ class AssistantForm extends HTMLElement {
             </label>
             <div style="margin-left:auto;display:flex;gap:8px">
               <button class="btn" id="btnStart">Iniciar Test</button>
-              <button class="btn" id="btnDownload">Descargar</button>
             </div>
           </div>
         </section>
@@ -156,26 +156,7 @@ class AssistantForm extends HTMLElement {
       if (e.target.closest('#btnCreateGenerateAuto')) {
         this.generateAndShowTest(true)
       }
-      if (e.target.closest('#btnDownload')) {
-        // download the current inline test as JSON
-        const preview = this.shadow.querySelector('#previewArea')
-        const tc = preview.querySelector('test-component')
-        if (!tc) {
-          document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'No hay test para descargar', type: 'error' } }))
-          return
-        }
-        const json = tc.getAttribute('data-questions') || '[]'
-        const tema = tc.getAttribute('data-tema') || 'test'
-        const blob = new Blob([json], { type: 'application/json' })
-        const url = URL.createObjectURL(blob)
-        const a = document.createElement('a')
-        a.href = url
-        a.download = `${tema.replace(/[^a-z0-9\-_]/gi, '_')}_test.json`
-        document.body.appendChild(a)
-        a.click()
-        a.remove()
-        URL.revokeObjectURL(url)
-      }
+      // download button removed from UI; no handler needed
       if (e.target.closest('#btnStart')) {
         const preview = this.shadow.querySelector('#previewArea')
         const tc = preview.querySelector('test-component')
@@ -476,8 +457,8 @@ class AssistantForm extends HTMLElement {
         header.dataset.tests = JSON.stringify(testsArr || [])
         header.dataset.type = type
 
-        // show a title and a small action button to open a modal listing the tests
-        header.innerHTML = `<span class="tema-title">${temaText}</span> <button type="button" class="open-group-btn" style="margin-left:auto;padding:6px 10px;border-radius:6px;border:none;background:#1e3a8a;color:#fff;cursor:pointer">Ver</button>`
+        // show a title and a small action button to open a modal listing the tests (arrow)
+        header.innerHTML = `<span class="tema-title">${temaText}</span> <button type="button" class="open-group-btn" style="margin-left:auto;padding:6px 10px;border-radius:6px;border:none;background:#1e3a8a;color:#fff;cursor:pointer;font-weight:700">›</button>`
         list.appendChild(header)
       })
     } catch (err) {
@@ -556,16 +537,12 @@ class AssistantForm extends HTMLElement {
         row.style.justifyContent = 'space-between'
         row.style.alignItems = 'center'
         row.style.margin = '6px 0'
-        row.innerHTML = `<span style="font-weight:600;color:#1e3a8a">${t.name}</span> <div style="display:flex;gap:8px"><button type="button" class="btn btn-primary open-test">Abrir</button><button type="button" class="btn download-test">Descargar</button></div>`
+        row.innerHTML = `<span style="font-weight:600;color:#1e3a8a">${t.name}</span> <div style="display:flex;gap:8px"><button type="button" class="open-test" style="padding:6px 10px;border-radius:6px;border:1px solid rgba(15,23,42,0.06);background:transparent;cursor:pointer;font-weight:700">›</button></div>`
         container.appendChild(row)
 
         row.querySelector('.open-test').addEventListener('click', () => {
           this.openTest(tema, t.name, type)
           overlay.remove()
-        })
-
-        row.querySelector('.download-test').addEventListener('click', () => {
-          this.downloadTest(tema, t.name, type)
         })
       })
     } else {
@@ -612,28 +589,29 @@ class AssistantForm extends HTMLElement {
 
       const openBtn = document.createElement('button')
       openBtn.type = 'button'
-      openBtn.className = 'btn btn-primary open-test'
-      openBtn.textContent = 'Abrir'
+      openBtn.className = 'open-test'
+      openBtn.style.padding = '6px 10px'
+      openBtn.style.borderRadius = '6px'
+      openBtn.style.border = '1px solid rgba(15,23,42,0.06)'
+      openBtn.style.background = 'transparent'
+      openBtn.style.cursor = 'pointer'
+      openBtn.style.fontWeight = '700'
+      openBtn.textContent = '›'
       openBtn.addEventListener('click', () => {
         this.openTest(header.dataset.tema || header.dataset.name || '', t.name || t.title || '', type)
       })
 
-      const downloadBtn = document.createElement('button')
-      downloadBtn.type = 'button'
-      downloadBtn.className = 'btn download-test'
-      downloadBtn.textContent = 'Descargar'
-      downloadBtn.addEventListener('click', () => {
-        this.downloadTest(header.dataset.tema || header.dataset.name || '', t.name || t.title || '', type)
-      })
-
       actions.appendChild(openBtn)
-      actions.appendChild(downloadBtn)
 
       row.appendChild(nameSpan)
       row.appendChild(actions)
       panel.appendChild(row)
     })
 
+    // limit height to show ~4 items and allow internal scroll
+    panel.style.maxHeight = '200px'
+    panel.style.overflow = 'auto'
+    panel.style.boxSizing = 'border-box'
     header.parentNode.insertBefore(panel, header.nextSibling)
     // Scroll panel into view inside sidebar if needed
     panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
