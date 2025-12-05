@@ -10,6 +10,14 @@ module.exports = class OpenAIService {
     this.threadId = null
     this.messages = null
     this.answer = null
+    // modelo configurable (por defecto gpt-5-nano)
+    this.model = process.env.OPENAI_MODEL || 'gpt-5-nano'
+    // helper de debug para llamadas a OpenAI
+    this._dbg = (msg, meta = {}) => {
+      try {
+        console.log('[OpenAI DEBUG]', msg, Object.keys(meta).length ? JSON.stringify(meta) : '')
+      } catch (e) {}
+    }
   }
 
   /** ======================
@@ -164,12 +172,13 @@ ${text}
 """
 `.trim();
 
+  this._dbg('generateQuestionsFromText -> calling chat.completions', { model: this.model, tema, textLen: (text||'').length })
   const response = await this.openai.chat.completions.create({
-    model: 'gpt-4o-mini',
-    temperature: 0.8,
+    model: this.model,
+    temperature: 0.6,
     max_tokens: 2000,
     messages: [
-      { role: "system", content: "Especialista en pedagogía para bomberos" },
+      { role: "system", content: "Especialista en pedagogía para bomberos. Responde SOLO JSON válido." },
       { role: "user", content: prompt }
     ]
   });
@@ -177,10 +186,22 @@ ${text}
   let raw = response.choices?.[0]?.message?.content || "[]";
   raw = raw.replace(/```json|```/g, "").trim();
 
+  // robust parsing: intentar parse directo, si falla extraer primer bloque [ ... ]
   try {
     return JSON.parse(raw);
   } catch (err) {
-    console.error("❌ JSON inválido devuelto por OpenAI:", raw);
+    const s = raw.indexOf('[');
+    const e = raw.lastIndexOf(']');
+    if (s !== -1 && e !== -1 && e > s) {
+      try {
+        const slice = raw.slice(s, e + 1);
+        return JSON.parse(slice);
+      } catch (err2) {
+        this._dbg('generateQuestionsFromText -> JSON parse failed after slicing', { err: err2.message })
+      }
+    }
+    this._dbg('generateQuestionsFromText -> raw response', { rawPreview: raw.slice(0,200) })
+    console.error("❌ JSON inválido devuelto por OpenAI:", raw.slice(0,1000));
     throw new Error("JSON de test mal formado");
   }
 }
@@ -222,11 +243,13 @@ NO GENERES flashcards de las preguntas directamente.
 USA las preguntas como GUÍA para extraer conceptos clave del tema.
 `.trim();
 
+    this._dbg('generateFlashcardsFromQuestions -> calling chat.completions', { model: this.model, tema, questions: Array.isArray(questions)?questions.length:0 })
     const response = await this.openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      temperature: 0.8,
+      model: this.model,
+      temperature: 0.6,
+      max_tokens: 1600,
       messages: [
-        { role: "system", content: "Eres un experto en pedagogía y oposiciones de bomberos." },
+        { role: "system", content: "Eres un experto en pedagogía y oposiciones de bomberos. Responde SOLO JSON válido." },
         { role: "user", content: prompt }
       ]
     });
@@ -234,16 +257,19 @@ USA las preguntas como GUÍA para extraer conceptos clave del tema.
     let raw = response.choices?.[0]?.message?.content || "[]";
     raw = raw.replace(/```json|```/g, "").trim();
 
-    // Validar JSON
-    let data;
+    // robust parsing
     try {
-      data = JSON.parse(raw);
+      return JSON.parse(raw);
     } catch (err) {
-      console.error("❌ JSON inválido devuelto por OpenAI:", raw);
+      const s = raw.indexOf('[');
+      const e = raw.lastIndexOf(']');
+      if (s !== -1 && e !== -1 && e > s) {
+        try { return JSON.parse(raw.slice(s, e + 1)) } catch (e2) {}
+      }
+      this._dbg('generateFlashcardsFromQuestions -> raw response preview', { rawPreview: raw.slice(0,200) })
+      console.error("❌ JSON inválido devuelto por OpenAI:", raw.slice(0,1000));
       throw new Error("OpenAI devolvió un JSON mal formado");
     }
-
-    return data; // 🔥 IMPORTANTE: aquí SI devuelve 👍
 
   } catch (err) {
     console.error("❌ Error en generateFlashcardsFromQuestions:", err);
@@ -274,14 +300,16 @@ sin depender de preguntas tipo test, SOLO teoría clave bien explicada.
 Texto base del PDF:
 """${textBase}"""
 
-Genera entre 15 y 25 flashcards, bien organizadas y variadas.
+Genera entre 50 flashcards, bien organizadas y variadas.
 `.trim();
 
+  this._dbg('generateFlashcardsFromTopicOnly -> calling chat.completions', { model: this.model, tema, textLen: (textBase||'').length })
   const response = await this.openai.chat.completions.create({
-    model: "gpt-4o-mini",
-    temperature: 0.8,
+    model: this.model,
+    temperature: 0.5,
+    max_tokens: 1800,
     messages: [
-      { role: "system", content: "Experto en pedagogía y memory training para oposiciones." },
+      { role: "system", content: "Experto en pedagogía y memory training para oposiciones. Responde SOLO JSON válido." },
       { role: "user", content: prompt }
     ]
   });
@@ -292,7 +320,13 @@ Genera entre 15 y 25 flashcards, bien organizadas y variadas.
   try {
     return JSON.parse(raw);
   } catch (err) {
-    console.error("❌ JSON inválido devuelto por OpenAI:", raw);
+    const s = raw.indexOf('[');
+    const e = raw.lastIndexOf(']');
+    if (s !== -1 && e !== -1 && e > s) {
+      try { return JSON.parse(raw.slice(s, e + 1)) } catch (e2) {}
+    }
+    this._dbg('generateFlashcardsFromTopicOnly -> raw response preview', { rawPreview: raw.slice(0,200) })
+    console.error("❌ JSON inválido devuelto por OpenAI:", raw.slice(0,1000));
     throw new Error("JSON de flashcards mal formado");
   }
 }

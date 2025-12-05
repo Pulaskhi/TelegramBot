@@ -1,0 +1,703 @@
+{
+  "tema": "TEMA-15",
+  "fecha": "2025-12-04T09:49:15.329Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es un efecto positivo de la insularidad en la economía de Mallorca?",
+      "opciones": {
+        "A": "Aumento de los costes de transporte",
+        "B": "Desarrollo de industrias pesadas",
+        "C": "Atractivo turístico del hecho insular",
+        "D": "Dificultades en el acceso a servicios"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué desafío presenta la insularidad para los servicios en Mallorca?",
+      "opciones": {
+        "A": "Mayor número de servicios disponibles",
+        "B": "Menos servicios y mayores dificultades de acceso",
+        "C": "Facilidad de acceso a servicios especializados",
+        "D": "Desarrollo económico acelerado"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué implica la insularidad en términos de transporte para Mallorca?",
+      "opciones": {
+        "A": "Reducción de costes de transporte",
+        "B": "Facilidad de exportación de productos",
+        "C": "Perjuicio económico por costes de transporte",
+        "D": "Independencia del transporte marítimo"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes características es típica de la biología de las Islas Baleares debido a su condición insular?",
+      "opciones": {
+        "A": "Presencia de especies invasoras",
+        "B": "Uniformidad de especies",
+        "C": "Endemismos y subespecies",
+        "D": "Baja diversidad biológica"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué estructura administrativa es específica de cada una de las Islas Baleares?",
+      "opciones": {
+        "A": "Consejos Insulares",
+        "B": "Gobierno Balear",
+        "C": "Consejo de Ministros",
+        "D": "Asamblea Nacional"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elemento cultural se menciona que ha ido desapareciendo en las Islas Baleares debido a la globalización?",
+      "opciones": {
+        "A": "Comidas típicas",
+        "B": "Carácter isleño",
+        "C": "Costumbres locales",
+        "D": "Diferencias dialectales"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes áreas pertenece al núcleo principal de Costitx?",
+      "opciones": {
+        "A": "la Portellada",
+        "B": "la Tanca Gran",
+        "C": "Son Coll",
+        "D": "la Raval"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué área de Calvià está clasificada como polígono industrial?",
+      "opciones": {
+        "A": "Son Bugadelles",
+        "B": "Bendinat",
+        "C": "Magaluf",
+        "D": "el Capdellà"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué localidad tiene como único núcleo a Fornalutx?",
+      "opciones": {
+        "A": "Fornalutx",
+        "B": "Búger",
+        "C": "Maria",
+        "D": "Lloret de Vistalegre"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes áreas no es una de las cinco comarcas distinguidas por V.M. Rosselló Verger en 1964?",
+      "opciones": {
+        "A": "Montaña",
+        "B": "Raiguer",
+        "C": "Pla de Levant",
+        "D": "Sierra",
+        "E": "Migjorn"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elemento distingue la comarcalización de B. Barceló de 1968a respecto a la de V.M. Rosselló Verger?",
+      "opciones": {
+        "A": "Incluye aspectos físicos",
+        "B": "Considera aspectos históricos",
+        "C": "Excluye aspectos urbanos",
+        "D": "Solo se basa en aspectos demográficos"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes polígonos industriales se encuentra en Palma?",
+      "opciones": {
+        "A": "Can Valero",
+        "B": "Can Peublanc",
+        "C": "Son Robiols",
+        "D": "Can Tro"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué característica principal distingue a Palma en la comarcalización del mapa topográfico nacional?",
+      "opciones": {
+        "A": "Su peso demográfico en el conjunto insular",
+        "B": "Su ubicación geográfica central",
+        "C": "Su baja densidad poblacional",
+        "D": "Su economía basada en la agricultura"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué fenómeno ha influido significativamente en la estructura económica y demográfica de las islas mencionadas en el texto?",
+      "opciones": {
+        "A": "La industrialización masiva",
+        "B": "El turismo de masas",
+        "C": "El desarrollo tecnológico",
+        "D": "La migración interna"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el término utilizado para describir la gran concentración de servicios y población en Palma en detrimento de otras zonas?",
+      "opciones": {
+        "A": "Urbanización",
+        "B": "Macrocefalia",
+        "C": "Centralización",
+        "D": "Metropolización"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el municipio menos poblado de Mallorca y cuántos habitantes tiene según el censo de 2019?",
+      "opciones": {
+        "A": "Escorca, 212 habitantes",
+        "B": "Felanitx, 17.789 habitantes",
+        "C": "Pollença, 16.283 habitantes",
+        "D": "Alcúdia, 20.241 habitantes"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué fenómeno ha contribuido a la aparición de nuevos focos de población en Mallorca?",
+      "opciones": {
+        "A": "El desarrollo industrial",
+        "B": "El crecimiento del sector primario",
+        "C": "El turismo y la terciarización",
+        "D": "La agricultura intensiva"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuántos municipios componen el área metropolitana de Palma de Mallorca?",
+      "opciones": {
+        "A": "3 municipios",
+        "B": "4 municipios",
+        "C": "5 municipios",
+        "D": "6 municipios"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué ley regula la declaración de espacios naturales protegidos en las Islas Baleares?",
+      "opciones": {
+        "A": "Ley 5/2005, de 26 de mayo",
+        "B": "Ley 3/1998, de 12 de marzo",
+        "C": "Ley 7/2001, de 31 de julio",
+        "D": "Ley 8/2010, de 15 de abril"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie total del Parque Nacional de Cabrera?",
+      "opciones": {
+        "A": "10.021,51 hectáreas",
+        "B": "8.705,26 hectáreas",
+        "C": "12.000,00 hectáreas",
+        "D": "9.500,30 hectáreas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué figura de protección no se menciona entre los espacios naturales protegidos?",
+      "opciones": {
+        "A": "Reserva de la biosfera",
+        "B": "Parque nacional",
+        "C": "Monumento natural",
+        "D": "Paisaje protegido",
+        "E": "Lugar de interés científico"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie total del Parque Natural de S'Albufera de Mallorca?",
+      "opciones": {
+        "A": "1.646,48 hectáreas terrestres",
+        "B": "750,25 hectáreas terrestres",
+        "C": "274,39 hectáreas terrestres",
+        "D": "No se especifica"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué elementos contribuyen a la diversidad paisajística del Parque Natural de Mondragó?",
+      "opciones": {
+        "A": "Bosques de acebuche y pinar, estanques y costa recortada",
+        "B": "Islotes y aspectos bioecológicos",
+        "C": "Cordón de dunas y formaciones de prado",
+        "D": "Solo bosques de acebuche y campos de cultivo"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué entidades gestionan conjuntamente el Parque Natural de Sa Dragonera?",
+      "opciones": {
+        "A": "Consejo de Mallorca y Gobierno de las Islas Baleares",
+        "B": "Gobierno de España y Consejo de Mallorca",
+        "C": "Consejo Insular de Menorca y Gobierno de las Islas Baleares",
+        "D": "No se gestiona conjuntamente"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie total del Parque Natural de la Península de Llevant en Mallorca?",
+      "opciones": {
+        "A": "1.407,09 hectáreas terrestres",
+        "B": "1.123,00 hectáreas marinas",
+        "C": "63.084,00 hectáreas totales",
+        "D": "1.407,09 hectáreas totales"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué tipo de hábitats predominan en la Serra de Tramuntana?",
+      "opciones": {
+        "A": "Encinares y acebuchales",
+        "B": "Pinares y carrizos",
+        "C": "Olivares y encinares",
+        "D": "Encinares, pinares y carrizos"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica destaca de la Reserva Natural de S'Albufereta?",
+      "opciones": {
+        "A": "Su baja biodiversidad",
+        "B": "Su ubicación en una zona urbana",
+        "C": "Su alta biodiversidad",
+        "D": "Su agua proviene exclusivamente del mar"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie total del Monumento Natural del Torrent de Pareis en Mallorca?",
+      "opciones": {
+        "A": "445,81 hectáreas",
+        "B": "211,43 hectáreas",
+        "C": "50,19 hectáreas",
+        "D": "300 hectáreas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué fenómeno hidrológico caracteriza al Monumento Natural de Ses Fonts Ufanes?",
+      "opciones": {
+        "A": "Afloramientos intermitentes",
+        "B": "Cañón cárstico",
+        "C": "Torrentes continuos",
+        "D": "Erosión costera"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cómo se clasifica el terreno forestal en las Islas Baleares desde el punto de vista urbanístico?",
+      "opciones": {
+        "A": "Suelos rústicos",
+        "B": "Suelos urbanos",
+        "C": "Terrenos agrícolas",
+        "D": "Zonas protegidas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de la superficie forestal de las Islas Baleares está dominado por pinares?",
+      "opciones": {
+        "A": "Casi 50%",
+        "B": "Aproximadamente 25%",
+        "C": "Alrededor de 17%",
+        "D": "Cerca del 70%"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es la comarca con el mayor porcentaje de superficie forestal en términos relativos en las Islas Baleares?",
+      "opciones": {
+        "A": "Sierra de Tramuntana",
+        "B": "Ponent",
+        "C": "Menorca",
+        "D": "Llevant",
+        "E": "Ibiza y Formentera"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué factor ha contribuido al descenso del número de superficie afectada por incendios forestales desde 1996?",
+      "opciones": {
+        "A": "Despacho automático de medios",
+        "B": "Incremento de la temperatura media",
+        "C": "Reducción de la superficie forestal",
+        "D": "Cambio en las especies de árboles predominantes"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de incendios forestales son provocados según los estudios?",
+      "opciones": {
+        "A": "Menos del 50%",
+        "B": "Alrededor del 80%",
+        "C": "Cerca del 100%",
+        "D": "Alrededor del 30%"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es un factor natural que aumenta la probabilidad de incendios forestales?",
+      "opciones": {
+        "A": "Tipo de vegetación",
+        "B": "Uso de maquinaria pesada",
+        "C": "Construcciones humanas",
+        "D": "Actividades recreativas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cómo influye el relieve en la propagación de incendios forestales?",
+      "opciones": {
+        "A": "Reduce la velocidad del fuego",
+        "B": "No tiene efecto",
+        "C": "Acelera la expansión del fuego",
+        "D": "Solo afecta en zonas llanas"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal medio utilizado para combatir incendios forestales en ciertas áreas según el texto?",
+      "opciones": {
+        "A": "Herramientas manuales",
+        "B": "Vehículos terrestres",
+        "C": "Medios aéreos",
+        "D": "Equipo de comunicación"
+      },
+      "correcta": "C",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué efecto de los incendios forestales es mencionado como difícilmente reversible?",
+      "opciones": {
+        "A": "Pérdida de suelo",
+        "B": "Muerte de especies animales",
+        "C": "Contaminación del agua",
+        "D": "Pérdida de vegetación"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la proporción aproximada de la población de Mallorca de origen extranjero?",
+      "opciones": {
+        "A": "Menos del 10%",
+        "B": "Más del 20%",
+        "C": "Alrededor del 15%",
+        "D": "Cerca del 30%"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el municipio mallorquín con la mayor proporción de población no nacida en España hasta la fecha indicada en el texto?",
+      "opciones": {
+        "A": "Deià",
+        "B": "Calvià",
+        "C": "Andratx",
+        "D": "Alcúdia"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes países no está mencionado como uno de los principales países de origen de la población extranjera en Mallorca?",
+      "opciones": {
+        "A": "Francia",
+        "B": "Alemania",
+        "C": "Marruecos",
+        "D": "Reino Unido"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de migración es predominante en el flujo Sur–Norte según el modelo migratorio de Mallorca?",
+      "opciones": {
+        "A": "Migración de retiro",
+        "B": "Migración económica laboral",
+        "C": "Migración turística",
+        "D": "Migración educativa"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué no se considera en las estimaciones de población estacional de un municipio?",
+      "opciones": {
+        "A": "Movimientos sin pernoctación por ocio",
+        "B": "Residencias de vacaciones",
+        "C": "Estancias en hoteles",
+        "D": "Personas que trabajan en el municipio"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes no es un polígono industrial mencionado en el texto?",
+      "opciones": {
+        "A": "PARCBIT",
+        "B": "SON ROSSINYOL",
+        "C": "CA NA LLORETA",
+        "D": "POLIGONO DE SOLLER"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué municipio tiene una alta proporción de habitantes originarios del Estado, cerca del 90%?",
+      "opciones": {
+        "A": "Marratxí",
+        "B": "Escorca",
+        "C": "Consejo",
+        "D": "Manacor"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes localidades de Mallorca tiene una población de 7845 habitantes según el texto?",
+      "opciones": {
+        "A": "Artá",
+        "B": "Bañalbufar",
+        "C": "Binisalem",
+        "D": "Búger"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué localidad está asociada con el nombre 'SON CASTELLÓ' en el texto?",
+      "opciones": {
+        "A": "Palma de Mallorca",
+        "B": "Inca",
+        "C": "Manacor",
+        "D": "Llucmajor"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "Según el texto, ¿cuál es la correcta correspondencia de 'SON PARDO'?",
+      "opciones": {
+        "A": "Palma de Mallorca",
+        "B": "Son Servera",
+        "C": "Santa María del Camí",
+        "D": "Pollença"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes localidades de Mallorca tiene la población más baja según los datos proporcionados?",
+      "opciones": {
+        "A": "Escorca",
+        "B": "Estellenchs",
+        "C": "Deyá",
+        "D": "Costitx"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la población aproximada de Palma de Mallorca?",
+      "opciones": {
+        "A": "Más de 400,000 habitantes",
+        "B": "Más de 300,000 habitantes",
+        "C": "Menos de 200,000 habitantes",
+        "D": "Menos de 100,000 habitantes"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué localidad de Menorca tiene una población más cercana a 5,000 habitantes?",
+      "opciones": {
+        "A": "Ciudadela",
+        "B": "Ferrerías",
+        "C": "Mercadal",
+        "D": "San Luis"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes municipios de Mallorca tiene la menor población según los datos proporcionados?",
+      "opciones": {
+        "A": "Sóller",
+        "B": "Son Servera",
+        "C": "Valldemossa",
+        "D": "Vilafranca de Bonany"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Según la comarcalización de B. Barceló (1968a), ¿cuántas unidades distingue para su estudio?",
+      "opciones": {
+        "A": "Cinco unidades",
+        "B": "Siete unidades",
+        "C": "Diez unidades",
+        "D": "Doce unidades"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué tipo de espacio natural protegido NO se menciona en el listado proporcionado?",
+      "opciones": {
+        "A": "Parque nacional",
+        "B": "Reserva marina",
+        "C": "Monumento natural",
+        "D": "Lugar de interés científico"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la característica principal del Parque Natural de Mondragó según el texto?",
+      "opciones": {
+        "A": "Diversidad de ambientes",
+        "B": "Ubicación en la Serra de Tramuntana",
+        "C": "Presencia de especies marinas",
+        "D": "Falta de biodiversidad"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué elemento natural separa a S'Albufera de Mallorca del mar?",
+      "opciones": {
+        "A": "Un río",
+        "B": "Un cordón de dunas",
+        "C": "Una barrera coralina",
+        "D": "Montañas"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de paisajes predominan en la Serra de Tramuntana?",
+      "opciones": {
+        "A": "Desérticos",
+        "B": "Forestales y agrícolas",
+        "C": "Urbanos",
+        "D": "Glaciares"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el fenómeno hidrológico más singular de Mallorca según las descripciones del tema?",
+      "opciones": {
+        "A": "Las fonts Ufanes",
+        "B": "Los torrentes de Pareis",
+        "C": "El macizo del Puig Tomir",
+        "D": "La Bahía de Pollença"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de la superficie forestal de las islas Baleares está dominado por pinos?",
+      "opciones": {
+        "A": "25%",
+        "B": "50%",
+        "C": "17%",
+        "D": "40%"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es la proporción de la población de origen extranjero en Mallorca que proviene de la Unión Europea?",
+      "opciones": {
+        "A": "Menos del 20%",
+        "B": "Casi la mitad",
+        "C": "Más del 30%",
+        "D": "Aproximadamente 25%"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes localidades no aparece en la TABLA_21 del TEMA-15?",
+      "opciones": {
+        "A": "CA NA LLORETA",
+        "B": "SON ROSSINYOL",
+        "C": "ES PUJOLS",
+        "D": "CAPDEPERA"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Según la TABLA_19, ¿qué tipo de migración se caracteriza por el retiro y el ocio?",
+      "opciones": {
+        "A": "Migración laboral de europeos",
+        "B": "Migración residencial no laboral",
+        "C": "Migración por vacaciones",
+        "D": "Migración económica"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué localidad está duplicada en la información de las TABLAS del TEMA-15?",
+      "opciones": {
+        "A": "SON SERVERA",
+        "B": "POLLENÇA",
+        "C": "PALMA DE MALLORCA",
+        "D": "Ninguna está duplicada"
+      },
+      "correcta": "C",
+      "dificultad": "dificil"
+    }
+  ]
+}

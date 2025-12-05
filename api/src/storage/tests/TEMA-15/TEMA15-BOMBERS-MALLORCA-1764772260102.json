@@ -1,0 +1,359 @@
+{
+  "tema": "TEMA-15",
+  "fecha": "2025-12-03T14:31:00.103Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es un efecto negativo de la insularidad en la economía de Mallorca?",
+      "opciones": {
+        "A": "Limitaciones en industrias de materias pesadas",
+        "B": "Mejora en la eficiencia del transporte",
+        "C": "Reducción en el coste de vida",
+        "D": "Aumento de la biodiversidad"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un impacto negativo de la insularidad en la economía de las islas?",
+      "opciones": {
+        "A": "Desarrollo de industrias pesadas",
+        "B": "Fomento del turismo local",
+        "C": "Mejora en la comunicación marítima",
+        "D": "Limitaciones en economías de aglomeración"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal impacto demográfico del turismo estacional en Mallorca?",
+      "opciones": {
+        "A": "Aumento de la densidad de población",
+        "B": "Disminución de la actividad industrial",
+        "C": "Reducción de zonas forestales",
+        "D": "Incremento de la importación de bienes"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal desafío para combatir incendios forestales en zonas insulares como Mallorca?",
+      "opciones": {
+        "A": "Escasez de recursos hídricos",
+        "B": "Acceso limitado por terreno",
+        "C": "Distancia de estaciones de bomberos",
+        "D": "Todos los anteriores"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un efecto directo del turismo estacional en la distribución poblacional de Mallorca?",
+      "opciones": {
+        "A": "Aumento de la población en zonas costeras",
+        "B": "Disminución uniforme de la población",
+        "C": "Aumento de la población en zonas industriales",
+        "D": "Reducción de la actividad turística"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cómo afecta la estacionalidad poblacional a la demanda de servicios de emergencia en Mallorca durante el verano?",
+      "opciones": {
+        "A": "Aumenta significativamente",
+        "B": "Disminuye ligeramente",
+        "C": "Se mantiene estable",
+        "D": "No hay datos disponibles"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes zonas turísticas de Mallorca requiere mayor atención en la prevención de incendios forestales durante la temporada alta de turismo?",
+      "opciones": {
+        "A": "Serra de Tramuntana",
+        "B": "Playa de Palma",
+        "C": "Cala Millor",
+        "D": "Todas por igual"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una desventaja de la localización industrial en Mallorca debido a la insularidad?",
+      "opciones": {
+        "A": "Menor coste de transporte",
+        "B": "Desarrollo de industrias pesadas",
+        "C": "Alto coste de importación de materias primas",
+        "D": "Fácil exportación de productos"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué factor es crucial en la planificación de emergencias en polígonos industriales insulares como Mallorca?",
+      "opciones": {
+        "A": "Acceso limitado a recursos",
+        "B": "Transporte de mercancías eficiente",
+        "C": "Proximidad a zonas residenciales",
+        "D": "Facilidad de evacuación"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un aspecto negativo de la insularidad en Mallorca relacionado con la economía?",
+      "opciones": {
+        "A": "Aumento del turismo",
+        "B": "Desarrollo de industrias pesadas",
+        "C": "Costes elevados de transporte",
+        "D": "Fácil acceso a materias primas"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una desventaja económica de la insularidad en Mallorca relacionada con el transporte de mercancías?",
+      "opciones": {
+        "A": "Mayor atractivo turístico",
+        "B": "Menor coste de transporte",
+        "C": "Aumento de los costes de importación y exportación",
+        "D": "Desarrollo de industrias pesadas"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un aspecto negativo de la insularidad económica en Mallorca?",
+      "opciones": {
+        "A": "Costes elevados de transporte",
+        "B": "Aumento del turismo",
+        "C": "Mejora en la comunicación marítima",
+        "D": "Desarrollo de industrias pesadas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un aspecto negativo de la insularidad en Mallorca desde el punto de vista económico?",
+      "opciones": {
+        "A": "Atractivo turístico",
+        "B": "Desarrollo de industrias pesadas",
+        "C": "Creación de industrias para mercado interior",
+        "D": "Mejora en la comunicación marítima"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un aspecto positivo de la insularidad para las islas en términos turísticos?",
+      "opciones": {
+        "A": "Aumento de los costes de transporte",
+        "B": "Desarrollo de industrias pesadas",
+        "C": "Atractivo turístico del hecho insular",
+        "D": "Menor acceso a servicios especializados"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un aspecto positivo de la insularidad para la economía de las islas?",
+      "opciones": {
+        "A": "Creación de industrias para un mercado interior protegido",
+        "B": "Desarrollo de industrias de materias pesadas",
+        "C": "Reducción de costes de transporte",
+        "D": "Mayor número de servicios disponibles"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una consecuencia negativa de la insularidad en términos económicos para las islas Baleares?",
+      "opciones": {
+        "A": "Aumento del turismo",
+        "B": "Desarrollo de industrias pesadas",
+        "C": "Costes elevados de transporte",
+        "D": "Mejora en la biodiversidad"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes localidades de Mallorca no cuenta con polígonos industriales mencionados en la lista proporcionada?",
+      "opciones": {
+        "A": "Inca",
+        "B": "Calvià",
+        "C": "Lloseta",
+        "D": "Fornalutx"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes localidades de Mallorca no tiene núcleos industriales según la información proporcionada?",
+      "opciones": {
+        "A": "Lloret de Vistalegre",
+        "B": "Inca",
+        "C": "Marratxí",
+        "D": "Manacor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la comarca de Mallorca que no forma parte de la comarcalización de B. Barceló de 1968a?",
+      "opciones": {
+        "A": "Montaña",
+        "B": "El Pariatge",
+        "C": "El Pla",
+        "D": "La Serra"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué fenómeno describe la concentración de servicios y población en Palma en detrimento de otras áreas?",
+      "opciones": {
+        "A": "Macrocéfalia",
+        "B": "Microcefalia",
+        "C": "Urbanización",
+        "D": "Descentralización"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el municipio menos poblado de Mallorca?",
+      "opciones": {
+        "A": "Escorca",
+        "B": "Pollença",
+        "C": "Alcúdia",
+        "D": "Felanitx"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes municipios no forma parte del área metropolitana de Palma de Mallorca?",
+      "opciones": {
+        "A": "Manacor",
+        "B": "Calviá",
+        "C": "Marratxí",
+        "D": "Llucmajor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el municipio menos poblado de Mallorca según los datos de 2019?",
+      "opciones": {
+        "A": "Escorca",
+        "B": "Pollença",
+        "C": "Felanitx",
+        "D": "Alcúdia"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué ley regula la declaración de espacios naturales protegidos en las Islas Baleares?",
+      "opciones": {
+        "A": "Ley 5/2005 de 26 de mayo",
+        "B": "Ley 3/2004 de 15 de marzo",
+        "C": "Ley 7/2007 de 9 de julio",
+        "D": "Ley 8/2010 de 31 de diciembre"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie total del Parque Nacional de Cabrera, incluyendo áreas marinas y terrestres?",
+      "opciones": {
+        "A": "10.021,51 hectáreas",
+        "B": "8.705,26 hectáreas",
+        "C": "1.316,25 hectáreas",
+        "D": "9.021,51 hectáreas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie terrestre del Parque Natural de Mondragó?",
+      "opciones": {
+        "A": "750,25 hectáreas",
+        "B": "1.646,48 hectáreas",
+        "C": "274,39 hectáreas",
+        "D": "No especificado"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie total del Parque Natural de la Península de Llevant en Mallorca?",
+      "opciones": {
+        "A": "1.407,09 hectáreas terrestres",
+        "B": "274,39 hectáreas terrestres",
+        "C": "63.084,00 hectáreas",
+        "D": "90 km de largo"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de la superficie forestal de las Islas Baleares está dominada por el pino?",
+      "opciones": {
+        "A": "Casi 50%",
+        "B": "25%",
+        "C": "17%",
+        "D": "85%"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes factores NO ha contribuido a la disminución de superficie afectada por incendios forestales en los últimos años?",
+      "opciones": {
+        "A": "Despacho automático de medios",
+        "B": "Conocimiento del territorio",
+        "C": "Reducción de la vegetación",
+        "D": "Prevención forestal en invierno"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el porcentaje aproximado de población de origen extranjero en Mallorca actualmente?",
+      "opciones": {
+        "A": "Menos del 10%",
+        "B": "Entre 10% y 20%",
+        "C": "Más del 20%",
+        "D": "Más del 50%"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué no se considera en el cálculo de la población estacional de un municipio según el INE?",
+      "opciones": {
+        "A": "Movimientos sin pernoctación por ocio",
+        "B": "Residencias de veraneo",
+        "C": "Estancias en hoteles",
+        "D": "Visitas por motivos laborales"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes tipos de espacios naturales protegidos permite una protección integral?",
+      "opciones": {
+        "A": "Parque nacional",
+        "B": "Paraje natural",
+        "C": "Monumento natural",
+        "D": "Reserva natural integral"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    }
+  ]
+}

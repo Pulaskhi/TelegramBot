@@ -1,0 +1,1957 @@
+{
+  "tema": "TEMA-2",
+  "fecha": "2025-12-04T09:20:17.940Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál de los siguientes agentes extintores es más efectivo para fuegos de clase F?",
+      "opciones": {
+        "A": "Agua",
+        "B": "Espuma",
+        "C": "Polvos químicos para metales",
+        "D": "CO2",
+        "E": "Gases inertes"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué propiedad del agua la hace limitada como agente extintor en ciertos fuegos?",
+      "opciones": {
+        "A": "Conductividad eléctrica",
+        "B": "Viscosidad",
+        "C": "Color",
+        "D": "Olor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la extinción de incendios, ¿qué efecto tienen los halones sobre el fuego?",
+      "opciones": {
+        "A": "Enfriamiento",
+        "B": "Sofocación",
+        "C": "Catalización",
+        "D": "Neutralización"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elemento NO es parte del tetraedro del fuego según el documento?",
+      "opciones": {
+        "A": "Vapor de agua",
+        "B": "Combustible",
+        "C": "Comburente",
+        "D": "Energía de activación"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En la extinción de incendios, ¿qué método NO se menciona para eliminar el comburente?",
+      "opciones": {
+        "A": "Inertización",
+        "B": "Sofocación",
+        "C": "Catalización",
+        "D": "Ninguna de las anteriores"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una estrategia para desalimentar un incendio?",
+      "opciones": {
+        "A": "Aumentar la temperatura del combustible",
+        "B": "Diluir el combustible",
+        "C": "Aumentar el oxígeno disponible",
+        "D": "Usar agua como barrera"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué método de extinción de incendios implica reducir la concentración de oxígeno por debajo del 15%?",
+      "opciones": {
+        "A": "Inhibición de la reacción en cadena",
+        "B": "Inertización",
+        "C": "Enfriamiento",
+        "D": "Sofocación"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal característica del agua como agente extintor?",
+      "opciones": {
+        "A": "Alto calor específico",
+        "B": "Capacidad de sofocación",
+        "C": "Bloqueo de radicales libres",
+        "D": "Desplazamiento de CO2"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué tipo de chorro se utiliza para dispersar agua en pequeñas gotas en un incendio?",
+      "opciones": {
+        "A": "Chorro sólido",
+        "B": "Chorro pulverizado",
+        "C": "Chorro continuo",
+        "D": "Chorro ajustable"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal función del dióxido de carbono (CO2) como agente extintor?",
+      "opciones": {
+        "A": "Desplazar el oxígeno y sofocar la combustión",
+        "B": "Enfriar rápidamente el área afectada",
+        "C": "Actuar como barrera física contra el fuego",
+        "D": "Neutralizar productos químicos inflamables"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué efecto adverso puede tener el uso de polvo químico en incendios?",
+      "opciones": {
+        "A": "Puede corroer los materiales",
+        "B": "Reduce la visibilidad y genera residuos",
+        "C": "Aumenta la toxicidad del ambiente",
+        "D": "Puede reaccionar con el fuego generando más llamas"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de aditivo se añade al agua para mejorar su penetración en la extinción de incendios?",
+      "opciones": {
+        "A": "Espesantes",
+        "B": "Humectantes",
+        "C": "Anticongelantes",
+        "D": "Desinfectantes"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal función de los humectantes en la lucha contra incendios?",
+      "opciones": {
+        "A": "Reducir la tensión superficial del agua",
+        "B": "Aumentar la viscosidad del agua",
+        "C": "Generar una barrera térmica",
+        "D": "Convertir el agua en gel"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué propiedad caracteriza principalmente al agua con boratos usada en incendios forestales?",
+      "opciones": {
+        "A": "Forma una capa espesa que escurra lentamente",
+        "B": "Expande cristales de borato al calentarse",
+        "C": "Reduce la pérdida de presión en tuberías",
+        "D": "Aumenta la densidad del agua"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué efecto tienen los modificadores de flujo en el sistema de extinción de incendios?",
+      "opciones": {
+        "A": "Aumentan la turbulencia interna",
+        "B": "Disminuyen la turbulencia interna",
+        "C": "Convierten el agua en un gel",
+        "D": "Expanden cristales al calentarse"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de los modificadores de densidad en la lucha contra incendios?",
+      "opciones": {
+        "A": "Crear una capa no inflamable sobre líquidos inflamables",
+        "B": "Aumentar la visibilidad en el área del incendio",
+        "C": "Reducir la temperatura del fuego directamente",
+        "D": "Generar ruido para disuadir la propagación del fuego"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de retardante se utiliza para ataques directos en la extinción de incendios?",
+      "opciones": {
+        "A": "De corto plazo",
+        "B": "De largo plazo",
+        "C": "Espumógeno de baja expansión",
+        "D": "Agente emulsionante"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En la clasificación de las espumas según su expansión, ¿cuál es utilizada principalmente en espacios cerrados?",
+      "opciones": {
+        "A": "Espuma de baja expansión",
+        "B": "Espuma de media expansión",
+        "C": "Espuma de alta expansión",
+        "D": "Espuma de muy baja expansión"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de lanzas de espuma se recomienda para derrames de químicos?",
+      "opciones": {
+        "A": "Baja expansión",
+        "B": "Media expansión",
+        "C": "Alta expansión",
+        "D": "No se recomienda usar espuma"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de los proporcionadores Venturi en el uso de espumas extintoras?",
+      "opciones": {
+        "A": "Generar espuma de alta expansión",
+        "B": "Controlar la mezcla de forma precisa",
+        "C": "Ajustar la dosificación entre espumógeno y agua",
+        "D": "Reducir el tiempo de drenaje de la espuma"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica de los espumógenos fluoroproteínicos los hace únicos?",
+      "opciones": {
+        "A": "Son biodegradables",
+        "B": "Compatibles con polvos químicos",
+        "C": "De baja viscosidad",
+        "D": "Rechazan hidrocarburos"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué método de extinción de fuego implica la separación física de los combustibles del foco del incendio?",
+      "opciones": {
+        "A": "Desalimentación directa",
+        "B": "Desalimentación indirecta",
+        "C": "Sofocación",
+        "D": "Enfriamiento"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la extinción de fuegos, ¿qué se logra al disminuir la concentración de combustible por debajo del LII?",
+      "opciones": {
+        "A": "Dilución",
+        "B": "Sofocación",
+        "C": "Desalimentación",
+        "D": "Enfriamiento"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes no es una forma de extinguir un fuego latente o en forma de brasas?",
+      "opciones": {
+        "A": "Sofocación",
+        "B": "Separación",
+        "C": "Enfriamiento",
+        "D": "Aumento de oxígeno"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el efecto de recubrir el combustible con arena o espuma durante un incendio?",
+      "opciones": {
+        "A": "Aumenta la inflamabilidad del combustible",
+        "B": "Disminuye la temperatura del combustible",
+        "C": "Impide el contacto del combustible con el aire",
+        "D": "Genera gases tóxicos"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué concentración de oxígeno debe alcanzarse para que el fuego se apague completamente?",
+      "opciones": {
+        "A": "Menos del 18%",
+        "B": "Menos del 15%",
+        "C": "Menos del 14%",
+        "D": "Menos del 20%"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué volumen de vapor de agua produce un litro de agua pulverizada durante la extinción de un incendio?",
+      "opciones": {
+        "A": "1770 litros",
+        "B": "1000 litros",
+        "C": "1500 litros",
+        "D": "2000 litros"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal objetivo al usar gases inertes como el dióxido de carbono en la extinción de incendios?",
+      "opciones": {
+        "A": "Eliminar completamente el oxígeno",
+        "B": "Reducir la proporción de oxígeno por debajo del nivel necesario para la combustión",
+        "C": "Aumentar la concentración de oxígeno",
+        "D": "Neutralizar los gases inflamables"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué efecto tiene el alto calor específico y alto calor latente de vaporización de un agente extintor?",
+      "opciones": {
+        "A": "Enfría el combustible absorbiendo calor",
+        "B": "Calienta el combustible liberando calor",
+        "C": "No afecta la temperatura del fuego",
+        "D": "Reduce la concentración de oxígeno en el aire"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cómo actúa la inhibición en la extinción de incendios?",
+      "opciones": {
+        "A": "Interrumpe la reacción en cadena desactivando radicales libres",
+        "B": "Aumenta la temperatura del combustible",
+        "C": "Fomenta la reacción en cadena de la combustión",
+        "D": "Absorbe calor sin cambiar de estado"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el agente extintor gaseoso que no se menciona en el texto proporcionado?",
+      "opciones": {
+        "A": "Helio",
+        "B": "Nitrógeno",
+        "C": "Anhídrido carbónico",
+        "D": "Aerosoles"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuántas kilocalorías son necesarias para vaporizar completamente un litro de agua a 15º C?",
+      "opciones": {
+        "A": "624 kilocalorías",
+        "B": "539 kilocalorías",
+        "C": "85 kilocalorías",
+        "D": "539 + 85 kilocalorías"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué propiedad del agua favorece su dispersión en pequeñas gotas y nieblas?",
+      "opciones": {
+        "A": "Alta densidad",
+        "B": "Baja viscosidad",
+        "C": "Alta tensión superficial",
+        "D": "Alto calor específico"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el efecto principal del agua como agente extintor en incendios?",
+      "opciones": {
+        "A": "Enfriamiento por su calor latente de vaporización",
+        "B": "Sofocación por desplazamiento de oxígeno",
+        "C": "Emulsificación de líquidos inflamables",
+        "D": "Desalimentación por dilución"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Por qué el agua pulverizada es más efectiva que el chorro compacto en la extinción de incendios?",
+      "opciones": {
+        "A": "Mayor superficie de contacto con el fuego",
+        "B": "Menor conductividad eléctrica",
+        "C": "Mayor capacidad de sofocación",
+        "D": "Menor punto de infamación requerido"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En un incendio de piroxilina, ¿por qué la acción del agua no es efectiva en sofocar el fuego?",
+      "opciones": {
+        "A": "El oxígeno se libera del material que se calienta",
+        "B": "El agua aumenta la temperatura del fuego",
+        "C": "La piroxilina es insoluble en agua",
+        "D": "El agua no puede enfriar la piroxilina eficientemente"
+      },
+      "correcta": "A",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuánto aumenta el volumen del agua al convertirse en vapor durante la extinción de un incendio?",
+      "opciones": {
+        "A": "Aumenta 1700 veces",
+        "B": "Aumenta 170 veces",
+        "C": "Aumenta 17 veces",
+        "D": "No aumenta"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué sucede cuando dos líquidos no miscibles como el agua y un aceite combustible se mezclan?",
+      "opciones": {
+        "A": "Forman una emulsión incombustible temporalmente",
+        "B": "Se separan inmediatamente",
+        "C": "Reaccionan químicamente",
+        "D": "Aumentan su combustibilidad"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué efecto tiene la dilución de materiales inflamables solubles en agua?",
+      "opciones": {
+        "A": "Extingue el fuego bajando los vapores del combustible",
+        "B": "Incrementa la temperatura del fuego",
+        "C": "No tiene efecto sobre el fuego",
+        "D": "Aumenta la viscosidad del líquido inflamable"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué propiedad del agua contribuye a su efectividad como barrera de protección en incendios?",
+      "opciones": {
+        "A": "Transparencia a la radiación visible",
+        "B": "Opacidad a longitudes de onda infrarrojas",
+        "C": "Absorción de oxígeno",
+        "D": "Emisión de dióxido de carbono"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la función principal del agua al ser utilizada en la extinción de incendios?",
+      "opciones": {
+        "A": "Emulsificación",
+        "B": "Inertización",
+        "C": "Absorción de calor de radiación",
+        "D": "Dilución"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué modalidad de proyección de agua se recomienda utilizar desde lejos en incendios de alta potencia?",
+      "opciones": {
+        "A": "Chorro sólido",
+        "B": "Cono de ataque",
+        "C": "Cortina de protección",
+        "D": "Ninguna de las anteriores"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal limitación del uso de chorro sólido o directo en la extinción de incendios?",
+      "opciones": {
+        "A": "Alto retroceso",
+        "B": "Baja capacidad de penetración",
+        "C": "Eficacia limitada del agua empleada",
+        "D": "Alto riesgo de rebosamiento",
+        "E": "Incremento de temperatura"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué método de aplicación de agua se recomienda para controlar incendios de clase C?",
+      "opciones": {
+        "A": "Chorro directo",
+        "B": "Agua pulverizada",
+        "C": "Cortina de protección",
+        "D": "Ninguno, es inadecuado usar agua"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la desventaja principal de usar cortina de protección en la extinción de incendios?",
+      "opciones": {
+        "A": "Nulo retroceso",
+        "B": "Limitado alcance",
+        "C": "Sin rendimiento extintor",
+        "D": "Alta evaporación",
+        "E": "Disminución de visibilidad"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Por qué no se recomienda usar agua en fuegos de Clase D?",
+      "opciones": {
+        "A": "Porque el agua es conductora de electricidad",
+        "B": "Porque el agua puede reaccionar con los metales",
+        "C": "Porque el agua no es efectiva en fuegos de líquidos",
+        "D": "Porque el agua incrementa el riesgo de explosión"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una limitación del uso de agua en fuegos con solventes polares como el alcohol?",
+      "opciones": {
+        "A": "El agua no puede mezclarse con solventes polares",
+        "B": "El agua disuelve el solvente, reduciendo su efectividad",
+        "C": "El agua aumenta la temperatura del solvente",
+        "D": "El agua no llega a extinguir el fuego si no es en gran cantidad"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué técnica especial permite el uso de agua en presencia de electricidad?",
+      "opciones": {
+        "A": "Uso de agua en forma de espuma",
+        "B": "Uso de lanzas pulverizadoras especiales",
+        "C": "Uso de agua con aditivos no conductores",
+        "D": "Uso de agua a baja presión"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué función tienen los humectantes en la extinción de incendios con agua?",
+      "opciones": {
+        "A": "Reducir la tensión superficial del agua",
+        "B": "Aumentar la viscosidad del agua",
+        "C": "Prevenir la congelación del agua",
+        "D": "Inhibir la corrosión en sistemas de extinción"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de añadir anticongelantes al agua en sistemas fijos de extinción?",
+      "opciones": {
+        "A": "Evitar la congelación del agua",
+        "B": "Reducir la tensión superficial del agua",
+        "C": "Aumentar la viscosidad del agua",
+        "D": "Disminuir la conductividad eléctrica del agua"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué sustancia se añade a los tanques de almacenamiento de agua para evitar la corrosividad?",
+      "opciones": {
+        "A": "Polioxietileno",
+        "B": "Dicromato sódico",
+        "C": "Humectantes homologados",
+        "D": "Anticongelantes"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal propósito de añadir polímeros como el polioxietileno al agua en operaciones de extinción de incendios?",
+      "opciones": {
+        "A": "Aumentar la viscosidad del agua",
+        "B": "Reducir la turbulencia del agua y aumentar el caudal y presión",
+        "C": "Mejorar el sabor del agua",
+        "D": "Disminuir la eficacia del agua en la extinción"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué función NO es realizada por la espuma en la extinción de incendios?",
+      "opciones": {
+        "A": "Sofoque del oxígeno para evitar la combustión",
+        "B": "Refrigeración al absorber calor del combustible",
+        "C": "Inanición al impedir la liberación de vapores inflamables",
+        "D": "Aumento de la inflamabilidad del combustible"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elemento es esencial en la formación de espuma para la extinción de incendios?",
+      "opciones": {
+        "A": "Agua",
+        "B": "Aceite",
+        "C": "Alcohol",
+        "D": "Gasolina"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué función tiene un dosificador en un sistema de espuma para extinción de incendios?",
+      "opciones": {
+        "A": "Introduce aire en el sistema",
+        "B": "Introduce la cantidad correcta de concentrado de espuma en el chorro de agua",
+        "C": "Genera agitación mecánica",
+        "D": "Mide la temperatura del fuego"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de espumógeno se utiliza comúnmente en la mezcla con agua para formar espuma?",
+      "opciones": {
+        "A": "Entre 1% y 3%",
+        "B": "Entre 4% y 6%",
+        "C": "Menos del 1%",
+        "D": "Más del 6%"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de la formación de espuma en la extinción de incendios?",
+      "opciones": {
+        "A": "Disminuir la visibilidad del fuego",
+        "B": "Aumentar la temperatura del líquido",
+        "C": "Reducir la tensión superficial del líquido y aumentar la interfase líquido-aire",
+        "D": "Crear una barrera física sólida"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué cantidad de espumógeno se necesita para preparar 100 litros de mezcla al 6%?",
+      "opciones": {
+        "A": "6 litros de espumógeno",
+        "B": "3 litros de espumógeno",
+        "C": "94 litros de espumógeno",
+        "D": "100 litros de espumógeno"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es el efecto de usar una mezcla con mayor cantidad de espumógeno que agua?",
+      "opciones": {
+        "A": "Genera una espuma más espesa y flujo más lento",
+        "B": "Disminuye el volumen de espuma producido",
+        "C": "Aumenta la velocidad de sofocación del fuego",
+        "D": "No afecta las propiedades de la espuma"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué indica un coeficiente de expansión de 200 en una solución espumante?",
+      "opciones": {
+        "A": "1 litro de espumante produce 200 litros de espuma",
+        "B": "200 litros de espumante son necesarios para 1 litro de espuma",
+        "C": "1 litro de espuma se obtiene de 200 litros de espumante",
+        "D": "200 litros de espuma se obtienen de 1 litro de agua"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la tasa mínima de aplicación de espuma para hidrocarburos?",
+      "opciones": {
+        "A": "4 L/min · m2",
+        "B": "6 L/min · m2",
+        "C": "5 L/min · m2",
+        "D": "3 L/min · m2"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué indica una mayor homogeneidad en el tamaño de las burbujas de una espuma?",
+      "opciones": {
+        "A": "Mayor adherencia",
+        "B": "Menor resistencia al calor",
+        "C": "Aumento de la temperatura",
+        "D": "Disminución de la estabilidad"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la temperatura máxima del agua recomendada para mezclar con los concentrados de espuma?",
+      "opciones": {
+        "A": "40°C",
+        "B": "30°C",
+        "C": "100°C",
+        "D": "50°C",
+        "E": "25°C"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal función de la espuma de baja expansión en la extinción de incendios?",
+      "opciones": {
+        "A": "Separar el combustible del oxígeno",
+        "B": "Enfriar rápidamente el área",
+        "C": "Evitar la toxicidad del humo",
+        "D": "Absorber el calor del fuego"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de espuma se recomienda para controlar derrames de químicos peligrosos?",
+      "opciones": {
+        "A": "Espuma de alta expansión",
+        "B": "Espuma de media expansión",
+        "C": "Espuma de baja expansión",
+        "D": "Espuma polivalente"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué caracteriza a las espumas fluoroproteínicas según su base?",
+      "opciones": {
+        "A": "Forman una película sobre el fuego",
+        "B": "Son efectivas contra hidrocarburos",
+        "C": "No se disuelven en alcoholes",
+        "D": "Todas las anteriores"
+      },
+      "correcta": "D",
+      "dificultad": "dificil"
+    },
+    {
+      "pregunta": "¿Cuál es la principal función de la espuma de media expansión en la extinción de incendios?",
+      "opciones": {
+        "A": "Separar el combustible del oxígeno",
+        "B": "Aumentar la temperatura del fuego",
+        "C": "Reducir la visibilidad en el área",
+        "D": "Generar humo adicional"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica limita el uso de la espuma de alta expansión en exteriores?",
+      "opciones": {
+        "A": "Alta densidad",
+        "B": "Poco poder refrigerante",
+        "C": "Resistencia al viento",
+        "D": "Alta resistencia al calor"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de espuma se recomienda para fuegos clase B y permite extinción desde corta distancia?",
+      "opciones": {
+        "A": "Espuma de baja expansión",
+        "B": "Espuma de media expansión",
+        "C": "Espuma de alta expansión",
+        "D": "Espuma de proteína"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una característica distintiva de los agentes fluoroproteínicos comparados con los proteínicos simples?",
+      "opciones": {
+        "A": "Mayor resistencia al calor",
+        "B": "Menor resistencia a la combustión",
+        "C": "Mayor resistencia a la contaminación por hidrocarburos",
+        "D": "Menor capacidad de formar burbujas"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué aditivos se agregan a los concentrados proteínicos para mejorar su capacidad de espumación?",
+      "opciones": {
+        "A": "Sales metálicas disueltas y disolventes orgánicos",
+        "B": "Agentes fluorados",
+        "C": "Bicarbonato de sodio",
+        "D": "Agua destilada"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de dosificación se utiliza comúnmente para los agentes fluoroproteínicos que forman película?",
+      "opciones": {
+        "A": "1-2%",
+        "B": "3-6%",
+        "C": "7-10%",
+        "D": "10-15%"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de espumas extintoras son compatibles con polvos secos y tienen una dosificación del 3-6%?",
+      "opciones": {
+        "A": "Espumógeno fluorosintético",
+        "B": "Espumógeno proteínico",
+        "C": "Fluoroproteínicos que forman película acuosa (FFFP)",
+        "D": "Espumógeno sintético"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal característica de los tensioactivos fluorados en la extinción de incendios?",
+      "opciones": {
+        "A": "Incrementan la viscosidad de las espumas",
+        "B": "Disminuyen la tensión superficial del agua",
+        "C": "Repelen a los hidrocarburos facilitando extinciones más rápidas",
+        "D": "Generan espumas de alta expansión"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de fuegos son adecuados para aplicar espumas de baja y media expansión?",
+      "opciones": {
+        "A": "Fuegos de clase A y B",
+        "B": "Fuegos de clase B",
+        "C": "Fuegos de clase A",
+        "D": "Fuegos de clase C"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la dosificación correcta de espumógeno polivalente para extinguir fuegos de líquidos polares?",
+      "opciones": {
+        "A": "3%",
+        "B": "6%",
+        "C": "5%",
+        "D": "4%"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de espumógeno se recomienda para fuegos B de líquidos polares?",
+      "opciones": {
+        "A": "Espumógeno fluorosintético formador de película acuosa (AFFF)",
+        "B": "Espumógeno resistente a los alcoholes",
+        "C": "Espumógeno universal",
+        "D": "Espumógeno multiexpansión"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Durante la formación de la espuma, ¿qué ocurre en la primera etapa (inducción)?",
+      "opciones": {
+        "A": "Se introduce aire al espumante",
+        "B": "Se agrega el espumógeno al flujo de agua",
+        "C": "Se produce la espuma final",
+        "D": "Se verifica la calidad del espumante"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal mecanismo de extinción de las espumas según su relación con líquidos inflamables?",
+      "opciones": {
+        "A": "Enfriamiento",
+        "B": "Sofocación",
+        "C": "Separación",
+        "D": "Reprimir"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de concentrado y agua se utiliza para obtener una solución de espuma en el rango más bajo?",
+      "opciones": {
+        "A": "1% concentrado, 99% agua",
+        "B": "3% concentrado, 97% agua",
+        "C": "6% concentrado, 94% agua",
+        "D": "10% concentrado, 90% agua"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cómo contribuye la espuma al enfriamiento durante la extinción de incendios?",
+      "opciones": {
+        "A": "Absorbe el calor al evaporarse",
+        "B": "Libera gases fríos",
+        "C": "Reacciona químicamente con el fuego",
+        "D": "Forma una barrera física que retiene el calor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal función de las lanzas de espuma en la extinción de incendios?",
+      "opciones": {
+        "A": "Emulsionar agua y líquido emulsor",
+        "B": "Generar calor",
+        "C": "Reducir la visibilidad del fuego",
+        "D": "Aumentar la presión del agua"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica deben tener las lanzas de espuma para proporcionar una espuma adecuada?",
+      "opciones": {
+        "A": "Mismo caudal nominal que el proporcionador",
+        "B": "Presión menor que el proporcionador",
+        "C": "Diferente material que el proporcionador",
+        "D": "Mismo color que el proporcionador"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el rango de presión en lanza para las lanzas de baja expansión?",
+      "opciones": {
+        "A": "3 a 4 bar",
+        "B": "6 a 7 bar",
+        "C": "1 a 2 bar",
+        "D": "8 a 9 bar"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es la presión de trabajo típica de una lanza de espuma de media expansión?",
+      "opciones": {
+        "A": "1 a 1,5 bar",
+        "B": "2,5 a 3 bar",
+        "C": "4 a 5 bar",
+        "D": "3 a 4 bar"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué capacidad de caudal debe tener un proporcionador si se usa con una lanza de espuma de 400 L/min?",
+      "opciones": {
+        "A": "200 L/min",
+        "B": "400 L/min",
+        "C": "800 L/min",
+        "D": "No necesita proporcionador"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica especial tienen los generadores de espuma de alta expansión?",
+      "opciones": {
+        "A": "No requieren proporcionador previo",
+        "B": "Funcionan sin agua",
+        "C": "Solo utilizan espumógeno puro",
+        "D": "Requieren un manómetro especial"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué color caracteriza al bicarbonato potásico utilizado en extintores?",
+      "opciones": {
+        "A": "Rojo",
+        "B": "Púrpura",
+        "C": "Verde",
+        "D": "Azul"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es la temperatura máxima recomendada para el almacenamiento de polvos químicos?",
+      "opciones": {
+        "A": "20 ºC",
+        "B": "35 ºC",
+        "C": "49 ºC",
+        "D": "60 ºC"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué gas se utiliza comúnmente para expulsar los polvos químicos de los dispositivos de extinción?",
+      "opciones": {
+        "A": "Oxígeno",
+        "B": "Nitrógeno",
+        "C": "Hidrógeno",
+        "D": "Dióxido de carbono"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué efecto tiene la descarga de polvo químico seco en la relación entre la llama y el combustible?",
+      "opciones": {
+        "A": "Crea una barrera física que separa la llama del combustible",
+        "B": "Aumenta la temperatura del combustible",
+        "C": "Reduce la concentración de oxígeno alrededor del fuego",
+        "D": "Genera una reacción química con el combustible"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal agente extintor en los polvos químicos secos tipo ABC?",
+      "opciones": {
+        "A": "Bicarbonato sódico",
+        "B": "Fosfato monoamónico",
+        "C": "Cloruro potásico",
+        "D": "Bicarbonato de urea y potasio"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué sucede cuando se mezcla un polvo alcalino con CO2 en cilindros de extinción?",
+      "opciones": {
+        "A": "Se produce una explosión",
+        "B": "Se neutralizan los radicales libres",
+        "C": "Se genera una acción enfriadora",
+        "D": "No tiene ningún efecto notable"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes agentes extintores tiene la mayor efectividad según el índice de eficacia para apagar fuegos clase B con 10 kilos de agente?",
+      "opciones": {
+        "A": "Bicarbonato de sodio (40B)",
+        "B": "Fosfato monoamónico (60B)",
+        "C": "Bicarbonato de potasio (80B)",
+        "D": "Carbonato de sodio (no listado)"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué agente extintor es polivalente y se puede emplear en fuegos de clase A, pero requiere agua pulverizada para apagar brasas incandescentes?",
+      "opciones": {
+        "A": "Fosfato monoamónico",
+        "B": "Bicarbonato de sodio",
+        "C": "Sulfato de sodio",
+        "D": "Cloruro de potasio"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una limitación de los polvos químicos al extinguir fuegos de líquidos inflamables?",
+      "opciones": {
+        "A": "Producen atmósferas inertes",
+        "B": "No son corrosivos",
+        "C": "No aseguran extinción permanente",
+        "D": "Son aptos para fuegos en profundidad"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Por qué los polvos químicos secos no deben usarse en equipos eléctricos delicados?",
+      "opciones": {
+        "A": "Necesitan presión propia",
+        "B": "Son eléctricamente conductores",
+        "C": "Requieren limpieza extensa",
+        "D": "Son incompatibles con agua"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de fuegos NO pueden extinguir los polvos químicos secos normales?",
+      "opciones": {
+        "A": "Fuegos en superficies metálicas",
+        "B": "Fuegos que se alimentan de su propio oxígeno",
+        "C": "Fuegos en áreas cerradas",
+        "D": "Fuegos eléctricos"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué agente de presurización se utiliza comúnmente con los polvos químicos secos?",
+      "opciones": {
+        "A": "Dióxido de carbono",
+        "B": "Nitrógeno seco",
+        "C": "Aire comprimido",
+        "D": "Oxígeno"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué tipo de fuegos son clasificados como Clase F?",
+      "opciones": {
+        "A": "Fuegos que involucran madera y papel",
+        "B": "Fuegos que involucran aceites y grasas de cocción",
+        "C": "Fuegos que involucran líquidos inflamables",
+        "D": "Fuegos que involucran gases inflamables"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal mecanismo de extinción del agente extintor para fuegos Clase F?",
+      "opciones": {
+        "A": "Enfriamiento",
+        "B": "Sofocación",
+        "C": "Saponificación",
+        "D": "Dilución"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica debe tener el agente extintor clase F en su presentación?",
+      "opciones": {
+        "A": "Debe ser un polvo seco",
+        "B": "Debe ser un gas comprimido",
+        "C": "Debe ser un líquido homogéneo sin sedimentos",
+        "D": "Debe ser una espuma expansiva"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿A qué temperatura se evapora el CO2 a presión atmosférica?",
+      "opciones": {
+        "A": "-78 °C",
+        "B": "-100 °C",
+        "C": "0 °C",
+        "D": "-50 °C"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es el efecto principal del CO2 cuando actúa como agente extintor?",
+      "opciones": {
+        "A": "Enfriamiento del fuego",
+        "B": "Desplazamiento del oxígeno",
+        "C": "Reacción química con el fuego",
+        "D": "Absorción de calor"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué concentración de CO2 en el aire puede causar inconsciencia casi inmediata?",
+      "opciones": {
+        "A": "6-7%",
+        "B": "9%",
+        "C": "12%",
+        "D": "3-4%"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la concentración mínima de CO2 en el aire requerida para extinguir un fuego?",
+      "opciones": {
+        "A": "Más del 9%",
+        "B": "Menos del 9%",
+        "C": "Exactamente 9%",
+        "D": "Más del 15%"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué efecto tiene una concentración de CO2 del 10-15% en el aire durante más de un minuto?",
+      "opciones": {
+        "A": "Dolor de cabeza y disnea",
+        "B": "Vértigo y somnolencia",
+        "C": "Pérdida de la consciencia",
+        "D": "Todas las anteriores"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes propiedades NO es correcta para el CO2 utilizado en extintores?",
+      "opciones": {
+        "A": "Es corrosivo",
+        "B": "Es dieléctrico",
+        "C": "No es corrosivo",
+        "D": "Es incoloro, inodoro e insípido"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la concentración mínima de CO2 en aire necesaria para extinguir fuegos superficiales?",
+      "opciones": {
+        "A": "22%",
+        "B": "30%",
+        "C": "38%",
+        "D": "61%"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué efecto produce la descarga de CO2 líquido en términos de electricidad estática?",
+      "opciones": {
+        "A": "No produce cargas electrostáticas",
+        "B": "Puede crear una chispa",
+        "C": "Genera un campo magnético",
+        "D": "Reduce la electricidad estática"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Por qué el CO2 no es efectivo contra fuegos de tipo de brazas o de masa?",
+      "opciones": {
+        "A": "Porque es más ligero que el aire",
+        "B": "Porque humedece el material",
+        "C": "Porque no mantiene una atmósfera inerte",
+        "D": "Porque no penetra materiales aislantes"
+      },
+      "correcta": "C",
+      "dificultad": "dificil"
+    },
+    {
+      "pregunta": "¿Qué tipo de fuegos NO puede extinguir el CO2 según el texto proporcionado?",
+      "opciones": {
+        "A": "Fuegos de celulosa sin oxígeno",
+        "B": "Fuegos de metales como sodio y potasio",
+        "C": "Fuegos de madera y papel",
+        "D": "Fuegos eléctricos"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la concentración mínima de CO2 necesaria para la extinción según el tipo de combustible?",
+      "opciones": {
+        "A": "Entre 20% y 30%",
+        "B": "Entre 30% y 38%",
+        "C": "Entre 40% y 50%",
+        "D": "Entre 10% y 20%"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿En qué casos se recomienda no usar el extintor de CO2?",
+      "opciones": {
+        "A": "En lugares normalmente ocupados sin evacuación",
+        "B": "En exteriores con viento",
+        "C": "En incendios de productos químicos",
+        "D": "En incendios forestales"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la temperatura a la que se produce la descarga de CO2 en los extintores de este tipo?",
+      "opciones": {
+        "A": "-79 ºC",
+        "B": "-50 ºC",
+        "C": "-100 ºC",
+        "D": "0 ºC"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué tipo de instalación fija de extinción utiliza CO2 en un espacio cerrado?",
+      "opciones": {
+        "A": "Inundación total",
+        "B": "Aplicación directa",
+        "C": "Líneas de mangueras manuales",
+        "D": "Sistemas de rociadores"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué indica el primer dígito en la nomenclatura de los agentes extintores halogenados?",
+      "opciones": {
+        "A": "Número de átomos de carbono",
+        "B": "Número de átomos de hidrógeno",
+        "C": "Número de átomos de halógeno",
+        "D": "Número de enlaces químicos"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elemento halógeno aumenta la estabilidad térmica y reduce la toxicidad en un compuesto?",
+      "opciones": {
+        "A": "Flúor",
+        "B": "Cloro",
+        "C": "Bromo",
+        "D": "Yodo"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes agentes extintores tiene 2 átomos de carbono y 4 de flúor?",
+      "opciones": {
+        "A": "Dibromotetrafluoretano",
+        "B": "Bromotrifluorometano",
+        "C": "Bromoclorodifluorometano",
+        "D": "Dibromodifluorometano"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica NO es común en los extintores halogenados?",
+      "opciones": {
+        "A": "Son corrosivos",
+        "B": "No dejan residuos",
+        "C": "Son dieléctricos",
+        "D": "Alta velocidad de extinción"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el mecanismo de extinción principal del Halón 1211?",
+      "opciones": {
+        "A": "Neutralización de radicales libres",
+        "B": "Absorción de calor",
+        "C": "Reducción de oxígeno",
+        "D": "Formación de espuma"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica hace que el Halón 1301 sea especialmente adecuado para su uso en equipos electrónicos?",
+      "opciones": {
+        "A": "Es dieléctrico",
+        "B": "Es conductor de electricidad",
+        "C": "Es corrosivo",
+        "D": "Es volátil"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Por qué el uso del Halón 1211 está generalmente prohibido?",
+      "opciones": {
+        "A": "Es altamente inflamable",
+        "B": "Es tóxico para humanos",
+        "C": "Daña la capa de ozono",
+        "D": "Es menos efectivo que otros agentes"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué método de extinción utiliza el halón 1301 para apagar fuegos?",
+      "opciones": {
+        "A": "Inhibición de radicales libres",
+        "B": "Enfriamiento",
+        "C": "Sofocación",
+        "D": "Formación de barrera física"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal diferencia entre el Halón 1301 y el Halón 1211 en términos de volumen necesario para la extinción?",
+      "opciones": {
+        "A": "Halón 1301 necesita 10% menos volumen",
+        "B": "Halón 1211 necesita 10% menos volumen",
+        "C": "Ambos necesitan el mismo volumen",
+        "D": "Depende del tipo de fuego"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Por qué se sobrepresuriza el halón en los extintores con nitrógeno?",
+      "opciones": {
+        "A": "Para reducir su punto de ebullición",
+        "B": "Para aumentar la velocidad de descarga",
+        "C": "Para disminuir su toxicidad",
+        "D": "Para incrementar su capacidad de enfriamiento"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal limitación de los extintores halogenados para fuegos de brasas profundas?",
+      "opciones": {
+        "A": "Son altamente efectivos",
+        "B": "No son efectivos",
+        "C": "Requieren recarga frecuente",
+        "D": "Producen gases tóxicos"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿En qué tipo de incendios es más difícil predecir la efectividad de los halones?",
+      "opciones": {
+        "A": "Fuegos Clase A",
+        "B": "Fuegos Clase B",
+        "C": "Fuegos Clase C",
+        "D": "Fuegos Clase D"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Por qué se recomienda el uso de halones en espacios con bienes de alto valor?",
+      "opciones": {
+        "A": "Por su bajo costo",
+        "B": "Por su rapidez de extinción",
+        "C": "Por su efectividad al aire libre",
+        "D": "Por no dejar residuos"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal uso de los halones 1301 en contextos militares y de seguridad nacional?",
+      "opciones": {
+        "A": "Inertizar cabinas de aviones",
+        "B": "Inertizar zonas con material radioactivo",
+        "C": "Inertizar puestos de control y comunicación",
+        "D": "Extinguir incendios en bodegas de carga"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica NO corresponde a los agentes extintores alternativos a los halones?",
+      "opciones": {
+        "A": "Son conductores de electricidad",
+        "B": "No afectan el medio ambiente",
+        "C": "No intervienen en la reacción de combustión",
+        "D": "Desplazan el O2 a niveles respirables"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el punto de ebullición del nitrógeno?",
+      "opciones": {
+        "A": "-210 ºC",
+        "B": "-196 ºC",
+        "C": "-183 ºC",
+        "D": "-78 ºC"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el punto de ebullición del nitrógeno N2 a presión y temperatura normales?",
+      "opciones": {
+        "A": "-195,79 ºC",
+        "B": "-210 ºC",
+        "C": "0 ºC",
+        "D": "-100 ºC"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de nitrógeno contiene el agente extintor compuesto por nitrógeno, argón y CO2?",
+      "opciones": {
+        "A": "52%",
+        "B": "40%",
+        "C": "8%",
+        "D": "30%"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el tiempo de descarga estimado para un extintor de gases inertes que contiene nitrógeno, argón y CO2?",
+      "opciones": {
+        "A": "60 a 90 segundos",
+        "B": "30 a 60 segundos",
+        "C": "90 a 120 segundos",
+        "D": "120 a 150 segundos"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el porcentaje mínimo de O2 necesario en el aire ambiental durante el uso de sistemas de extinción con nitrógeno?",
+      "opciones": {
+        "A": "10%",
+        "B": "12%",
+        "C": "14%",
+        "D": "16%"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué gases componen el sistema extintor mencionado en el texto y cuál es el porcentaje de CO2?",
+      "opciones": {
+        "A": "Nitrógeno 52%, Argón 40%, CO2 8%",
+        "B": "Nitrógeno 60%, Argón 30%, CO2 10%",
+        "C": "Nitrógeno 50%, Argón 45%, CO2 5%",
+        "D": "Nitrógeno 55%, Argón 35%, CO2 10%"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el tiempo máximo de descarga para sistemas de inundación total según el texto?",
+      "opciones": {
+        "A": "Menos de 10 segundos",
+        "B": "Menos de 1 minuto",
+        "C": "60 a 90 segundos",
+        "D": "30 a 60 segundos"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la concentración extintora recomendada para el uso de HFC-227EA?",
+      "opciones": {
+        "A": "Entre 5% y 7.1%",
+        "B": "Entre 12% y 16%",
+        "C": "Menos del 5%",
+        "D": "Más del 16%"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué propiedad NO posee el HFC-23?",
+      "opciones": {
+        "A": "Es conductor de la electricidad",
+        "B": "No deja residuos",
+        "C": "Es incoloro",
+        "D": "Tiene una densidad mayor que el aire"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de extintor es más adecuado para fuegos de clase B (líquidos)?",
+      "opciones": {
+        "A": "Agua pulvurizada",
+        "B": "Agua a chorro",
+        "C": "Polvo BC",
+        "D": "Polvo ABC"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de los aditivos humectantes en la lucha contra incendios?",
+      "opciones": {
+        "A": "Reducir la tensión superficial del agua",
+        "B": "Aumentar la tensión superficial del agua",
+        "C": "Crear una capa aislante sobre el fuego",
+        "D": "Disminuir la viscosidad del agua"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué propiedad de los aditivos espesantes mejora su efectividad en incendios forestales?",
+      "opciones": {
+        "A": "Aumentan la viscosidad del agua",
+        "B": "Disminuyen la tensión superficial del agua",
+        "C": "Hacen que el agua sea menos densa",
+        "D": "Permiten que el agua se evapore más rápido"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica de los aditivos humectantes requiere homologación ambiental?",
+      "opciones": {
+        "A": "Su capacidad de aumentar la viscosidad",
+        "B": "Su toxicidad y estabilidad al mezclarse con agua",
+        "C": "Su capacidad de reducir la temperatura del fuego",
+        "D": "Su habilidad para formar una capa continua"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal función de los boratos en la extinción de fuegos forestales?",
+      "opciones": {
+        "A": "Formar una capa vidriosa al calentarse",
+        "B": "Aumentar la toxicidad del agua",
+        "C": "Reducir la fricción en las mangueras",
+        "D": "Proporcionar un recubrimiento aislante térmico y retardar la llama"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué efecto tiene el óxido de polietileno cuando se añade al agua en las mangueras de bomberos?",
+      "opciones": {
+        "A": "Aumenta la fricción con las paredes",
+        "B": "Hace que el agua fluya de forma no turbulenta",
+        "C": "Disminuye la adherencia del agua",
+        "D": "Transforma el agua en un gel"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es un inconveniente de usar agua con boratos en la extinción de incendios?",
+      "opciones": {
+        "A": "Es menos efectiva en fuegos eléctricos",
+        "B": "Se solidifica rápidamente tras su elaboración",
+        "C": "Aumenta la fricción en las mangueras",
+        "D": "Es menos tóxica que otros aditivos"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué efecto tiene la adición de un agente emulsificante al agua en la extinción de incendios?",
+      "opciones": {
+        "A": "Forma una capa aislante sobre el fuego",
+        "B": "Reduce la tensión superficial del agua",
+        "C": "Forma una emulsión no inflamable con el combustible",
+        "D": "Aumenta la viscosidad del agua"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal característica de los retardantes de corto plazo usados en la extinción de incendios?",
+      "opciones": {
+        "A": "Dependen de la presencia de agua",
+        "B": "No dependen de la presencia de agua",
+        "C": "Su efecto dura mucho tiempo",
+        "D": "Son principalmente sólidos"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué resultado produce la adición de pequeñas cantidades de detergentes sintéticos al agua?",
+      "opciones": {
+        "A": "Aumenta la presión de vapor del combustible",
+        "B": "Disminuye la cantidad de vapor hasta un punto no inflamable",
+        "C": "Hace que el agua sea menos efectiva contra el fuego",
+        "D": "Crea una capa protectora sobre el fuego"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué función principal tiene el agua como agente extintor en un incendio?",
+      "opciones": {
+        "A": "Absorber calor mediante su alto calor específico y latente",
+        "B": "Actuar como barrera física solamente",
+        "C": "Iniciar la combustión de materiales",
+        "D": "Reducir la visibilidad en el área del incendio"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de añadir boratos al agua en la lucha contra incendios forestales?",
+      "opciones": {
+        "A": "Mejorar la adherencia a las superficies y actuar como retardante",
+        "B": "Aumentar la presión del agua en mangueras",
+        "C": "Generar espuma para sofocar el fuego",
+        "D": "Reducir la tensión superficial del agua"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué indica el coeficiente de expansión en el uso de espumas contra incendios?",
+      "opciones": {
+        "A": "La capacidad de la espuma para cubrir la superficie incendiada",
+        "B": "La relación entre la cantidad de agua y espumógeno",
+        "C": "La eficacia del agente emulsor en la espuma",
+        "D": "El volumen de espuma generado respecto al de la solución utilizada"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la función principal del dióxido de carbono (CO2) como agente extintor en incendios?",
+      "opciones": {
+        "A": "Refrigeración del fuego y eliminación del oxígeno",
+        "B": "Aumento de la viscosidad del agua",
+        "C": "Generación de espuma extintora",
+        "D": "Dilución de combustibles solubles"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de espuma se utiliza idealmente para incendios de hidrocarburos?",
+      "opciones": {
+        "A": "Espuma de baja expansión",
+        "B": "Espuma de media expansión",
+        "C": "Espuma de alta expansión",
+        "D": "Espuma sin expansión"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué dispositivo se utiliza para introducir la cantidad correcta de espumógeno en el chorro de agua?",
+      "opciones": {
+        "A": "Dosificador",
+        "B": "Emulsor",
+        "C": "Espesante",
+        "D": "Diluyente"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el rango de coeficiente de expansión de la espuma de media expansión utilizada en incendios de líquidos inflamables?",
+      "opciones": {
+        "A": "20:1 a 200:1",
+        "B": "200:1 a 1.000:1",
+        "C": "100:1 a 500:1",
+        "D": "50:1 a 250:1"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué tipo de espuma es más adecuada para usar en espacios cerrados debido a su gran volumen?",
+      "opciones": {
+        "A": "Espuma de alta expansión",
+        "B": "Espuma de media expansión",
+        "C": "Fluoroproteínica",
+        "D": "Humectantes"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica especial tienen las espumas Fluorosintéticas formadores de película (AFFF)?",
+      "opciones": {
+        "A": "Forman una película acuosa sobre líquidos inflamables",
+        "B": "Mejoran la fluidez de la espuma",
+        "C": "Reducen la tensión superficial del agua",
+        "D": "Inhiben la corrosión en sistemas de almacenamiento"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de lanza de espuma es ideal para incendios en espacios cerrados debido a su alta expansión y menor contenido de agua?",
+      "opciones": {
+        "A": "Lanza de alta expansión",
+        "B": "Lanza de baja expansión",
+        "C": "Lanza de media expansión",
+        "D": "Proporcionador Venturi"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal mecanismo de extinción que utilizan los polvos químicos en incendios?",
+      "opciones": {
+        "A": "Inhibición de la reacción en cadena",
+        "B": "Enfriamiento",
+        "C": "Sofocación",
+        "D": "Apantallamiento de la radiación"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué dispositivo ajusta automáticamente la mezcla de espumógeno y agua en la proporción adecuada?",
+      "opciones": {
+        "A": "Proporcionadores automáticos",
+        "B": "Proporcionadores Venturi",
+        "C": "Lanza de media expansión",
+        "D": "Modificadores de flujo"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué método de extinción se basa en la eliminación del comburente para sofocar el fuego?",
+      "opciones": {
+        "A": "Enfriamiento",
+        "B": "Sofocación",
+        "C": "Dilución",
+        "D": "Inhibición"
+      },
+      "correcta": "B",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes sustancias es un retardante de largo plazo en la lucha contra incendios?",
+      "opciones": {
+        "A": "Espumas",
+        "B": "Geles",
+        "C": "Productos que alteran la reacción en cadena",
+        "D": "Agentes inhibidores"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el modelo del tetraedro del fuego, ¿cuál de los siguientes no es uno de los elementos esenciales para la combustión?",
+      "opciones": {
+        "A": "Combustible",
+        "B": "Oxígeno",
+        "C": "Agua",
+        "D": "Calor"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes no es un mecanismo de extinción de incendios listado en el material proporcionado?",
+      "opciones": {
+        "A": "Desalimentación",
+        "B": "Inhibición",
+        "C": "Compresión",
+        "D": "Enfriamiento"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué agente extintor se clasifica principalmente por su capacidad de inhibir la reacción en cadena durante un incendio?",
+      "opciones": {
+        "A": "Espuma",
+        "B": "Dióxido de carbono",
+        "C": "Agua con boratos",
+        "D": "Polvo químico"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de los agentes extintores, ¿qué tipo de aditivo se utiliza para generar espumas aéreas semiestables?",
+      "opciones": {
+        "A": "Humectantes",
+        "B": "Espesantes",
+        "C": "Modificadores de flujo",
+        "D": "Adición de aire"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal mecanismo de extinción del agua como agente extintor?",
+      "opciones": {
+        "A": "Enfriamiento",
+        "B": "Sofocación",
+        "C": "Inhibición de la reacción en cadena",
+        "D": "Dilución"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué característica define mejor a las lanzas de baja expansión utilizadas en la extinción de incendios?",
+      "opciones": {
+        "A": "Generan espuma de gran volumen",
+        "B": "Son ideales para espacios confinados",
+        "C": "Producen un chorro más directo y potente",
+        "D": "Adecuadas para fuegos de clase A y B"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la formación de espuma, ¿qué indica el coeficiente de expansión?",
+      "opciones": {
+        "A": "La velocidad de expansión de la espuma",
+        "B": "La cantidad de aire incorporado en la espuma",
+        "C": "La densidad de la espuma formada",
+        "D": "La resistencia de la espuma al calor"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la temperatura de descomposición del Halón 1301 según la información proporcionada?",
+      "opciones": {
+        "A": "195,79 ºC",
+        "B": "100 ºC",
+        "C": "250 ºC",
+        "D": "300 ºC"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la densidad del Halón 1301 mencionada en el texto?",
+      "opciones": {
+        "A": "1,2 kg/m3",
+        "B": "1,5 kg/m3",
+        "C": "0,8 kg/m3",
+        "D": "2,0 kg/m3"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones NO es una ventaja de los agentes extintores mencionados?",
+      "opciones": {
+        "A": "Alta eficacia extintora",
+        "B": "Bajo costo de mantenimiento",
+        "C": "Toxicidad para seres humanos",
+        "D": "Facilidad de aplicación"
+      },
+      "correcta": "C",
+      "dificultad": "dificil"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es considerado un agente extintor muy adecuado según las clasificaciones disponibles?",
+      "opciones": {
+        "A": "Agua",
+        "B": "Espuma",
+        "C": "CO2",
+        "D": "Polvo químico seco"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la clasificación de agentes extintores, ¿qué calificación se le da al CO2?",
+      "opciones": {
+        "A": "Muy adecuado",
+        "B": "Adecuado",
+        "C": "Aceptable",
+        "D": "No recomendado"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la calificación más baja que puede recibir un agente extintor en las clasificaciones revisadas?",
+      "opciones": {
+        "A": "Muy adecuado",
+        "B": "Adecuado",
+        "C": "Aceptable"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    }
+  ]
+}

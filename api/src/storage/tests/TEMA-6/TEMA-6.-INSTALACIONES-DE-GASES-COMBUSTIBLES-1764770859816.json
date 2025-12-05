@@ -1,0 +1,434 @@
+{
+  "tema": "TEMA-6",
+  "fecha": "2025-12-03T14:07:39.817Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es la temperatura de autoinflamación del propano?",
+      "opciones": {
+        "A": "468 °C",
+        "B": "500 °C",
+        "C": "450 °C",
+        "D": "485 °C"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Dentro de qué porcentajes una mezcla gas-aire se vuelve inflamable?",
+      "opciones": {
+        "A": "Dentro de los límites de inflamabilidad",
+        "B": "Entre 5% y 15%",
+        "C": "A cualquier porcentaje",
+        "D": "Más del 20%"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la temperatura de autoinflamación del gas natural?",
+      "opciones": {
+        "A": "540°C",
+        "B": "650°C",
+        "C": "745°C",
+        "D": "500°C"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En una instalación doméstica, ¿qué medida es esencial para prevenir la acumulación de gases de combustión peligrosos?",
+      "opciones": {
+        "A": "Uso de detectores de gas en todas las habitaciones",
+        "B": "Instalación de ventilación adecuada directa al exterior",
+        "C": "Revisión semanal de las instalaciones",
+        "D": "Prohibir el uso de equipos a gas"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la temperatura de autoinflamación del propano, un componente común de los gases licuados del petróleo (GLP)?",
+      "opciones": {
+        "A": "468 °C",
+        "B": "410 °C",
+        "C": "520 °C",
+        "D": "350 °C"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En la clasificación de familias de gases combustibles, ¿a qué familia pertenecen los gases licuados del petróleo (GLP) según su potencia calorífica?",
+      "opciones": {
+        "A": "1ª Familia",
+        "B": "2ª Familia",
+        "C": "3ª Familia"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el método principal para detectar fugas en instalaciones de almacenamiento de GLP?",
+      "opciones": {
+        "A": "Inspección visual diaria",
+        "B": "Control de peso semanal",
+        "C": "Pruebas de presión hidrostática",
+        "D": "Monitoreo electrónico de la concentración de gas"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el requisito mínimo de distancia de seguridad para el almacenamiento de grandes cantidades de GLP respecto a edificaciones y límites de propiedad?",
+      "opciones": {
+        "A": "5 metros",
+        "B": "10 metros",
+        "C": "15 metros",
+        "D": "20 metros"
+      },
+      "correcta": "C",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuál es la presión máxima de operación (MOP) permitida para las instalaciones de gas natural clasificadas como Media Presión A (MPA) según la normativa RTDUGC vigente?",
+      "opciones": {
+        "A": "0,1 bar",
+        "B": "2 bar",
+        "C": "5 bar",
+        "D": "0,4 bar"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de las clasificaciones de presión para el gas natural, ¿cuál categoría corresponde a una presión de funcionamiento de más de 16 bar bajo la normativa RTDUGC actual?",
+      "opciones": {
+        "A": "Alta Presión A (APA)",
+        "B": "Alta Presión B (APB)",
+        "C": "Media Presión B (MPB)",
+        "D": "Baja Presión (BP)"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de la llave general de acometida en las instalaciones receptoras domésticas de gas?",
+      "opciones": {
+        "A": "Cortar el suministro de gas desde la red de distribución al usuario",
+        "B": "Regular la presión del gas antes de su uso",
+        "C": "Medir el consumo de gas del usuario",
+        "D": "Detectar fugas de gas en la instalación"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En una instalación receptora doméstica, ¿qué elemento se instala obligatoriamente justo antes de cada aparato de consumo de gas?",
+      "opciones": {
+        "A": "Llave específica del aparato",
+        "B": "Llave de vivienda",
+        "C": "Llave de montante",
+        "D": "Llave en cada instalación fija de gas"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la temperatura de autoignición del propano?",
+      "opciones": {
+        "A": "468 °C",
+        "B": "410 °C",
+        "C": "500 °C",
+        "D": "450 °C"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En una instalación doméstica, ¿qué medida es crucial para evitar la acumulación de gases producto de la combustión?",
+      "opciones": {
+        "A": "Ventilación adecuada al exterior",
+        "B": "Uso exclusivo de gas natural",
+        "C": "Instalación de detectores de humo en cada habitación",
+        "D": "Mantenimiento anual del sistema"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué rango de concentraciones define los límites de inflamabilidad de una mezcla gas-aire?",
+      "opciones": {
+        "A": "Entre una concentración mínima y máxima de gas",
+        "B": "Entre el 5% y el 15% de gas",
+        "C": "Solo la concentración máxima de gas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el significado de la temperatura de autoinflamación en relación con los gases combustibles?",
+      "opciones": {
+        "A": "Temperatura a la que se inflama un gas sin necesidad de llama o chispa externa",
+        "B": "Temperatura máxima que puede alcanzar un gas antes de inflamarse",
+        "C": "Temperatura a la que un gas se convierte en líquido",
+        "D": "Temperatura mínima para mantener la combustión de un gas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Si una mezcla de gas y aire alcanza la temperatura de autoinflamación, ¿qué ocurre?",
+      "opciones": {
+        "A": "La mezcla se inflama automáticamente sin fuente de ignición externa",
+        "B": "El gas en la mezcla se disipa y evita la inflamación",
+        "C": "La mezcla necesita una chispa externa para inflamarse",
+        "D": "Ninguna de las anteriores"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es el rango de porcentajes de mezcla de gas-aire en el que el propano se vuelve inflamable en condiciones normales de presión y temperatura ambiente?",
+      "opciones": {
+        "A": "1.5% a 9.6%",
+        "B": "2.1% a 9.5%",
+        "C": "1.7% a 8.6%",
+        "D": "2.0% a 10.0%"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "La temperatura de autoinflamación se define como la temperatura a la cual una mezcla estequiométrica de gas-aire se inflama espontáneamente. ¿Cuál es la temperatura de autoinflamación del butano?",
+      "opciones": {
+        "A": "468 °C",
+        "B": "410 °C",
+        "C": "520 °C",
+        "D": "450 °C"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la velocidad máxima inicial con la que se propaga la llama en una deflagración estequiométrica de gas y aire?",
+      "opciones": {
+        "A": "Depende de la temperatura y presión ambiental",
+        "B": "Es constante y no varía con la composición del gas",
+        "C": "Corresponde a la velocidad de propagación de la llama en una mezcla estequiométrica"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En una situación donde la mezcla de gas y aire es estequiométrica, ¿qué factor influye más significativamente en la velocidad de propagación de la llama durante una deflagración?",
+      "opciones": {
+        "A": "La temperatura de autoinflamación del gas",
+        "B": "La concentración máxima de gas en el aire",
+        "C": "Las condiciones de presión y temperatura ambiente"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes gases tiene la temperatura de auto inflamación más baja?",
+      "opciones": {
+        "A": "Metano",
+        "B": "Propano",
+        "C": "Butano",
+        "D": "Hidrógeno"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En una instalación doméstica, ¿cuál es el principal riesgo asociado con una mala evacuación de los gases de combustión?",
+      "opciones": {
+        "A": "Explosión por acumulación de gas",
+        "B": "Corrosión de materiales",
+        "C": "Asfixia por desplazamiento de oxígeno",
+        "D": "Aumento de la humedad ambiental"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la temperatura mínima a la cual una mezcla estequiométrica de gas-aire se inflama espontáneamente sin necesidad de una fuente de ignición externa?",
+      "opciones": {
+        "A": "Temperatura de autoinflamación",
+        "B": "Temperatura de ignición",
+        "C": "Punto de ebullición",
+        "D": "Punto de fusión"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Dentro de qué rango se considera que la mezcla de gas-aire es inflamable?",
+      "opciones": {
+        "A": "Límites de inflamabilidad",
+        "B": "Rango de combustibilidad",
+        "C": "Intervalo de explosividad",
+        "D": "Zona de seguridad"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal componente del gas natural licuado (GNL)?",
+      "opciones": {
+        "A": "Metano",
+        "B": "Propano",
+        "C": "Butano",
+        "D": "Etano"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "En el proceso de transporte del GNL, ¿qué tipo de buques se utilizan específicamente para este propósito?",
+      "opciones": {
+        "A": "Metaneros",
+        "B": "Petroleros",
+        "C": "Portacontenedores",
+        "D": "Buques graneleros"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué color se utiliza para identificar una botella que contiene un gas oxidante según la normativa europea?",
+      "opciones": {
+        "A": "Azul claro",
+        "B": "Rojo",
+        "C": "Verde oscuro",
+        "D": "Amarillo"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Según la normativa europea, ¿qué indica un recipiente de color verde intenso en su código de colores?",
+      "opciones": {
+        "A": "Gas inerte",
+        "B": "Gas inflamable",
+        "C": "Gas tóxico/corrosivo",
+        "D": "Gas oxidante"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes gases tiene la temperatura de autoinflamación más alta?",
+      "opciones": {
+        "A": "Propano",
+        "B": "Butano",
+        "C": "Gas natural",
+        "D": "Metano"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En la clasificación de gases combustibles, ¿cuál de los siguientes rangos representa correctamente los límites de inflamabilidad del butano?",
+      "opciones": {
+        "A": "1.5% a 8.5%",
+        "B": "1.8% a 9.0%",
+        "C": "1.9% a 8.4%",
+        "D": "2.0% a 9.5%"
+      },
+      "correcta": "A",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuál es el principal riesgo asociado con la acumulación de gases de combustión en un espacio cerrado sin ventilación adecuada?",
+      "opciones": {
+        "A": "Inflamación espontánea de los gases",
+        "B": "Explosión debido a la presión acumulada",
+        "C": "Asfixia por desplazamiento del oxígeno",
+        "D": "Corrosión de materiales",
+        "E": "Todas las anteriores"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica de los gases combustibles es crucial para determinar los rangos de seguridad en su manejo y almacenamiento?",
+      "opciones": {
+        "A": "Temperatura de condensación",
+        "B": "Límites de inflamabilidad",
+        "C": "Peso molecular del gas",
+        "D": "Solubilidad en agua",
+        "E": "Densidad a temperatura ambiente"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal peligro del monóxido de carbono (CO) generado en la combustión incompleta de gases combustibles?",
+      "opciones": {
+        "A": "Es altamente inflamable",
+        "B": "Es extremadamente tóxico y puede provocar asfixia",
+        "C": "Reduce la eficiencia térmica de los aparatos",
+        "D": "Corrode los materiales de construcción"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué medida de seguridad es esencial para prevenir la acumulación de monóxido de carbono en espacios cerrados?",
+      "opciones": {
+        "A": "Instalar detectores de CO en cada habitación",
+        "B": "Ventilación adecuada para evacuar los gases de la combustión al exterior",
+        "C": "Uso exclusivo de gases de la misma familia en los quemadores",
+        "D": "Revisión anual del sistema de calefacción"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal consecuencia de una acumulación de dióxido de carbono (CO₂) en un ambiente cerrado debido a la combustión de gases combustibles?",
+      "opciones": {
+        "A": "Explosión inmediata del entorno",
+        "B": "Desplazamiento del oxígeno provocando asfixia",
+        "C": "Incremento de la temperatura ambiente",
+        "D": "Formación de ozono en el interior"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica debe tener una instalación para asegurar la seguridad al utilizar equipos que generan dióxido de carbono (CO₂) en la combustión?",
+      "opciones": {
+        "A": "Debe permitir el ajuste manual de la temperatura",
+        "B": "Necesita tener una salida directa al exterior para evacuar los gases",
+        "C": "Requiere sensores de movimiento para operar",
+        "D": "Debe operar exclusivamente con energía renovable"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué sustancia se añade comúnmente al gas natural para dotarlo de olor y facilitar la detección de fugas?",
+      "opciones": {
+        "A": "Metano",
+        "B": "Tetrahidrotiofeno",
+        "C": "Propano",
+        "D": "Butano"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal propósito de la odorización en los gases combustibles?",
+      "opciones": {
+        "A": "Aumentar su poder calorífico",
+        "B": "Facilitar su transporte",
+        "C": "Detectar fugas de manera eficiente",
+        "D": "Reducir su inflamabilidad"
+      },
+      "correcta": "C",
+      "dificultad": "facil"
+    }
+  ]
+}

@@ -1,0 +1,529 @@
+{
+  "tema": "TEMA-10",
+  "fecha": "2025-12-03T19:18:41.206Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es el propósito principal del Código Técnico de la Edificación (CTE) según la Ley 38/1999 de Ordenación de la Edificación?",
+      "opciones": {
+        "A": "Establecer un seguro de caución",
+        "B": "Regular la habitabilidad y seguridad básica de edificios",
+        "C": "Definir las mercancías peligrosas",
+        "D": "Dictar normas de estética urbana"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué define el Código Técnico de la Edificación (CTE) en relación a los edificios?",
+      "opciones": {
+        "A": "Requisitos de seguridad y habitabilidad",
+        "B": "Normas de estética arquitectónica",
+        "C": "Regulaciones de uso de suelo",
+        "D": "Códigos de conducta para constructores"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué establece el Código Técnico de la Edificación (CTE) según la Ley 38/1999 de Ordenación de la Edificación (LOE)?",
+      "opciones": {
+        "A": "Requisitos de seguridad y habitabilidad de los edificios",
+        "B": "Normas exclusivas para edificios industriales",
+        "C": "Regulaciones solo para viviendas",
+        "D": "Protocolos para la gestión de residuos"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de escalera es obligatoria en edificios con altura de evacuación superior a los 18 metros según el CTE?",
+      "opciones": {
+        "A": "Escalera protegida",
+        "B": "Escalera especialmente protegida",
+        "C": "Escalera abierta al exterior",
+        "D": "Escalera común"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué aspecto NO es cubierto por las exigencias básicas de calidad del Código Técnico de la Edificación según la Ley 38/1999?",
+      "opciones": {
+        "A": "Seguridad estructural",
+        "B": "Seguridad contra incendios",
+        "C": "Seguridad de utilización",
+        "D": "Aislamiento acústico"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes aspectos NO es considerado parte de la habitabilidad según el CTE?",
+      "opciones": {
+        "A": "Salubridad",
+        "B": "Protección frente al ruido",
+        "C": "Ahorro de energía",
+        "D": "Resistencia al fuego"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes no es una exigencia básica del Código Técnico de la Edificación según la Ley 38/1999?",
+      "opciones": {
+        "A": "Seguridad estructural",
+        "B": "Seguridad contra incendios",
+        "C": "Protección contra terremotos",
+        "D": "Habitabilidad"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes NO es una exigencia básica de calidad en los edificios según el Código Técnico de la Edificación (CTE)?",
+      "opciones": {
+        "A": "Seguridad estructural",
+        "B": "Seguridad contra incendios",
+        "C": "Seguridad de utilización",
+        "D": "Protección contra plagas"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué ley establece los requisitos básicos de seguridad y habitabilidad en los edificios en España?",
+      "opciones": {
+        "A": "Ley 38/1999 - LOE",
+        "B": "Ley 51/2003 de accesibilidad",
+        "C": "Código Técnico de la Edificación",
+        "D": "Ley de Seguridad Pública"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes no es una categoría de seguridad mencionada en el CTE?",
+      "opciones": {
+        "A": "Seguridad estructural",
+        "B": "Seguridad contra incendios",
+        "C": "Seguridad ambiental",
+        "D": "Seguridad de utilización"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes no es un Documento Básico (DB) del Código Técnico de la Edificación (CTE)?",
+      "opciones": {
+        "A": "DB SE-AE: Acciones en la edificación",
+        "B": "DB SE-A: Estructuras de acero",
+        "C": "DB SE-F: Estructuras de fábrica",
+        "D": "DB SE-V: Ventilación"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué documento básico del CTE se centra en la seguridad de utilización y accesibilidad de un edificio?",
+      "opciones": {
+        "A": "DB SE",
+        "B": "DB SUA",
+        "C": "DB HE",
+        "D": "DB HR"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes no es un Documento Básico (DB) del Código Técnico de la Edificación?",
+      "opciones": {
+        "A": "DB SE-AE: Acciones en la edificación",
+        "B": "DB SE-F: Estructuras de fábrica",
+        "C": "DB SE-M: Estructuras de madera",
+        "D": "DB SE-V: Ventilación"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes Documentos Básicos del CTE se enfoca en la estabilidad estructural de las edificaciones de madera?",
+      "opciones": {
+        "A": "DB SE-AE: Acciones en la edificación",
+        "B": "DB SE-A: Estructuras de acero",
+        "C": "DB SE-M: Estructuras de madera",
+        "D": "DB SE-C: Cimentaciones"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes Documentos Básicos del CTE se centra específicamente en la seguridad de utilización y accesibilidad?",
+      "opciones": {
+        "A": "DB SUA",
+        "B": "DB SE",
+        "C": "DB SI",
+        "D": "DB HE"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elemento NO se considera válido para evacuaciones según la normativa de seguridad contra incendios?",
+      "opciones": {
+        "A": "Escaleras mecánicas",
+        "B": "Rampas móviles sin sistema de parada",
+        "C": "Rampas móviles con sistema de parada",
+        "D": "Aparatos elevadores"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elementos no se consideran válidos para evacuaciones según la normativa de seguridad contra incendios?",
+      "opciones": {
+        "A": "Escaleras mecánicas",
+        "B": "Rampas móviles sin sistema de parada",
+        "C": "Aparatos elevadores",
+        "D": "Escaleras fijas"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes opciones NO se considera válida para evacuaciones según la normativa de seguridad contra incendios?",
+      "opciones": {
+        "A": "Escaleras mecánicas",
+        "B": "Rampas móviles con sistema de parada automática",
+        "C": "Aparatos elevadores",
+        "D": "Salidas de emergencia"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elementos no se consideran válidos para evacuaciones según el CTE?",
+      "opciones": {
+        "A": "Escaleras mecánicas y elevadores",
+        "B": "Rampas móviles sin sistema de parada automática",
+        "C": "Escaleras de emergencia",
+        "D": "Puertas de salida de emergencia",
+        "E": "Rampas móviles con sistema de parada automática"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de escaleras no se consideran válidas para evacuaciones según la normativa?",
+      "opciones": {
+        "A": "Escaleras mecánicas y rampas móviles",
+        "B": "Escaleras de caracol permanentes",
+        "C": "Escaleras convencionales de emergencia",
+        "D": "Rampas fijas de evacuación"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué elementos no se consideran válidos para evacuaciones en un edificio, según la normativa de seguridad?",
+      "opciones": {
+        "A": "Escaleras mecánicas",
+        "B": "Rampas móviles sin sistema de parada",
+        "C": "Elevadores en caso de incendio",
+        "D": "Todas las anteriores",
+        "E": "Solo escaleras mecánicas y rampas móviles"
+      },
+      "correcta": "D",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué representa la carga de fuego en un espacio según la normativa UNE-EN 1991-1-2:2004?",
+      "opciones": {
+        "A": "Energía calorífica liberada durante la combustión de todos los materiales",
+        "B": "Cantidad de humo producido en un incendio",
+        "C": "Intensidad de la llama en un incendio",
+        "D": "Tiempo máximo de evacuación permitido"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué representa la 'carga de fuego' en un edificio según la UNE-EN 1991-1-2:2004?",
+      "opciones": {
+        "A": "Energía liberada durante la combustión de materiales combustibles",
+        "B": "Cantidad de fuego necesario para iniciar la combustión",
+        "C": "Tiempo necesario para evacuar un edificio en llamas",
+        "D": "Resistencia de los materiales constructivos al fuego"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de puertas deben tener los accesos a un recinto de escalera protegida según la normativa de prevención de incendios?",
+      "opciones": {
+        "A": "Puertas EI 120-C5",
+        "B": "Puertas EI2 60-C5",
+        "C": "Puertas EI 90",
+        "D": "Puertas EI 30-C3",
+        "E": "Puertas EI 100"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de puertas deben tener los accesos al recinto de una escalera protegida?",
+      "opciones": {
+        "A": "Puertas EI2 60-C5",
+        "B": "Puertas EI 120",
+        "C": "Puertas EI 30-C3",
+        "D": "Puertas EI 90-C2"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la altura máxima sobre el suelo para la parte superior de las rejillas de entrada de aire según la normativa?",
+      "opciones": {
+        "A": "Menor que 1 m",
+        "B": "Mayor que 1,80 m",
+        "C": "Exactamente 1 m",
+        "D": "No especificado"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la altura máxima permitida para la parte inferior de las rejillas de salida de aire en una escalera protegida?",
+      "opciones": {
+        "A": "Menor que 1 m",
+        "B": "Mayor que 1,80 m",
+        "C": "Igual a 1,50 m",
+        "D": "No especificado"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la altura mínima que debe tener la parte inferior de las rejillas de salida de aire en un sistema de compartimentación?",
+      "opciones": {
+        "A": "1 m",
+        "B": "1,80 m",
+        "C": "2 m",
+        "D": "1,50 m"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la superficie mínima que deben acumular los huecos permanentemente abiertos al exterior en cada planta de una escalera especialmente protegida?",
+      "opciones": {
+        "A": "5A m², donde A es la anchura del tramo de la escalera",
+        "B": "10A m², donde A es la anchura del tramo de la escalera",
+        "C": "15A m², donde A es la anchura del tramo de la escalera",
+        "D": "20A m², donde A es la anchura del tramo de la escalera"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el requisito mínimo de superficie de los huecos abiertos al exterior en cada planta para una escalera abierta?",
+      "opciones": {
+        "A": "5 veces la anchura del tramo de la escalera",
+        "B": "3 veces la altura del patio",
+        "C": "No hay requisito mínimo específico",
+        "D": "Depende del número de plantas del edificio"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes espacios NO se considera origen de evacuación según la normativa de prevención de incendios?",
+      "opciones": {
+        "A": "Un despacho de 30 m² con densidad de 1 persona/5 m²",
+        "B": "Un local de riesgo especial de 60 m²",
+        "C": "Una vivienda privada",
+        "D": "Un hotel de 100 m² con habitaciones de 20 m²",
+        "E": "Un hospital con habitaciones de 10 m²"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué condiciones deben cumplirse para que un espacio no sea considerado origen de evacuación?",
+      "opciones": {
+        "A": "Densidad no supera 1 persona/5 m² y superficie total no supera 50 m²",
+        "B": "Densidad no supera 1 persona/10 m² y superficie total no supera 100 m²",
+        "C": "Densidad no supera 1 persona/5 m² y superficie total no supera 100 m²",
+        "D": "Densidad no supera 1 persona/10 m² y superficie total no supera 50 m²"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué evalúa la reacción al fuego de un material según la norma DPC - DI2?",
+      "opciones": {
+        "A": "Su capacidad de resistir el fuego sin perder integridad",
+        "B": "Su contribución al desarrollo del incendio",
+        "C": "Su capacidad de aislamiento térmico",
+        "D": "Su resistencia a la humedad"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de elementos no se consideran válidos en un recorrido de evacuación según la normativa DPC - DI2?",
+      "opciones": {
+        "A": "Escaleras mecánicas y torniquetes",
+        "B": "Pasillos y rampas móviles",
+        "C": "Escaleras fijas y rampas permanentes",
+        "D": "Puertas de emergencia"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el área máxima permitida del hueco del forjado en una escalera no protegida considerada salida de planta?",
+      "opciones": {
+        "A": "1,30 m²",
+        "B": "1,50 m²",
+        "C": "1,00 m²",
+        "D": "1,20 m²"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el área máxima permitida del hueco del forjado en el punto donde se ubica una escalera no protegida que se considera salida de planta?",
+      "opciones": {
+        "A": "1,30 m²",
+        "B": "0,5 m²",
+        "C": "2,00 m²",
+        "D": "1,00 m²"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de la compartimentación en la prevención de incendios?",
+      "opciones": {
+        "A": "Impedir la propagación del incendio",
+        "B": "Aumentar la temperatura en zonas seguras",
+        "C": "Reducir el número de ocupantes en el edificio",
+        "D": "Facilitar la salida de vehículos de emergencia"
+      },
+      "correcta": "A",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Cuál es la resistencia mínima al fuego que deben tener las paredes de un vestíbulo de independencia?",
+      "opciones": {
+        "A": "EI 120",
+        "B": "EI 30-C5",
+        "C": "EI 60",
+        "D": "EI 90"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de las siguientes áreas se considera una zona de ocupación nula según la normativa de prevención de incendios?",
+      "opciones": {
+        "A": "Sala de conferencias",
+        "B": "Cuarto de instalaciones",
+        "C": "Oficina administrativa",
+        "D": "Recepción del edificio"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de zonas no se consideran para calcular la altura de evacuación en un edificio, pero deben cumplir los límites establecidos si son de riesgo especial o se evalúa la evacuación desde dicha planta?",
+      "opciones": {
+        "A": "Zonas de ocupación nula",
+        "B": "Zonas comunes",
+        "C": "Áreas de descanso",
+        "D": "Salas de control"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué se considera una zona de ocupación nula en términos de prevención de incendios?",
+      "opciones": {
+        "A": "Zonas de alta densidad de ocupantes",
+        "B": "Áreas de acceso público frecuente",
+        "C": "Espacios usados ocasionalmente o para mantenimiento",
+        "D": "Todas las áreas de un edificio"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de una escalera protegida en el contexto de evacuación de un edificio?",
+      "opciones": {
+        "A": "Facilitar la evacuación segura",
+        "B": "Proporcionar acceso al techo",
+        "C": "Servir como área de descanso",
+        "D": "Almacenar equipo de emergencia"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica debe cumplir una zona de ocupación nula para que los recorridos de evacuación sean considerados en la evaluación de evacuación?",
+      "opciones": {
+        "A": "Ser una zona de riesgo especial",
+        "B": "Tener una densidad de ocupación alta",
+        "C": "Estar siempre abierta al público",
+        "D": "No tener instalaciones de seguridad"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué criterio debe cumplir un recorrido de evacuación que pasa por una zona de ocupación nula?",
+      "opciones": {
+        "A": "Debe ser más corto que los recorridos normales",
+        "B": "No necesita cumplir ningún criterio específico",
+        "C": "Debe cumplir los límites establecidos si es zona de riesgo especial o se evalúa la evacuación desde esa planta",
+        "D": "Puede incluir obstáculos si no se usa regularmente",
+        "E": "No se permite el paso por zonas de ocupación nula"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué criterio se aplica para considerar una zona de 'ocupación nula' en términos de evacuación según el CTE?",
+      "opciones": {
+        "A": "Solo si es área de mantenimiento",
+        "B": "Si es área de mantenimiento o uso ocasional",
+        "C": "Solo si no hay presencia humana",
+        "D": "Si es área de riesgo especial"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué normativa especifica los requisitos para un sistema de presión diferencial en escaleras especialmente protegidas?",
+      "opciones": {
+        "A": "EN 12101-6:2005",
+        "B": "ISO 9001:2015",
+        "C": "NFPA 101",
+        "D": "CTE DB-SI"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de una escalera abierta al exterior en términos de evacuación y seguridad contra incendios según la normativa aplicable?",
+      "opciones": {
+        "A": "Facilitar la evacuación rápida del edificio",
+        "B": "Servir como área de descanso durante la evacuación",
+        "C": "Proporcionar acceso exclusivo para bomberos",
+        "D": "Usarse únicamente para operaciones de mantenimiento"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    }
+  ]
+}
