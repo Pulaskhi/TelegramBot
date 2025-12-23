@@ -38,6 +38,7 @@ router.use('/admin/assistants', require('./admin/assistants'))
 router.use('/customer/faqs', require('./customer/faqs'))
 router.use('/customer/headers', require('./customer/headers'))
 router.use('/customer/chats', require('./customer/chats'))
+router.use('/eventos', require('./eventos'))
 
 
 

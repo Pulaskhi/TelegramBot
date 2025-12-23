@@ -3,6 +3,7 @@ const path = require("path");
 const router = require("express").Router();
 const OpenAI = require("openai");
 const OpenAIService = require("../../services/openai-service");
+const UnsplashService = require("../../services/unsplash-service");
 
 // ✅ Carga universal de pdf-parse
 let pdfParse;
@@ -849,6 +850,78 @@ router.get("/flashcards/:tema/:name", (req, res) => {
   } catch (err) {
     console.error("❌ Error leyendo flashcards:", err);
     res.status(500).json({ success: false, message: "Error leyendo flashcards" });
+  }
+});
+
+
+/* ===========================================================
+   🖼️ Añadir imágenes a un archivo de flashcards usando Unsplash
+   =========================================================== */
+router.post('/flashcards/add-images', async (req, res) => {
+  try {
+    const { tema, name } = req.body;
+    if (!process.env.UNSPLASH_ACCESS_KEY) {
+      return res.status(400).json({ success: false, message: 'UNSPLASH_ACCESS_KEY no configurada en el entorno' });
+    }
+
+    if (!tema || !name) return res.status(400).json({ success: false, message: 'Faltan parámetros: tema y name' });
+
+    const filePath = path.join(flashcardsRoot, tema, name);
+    if (!fs.existsSync(filePath)) return res.status(404).json({ success: false, message: 'Archivo de flashcards no encontrado' });
+
+    const raw = fs.readFileSync(filePath, 'utf8');
+    const parsed = JSON.parse(raw);
+    // soportar tanto array como { flashcards: [...] }
+    const cards = Array.isArray(parsed) ? parsed : (parsed.flashcards || parsed.cards || []);
+    if (!Array.isArray(cards) || !cards.length) return res.status(400).json({ success: false, message: 'El archivo no contiene flashcards en el formato esperado' });
+
+    const unsplash = new UnsplashService(process.env.UNSPLASH_ACCESS_KEY);
+
+    const results = [];
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i];
+      // Construir consulta segura: usar sólo el texto principal sin exponer en logs
+      const q = String(card.pregunta || card.question || card.front || card.text || '').trim();
+      let query = q;
+      if (!query) {
+        // intentar con respuesta o tags
+        query = String(card.respuesta || card.answer || card.back || card.hint || '').trim();
+      }
+
+      try {
+        // Pausa pequeña para evitar ráfagas
+        await new Promise(r => setTimeout(r, 350));
+        const img = await unsplash.searchImage(query || tema || '');
+        if (img) {
+          // Adjuntar metadatos de imagen a la tarjeta sin incluir raw masivo
+          card.image = {
+            id: img.id,
+            url: img.url,
+            full: img.full || null,
+            author: img.author || null,
+            author_url: img.author_url || null,
+            source: 'unsplash'
+          };
+          results.push({ index: i, found: true });
+        } else {
+          results.push({ index: i, found: false });
+        }
+      } catch (err) {
+        console.warn(`⚠️ Unsplash fallo en tarjeta ${i}: ${err.message}`);
+        results.push({ index: i, found: false, error: err.message });
+      }
+    }
+
+    // Guardar nuevo archivo con sufijo
+    const outName = name.replace(/\.json$/i, '') + '-with-images.json';
+    const outPath = path.join(flashcardsRoot, tema, outName);
+    const toWrite = Array.isArray(parsed) ? cards : { ...parsed, flashcards: cards };
+    fs.writeFileSync(outPath, JSON.stringify(toWrite, null, 2), 'utf8');
+
+    return res.json({ success: true, file: path.join(tema, outName), summary: { total: cards.length, imagesFound: results.filter(r => r.found).length } });
+  } catch (err) {
+    console.error('❌ Error en /flashcards/add-images:', err);
+    return res.status(500).json({ success: false, message: 'Error añadiendo imágenes', error: err.message });
   }
 });
 
