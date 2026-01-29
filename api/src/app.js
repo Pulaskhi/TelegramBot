@@ -1,6 +1,5 @@
 const express = require('express')
-const Redis = require('ioredis');
-const redis = new Redis();
+
 const app = express()
 const errorHandler = require('./middlewares/error-handler')
 const userAgentMiddleware = require('./middlewares/user-agent')

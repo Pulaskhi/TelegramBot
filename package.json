@@ -1,11 +1,18 @@
 {
     "dependencies": {
+        "bcryptjs": "^3.0.3",
         "dotenv": "^17.2.2",
-        "express": "^5.1.0",
-        "http-proxy-middleware": "^2.0.6",
+        "express": "^5.2.1",
+        "http-proxy-middleware": "^2.0.9",
+        "jsonwebtoken": "^9.0.3",
         "jszip": "^3.10.1",
         "mongoose": "^8.18.2",
-        "openai": "^5.22.1"
+        "mysql2": "^3.16.2",
+        "nodemailer": "^7.0.12",
+        "openai": "^5.22.1",
+        "sequelize": "^6.37.7",
+        "sequelize-cli": "^6.6.5",
+        "sqlite3": "^5.1.7"
     },
     "scripts": {
         "dev": "npm-run-all --parallel dev:front-admin dev:front-customer proxy",

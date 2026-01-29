@@ -16,7 +16,7 @@ class Hero extends HTMLElement {
       title: 'Prepárate para la oposición de Bombero',
       description: 'Utiliza asistentes de inteligencia artificial para generar test automaticamente',
       buttonText: 'Comenzar',
-      redirectUrl: '/admin/asistentes'
+      redirectUrl: '/admin/assistant-form'
     }
   }
 
@@ -61,10 +61,31 @@ class Hero extends HTMLElement {
   }
 
   setupButtonListener () {
-    const button = this.shadow.querySelector('.hero-button button')
+    const button = this.shadow.querySelector('.hero-cta .cta-primary')
     if (button) {
       button.addEventListener('click', () => {
-        window.location.href = this.data.redirectUrl
+        // Requiere login: si no hay token, enviar a /login
+        const token = localStorage.getItem('token')
+        if (!token) {
+          // conserva el proxy host
+          const proxyPort = '8082'
+          let targetOrigin = window.location.origin
+          if (window.location.port !== proxyPort) {
+            targetOrigin = `${window.location.protocol}//${window.location.hostname}:${proxyPort}`
+          }
+          window.location.href = `${targetOrigin}/login`
+          return
+        }
+
+        if (this.data && this.data.redirectUrl) {
+          // Ya autenticado, redirige al destino (vía proxy)
+          const proxyPort = '8082'
+          let targetOrigin = window.location.origin
+          if (window.location.port !== proxyPort) {
+            targetOrigin = `${window.location.protocol}//${window.location.hostname}:${proxyPort}`
+          }
+          window.location.href = `${targetOrigin}${this.data.redirectUrl}`
+        }
       })
     }
   }

@@ -5,15 +5,17 @@ class TelegramService {
   constructor (telegramToken, groupId) {
     this.token = telegramToken
     this.groupId = parseFloat(groupId)
-    this.bot = new TelegramBot(this.token, { polling: true })
     this.sessionAnchors = new Map()
-    // Map threadId -> telegram chat id (user who clicked the deep-link)
     this.userSessions = new Map()
 
-    this.bot.on('message', (msg) => this.handleGroupMessage(msg))
-
-    // Handle deep links: /start <threadId>
-    this.bot.onText(/\/start(?:\s+(.*))?/, (msg, match) => this.handleStart(msg, match))
+    // Solo activar el bot si está en producción
+    if (process.env.NODE_ENV === 'production') {
+      this.bot = new TelegramBot(this.token, { polling: true })
+      this.bot.on('message', (msg) => this.handleGroupMessage(msg))
+      this.bot.onText(/\/start(?:\s+(.*))?/, (msg, match) => this.handleStart(msg, match))
+    } else {
+      this.bot = { sendMessage: async () => {}, on: () => {}, onText: () => {} }
+    }
   }
 
   async escalateToHuman (threadId, preview) {

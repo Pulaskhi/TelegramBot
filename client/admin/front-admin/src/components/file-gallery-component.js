@@ -1,6 +1,8 @@
 import { store } from '../redux/store.js'
 import { showFile, removeFile } from '../redux/files-slice.js'
 
+const API_BASE = import.meta.env.VITE_API_URL || ''
+
 class FileGallery extends HTMLElement {
   constructor () {
     super()
@@ -345,7 +347,7 @@ class FileGallery extends HTMLElement {
     try {
       const fileGallery = this.shadow.querySelector('.file-gallery')
       fileGallery.innerHTML = ''
-      const result = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/files?fileType=${this.fileType}`)
+      const result = await fetch(`${API_BASE}/api/admin/files?fileType=${this.fileType}`)
       const data = await result.json()
       const files = data.rows
 
@@ -398,7 +400,7 @@ class FileGallery extends HTMLElement {
     formData.append('fileType', this.fileType)
     formData.append('entity', this.entity)
 
-    const result = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/files`, {
+    const result = await fetch(`${API_BASE}/api/admin/files`, {
       method: 'POST',
       body: formData
     })
@@ -442,7 +444,7 @@ class FileGallery extends HTMLElement {
   }
 
   async deletefile (filename) {
-    const result = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/files/${filename}?fileType=${this.fileType}`, {
+    const result = await fetch(`${API_BASE}/api/admin/files/${filename}?fileType=${this.fileType}`, {
       method: 'DELETE'
     })
 

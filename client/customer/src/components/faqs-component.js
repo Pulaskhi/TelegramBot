@@ -12,7 +12,7 @@ class Faqs extends HTMLElement {
 
   async loadData () {
     try {
-      const response = await fetch('http://dev-youthing.com/api/customer/faqs') // ajusta si usas /api
+      const response = await fetch('/api/customer/faqs') // use proxy / relative path
       if (!response.ok) throw new Error('Error al obtener FAQs')
       this.data = await response.json()
     } catch (error) {

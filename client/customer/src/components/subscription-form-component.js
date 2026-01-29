@@ -256,20 +256,54 @@ class SubscriptionForm extends HTMLElement {
           </div>
         </div>
         <div class="form">
-          <form>
+          <form id="newsletter-form">
             <div class="form-element">
               <div class="form-element-input">
-                <input type="text" placeholder="Dirección de correo">
+                <input id="newsletter-email" type="email" placeholder="Dirección de correo" required>
               </div>
             </div>
             <div class="form-element-button">
-              <button>${this.data.formElementButton}</button>
+              <button type="submit">${this.data.formElementButton}</button>
             </div>
+            <div id="newsletter-feedback" style="margin-top:10px;"></div>
           </form>
         </div>
       </div>
     </section>
     `
+    // Lógica JS para el formulario
+    const form = this.shadow.getElementById('newsletter-form')
+    const emailInput = this.shadow.getElementById('newsletter-email')
+    const feedback = this.shadow.getElementById('newsletter-feedback')
+    form.onsubmit = async (e) => {
+      e.preventDefault()
+      feedback.textContent = ''
+      const email = emailInput.value.trim()
+      if (!email) {
+        feedback.textContent = 'Introduce un correo válido.'
+        feedback.style.color = 'red'
+        return
+      }
+      try {
+        const res = await fetch('/api/customer/newsletter', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        })
+        const data = await res.json()
+        if (res.ok) {
+          feedback.textContent = '¡Suscripción exitosa! Revisa tu correo.'
+          feedback.style.color = 'green'
+          form.reset()
+        } else {
+          feedback.textContent = data.message || 'Error al suscribirse.'
+          feedback.style.color = 'red'
+        }
+      } catch (err) {
+        feedback.textContent = 'Error de red.'
+        feedback.style.color = 'red'
+      }
+    }
   }
 }
 

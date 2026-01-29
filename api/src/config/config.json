@@ -1,24 +1,14 @@
 {
     "development": {
-      "username": "root",
-      "password": "password",
-      "database": "telegram-bot",
-      "host": "127.0.0.1",
-      "port": 3305,
-      "dialect": "mysql"
+      "dialect": "sqlite",
+      "storage": "./db/dev.sqlite3"
     },
     "test": {
-      "username": "root",
-      "password": null,
-      "database": "database_test",
-      "host": "127.0.0.1",
-      "dialect": "mysql"
+      "dialect": "sqlite",
+      "storage": "./db/test.sqlite3"
     },
     "production": {
-      "username": "root",
-      "password": null,
-      "database": "database_production",
-      "host": "127.0.0.1",
-      "dialect": "mysql"
+      "dialect": "sqlite",
+      "storage": "./db/prod.sqlite3"
     }
   }

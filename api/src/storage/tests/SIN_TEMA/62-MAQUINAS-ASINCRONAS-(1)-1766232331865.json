@@ -1,0 +1,446 @@
+{
+  "tema": "SIN_TEMA",
+  "fecha": "2025-12-20T12:05:31.867Z",
+  "feedback": "",
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es la principal característica que distingue a los motores asíncronos de otros tipos de motores eléctricos?",
+      "opciones": {
+        "A": "Utilizan corriente alterna en ambos, el rotor y el estator",
+        "B": "Operan exclusivamente con corriente continua",
+        "C": "Requieren una alimentación externa constante para el rotor",
+        "D": "Su rotor no necesita estar en cortocircuito"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Por qué se denomina al motor asíncrono también como motor de inducción?",
+      "opciones": {
+        "A": "Porque la corriente del rotor es inducida por el campo magnético del estator sin conexión eléctrica externa",
+        "B": "Porque utiliza inducción electromagnética para transmitir energía a través del aire",
+        "C": "Porque su velocidad puede ser ajustada mediante inducción variable",
+        "D": "Porque el motor puede inducir voltajes adicionales en sistemas cercanos"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué sucede en un motor de inducción cuando el rotor alcanza la velocidad de sincronismo del campo giratorio del estator?",
+      "opciones": {
+        "A": "El rotor pierde el par motor y reduce su velocidad.",
+        "B": "El rotor aumenta su par motor y mantiene su velocidad.",
+        "C": "El rotor se detiene completamente.",
+        "D": "No hay cambio en la velocidad o el par motor del rotor."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la relación entre el deslizamiento y la frecuencia de la corriente en el rotor de un motor de inducción?",
+      "opciones": {
+        "A": "La frecuencia de la corriente en el rotor aumenta con el deslizamiento.",
+        "B": "La frecuencia de la corriente en el rotor no está relacionada con el deslizamiento.",
+        "C": "La frecuencia de la corriente en el rotor disminuye con el deslizamiento."
+      },
+      "correcta": "A",
+      "dificultad": "difícil"
+    },
+    {
+      "pregunta": "¿Cuál es la principal característica del rotor en un motor asíncrono?",
+      "opciones": {
+        "A": "El rotor está en cortocircuito para inducir corriente sin alimentación externa.",
+        "B": "El rotor está permanentemente conectado a una fuente de alimentación externa.",
+        "C": "El rotor utiliza engranajes para aumentar la velocidad de rotación.",
+        "D": "El rotor está sincronizado con el campo magnético del estator."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de rotor se describe como 'motor en Jaula de Ardilla'?",
+      "opciones": {
+        "A": "Un rotor formado por bobinas conectadas a reostatos externos.",
+        "B": "Un rotor compuesto por barras de cobre o aluminio cortocircuitadas con anillos del mismo material.",
+        "C": "Un rotor que utiliza imanes permanentes para generar movimiento.",
+        "D": "Un rotor conectado directamente a la red eléctrica para su funcionamiento."
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué es la velocidad de sincronismo en un motor asíncrono?",
+      "opciones": {
+        "A": "La velocidad a la que el campo magnético del estator rota, y a la que el rotor intenta alcanzar pero no iguala",
+        "B": "La velocidad máxima que el rotor puede alcanzar bajo carga máxima",
+        "C": "La velocidad a la que el rotor gira exactamente igual que el estator",
+        "D": "La velocidad mínima requerida para iniciar el movimiento del rotor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Por qué se considera que los motores asíncronos tienen una velocidad de giro del rotor ligeramente inferior a la velocidad de sincronismo?",
+      "opciones": {
+        "A": "Porque los devanados del rotor están en cortocircuito y no pueden alcanzar la velocidad del campo magnético estatórico",
+        "B": "Debido a la resistencia aerodinámica que enfrenta el rotor durante su rotación",
+        "C": "Porque la alimentación exterior impide que el rotor alcance la velocidad del estator",
+        "D": "Por una ineficiencia inherente en la conversión de energía eléctrica a mecánica"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué método se utiliza en los motores monofásicos para crear un campo magnético giratorio a partir de un campo estático?",
+      "opciones": {
+        "A": "Utilización de un condensador para desfase de corriente",
+        "B": "Inversión de la polaridad de las bobinas a intervalos regulares",
+        "C": "Aplicación de corriente alterna directamente",
+        "D": "Uso de un rotor con imanes permanentes"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal ventaja de utilizar un motor asíncrono en aplicaciones industriales?",
+      "opciones": {
+        "A": "Control preciso de la velocidad",
+        "B": "Bajo consumo de potencia reactiva",
+        "C": "Facilidad de mantenimiento y robustez",
+        "D": "Baja intensidad absorbida en el arranque"
+      },
+      "correcta": "C",
+      "dificultad": "facil"
+    },
+    {
+      "pregunta": "¿Qué describe mejor el deslizamiento en un motor de inducción?",
+      "opciones": {
+        "A": "Es la diferencia entre la velocidad del campo giratorio del estator y la velocidad de giro del rotor.",
+        "B": "Es la velocidad a la que el rotor puede girar sin ninguna carga.",
+        "C": "Es la velocidad máxima que el rotor puede alcanzar bajo condiciones ideales.",
+        "D": "Es la medida de la resistencia interna del motor."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la consecuencia de un deslizamiento nulo en un motor de inducción?",
+      "opciones": {
+        "A": "El motor alcanza su máxima eficiencia.",
+        "B": "El rotor gira a la misma velocidad que el campo magnético del estator, perdiendo el par motor.",
+        "C": "El motor se sobrecalienta debido al aumento de la corriente.",
+        "D": "El motor se detiene automáticamente."
+      },
+      "correcta": "B",
+      "dificultad": "dificil"
+    },
+    {
+      "pregunta": "¿Qué describe el Teorema de Ferraris en relación con las máquinas asíncronas?",
+      "opciones": {
+        "A": "La generación de un campo magnético giratorio en el estator que induce una f.e.m. en el rotor",
+        "B": "La igualdad de velocidad entre el rotor y el estator durante el funcionamiento",
+        "C": "La necesidad de una alimentación externa para el rotor",
+        "D": "El uso de corriente continua en los devanados del rotor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el efecto de no tener deslizamiento entre el rotor y el campo giratorio del estator en un motor de inducción?",
+      "opciones": {
+        "A": "El rotor alcanza la velocidad de sincronismo y pierde el par motor",
+        "B": "Aumenta el par motor del rotor",
+        "C": "Se maximiza la eficiencia del motor",
+        "D": "Se reduce el consumo energético del estator"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué describe la Ley de Lenz relacionado con el funcionamiento de los motores de inducción?",
+      "opciones": {
+        "A": "La dirección de una corriente inducida se opone siempre a la causa que la produce.",
+        "B": "La corriente inducida en un conductor es directamente proporcional a la velocidad del rotor.",
+        "C": "La intensidad de la corriente inducida depende únicamente de la resistencia del conductor.",
+        "D": "Los campos magnéticos del estator y rotor siempre se suman algebraicamente."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En un motor de inducción, el máximo deslizamiento ocurre cuando:",
+      "opciones": {
+        "A": "El rotor está en movimiento sincronizado con el campo magnético del estator.",
+        "B": "El rotor está parado y hay máxima diferencia de velocidad entre el rotor y el estator.",
+        "C": "El rotor alcanza la velocidad máxima permitida por el diseño del motor.",
+        "D": "No hay campo magnético aplicado al rotor."
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el principal factor que determina la magnitud de la fuerza electrodinámica en un motor asíncrono?",
+      "opciones": {
+        "A": "La diferencia de velocidad entre el estator y el rotor",
+        "B": "La temperatura del motor",
+        "C": "El tipo de material del rotor",
+        "D": "La resistencia eléctrica del estator"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En un motor asíncrono, ¿qué sucede si el rotor alcanza la velocidad de sincronismo del campo giratorio del estator?",
+      "opciones": {
+        "A": "El rotor continúa acelerando indefinidamente",
+        "B": "El par motor desaparece y el rotor comienza a desacelerar",
+        "C": "La fuerza electrodinámica se invierte, frenando el rotor",
+        "D": "Se aumenta la eficiencia del motor"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué representa el par motor en un motor asíncrono?",
+      "opciones": {
+        "A": "La fuerza electrodinámica que gira el rotor",
+        "B": "La velocidad a la que gira el rotor",
+        "C": "La energía consumida por el motor",
+        "D": "La resistencia al giro del rotor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el efecto de alcanzar un deslizamiento cero en un motor asíncrono?",
+      "opciones": {
+        "A": "El motor aumenta su eficiencia",
+        "B": "El rotor alcanza la velocidad de sincronismo y pierde par motor",
+        "C": "El rotor se detiene completamente",
+        "D": "Se maximiza la producción de energía eléctrica"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una característica distintiva del motor asíncrono de inducción en comparación con otros tipos de motores eléctricos?",
+      "opciones": {
+        "A": "El rotor trabaja con sus devanados en cortocircuito.",
+        "B": "Utiliza corriente continua en el estator y el rotor.",
+        "C": "Requiere una fuente de alimentación externa para el rotor.",
+        "D": "El rotor y el estator no están eléctricamente conectados."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de motor se denomina 'motor en Jaula de Ardilla' y por qué recibe este nombre?",
+      "opciones": {
+        "A": "Motor asíncrono con barras de cobre o aluminio en las ranuras del rotor cortocircuitadas a través de dos anillos del mismo material, por su apariencia.",
+        "B": "Motor síncrono con un rotor que tiene un diseño especial en forma de jaula para mejorar la conductividad.",
+        "C": "Motor de corriente continua cuyo rotor está diseñado para minimizar la resistencia eléctrica.",
+        "D": "Motor paso a paso, llamado así por su capacidad para realizar movimientos precisos y controlados."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes métodos de arranque de un motor de inducción reduce la corriente de arranque al 33% de la corriente nominal?",
+      "opciones": {
+        "A": "Arranque directo",
+        "B": "Arranque con resistencia en serie con el estator",
+        "C": "Arrancador estrella-triángulo",
+        "D": "Arranque con autotransformador"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de arranque de motores de inducción, el REBT (ITC-BT-47) establece límites para la intensidad de arranque con el fin de:",
+      "opciones": {
+        "A": "Disminuir el tiempo de arranque del motor",
+        "B": "Evitar perturbaciones en la red y daños en la máquina",
+        "C": "Incrementar la eficiencia energética del motor",
+        "D": "Aumentar la potencia de salida del motor"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es la principal desventaja del arranque directo en motores de inducción de alta potencia?",
+      "opciones": {
+        "A": "Alto consumo de corriente inicial",
+        "B": "Reducción de la vida útil del motor",
+        "C": "Aumento del par motor",
+        "D": "Disminución del deslizamiento del rotor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué característica define el arranque directo en motores de jaula de ardilla?",
+      "opciones": {
+        "A": "Se utiliza sin dispositivos adicionales para reducir la corriente de arranque",
+        "B": "Requiere un autotransformador para iniciar",
+        "C": "Necesita un reostato en serie con el estator",
+        "D": "Implica el uso de un arrancador estrella-triángulo"
+      },
+      "correcta": "A",
+      "dificultad": "fácil"
+    },
+    {
+      "pregunta": "¿Qué función tiene el uso de resistencia en el rotor durante el arranque de un motor asíncrono?",
+      "opciones": {
+        "A": "Reduce la corriente de arranque al aumentar la resistencia del circuito.",
+        "B": "Aumenta la velocidad de arranque del motor.",
+        "C": "Disminuye el par motor generado durante el arranque.",
+        "D": "Estabiliza la tensión en el estator."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de motores asíncronos, ¿cuál es el resultado de eliminar progresivamente la resistencia insertada en serie con el rotor?",
+      "opciones": {
+        "A": "Aumento gradual de la corriente de arranque.",
+        "B": "Reducción del par motor al alcanzar la velocidad nominal.",
+        "C": "Aumento del par motor y ajuste de la velocidad del motor.",
+        "D": "Disminuye la eficiencia del motor."
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes porcentajes NO es una toma típica de tensión en un arranque con autotransformador para motores de gran potencia?",
+      "opciones": {
+        "A": "60%",
+        "B": "75%",
+        "C": "80%",
+        "D": "90%"
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "Durante un arranque con autotransformador, si se selecciona una toma al 70% de la tensión nominal, ¿qué porcentaje aproximado de la corriente nominal absorberá el motor?",
+      "opciones": {
+        "A": "49%",
+        "B": "70%",
+        "C": "30%",
+        "D": "100%"
+      },
+      "correcta": "A",
+      "dificultad": "dificil"
+    },
+    {
+      "pregunta": "¿Qué función cumple la conexión en estrella en un arrancador estrella-triángulo durante el arranque de un motor?",
+      "opciones": {
+        "A": "Reduce la tensidad de alimentación aplicada al motor",
+        "B": "Aumenta la velocidad del motor",
+        "C": "Desconecta automáticamente el motor tras el arranque",
+        "D": "Invierte el sentido de rotación del motor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito de cambiar de una configuración en estrella a una en triángulo en un arrancador estrella-triángulo una vez que el motor alcanza la velocidad nominal?",
+      "opciones": {
+        "A": "Aumentar la corriente de línea absorbida al valor nominal",
+        "B": "Disminuir la corriente de línea absorbida",
+        "C": "Detener el motor",
+        "D": "Revertir la dirección del motor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es el propósito principal de utilizar un arrancador electrónico en el arranque de un motor?",
+      "opciones": {
+        "A": "Reducir la corriente de pico durante el arranque",
+        "B": "Aumentar la velocidad del motor",
+        "C": "Disminuir la eficiencia del motor",
+        "D": "Regular la temperatura del motor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "En el contexto de arrancadores para motores, ¿qué caracteriza principalmente a un arrancador estrella-triángulo?",
+      "opciones": {
+        "A": "Conexión del bobinado en estrella durante el arranque y en triángulo a velocidad nominal",
+        "B": "Utilización de un autotransformador para regular la tensión",
+        "C": "Inserción de una resistencia en serie con el estator",
+        "D": "Control de la velocidad del motor mediante variadores de frecuencia"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué tipo de frenado eléctrico del motor asíncrono permite recuperar parte de la energía durante el proceso?",
+      "opciones": {
+        "A": "Frenado regenerativo o por recuperación de energía",
+        "B": "Frenado por contracorriente",
+        "C": "Frenado dinámico",
+        "D": "Frenado por inducción"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes inconvenientes corresponde al frenado por contracorriente en motores asíncronos?",
+      "opciones": {
+        "A": "Necesita un cambio frecuente de componentes",
+        "B": "No permite grandes deceleraciones",
+        "C": "Requiere una intensidad muy elevada y produce altas pérdidas",
+        "D": "No es adecuado para motores de gran potencia"
+      },
+      "correcta": "C",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué caracteriza principalmente al frenado regenerativo en un motor asíncrono?",
+      "opciones": {
+        "A": "Convierte el motor en generador para recuperar energía.",
+        "B": "Invierte el sentido de giro del campo magnético.",
+        "C": "Alimenta el estator con corriente continua.",
+        "D": "Utiliza un reostato para disminuir la velocidad."
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes NO es un beneficio del frenado regenerativo?",
+      "opciones": {
+        "A": "Permite recuperar parte de la energía del proceso de frenado.",
+        "B": "Proporciona un frenado total del motor.",
+        "C": "Reduce el consumo energético total del sistema.",
+        "D": "Contribuye a la eficiencia general del motor."
+      },
+      "correcta": "B",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Qué cambio se realiza en la secuencia de fases para aplicar el frenado por contracorriente en un motor asíncrono?",
+      "opciones": {
+        "A": "Se intercambian dos fases",
+        "B": "Se desconectan todas las fases",
+        "C": "Se invierte la alimentación en todas las fases",
+        "D": "No se requiere ningún cambio en las fases"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    },
+    {
+      "pregunta": "¿Cuál es una desventaja del frenado por contracorriente en motores asíncronos?",
+      "opciones": {
+        "A": "Intensidad de corriente muy elevada",
+        "B": "Requiere un cambio en el número de polos del estator",
+        "C": "Disminuye la eficiencia del motor permanentemente",
+        "D": "Reduce la vida útil de las escobillas del motor"
+      },
+      "correcta": "A",
+      "dificultad": "media"
+    }
+  ]
+}

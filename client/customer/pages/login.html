@@ -1,0 +1,51 @@
+<section style="padding:24px; max-width:520px; margin:24px auto;">
+  <h2>Iniciar sesión</h2>
+  <form id="login-form" autocomplete="off" onsubmit="return false;">
+    <div style="margin:8px 0"><label>Email<br><input id="email" name="email" type="email" required autocomplete="username"></label></div>
+    <div style="margin:8px 0"><label>Contraseña<br><input id="password" name="password" type="password" required autocomplete="current-password"></label></div>
+    <div style="margin:8px 0"><button type="button" id="login-btn">Entrar</button></div>
+  </form>
+  <p id="message"></p>
+</section>
+
+<script src="./login.js"></script>
+      if (!email) return message.textContent = 'El email es requerido'
+      if (!password) return message.textContent = 'La contraseña es requerida'
+
+      const btn = document.getElementById('login-btn')
+      btn.disabled = true
+      btn.textContent = 'Entrando...'
+
+      try {
+        const res = await fetch('/api/customer/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.message || 'Error')
+
+        localStorage.setItem('token', data.token)
+        history.replaceState(null, '', window.location.pathname)
+
+        message.textContent = 'Login correcto. Redirigiendo...'
+        setTimeout(() => { window.location.href = '/' }, 600)
+      } catch (err) {
+        message.textContent = err.message || 'Credenciales inválidas'
+        btn.disabled = false
+        btn.textContent = 'Entrar'
+      }
+    }
+
+    document.getElementById('login-btn').addEventListener('click', (e) => {
+      e.preventDefault()
+      doLogin()
+    })
+
+    // keep form submit prevented as a safety net
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      return false
+    })
+  })()
+</script>

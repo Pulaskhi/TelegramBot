@@ -70,7 +70,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     }, { // opciones del modelo
       sequelize,
-      tableName: 'user-credentials',
+      tableName: 'user_credentials',
       timestamps: true,
       paranoid: true, // no borres datos
       indexes: [

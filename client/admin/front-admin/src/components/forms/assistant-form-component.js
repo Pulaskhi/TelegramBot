@@ -54,24 +54,8 @@ class AssistantForm extends HTMLElement {
 
       .upload-row { display:flex; gap:12px; align-items:flex-start }
       upload-file-button-component { display:block }
-      /* Improved upload area */
-      .upload-area { display:flex; gap:12px; align-items:center; padding:12px; border-radius:8px; border:1px dashed rgba(30,58,138,0.12); background:linear-gradient(180deg, rgba(226,232,255,0.4), rgba(255,255,255,0)); min-height:64px }
-      .upload-area .upload-info { display:flex; flex-direction:column; gap:6px }
-      .upload-area .upload-placeholder { color:#374151; font-size:0.95rem }
-      .upload-area .upload-filename { color:#1e3a8a; font-weight:700; font-size:0.95rem }
-      /* File actions below upload */
-      .file-actions { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:8px }
-      .actions-left { display:flex; gap:8px; align-items:center }
-      .actions-right { display:flex; flex-direction:column; align-items:flex-end; gap:6px }
-      .btn { padding:8px 12px; border-radius:8px; border:1px solid transparent; cursor:pointer; background:#f3f4f6; color:#0f172a; font-weight:600; display:inline-flex; align-items:center; gap:8px }
-      .btn-primary { background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff; border:none }
-      .btn-ghost { background:transparent; border:1px solid rgba(2,6,23,0.06); color:#1e3a8a }
-      .btn svg { width:16px; height:16px; display:inline-block }
-      .help-text { color:#6b7280; font-size:0.9rem }
-      @media(max-width:700px){ .upload-area{flex-direction:column;align-items:stretch} }
 
       .test-list { display:flex; flex-direction:column; gap:8px; overflow:auto; padding:6px; border-radius:8px; border:1px solid #eef2ff; min-height:0 }
-      .section-title{ font-family: inherit; font-size:1.05rem; font-weight:700; margin:0 0 8px; color:var(--muted, #1e293b) }
       .tema-header { display:flex; align-items:center; gap:10px; padding:10px; border-radius:8px; background:#eef2ff; }
       .tema-title{ font-weight:700; color:#1e3a8a; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:calc(100% - 48px); }
       .open-group-btn { margin-left:auto; padding:8px 12px; border-radius:8px; border:none; background:#1e3a8a; color:#fff; cursor:pointer }
@@ -108,6 +92,7 @@ class AssistantForm extends HTMLElement {
                 <div class="tab inactive" data-tab="saved">Tests Generados</div>
                 <div class="tab inactive" data-tab="trained">Tests Entrenados</div>
               </div>
+              <select id="filterTopic" style="margin-left:auto;padding:8px;border-radius:8px;border:1px solid #e6eefc"></select>
             </div>
           </div>
 
@@ -118,35 +103,22 @@ class AssistantForm extends HTMLElement {
               <div class="tab-content" data-tab="files">
                 <label>Sube tu documento PDF</label>
                 <div class="upload-row">
-                  <div class="upload-area">
-                    <upload-file-button-component icon="documents" name="assistantDocuments" language-alias="all" quantity="single" file-type="documents"></upload-file-button-component>
-                    <div class="upload-info">
-                      <div class="upload-placeholder">Seleccione o arrastre un PDF aquí</div>
-                      <div class="upload-filename" aria-hidden="true"></div>
-                    </div>
-                  </div>
+                  <upload-file-button-component icon="documents" name="assistantDocuments" language-alias="all" quantity="single" file-type="documents"></upload-file-button-component>
                 </div>
-                <div class="file-actions">
-                  <div class="actions-left">
-                    <button type="button" class="btn btn-primary" id="btnCreateGenerate">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5v14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12H5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                      <span>Generar y guardar</span>
-                    </button>
-                    <button type="button" class="btn btn-ghost" id="btnCreateGenerateAuto">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v4" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 18v4" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.2 5.2l2.8 2.8" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 16l2.8 2.8" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                      <span>Generar + Auto-train</span>
-                    </button>
-                  </div>
+                <div style="display:flex;gap:8px">
+                  <button type="button" class="btn btn-primary" id="btnCreateGenerate">Generar y guardar</button>
+                  <button type="button" class="btn" id="btnCreateGenerateAuto">Generar + Auto-train</button>
                 </div>
+                <small style="color:#6b7280">Selecciona un PDF y pulsa generar. El test se guardará en el tema detectado.</small>
               </div>
 
               <div class="tab-content" data-tab="saved" style="display:none">
-                <h3 class="section-title">Tests generados</h3>
+                <label>Tests generados previamente</label>
                 <div class="test-list saved-list"></div>
               </div>
 
               <div class="tab-content" data-tab="trained" style="display:none">
-                <h3 class="section-title">Tests entrenados</h3>
+                <label>Tests entrenados</label>
                 <div class="test-list trained-list"></div>
               </div>
             </form>
@@ -154,8 +126,16 @@ class AssistantForm extends HTMLElement {
         </aside>
 
         <section class="preview">
+          <h3 style="margin:0 0 8px">Vista Previa del Test</h3>
           <div id="previewArea"></div>
-          
+          <div class="preview-controls">
+            <label style="display:flex;align-items:center;gap:8px">Mostrar:
+              <select id="selectLimit"><option value="0">Todas</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select>
+            </label>
+            <div style="margin-left:auto;display:flex;gap:8px">
+              <button class="btn" id="btnStart">Iniciar Test</button>
+            </div>
+          </div>
         </section>
       </div>
     </section>
@@ -175,7 +155,43 @@ class AssistantForm extends HTMLElement {
         this.generateAndShowTest(true)
       }
       // download button removed from UI; no handler needed
-      
+      if (e.target.closest('#btnStart')) {
+        const preview = this.shadow.querySelector('#previewArea')
+        const tc = preview.querySelector('test-component')
+        if (!tc) {
+          document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'No hay test para iniciar', type: 'error' } }))
+          return
+        }
+        let questions = []
+        try { questions = JSON.parse(tc.getAttribute('data-questions') || '[]') } catch (err) { questions = [] }
+        const tema = tc.getAttribute('data-tema') || null
+        const source = tc.getAttribute('data-source') || null
+        // emit a custom event so the app can react (navigate to runner, open modal, etc.)
+        document.dispatchEvent(new CustomEvent('start-test', { detail: { questions, tema, source } }))
+        document.dispatchEvent(new CustomEvent('notice', { detail: { message: 'Iniciando test seleccionado...', type: 'success' } }))
+      }
+      if (e.target.closest('#selectLimit')) {
+        const select = e.target.closest('#selectLimit')
+        const limit = parseInt(select.value) || 0
+        const preview = this.shadow.querySelector('#previewArea')
+        const tc = preview.querySelector('test-component')
+        if (!tc) return
+        const tema = tc.getAttribute('data-tema') || null
+        const source = tc.getAttribute('data-source') || null
+        const feedback = tc.getAttribute('data-feedback') || ''
+        let questions = []
+        try { questions = JSON.parse(tc.getAttribute('data-questions') || '[]') } catch (e) { questions = [] }
+        const sliced = limit > 0 ? questions.slice(0, limit) : questions
+        // remove and re-render smaller test
+        const wrapper = preview
+        wrapper.innerHTML = ''
+        const newTest = document.createElement('test-component')
+        newTest.setAttribute('data-questions', JSON.stringify(sliced))
+        if (tema) newTest.setAttribute('data-tema', tema)
+        if (source) newTest.setAttribute('data-source', source)
+        if (feedback) newTest.setAttribute('data-feedback', feedback)
+        wrapper.appendChild(newTest)
+      }
 
       const tab = e.target.closest('.tab')
       if (tab) {
@@ -231,7 +247,28 @@ class AssistantForm extends HTMLElement {
       }
     })
 
-    
+    const selectLimit = this.shadow.querySelector('#selectLimit')
+    if (selectLimit) {
+      selectLimit.addEventListener('change', (e) => {
+        const limit = parseInt(e.target.value) || 0
+        const preview = this.shadow.querySelector('#previewArea')
+        const tc = preview.querySelector('test-component')
+        if (!tc) return
+        const tema = tc.getAttribute('data-tema') || null
+        const source = tc.getAttribute('data-source') || null
+        const feedback = tc.getAttribute('data-feedback') || ''
+        let questions = []
+        try { questions = JSON.parse(tc.getAttribute('data-questions') || '[]') } catch (err) { questions = [] }
+        const sliced = limit > 0 ? questions.slice(0, limit) : questions
+        preview.innerHTML = ''
+        const newTest = document.createElement('test-component')
+        newTest.setAttribute('data-questions', JSON.stringify(sliced))
+        if (tema) newTest.setAttribute('data-tema', tema)
+        if (source) newTest.setAttribute('data-source', source)
+        if (feedback) newTest.setAttribute('data-feedback', feedback)
+        preview.appendChild(newTest)
+      })
+    }
   }
 
   async connectedExtras() {
